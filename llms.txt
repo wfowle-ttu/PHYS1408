@@ -1,0 +1,7 @@
+# PHYS 1408 Notes
+
+## Pages
+
+- [Lecture 8-26-2026](https://wfowle-ttu.github.io/PHYS1408/lectures/lecture_82626.llms.md)
+- [About](https://wfowle-ttu.github.io/PHYS1408/about.llms.md)
+- [notes](https://wfowle-ttu.github.io/PHYS1408/index.llms.md)

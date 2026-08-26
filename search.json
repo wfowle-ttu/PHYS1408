@@ -4,7 +4,29 @@
     "href": "lectures/lecture_82626.html",
     "title": "Lecture 8-26-2026",
     "section": "",
-    "text": "1 Dimensonal Motion:",
+    "text": "Essential Equations\nSolving for X final given X initial, velocity initial, velocity final, and time. \\[\nX_f = X_i + \\frac{V_i+v_f}{2}*t\n\\]\n\\[\nV_f = V_i + a*t\n\\]\n\\[\nV_f^2 = V_i^2+2a(X_f-X_i)\n\\]\n\\[\nX_f = X_i+V_it+(1/2)*a*t^2\n\\]\nFor each of the above equations X can be substituted for Y and the same calculations can be used to find Vertical motion in 1D.\n\n\nTwo cars starting from rest 1000 meters apart. The two vehicles approach eachother head on where \\(A_1 = 3\\) meters per second squared, and \\(A_2 = -2\\) meters per second squared.\n[Fill from notes]\n\n\n\nCarrier problem\n[Fill from notes]",
+    "crumbs": [
+      "Lectures",
+      "Lecture 8-26-2026"
+    ]
+  },
+  {
+    "objectID": "lectures/lecture_82626.html#example-problem-1",
+    "href": "lectures/lecture_82626.html#example-problem-1",
+    "title": "Lecture 8-26-2026",
+    "section": "",
+    "text": "Two cars starting from rest 1000 meters apart. The two vehicles approach eachother head on where \\(A_1 = 3\\) meters per second squared, and \\(A_2 = -2\\) meters per second squared.\n[Fill from notes]",
+    "crumbs": [
+      "Lectures",
+      "Lecture 8-26-2026"
+    ]
+  },
+  {
+    "objectID": "lectures/lecture_82626.html#example-problem-2",
+    "href": "lectures/lecture_82626.html#example-problem-2",
+    "title": "Lecture 8-26-2026",
+    "section": "",
+    "text": "Carrier problem\n[Fill from notes]",
     "crumbs": [
       "Lectures",
       "Lecture 8-26-2026"
