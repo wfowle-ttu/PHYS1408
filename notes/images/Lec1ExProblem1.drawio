@@ -1,0 +1,58 @@
+<mxfile host="Electron">
+  <diagram name="Page-1" id="WhhMI9W1O3knoz_c_41P">
+    <mxGraphModel dx="1867" dy="1092" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="n-8aU-dP6o-TNiw0pQ_q-1" parent="1" style="triangle;whiteSpace=wrap;html=1;" value="Car1" vertex="1">
+          <mxGeometry height="80" width="60" x="50" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="n-8aU-dP6o-TNiw0pQ_q-2" parent="1" style="triangle;whiteSpace=wrap;html=1;rotation=-180;" value="" vertex="1">
+          <mxGeometry height="80" width="60" x="620" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="n-8aU-dP6o-TNiw0pQ_q-3" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Car2" vertex="1">
+          <mxGeometry height="30" width="60" x="620" y="375" as="geometry" />
+        </mxCell>
+        <mxCell id="n-8aU-dP6o-TNiw0pQ_q-4" edge="1" parent="1" source="n-8aU-dP6o-TNiw0pQ_q-1" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="n-8aU-dP6o-TNiw0pQ_q-3" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="400" y="580" as="sourcePoint" />
+            <mxPoint x="450" y="530" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n-8aU-dP6o-TNiw0pQ_q-5" connectable="0" parent="n-8aU-dP6o-TNiw0pQ_q-4" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Distance = 1000 meters" vertex="1">
+          <mxGeometry relative="1" x="0.0848" y="2" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n-8aU-dP6o-TNiw0pQ_q-6" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="680" y="320" as="sourcePoint" />
+            <mxPoint x="550" y="320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n-8aU-dP6o-TNiw0pQ_q-7" connectable="0" parent="n-8aU-dP6o-TNiw0pQ_q-6" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="A_2 = -2 m/s^2" vertex="1">
+          <mxGeometry relative="1" x="-0.1797" y="-1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n-8aU-dP6o-TNiw0pQ_q-8" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="50" y="320" as="sourcePoint" />
+            <mxPoint x="180" y="320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n-8aU-dP6o-TNiw0pQ_q-9" connectable="0" parent="n-8aU-dP6o-TNiw0pQ_q-8" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="A_1= 3 m/s^2" vertex="1">
+          <mxGeometry relative="1" x="-0.1797" y="-1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n-8aU-dP6o-TNiw0pQ_q-10" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="X_{I2} = 1000&amp;nbsp;" vertex="1">
+          <mxGeometry height="30" width="90" x="605" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="n-8aU-dP6o-TNiw0pQ_q-11" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="X_{I1} = 0&amp;nbsp;" vertex="1">
+          <mxGeometry height="30" width="90" x="50" y="440" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

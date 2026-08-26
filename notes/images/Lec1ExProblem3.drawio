@@ -1,0 +1,45 @@
+<mxfile host="Electron">
+  <diagram name="Page-1" id="JMNIVCvOM1O0xY2qXc2W">
+    <mxGraphModel dx="1204" dy="1201" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="HbyHXo1NyGZUu_h4_otx-1" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="Wile E Coyote" vertex="1">
+          <mxGeometry height="60" width="30" x="1050" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="HbyHXo1NyGZUu_h4_otx-3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="510" width="120" x="1110" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="HbyHXo1NyGZUu_h4_otx-4" edge="1" parent="1" style="endArrow=classic;startArrow=classic;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="1010" y="700" as="sourcePoint" />
+            <mxPoint x="1010" y="200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="HbyHXo1NyGZUu_h4_otx-5" connectable="0" parent="HbyHXo1NyGZUu_h4_otx-4" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="100 meters" vertex="1">
+          <mxGeometry relative="1" x="0.0867" y="-2" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="HbyHXo1NyGZUu_h4_otx-6" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="V_i = 0" vertex="1">
+          <mxGeometry height="30" width="60" x="890" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="HbyHXo1NyGZUu_h4_otx-7" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="y_i =100" vertex="1">
+          <mxGeometry height="30" width="60" x="890" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="HbyHXo1NyGZUu_h4_otx-8" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="y_f = 0" vertex="1">
+          <mxGeometry height="30" width="60" x="890" y="700" as="geometry" />
+        </mxCell>
+        <mxCell id="HbyHXo1NyGZUu_h4_otx-9" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="a = -9.81 m/s^2" vertex="1">
+          <mxGeometry height="50" width="120" x="860" y="370" as="geometry" />
+        </mxCell>
+        <mxCell id="HbyHXo1NyGZUu_h4_otx-10" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="t = ?" vertex="1">
+          <mxGeometry height="30" width="60" x="860" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="HbyHXo1NyGZUu_h4_otx-11" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="v_f = ?" vertex="1">
+          <mxGeometry height="30" width="60" x="890" y="670" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
