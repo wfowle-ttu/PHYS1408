@@ -174,8 +174,12 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#dimensonal-motion" id="toc-dimensonal-motion" class="nav-link active" data-scroll-target="#dimensonal-motion">1 Dimensonal Motion:</a>
+  <li><a href="#dimensonal-motion" id="toc-dimensonal-motion" class="nav-link active" data-scroll-target="#dimensonal-motion">1 Dimensonal Motion</a>
   <ul class="collapse">
+  <li><a href="#kinematic-equation-1" id="toc-kinematic-equation-1" class="nav-link" data-scroll-target="#kinematic-equation-1">Kinematic Equation 1</a></li>
+  <li><a href="#kinematic-equation-2" id="toc-kinematic-equation-2" class="nav-link" data-scroll-target="#kinematic-equation-2">Kinematic Equation 2</a></li>
+  <li><a href="#kinematic-equation-3" id="toc-kinematic-equation-3" class="nav-link" data-scroll-target="#kinematic-equation-3">Kinematic Equation 3</a></li>
+  <li><a href="#kinematic-equation-4" id="toc-kinematic-equation-4" class="nav-link" data-scroll-target="#kinematic-equation-4">Kinematic Equation 4</a></li>
   <li><a href="#example-problem-1" id="toc-example-problem-1" class="nav-link" data-scroll-target="#example-problem-1">Example Problem 1</a></li>
   <li><a href="#example-problem-2" id="toc-example-problem-2" class="nav-link" data-scroll-target="#example-problem-2">Example Problem 2</a></li>
   <li><a href="#example-problem-3" id="toc-example-problem-3" class="nav-link" data-scroll-target="#example-problem-3">Example Problem 3</a></li>
@@ -206,33 +210,336 @@ window.Quarto = {
 
 
 <section id="dimensonal-motion" class="level1">
-<h1>1 Dimensonal Motion:</h1>
+<h1>1 Dimensonal Motion</h1>
 <p>Essential Equations</p>
-<p>Solving for X final given X initial, velocity initial, velocity final, and time. <span class="math display">\[
+<section id="kinematic-equation-1" class="level3">
+<h3 class="anchored" data-anchor-id="kinematic-equation-1">Kinematic Equation 1</h3>
+<p>Solve for the final position of something given it’s initial position and the amount of time. <span class="math display">\[
 X_f = X_i + \frac{V_i+v_f}{2}*t
 \]</span></p>
-<p><span class="math display">\[
+</section>
+<section id="kinematic-equation-2" class="level3">
+<h3 class="anchored" data-anchor-id="kinematic-equation-2">Kinematic Equation 2</h3>
+<p>Solve for the final velocity of something given an initial velocity, acceleration, and time. <span class="math display">\[
 V_f = V_i + a*t
 \]</span></p>
-<p><span class="math display">\[
+</section>
+<section id="kinematic-equation-3" class="level3">
+<h3 class="anchored" data-anchor-id="kinematic-equation-3">Kinematic Equation 3</h3>
+<p>Find the acceleration of something when given it’s initial velocity, it’s final position, and initial position. <span class="math display">\[
 V_f^2 = V_i^2+2a(X_f-X_i)
 \]</span></p>
-<p><span class="math display">\[
-X_f = X_i+V_it+(1/2)*a*t^2
+</section>
+<section id="kinematic-equation-4" class="level3">
+<h3 class="anchored" data-anchor-id="kinematic-equation-4">Kinematic Equation 4</h3>
+<p>Find the final position of something given it’s initial position, initial velocity, time, and acceleration. <span class="math display">\[
+X_f = X_i+V_i*t+\frac{1}{2}a*t^2
 \]</span></p>
 <p>For each of the above equations X can be substituted for Y and the same calculations can be used to find Vertical motion in 1D.</p>
+</section>
 <section id="example-problem-1" class="level2">
 <h2 class="anchored" data-anchor-id="example-problem-1">Example Problem 1</h2>
-<p>Two cars starting from rest 1000 meters apart. The two vehicles approach eachother head on where <span class="math inline">\(A_1 = 3\)</span> meters per second squared, and <span class="math inline">\(A_2 = -2\)</span> meters per second squared.</p>
-<p>[Fill from notes]</p>
+<p>Two cars 1000 meters apart approach eachother. Initially they are at rest, Car 1 accelerates at <span class="math inline">\(3 m/s^2\)</span> and Car 2 acclerates at <span class="math inline">\(-2 m/s^2\)</span>. When do they collide?</p>
+<p>Given that we know several properties about both vehicles and that we are solving for <span class="math inline">\(t\)</span> we are going to want to select the Kinematic Equation that includes all of the variables we know.</p>
+<p>In this case we know:</p>
+<p>For Car 1: <span class="math display">\[
+X_{i1} = 0 \newline
+A_1 = 3 m/s^2
+\]</span></p>
+<p>For Car 2: <span class="math display">\[
+X_{i2} = 1000 \newline
+A_2 = -2 m/s^2
+\]</span></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Lec1ExProblem1.drawio.png" class="img-fluid figure-img"></p>
+<figcaption>Example Problem 1 Visualized</figcaption>
+</figure>
+</div>
+<p>We can take the variables that we know and plug them into Kinematic equation 1. The reason we choose kinematic equation 1 is because it includes all of the variables we know and doesn’t have variables that we do not know the value of (at least not more than one).</p>
+<p>Therefore from here we can plug in our known values. Recall that Kinematic equation 1 is:</p>
+<p><span class="math display">\[
+X_f = X_i + \frac{V_i+v_f}{2}*t
+\]</span></p>
+<p>Now, we can fill out some portion of that equation for both cars.</p>
+<p>For Car 1:</p>
+<p>We cancel out <span class="math inline">\(X_{1i}\)</span> and <span class="math inline">\(V_{1i}\)</span> because they are both zero.</p>
+<p><span class="math display">\[
+X_{1f} = 0 + 0 + \frac{1}{2}a_2*t^2
+\]</span></p>
+<p>And this then simplifies to:</p>
+<p><span class="math display">\[
+X_{1f} = \frac{1}{2}a_2*t^2
+\]</span></p>
+<p>For Car 2 we have a non-zero X initial point therefore X initial doesn’t cancel out there.</p>
+<p><span class="math display">\[
+X_{2f} = 1000 + 0 \frac{1}{2}a_2*t^2
+\]</span></p>
+<p>Therefore <span class="math inline">\(V_{2i}\)</span> is cancelled out to give us:</p>
+<p><span class="math display">\[
+X_{2f} = X_{2i} \frac{1}{2}a_2*t^2
+\]</span></p>
+<p>Considering that both vehicles are moving across a one dimension plane, and that both are head on. What we really want to find to solve for WHEN (that is at what Time <span class="math inline">\(t\)</span>) do both vehicles have the same position or where <span class="math inline">\(X_1 = X_2\)</span></p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Professor Lamp warned in this lecture that it can be tempting to plug in numbers early, however this makes isolating the variable we’re solving for confusing.</p>
+<p>Therefore, in order to properly solve this equation we’re going to hold off on plugging in any numbers until we’ve isolated <span class="math inline">\(t\)</span> which is the variable we’re solving for!</p>
+</div>
+</div>
+<hr>
+<p>What we can do to make that happen is set the equation to find <span class="math inline">\(X_{fn}\)</span> for either car equal to eachother. In other words:</p>
+<p><span class="math display">\[
+\frac{1}{2}a_1*t^2 = X_{2i} + \frac{1}{2}a_2*t^2
+\]</span></p>
+<p>Which is effectively where <span class="math inline">\(X_{1f} = X_{2f}\)</span></p>
+<p>From there we can use alegbra to solve for <span class="math inline">\(t\)</span></p>
+<p><strong>1. Subtract <span class="math inline">\(\frac{1}{2}*a_2*t^2\)</span> from both sides.</strong></p>
+<p>This gives us:</p>
+<p><span class="math display">\[
+\frac{1}{2}a_1*t^2 - \frac{1}{2}*a_2*t^2 = X_{2i}
+\]</span></p>
+<p>We can refactor</p>
+<p><span class="math display">\[
+\frac{1}{2}a_1*t^2 - \frac{1}{2}*a_2*t^2
+\]</span></p>
+<p>Because both terms share <span class="math inline">\(\frac{1}{2}t^2\)</span> the left side becomes:</p>
+<p><span class="math display">\[
+\frac{1}{2}(a_1 - a_2)*t^2
+\]</span></p>
+<p>And in totality:</p>
+<p><span class="math display">\[
+\frac{1}{2}(a_1 - a_2)*t^2 = X_{2i}
+\]</span></p>
+<p><strong>2. Divide both sides by <span class="math inline">\(\frac{1}{2}(a_1 - a_2)\)</span> in order to isolate <span class="math inline">\(t\)</span></strong></p>
+<p>When dividing by a fraction you are effectively multiplying by the reciprocal of that fraction.</p>
+<p>Ergo <span class="math inline">\(\frac{X_{2i}}{\frac{1}{2}} = \frac{2}{1} * X_{2i}\)</span></p>
+<p>Since our right side would become:</p>
+<p><span class="math display">\[
+t^2 = \frac{X_{2i}}{\frac{1}{2}(a_1 - a_2)}
+\]</span></p>
+<p>We can simplify to</p>
+<p><span class="math display">\[
+t^2 = X_{2i} * \frac{2}{a_1 - a_2}
+\]</span></p>
+<p>And that further simplifies to</p>
+<p><span class="math display">\[
+t^2 = \frac{2X_{2i}}{a_1 - a_2}
+\]</span></p>
+<p><strong>3. Take the square root of both sides to solve for <span class="math inline">\(t\)</span></strong></p>
+<p>In our final step to solve for <span class="math inline">\(t\)</span> we take the square root of both sides and that should give us the time at which <span class="math inline">\(X_1 = X_2\)</span> or in other words where our vehicles collide.</p>
+<p><span class="math display">\[
+t = \sqrt{\frac{2X_{2i}}{a_1 - a_2}}
+\]</span></p>
+<p>And since we have values for each of our variables on the right side, we can plug those in now, this gives us:</p>
+<p><span class="math display">\[
+t = \sqrt{\frac{2*1000}{3 - (-2)}}
+\]</span></p>
+<p>Now <span class="math inline">\(3 - (-2)\)</span> becomes <span class="math inline">\(3+2\)</span> once you workout the signs and you end up with:</p>
+<p><span class="math display">\[
+t = \sqrt{\frac{2*1000}{5}}
+\]</span></p>
+<p>or</p>
+<p><span class="math display">\[
+t = \sqrt{\frac{2000}{5}}
+\]</span></p>
+<p><span class="math display">\[
+t = \sqrt{400}
+\]</span></p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Since our unit of acceleration is in <span class="math inline">\(m/s^2\)</span> and our distance is in meters the new unit when dividing meters by <span class="math inline">\(m/s^2\)</span> is <span class="math inline">\(m^2/s^2\)</span>.</p>
+</div>
+</div>
+<p>So we’re effectively getting the square root of 400 seconds squared here. That means that the result of the square root is just seconds (not seconds squared).</p>
+<p>Plugging that into a calculator we find that <span class="math inline">\(t = 20\)</span></p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Technically because we’re working with a square root <span class="math inline">\(t = \pm 20\)</span>, but since we don’t care about a negative time (since that doesn’t necessarily matter here) we just say that <span class="math inline">\(t = 20\)</span>.</p>
+</div>
+</div>
+<p>Therefore, given the parameters of the problem we find that the cars will both be at the same X position at 20 seconds.</p>
+<hr>
+<p>If we wanted to further explore this problem we might also ask at what X position do both cars collide. This is easy to solve because we only need to find the position of one of the vehicles since it’s a collision at <span class="math inline">\(t = 20\)</span> that means the position of either car 1 or car 2 at <span class="math inline">\(t=20\)</span> is the same position the other car is at.</p>
+<p>Therefore finding the position of car 1 at <span class="math inline">\(t=20\)</span> will give us the position of both cars:</p>
+<p><span class="math display">\[
+X_{1f} = \frac{1}{2}a_1t^2 \newline
+\frac{1}{2}*3*20^2 = 600
+\]</span></p>
+<p>Therefore, at X of 600 both vehicles collide or 600 meters since X is a measure of meters.</p>
 </section>
 <section id="example-problem-2" class="level2">
 <h2 class="anchored" data-anchor-id="example-problem-2">Example Problem 2</h2>
-<p>Carrier problem</p>
-<p>[Fill from notes]</p>
+<p>A plane lands at <span class="math inline">\(70 m/s^2\)</span> on a carrier deck that is 100 meters long. In order to stop before the end of the carrier how quickly must the aircraft decelerate?</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Lec1ExProblem2.drawio.png" class="img-fluid figure-img"></p>
+<figcaption>Example Problem 2 Visualized</figcaption>
+</figure>
+</div>
+<p>Taking stock of what variables the problem offers us we know that:</p>
+<p><span class="math display">\[
+X_i = 0 \newline
+X_f = 100 \newline
+V_i = 70 m/s^2 \newline
+V_f = 0 \newline
+a = ?
+\]</span></p>
+<p>So taking in those values and solving for acceleration would require us to use Kinematic equation #3 because we do not have time <span class="math inline">\(t\)</span>.</p>
+<p>Therfore we will use: <span class="math display">\[
+V_f^2 = V_i^2+2a(X_f-X_i)
+\]</span></p>
+<p>Let’s go through the steps of solving this problem using Kinematic Equation #3:</p>
+<p><strong>1. Refactor the equation to isolate <span class="math inline">\(a\)</span></strong></p>
+<p>First we will subract <span class="math inline">\(V_i^2\)</span> from both sides: <span class="math display">\[
+V_f^2-V_i^2=2a(X_f-X_i)
+\]</span></p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Professor Lamp refers to <span class="math inline">\(X_f - X_i\)</span> simply as <span class="math inline">\(\Delta{X}\)</span> we will do the same here on occasion.</p>
+</div>
+</div>
+<p><strong>2. Divide both sides by 2</strong></p>
+<p>Since <span class="math inline">\(2a\Delta{X}\)</span> are all the same factor we can choose to divide by <span class="math inline">\(2\Delta{X}\)</span> treating it as a coeffecient of a. This enables us to easily isolate a on the right side.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Terms are seperated by <span class="math inline">\(+\)</span> and <span class="math inline">\(-\)</span>, they are pieces of an expression you add or subtract together. Factors are seperated by multiplication, they are multipled inside a single term. Ergo <span class="math inline">\(2a(X_f - X_i)\)</span> is all one term. And you can divide a term by any of it’s factors and they cancel!</p>
+</div>
+</div>
+<p><span class="math display">\[
+\frac{V_f^2-V_i^2}{2\Delta{X}}=a
+\]</span></p>
+<p><strong>3. Now that we have <span class="math inline">\(a\)</span> isolated we can solve the equation by plugging in our known numbers</strong></p>
+<p><span class="math display">\[
+\frac{V_f^2-V_i^2}{2\Delta{X}}=a
+\]</span></p>
+<p>Becomes:</p>
+<p><span class="math display">\[
+\frac{0^2-70^2}{2*\Delta{100}}=a
+\]</span></p>
+<p>Which further simplifies to:</p>
+<p><span class="math display">\[
+\frac{-70^2}{200} = a \newline
+\frac{-4900}{200} = a \newline
+-24.5m/s^2 = a
+\]</span></p>
+<p>Therefore the aircraft must decelerate at <span class="math inline">\(-24.5m\s^2\)</span> to come to a complete stop before the end of the carrier deck.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This amount of deceleration is equivalent to 2.5 g’s!</p>
+</div>
+</div>
 </section>
 <section id="example-problem-3" class="level2">
 <h2 class="anchored" data-anchor-id="example-problem-3">Example Problem 3</h2>
+<p>Wile E. Coyote unexpectadly runs off the end of a 100 meter tall cliff in pursuit of the road runner. How long will Wile E. Coyote fall before reaching initial impact?</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Lec1ExProblem3.drawio.png" class="img-fluid figure-img"></p>
+<figcaption>Visualization of example problem 3</figcaption>
+</figure>
+</div>
+<p>Taking stock of the variables we know and don’t know, we have:</p>
+<p><span class="math display">\[
+V_i = 0 \newline
+Y_i - 0 \newline
+a = -9.81 m\s^2 \newline
+y_f = 0
+t = ?
+\]</span></p>
+<p>Therefore in order to find <span class="math inline">\(t\)</span> we can use Kinematic Equation 4:</p>
+<p><span class="math display">\[
+Y_f = Y_i+V_i*t+\frac{1}{2}a*t^2
+\]</span></p>
+<p>Which will allow us to isolate and solve for <span class="math inline">\(t\)</span>.</p>
+<p><strong>1. Remove variables that cancel out</strong></p>
+<p>Since <span class="math inline">\(V_i\)</span> is 0, that makes the term <span class="math inline">\(V_i*t\)</span> irrelevant to this equation as it’s value is simply zero regardless of what <span class="math inline">\(t\)</span> is.</p>
+<p>Therefore we can simplify to:</p>
+<p><span class="math display">\[
+Y_f = Y_i + \frac{1}{2}at^2
+\]</span></p>
+<p>This equation likely looks familiar from earlier in our problem questions:</p>
+<p><strong>2. Subtract Y_i from both sides</strong></p>
+<p><span class="math display">\[
+Y_f - Y_i = \frac{1}{2}at^2
+\]</span></p>
+<p><strong>3. Divide both sides by <span class="math inline">\(\frac{1}{2}a\)</span></strong></p>
+<p><span class="math display">\[
+\frac{Y_f - Y_i}{\frac{1}{2}a} = t^2
+\]</span></p>
+<p>This simplifies to:</p>
+<p><span class="math display">\[
+\frac{2(Y_f - Y_i)}{a} = t^2
+\]</span></p>
+<p>Here we can refere to <span class="math inline">\(Y_f - Y_i\)</span> as simply <span class="math inline">\(\Delta{Y}\)</span></p>
+<p>So:</p>
+<p><span class="math display">\[
+\frac{2\Delta{Y}}{a} = t^2
+\]</span></p>
+<p><strong>4. Solve for <span class="math inline">\(t\)</span> by taking the square root of the left side</strong></p>
+<p><span class="math display">\[
+\sqrt{\frac{2\Delta{Y}}{a}} = t
+\]</span></p>
+<p>Now that t is isolated we can plug in our values and find:</p>
+<p><span class="math display">\[
+\sqrt{\frac{2*-100}{-9.81m/s^2}}
+\]</span></p>
+<p>Which becomes</p>
+<p><span class="math display">\[
+\sqrt{\frac{-200}{-9.81}}
+\]</span></p>
+<p>further:</p>
+<p><span class="math display">\[
+\sqrt{20.30} = 4.52 \space \text{seconds} = t
+\]</span></p>
+<p>Therefore it takes Wile E. Coyote 4.52 seconds after realizing his grave error until he impacts near the base of the cliff.</p>
 
 
 </section>
