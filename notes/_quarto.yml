@@ -3,6 +3,7 @@ project:
 
 website:
   title: "PHYS 1408 Notes"
+  llms-txt: true
   sidebar:
     style: "docked"
     search: true
