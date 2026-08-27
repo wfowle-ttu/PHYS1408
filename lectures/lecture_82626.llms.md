@@ -1,8 +1,8 @@
 # Lecture 8-26-2026
 
-# 1 Dimensonal Motion
+# 1-D Motion
 
-Essential Equations
+## Essential Kinematic Equations
 
 ### Kinematic Equation 1
 
