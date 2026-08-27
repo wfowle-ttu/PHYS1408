@@ -226,7 +226,7 @@ Visualization of example problem 3
 
 Taking stock of the variables we know and don’t know, we have:
 
-\\ V_i = 0 \newline Y_i - 0 \newline a = -9.81 m\s^2 \newline y_f = 0 t = ? \\
+\\ V_i = 0 \newline Y_i = 100 \newline a = -9.81 m/s^2 \newline y_f = 0 t = ? \\
 
 Therefore in order to find \\t\\ we can use Kinematic Equation 4:
 
