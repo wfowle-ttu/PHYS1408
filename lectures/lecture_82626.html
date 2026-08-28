@@ -150,7 +150,7 @@ window.Quarto = {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
- <span class="menu-text">Lectures</span></a>
+ <span class="menu-text">Book</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -158,8 +158,31 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../book/chapter-1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter 1</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Lectures</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../lectures/lecture_82626.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Lecture 8-26-2026</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lectures/lecture_82826.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture 8-28-2026</span></a>
   </div>
 </li>
       </ul>
@@ -511,7 +534,7 @@ Y_f = Y_i+V_i*t+\frac{1}{2}a*t^2
 Y_f = Y_i + \frac{1}{2}at^2
 \]</span></p>
 <p>This equation likely looks familiar from earlier in our problem questions:</p>
-<p><strong>2. Subtract Y_i from both sides</strong></p>
+<p><strong>2. Subtract <span class="math inline">\(Y_i\)</span> from both sides</strong></p>
 <p><span class="math display">\[
 Y_f - Y_i = \frac{1}{2}at^2
 \]</span></p>
@@ -545,6 +568,27 @@ Y_f - Y_i = \frac{1}{2}at^2
 \sqrt{20.30} = 4.52 \space \text{seconds} = t
 \]</span></p>
 <p>Therefore it takes Wile E. Coyote 4.52 seconds after realizing his grave error until he impacts near the base of the cliff.</p>
+<p>Now how quickly was he travelling when he impacted the ground?</p>
+<p>In order to figure this out we will use kinematic equation 3, we use specially 3 because it avoid the use of <span class="math inline">\(t\)</span> which even though we calculated, if we incorrectly calculated could lead us to a wrong answer here.</p>
+<p><span class="math display">\[
+V_f^2 = V_i^2+2a(X_f-X_i)
+\]</span></p>
+<p>Taking stock we know:</p>
+<p><span class="math display">\[
+V_i^2 = 0
+a = -9.81m/s^2
+Y_f = 0
+Y_i = 100
+\]</span></p>
+<p>Solving we find that</p>
+<p><span class="math display">\[
+V_f^2 = 2a\Delta{y} \newline
+V_f = \sqrt{2a\Delta{y}}
+\]</span></p>
+<p><span class="math display">\[
+V_f = \sqrt{2*-9.81*-100} = \pm{44.27}m/s^2
+\]</span></p>
+<p>Giving us a <span class="math inline">\(V_f\)</span> of -44.27 m/s at the time of impact.</p>
 
 
 </section>

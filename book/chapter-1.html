@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>About – PHYS 1408 Notes</title>
+<title>Chapter 1 – PHYS 1408 Notes</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -29,23 +29,23 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-03a0d00fd5ba774dd8e50f606f192499.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-03a0d00fd5ba774dd8e50f606f192499.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -74,8 +74,37 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
 
-<link rel="stylesheet" href="styles.css">
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../styles.css">
 </head>
 
 <body class="nav-sidebar docked quarto-light">
@@ -87,7 +116,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./about.html">About</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../book/chapter-1.html">Book</a></li><li class="breadcrumb-item"><a href="../book/chapter-1.html">Chapter 1</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -102,7 +131,7 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">PHYS 1408 Notes</a> 
+      <a href="../">PHYS 1408 Notes</a> 
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -114,7 +143,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./about.html" class="sidebar-item-text sidebar-link active">
+  <a href="../about.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">About</span></a>
   </div>
 </li>
@@ -129,7 +158,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./book/chapter-1.html" class="sidebar-item-text sidebar-link">
+  <a href="../book/chapter-1.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Chapter 1</span></a>
   </div>
 </li>
@@ -146,13 +175,13 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./lectures/lecture_82626.html" class="sidebar-item-text sidebar-link">
+  <a href="../lectures/lecture_82626.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lecture 8-26-2026</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./lectures/lecture_82826.html" class="sidebar-item-text sidebar-link">
+  <a href="../lectures/lecture_82826.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lecture 8-28-2026</span></a>
   </div>
 </li>
@@ -168,16 +197,21 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#auto-generation" id="toc-auto-generation" class="nav-link active" data-scroll-target="#auto-generation">Auto Generation</a></li>
+  <li><a href="#si-units-of-length-mass-and-time" id="toc-si-units-of-length-mass-and-time" class="nav-link active" data-scroll-target="#si-units-of-length-mass-and-time">1.1 SI Units of Length, Mass and Time</a></li>
+  <li><a href="#modeling-and-alternative-representations" id="toc-modeling-and-alternative-representations" class="nav-link" data-scroll-target="#modeling-and-alternative-representations">1.2 Modeling and Alternative Representations</a>
+  <ul class="collapse">
+  <li><a href="#types-of-models" id="toc-types-of-models" class="nav-link" data-scroll-target="#types-of-models">Types of Models</a></li>
+  </ul></li>
+  <li><a href="#dimensonal-analysis" id="toc-dimensonal-analysis" class="nav-link" data-scroll-target="#dimensonal-analysis">1.3 Dimensonal Analysis</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../book/chapter-1.html">Book</a></li><li class="breadcrumb-item"><a href="../book/chapter-1.html">Chapter 1</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">About</h1>
+<h1 class="title">Chapter 1</h1>
 </div>
 
 
@@ -194,20 +228,119 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>This site is my documentation site for my notes taken during PHYS1408. Typically, I will either take notes by hand and then transcribe them into this site or I will just write them directly on a document.</p>
-<p>I will use this sidebar strategy for loading contents into the site:</p>
-<section id="auto-generation" class="level3">
-<h3 class="anchored" data-anchor-id="auto-generation">Auto Generation</h3>
-<p>Above we describe how to explicitly populate the contents of your sidebar with navigation items. You can also automatically generate sidebar navigation from the filesystem. The most straightforward way to do this is to specify the contents option as follows:</p>
-<p>sidebar: contents: auto</p>
-<p>Using contents: auto at the root level will result in all documents in your website being included within the navigation (save for the home page which can be navigated to via the title link). Navigation is constructed using the following rules:</p>
-<pre><code>Navigation item titles will be read from the title field of documents.
-
-Sub-directories will create sections and will be automatically titled based on the directory name (including adding capitalization and substituting spaces for dashes and underscores). Use an index.qmd in the directory to provide an explicit title if you don’t like the automatic one.
-
-Order is alphabetical (by filename) unless a numeric order field is provided in document metadata.</code></pre>
-<p>Automatic navigation automatically includes items in sub-directories. If you prefer not to do this, use an explicit /* to indicate only the documents in the root directory:</p>
-<p>Ergo notes and their section layout are determined by Quarto’s automatic layout from the contents being set to auto.</p>
+<p><a href="https://ebooks.cengage.com/reader/d140bb6e-72b0-4824-9647-541fdd004159/content-bd_ch_01_sect_03?code=qwlw9Z7D2QojoMnDFWzc9gDvwdXizGK9NhY89_OI1BM&amp;state=0a2598cd-6c15-4171-b1d4-2ecc5e4b9432&amp;sidepanel=contents">Book Resource Found Here</a></p>
+<section id="si-units-of-length-mass-and-time" class="level1">
+<h1>1.1 SI Units of Length, Mass and Time</h1>
+<ol type="1">
+<li><strong>Length</strong></li>
+</ol>
+<ul>
+<li>Length is the linear distance between two points in space. In 1120 the king of England decreed that the standard of length in his country would be named the yard and would be precisely equal to the distance from the top of his nose to the end of his outstretched arm.</li>
+<li>Today the SI unit for length is the meter or the kilometer.</li>
+</ul>
+<ol start="2" type="1">
+<li><strong>Mass</strong></li>
+</ol>
+<ul>
+<li>The mass of an object is related to the amount of material that is present in that object or how much that object resists change to motion. Mass is an inherent property of an object and is indepdendant of that object’s surroundings. The Fundamental SI unit of mass is kilogram <span class="math inline">\(kg\)</span>.</li>
+</ul>
+<ol start="3" type="1">
+<li><strong>Time</strong></li>
+</ol>
+<ul>
+<li>The fundamental SI unit of time is the second. Before 1967 the standard of time was the mean solar day. And the second was defined as <span class="math inline">\(\frac{1}{60}\frac{1}{60}\frac{1}{24}\)</span> of a mean solar day.</li>
+<li>A time and <em>time interval</em> are different. A Time is a description of an instant relative to a reference time. For example <span class="math inline">\(t\)</span> = 10.0 s refers to an instant 10.0s after that instant we have identified <span class="math inline">\(t = 0\)</span>. As another example, a <em>time</em> of 11:30 AM means an instant 11.5 hours after our reference time of midnight.</li>
+<li>A <em>time interval</em> refers to duration, i.e.&nbsp;he required 30 minutes to complete the task.</li>
+</ul>
+</section>
+<section id="modeling-and-alternative-representations" class="level1">
+<h1>1.2 Modeling and Alternative Representations</h1>
+<p>This section is about organizing work to help problem solve.</p>
+<p>The primary problem-solving method in physics is to form an appropriate model of the problem. A <strong>model</strong> is a simplified substitute for the real problem that allows us to solve the problem in a relatively simple way.</p>
+<section id="types-of-models" class="level2">
+<h2 class="anchored" data-anchor-id="types-of-models">Types of Models</h2>
+<p>Using geometry to model a problem into a solvable solution.</p>
+<p>Example:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="BookCh1Ex1.drawio.png" class="img-fluid figure-img"></p>
+<figcaption>Finding the height of a tree</figcaption>
+</figure>
+</div>
+<p>You want to find the height of a tree but cannot measure it directly. You stand 50 meters from the tree and determine that the line of sight from the group to the top of the tree makes an angle of 25° with the ground.</p>
+<p>To determine the height of the tree we can use a right triangle and recall <em>SOH CAH TOA</em></p>
+<p>In this case given our variables we would like to use <span class="math inline">\(\tan{\theta} = \frac{\text{opposite side}}{\text{adjacent side}}\)</span></p>
+<p>And that allows us to see that:</p>
+<p><span class="math display">\[
+\tan{\theta} = \frac{h}{50}
+\]</span></p>
+<p>Solving for h by multiplying both sides by 50:</p>
+<p><span class="math display">\[
+h = 50 * \tan{25^\circ} = h \newline
+h = 23.3 m
+\]</span></p>
+<p>The particle model is an example of a <em>simplification model</em> where details that are not significant in determining the outcome of the problem are ignored.</p>
+<p>Another category of models is an <em>analysis model</em> and then there are <em>structural models</em> which are used to understand the behavior of a system that is far different in scale from our macroscopic world, either much larger or much smaller.</p>
+</section>
+</section>
+<section id="dimensonal-analysis" class="level1">
+<h1>1.3 Dimensonal Analysis</h1>
+<p>In physics the word <em>dimension</em> denotes the physical nature of a quantity. The distance between two points can be measured in feet, meters, or furlongs, which are all different units of expression for expressing the dimension of length.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>They use the symbols <span class="math inline">\(L\)</span>, <span class="math inline">\(M\)</span>, and <span class="math inline">\(T\)</span> to represent length, mass and time respectively. They use brackets [] to denote the dimensions of a physical quantity, e.g.&nbsp;the symbol used for speed is <span class="math inline">\(v\)</span> and in the book’s notation the dimensions of speed are written <span class="math inline">\([v] = L/T\)</span>. Further, the dimensions of area <span class="math inline">\(A\)</span> are <span class="math inline">\([A] = L^2\)</span></p>
+</div>
+</div>
+<table class="caption-top table">
+<caption>Dimensions and Units of Four Derived Quantities</caption>
+<colgroup>
+<col style="width: 25%">
+<col style="width: 15%">
+<col style="width: 17%">
+<col style="width: 16%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Quantity</th>
+<th>Area (<span class="math inline">\(A\)</span>)</th>
+<th>Volume <span class="math inline">\((V)\)</span></th>
+<th>Speed <span class="math inline">\((v)\)</span></th>
+<th>Acceleration <span class="math inline">\((a)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Dimensions</td>
+<td><span class="math inline">\(L^2\)</span></td>
+<td><span class="math inline">\(L^3\)</span></td>
+<td><span class="math inline">\(L/T\)</span></td>
+<td><span class="math inline">\(L/T^2\)</span></td>
+</tr>
+<tr class="even">
+<td>SI Units</td>
+<td><span class="math inline">\(m^2\)</span></td>
+<td><span class="math inline">\(m^3\)</span></td>
+<td><span class="math inline">\(m/s\)</span></td>
+<td><span class="math inline">\(m/s^2\)</span></td>
+</tr>
+<tr class="odd">
+<td>US Customary Units</td>
+<td><span class="math inline">\(ft^2\)</span></td>
+<td><span class="math inline">\(ft^3\)</span></td>
+<td><span class="math inline">\(ft/s\)</span></td>
+<td><span class="math inline">\(ft/s^2\)</span></td>
+</tr>
+</tbody>
+</table>
 
 
 </section>

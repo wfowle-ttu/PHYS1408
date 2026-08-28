@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>About – PHYS 1408 Notes</title>
+<title>Lecture 8-28-2026 – PHYS 1408 Notes</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -29,23 +29,23 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-03a0d00fd5ba774dd8e50f606f192499.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-03a0d00fd5ba774dd8e50f606f192499.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -74,8 +74,37 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
 
-<link rel="stylesheet" href="styles.css">
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../styles.css">
 </head>
 
 <body class="nav-sidebar docked quarto-light">
@@ -87,7 +116,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./about.html">About</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lectures/lecture_82626.html">Lectures</a></li><li class="breadcrumb-item"><a href="../lectures/lecture_82826.html">Lecture 8-28-2026</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -102,7 +131,7 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">PHYS 1408 Notes</a> 
+      <a href="../">PHYS 1408 Notes</a> 
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -114,7 +143,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./about.html" class="sidebar-item-text sidebar-link active">
+  <a href="../about.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">About</span></a>
   </div>
 </li>
@@ -129,7 +158,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./book/chapter-1.html" class="sidebar-item-text sidebar-link">
+  <a href="../book/chapter-1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Chapter 1</span></a>
   </div>
 </li>
@@ -146,13 +175,13 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./lectures/lecture_82626.html" class="sidebar-item-text sidebar-link">
+  <a href="../lectures/lecture_82626.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lecture 8-26-2026</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./lectures/lecture_82826.html" class="sidebar-item-text sidebar-link">
+  <a href="../lectures/lecture_82826.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Lecture 8-28-2026</span></a>
   </div>
 </li>
@@ -168,16 +197,23 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#auto-generation" id="toc-auto-generation" class="nav-link active" data-scroll-target="#auto-generation">Auto Generation</a></li>
+  <li><a href="#one-dimensonal-motion-cont." id="toc-one-dimensonal-motion-cont." class="nav-link active" data-scroll-target="#one-dimensonal-motion-cont.">One Dimensonal Motion Cont.</a>
+  <ul class="collapse">
+  <li><a href="#example-problem-4" id="toc-example-problem-4" class="nav-link" data-scroll-target="#example-problem-4">Example Problem 4</a></li>
+  </ul></li>
+  <li><a href="#d-motion" id="toc-d-motion" class="nav-link" data-scroll-target="#d-motion">2-D Motion</a>
+  <ul class="collapse">
+  <li><a href="#example-problem-1" id="toc-example-problem-1" class="nav-link" data-scroll-target="#example-problem-1">Example Problem 1</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lectures/lecture_82626.html">Lectures</a></li><li class="breadcrumb-item"><a href="../lectures/lecture_82826.html">Lecture 8-28-2026</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">About</h1>
+<h1 class="title">Lecture 8-28-2026</h1>
 </div>
 
 
@@ -194,22 +230,78 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>This site is my documentation site for my notes taken during PHYS1408. Typically, I will either take notes by hand and then transcribe them into this site or I will just write them directly on a document.</p>
-<p>I will use this sidebar strategy for loading contents into the site:</p>
-<section id="auto-generation" class="level3">
-<h3 class="anchored" data-anchor-id="auto-generation">Auto Generation</h3>
-<p>Above we describe how to explicitly populate the contents of your sidebar with navigation items. You can also automatically generate sidebar navigation from the filesystem. The most straightforward way to do this is to specify the contents option as follows:</p>
-<p>sidebar: contents: auto</p>
-<p>Using contents: auto at the root level will result in all documents in your website being included within the navigation (save for the home page which can be navigated to via the title link). Navigation is constructed using the following rules:</p>
-<pre><code>Navigation item titles will be read from the title field of documents.
+<p>Reference <a href="../lectures/lecture_82626.html#kinematic-equation-1">The first lecture for kinematic equations</a>.</p>
+<section id="one-dimensonal-motion-cont." class="level1">
+<h1>One Dimensonal Motion Cont.</h1>
+<section id="example-problem-4" class="level2">
+<h2 class="anchored" data-anchor-id="example-problem-4">Example Problem 4</h2>
+<p>A penny is dropped down a well and his water after 2 seconds, how deep is the well?</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Lec2ExProblem4.png" class="img-fluid figure-img"></p>
+<figcaption>Example problem 4 visualization</figcaption>
+</figure>
+</div>
+<p>Given the variables we have that would mean we need to use Kinematic 4.</p>
+<p><span class="math display">\[
+X_f = X_i+V_i*t+\frac{1}{2}a*t^2
+\]</span></p>
+<p><span class="math display">\[
+y_f = y_i + \frac{1}{2}(-g)t^2
+\]</span></p>
+<p><span class="math display">\[
+y_f = \frac{1}{2}gt^2
+\]</span></p>
+<p>Penny is thrown down the well with a V_i = -2m/s and impacts in 1 second.</p>
+<p>This effectively becomes the same problem but with different parameters:</p>
+<p><span class="math display">\[
+y_f = y_i + v_{yi} + \frac{1}{2}a_yt^2-V_{yi}t
+\]</span></p>
+<p><span class="math display">\[
+y_f = \frac{1}{2}9.8m/s^2(1s)^2-(-2m/s)1s = 6.9m
+\]</span></p>
+<p>In another form of this equation the penny is thrown upwards at 5m/s and hits the bottom of the well after 3s.</p>
+<p>Using the 4th equation again we get:</p>
+<p><span class="math display">\[
+Y_f = Y_i+V_i*t+\frac{1}{2}a*t^2
+\]</span></p>
+<p>In which case we have <span class="math display">\[
+V_{yi} = 5 m/s \newline
+a_y = -g \newline
+y_f = 0 \newline
+y_i = \space ? \space \text{(also known as h)}
+\]</span></p>
+<p>Plugging that in</p>
+<p><span class="math display">\[
+0 = h + V_{yi}t - \frac{gt^2}{2}
+\]</span></p>
+<p>Which simplifies to:</p>
+<p><span class="math display">\[
+h = \frac{gt^2}{2}-V_{yi}t \newline
+h = 9.8/2*3^2-5*3 \newline
+h = 29.1 \space \text{meters deep}
+\]</span></p>
+</section>
+</section>
+<section id="d-motion" class="level1">
+<h1>2-D Motion</h1>
+<section id="example-problem-1" class="level2">
+<h2 class="anchored" data-anchor-id="example-problem-1">Example Problem 1</h2>
+<p>A ball rolling off of a table:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Lec2ExProblem4.png" class="img-fluid figure-img"></p>
+<figcaption>Example problem 1 visualized</figcaption>
+</figure>
+</div>
+<p>Taking stock of the variables we know we will associate with the final position of the ball as <span class="math inline">\(R\)</span></p>
+<p><span class="math display">\[
+X_f = X_i+V_i*t+\frac{1}{2}a*t^2
+\]</span></p>
+<p>Where we calculate x and y.</p>
 
-Sub-directories will create sections and will be automatically titled based on the directory name (including adding capitalization and substituting spaces for dashes and underscores). Use an index.qmd in the directory to provide an explicit title if you don’t like the automatic one.
 
-Order is alphabetical (by filename) unless a numeric order field is provided in document metadata.</code></pre>
-<p>Automatic navigation automatically includes items in sub-directories. If you prefer not to do this, use an explicit /* to indicate only the documents in the root directory:</p>
-<p>Ergo notes and their section layout are determined by Quarto’s automatic layout from the contents being set to auto.</p>
-
-
+</section>
 </section>
 
 </main> <!-- /main -->
