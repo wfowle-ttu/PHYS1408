@@ -342,7 +342,7 @@ $$
 
 This equation likely looks familiar from earlier in our problem questions:
 
-**2. Subtract Y_i from both sides**
+**2. Subtract $Y_i$ from both sides**
 
 $$
 Y_f - Y_i = \frac{1}{2}at^2
@@ -393,6 +393,43 @@ $$
 $$
 
 Therefore it takes Wile E. Coyote 4.52 seconds after realizing his grave error until he impacts near the base of the cliff. 
+
+Now how quickly was he travelling when he impacted the ground?
+
+In order to figure this out we will use kinematic equation 3, we use specially 3 because it avoid the use of $t$ which even though we calculated, if we incorrectly calculated could lead us to a wrong answer here.
+
+$$
+V_f^2 = V_i^2+2a(X_f-X_i)
+$$
+
+Taking stock we know:
+
+$$
+V_i^2 = 0 
+a = -9.81m/s^2
+Y_f = 0
+Y_i = 100
+$$
+
+Solving we find that 
+
+$$
+V_f^2 = 2a\Delta{y} \newline
+V_f = \sqrt{2a\Delta{y}}
+$$
+
+$$
+V_f = \sqrt{2*-9.81*-100} = \pm{44.27}m/s^2
+$$
+
+
+Giving us a $V_f$ of -44.27 m/s at the time of impact.
+
+
+
+
+
+
 
 
 
