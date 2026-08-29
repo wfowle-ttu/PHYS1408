@@ -256,7 +256,11 @@ This simplifies to:
 
 \\ \frac{2(Y_f - Y_i)}{a} = t^2 \\
 
-Here we can refere to \\Y_f - Y_i\\ as simply \\\Delta{Y}\\
+Here we can refer to \\Y_f - Y_i\\ as simply \\\Delta{Y}\\
+
+> **TIP:**
+>
+> \\\Delta{Y}\\ can also be referred to as \\h\\ or height on occasion, especially when \\y_f = 0\\ and \\y_i\\ is some non-zero number.
 
 So:
 
@@ -266,7 +270,7 @@ So:
 
 \\ \sqrt{\frac{2\Delta{Y}}{a}} = t \\
 
-Now that t is isolated we can plug in our values and find:
+Now that \\t\\ is isolated we can plug in our values and find:
 
 \\ \sqrt{\frac{2\*-100}{-9.81m/s^2}} \\
 
@@ -297,3 +301,7 @@ Solving we find that
 \\ V_f = \sqrt{2\*-9.81\*-100} = \pm{44.27}m/s^2 \\
 
 Giving us a \\V_f\\ of -44.27 m/s at the time of impact.
+
+> **TIP:**
+>
+> We use the negative result of the square root because the coyote is descending which is a negative movement across our established \\y\\ axis.
