@@ -4,6 +4,7 @@
 
 - [Lecture 8-26-2026](https://wfowle-ttu.github.io/PHYS1408/lectures/lecture_82626.llms.md)
 - [notes](https://wfowle-ttu.github.io/PHYS1408/index.llms.md)
-- [About](https://wfowle-ttu.github.io/PHYS1408/about.llms.md)
 - [Chapter 1](https://wfowle-ttu.github.io/PHYS1408/book/chapter-1.llms.md)
+- [About](https://wfowle-ttu.github.io/PHYS1408/about.llms.md)
+- [Chapter 2 - Vectors](https://wfowle-ttu.github.io/PHYS1408/book/chapter-2.llms.md)
 - [Lecture 8-28-2026](https://wfowle-ttu.github.io/PHYS1408/lectures/lecture_82826.llms.md)

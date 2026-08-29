@@ -68,3 +68,15 @@ In physics the word *dimension* denotes the physical nature of a quantity. The d
 | US Customary Units | \\ft^2\\ | \\ft^3\\ | \\ft/s\\ | \\ft/s^2\\ |
 
 Dimensions and Units of Four Derived Quantities {.caption-top .table}
+
+# Summary
+
+## Definitions
+
+The three fundamental physical quantities of mechanics are length, mass, and time, of which the SI units are meter (m), kilogram (kg) and seconds (s) respectively.
+
+The density of a substance is defined as its mass per unit volume:
+
+\\ \rho \equiv \frac{m}{V} \\
+
+\[There are other concepts in chapter one that are worth covering and they have about 30 practice problems we should highly consider taking on\]
