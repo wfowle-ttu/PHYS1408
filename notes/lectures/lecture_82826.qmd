@@ -12,32 +12,64 @@ A penny is dropped down a well and his water after 2 seconds, how deep is the we
 
 ![Example problem 4 visualization](Lec2ExProblem4.png)
 
-Given the variables we have that would mean we need to use Kinematic 4. 
+Given the variables we have that would mean we need to use Kinematic 4 as we are trying to solve for $y_f$
 
 $$
 X_f = X_i+V_i*t+\frac{1}{2}a*t^2
 $$
 
-
+Removing the variables we know equate to zero our equation shifts:
 $$
 y_f = y_i + \frac{1}{2}(-g)t^2
 $$
 
+And the final position of y is the depth of our well.
 $$
-y_f = \frac{1}{2}gt^2
+y_f = \frac{1}{2}(-g)t^2
 $$
 
-Penny is thrown down the well with a V_i = -2m/s and impacts in 1 second. 
+Plugging in our values we find:
+
+$$
+y_f = \frac{1}{2}(-9.81 m/s)2s^2 \newline
+y_f = -19.6 \space \text{meters}
+$$
+
+Our answer tells us that our well is around 19.6 meters deep.
+
+---
+
+Let's shuffle our previous problem slightly to reveal additional algebra within the [4th Kinematic equation](./lecture_82626.qmd#kinematic-equation-4).
+
+Let's assume the penny is thrown down the well (rather than dropped) with a $V_i = -2m/s$ and impacts in 1 second. 
 
 This effectively becomes the same problem but with different parameters:
 
-$$
-y_f = y_i + v_{yi} + \frac{1}{2}a_yt^2-V_{yi}t
-$$
+
 
 $$
-y_f = \frac{1}{2}9.8m/s^2(1s)^2-(-2m/s)1s = 6.9m
+y_f = y_i + v_{yi}*t + \frac{1}{2}a_yt^2-V_{yi}t
 $$
+
+Plugging in our known variables we find:
+
+$$
+y_f = 0 + -2 m/s * 1 s + \frac{1}{2}(-9.81)(1s)^2
+$$
+
+Simplifying
+
+$$
+y_f = -2 + -4.905
+y_f = -6.905 meters
+$$
+
+
+
+
+
+
+
 
 
 In another form of this equation the penny is thrown upwards at 5m/s and hits the bottom of the well after 3s. 
@@ -78,12 +110,16 @@ $$
 
 A ball rolling off of a table:
 
-![Example problem 1 visualized](Lec2ExProblem4.png)
+![Example problem 1 visualized](Lec2Ex1.drawio.png)
 
 Taking stock of the variables we know we will associate with the final position of the ball as $R$
 
-$$
-X_f = X_i+V_i*t+\frac{1}{2}a*t^2
-$$
+In this problem we have to calculate both x and y indepdently in the same way we would normally calculate them. 
 
-Where we calculate x and y.
+Firstly since the ball is rolling across the $x$ axis at 1m/s and  we know the x axis takes on no additional acceleration we can calculate the x position of the ball using one of the kinematic equations, [specifically equation 4:](./lecture_82626.qmd#kinematic-equation-4)
+
+We will also have to calculate the y coordinate as well, using the same kinematic equation. Our example problem provides us with the necessary information to solve for both x and y. 
+
+We will want to solve for y first since it will tell us how long the ball takes to drop, from there we can pause and solve for x at the same time frame to find where r is. 
+
+1. **Solve for $Y_f$ when **
