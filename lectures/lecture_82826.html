@@ -248,23 +248,37 @@ window.Quarto = {
 <figcaption>Example problem 4 visualization</figcaption>
 </figure>
 </div>
-<p>Given the variables we have that would mean we need to use Kinematic 4.</p>
+<p>Given the variables we have that would mean we need to use Kinematic 4 as we are trying to solve for <span class="math inline">\(y_f\)</span></p>
 <p><span class="math display">\[
 X_f = X_i+V_i*t+\frac{1}{2}a*t^2
 \]</span></p>
-<p><span class="math display">\[
+<p>Removing the variables we know equate to zero our equation shifts: <span class="math display">\[
 y_f = y_i + \frac{1}{2}(-g)t^2
 \]</span></p>
-<p><span class="math display">\[
-y_f = \frac{1}{2}gt^2
+<p>And the final position of y is the depth of our well. <span class="math display">\[
+y_f = \frac{1}{2}(-g)t^2
 \]</span></p>
-<p>Penny is thrown down the well with a V_i = -2m/s and impacts in 1 second.</p>
+<p>Plugging in our values we find:</p>
+<p><span class="math display">\[
+y_f = \frac{1}{2}(-9.81 m/s)2s^2 \newline
+y_f = -19.6 \space \text{meters}
+\]</span></p>
+<p>Our answer tells us that our well is around 19.6 meters deep.</p>
+<hr>
+<p>Let’s shuffle our previous problem slightly to reveal additional algebra within the <a href="../lectures/lecture_82626.html#kinematic-equation-4">4th Kinematic equation</a>.</p>
+<p>Let’s assume the penny is thrown down the well (rather than dropped) with a <span class="math inline">\(V_i = -2m/s\)</span> and impacts in 1 second.</p>
 <p>This effectively becomes the same problem but with different parameters:</p>
 <p><span class="math display">\[
-y_f = y_i + v_{yi} + \frac{1}{2}a_yt^2-V_{yi}t
+y_f = y_i + v_{yi}*t + \frac{1}{2}a_yt^2-V_{yi}t
 \]</span></p>
+<p>Plugging in our known variables we find:</p>
 <p><span class="math display">\[
-y_f = \frac{1}{2}9.8m/s^2(1s)^2-(-2m/s)1s = 6.9m
+y_f = 0 + -2 m/s * 1 s + \frac{1}{2}(-9.81)(1s)^2
+\]</span></p>
+<p>Simplifying</p>
+<p><span class="math display">\[
+y_f = -2 + -4.905
+y_f = -6.905 meters
 \]</span></p>
 <p>In another form of this equation the penny is thrown upwards at 5m/s and hits the bottom of the well after 3s.</p>
 <p>Using the 4th equation again we get:</p>
@@ -296,15 +310,18 @@ h = 29.1 \space \text{meters deep}
 <p>A ball rolling off of a table:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="Lec2ExProblem4.png" class="img-fluid figure-img"></p>
+<p><img src="Lec2Ex1.drawio.png" class="img-fluid figure-img"></p>
 <figcaption>Example problem 1 visualized</figcaption>
 </figure>
 </div>
 <p>Taking stock of the variables we know we will associate with the final position of the ball as <span class="math inline">\(R\)</span></p>
-<p><span class="math display">\[
-X_f = X_i+V_i*t+\frac{1}{2}a*t^2
-\]</span></p>
-<p>Where we calculate x and y.</p>
+<p>In this problem we have to calculate both x and y indepdently in the same way we would normally calculate them.</p>
+<p>Firstly since the ball is rolling across the <span class="math inline">\(x\)</span> axis at 1m/s and we know the x axis takes on no additional acceleration we can calculate the x position of the ball using one of the kinematic equations, <a href="../lectures/lecture_82626.html#kinematic-equation-4">specifically equation 4:</a></p>
+<p>We will also have to calculate the y coordinate as well, using the same kinematic equation. Our example problem provides us with the necessary information to solve for both x and y.</p>
+<p>We will want to solve for y first since it will tell us how long the ball takes to drop, from there we can pause and solve for x at the same time frame to find where r is.</p>
+<ol type="1">
+<li><strong>Solve for <span class="math inline">\(Y_f\)</span> when </strong></li>
+</ol>
 
 
 </section>
