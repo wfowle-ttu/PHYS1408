@@ -62,9 +62,9 @@ Then to solve for $\theta$ we can use the arc tangent of $x,y$:
 
 $$
 \newline
-\theta = \arctan{\frac{\lvert{x}\rvert{}}{\lvert{y}\rvert{}}} \newline
+\theta = \tan^{-1}{\frac{\lvert{x}\rvert{}}{\lvert{y}\rvert{}}} \newline
 \newline
-35.5^\circ = \arctan{\frac{\lvert{-2.50m}\rvert{}}{\lvert{-3.50m}\rvert{}}} \newline
+35.5^\circ = \tan^{-1}{\frac{\lvert{-2.50m}\rvert{}}{\lvert{-3.50m}\rvert{}}} \newline
 \newline
 \newline
 \theta = 35.5^\circ + 180^\circ = 216^\circ
@@ -323,10 +323,212 @@ We can also find the direction of $\overrightarrow{\mathbf{R}}$ by using:
 
 $$
 \newline
-\theta = \arctan{\frac{\lvert R_y\rvert}{\lvert R_x \rvert}} = \arctan{\frac{\lvert -2.0 \rvert }{\lvert 4.0 \rvert }} = 27^\circ
+\theta = \tan^{-1}{\frac{\lvert R_y\rvert}{\lvert R_x \rvert}} = \tan^{-1}{\frac{\lvert -2.0 \rvert }{\lvert 4.0 \rvert }} = 27^\circ
 $$
 
-The vector $\overrightarrow{\mathbf{R}}$ has a positive $x$ component and a negative $y$ component meaning that the vector is in the 4th quadrant and the angle $\theta$ is measured below the positive $x$ axis. Therefore we can express this angle as $\theta = 360^\circ - 27^\circ = 333^\circ$. 
+The vector $\overrightarrow{\mathbf{R}}$ has a positive $x$ component and a negative $y$ component meaning that the vector is in the 4th quadrant and the angle $\theta$ is measured below the positive $x$ axis. Therefore we can express this angle as $\theta = 360^\circ - 27^\circ = 333^\circ$.
+
+### Example Problem: Resultant Displacement
+
+A particle undergoes three consectuive displacements:
+
+$$
+\Delta{r_1} = (15\hat{\mathbf{i}}+30\hat{\mathbf{j}}+12\hat{\mathbf{k}}) cm \newline
+\Delta{r_2} = (23\hat{\mathbf{i}}-14\hat{\mathbf{j}}-5.0\hat{\mathbf{k}})cm \newline
+\Delta{r_3} = (-13\hat{\mathbf{i}}+15\hat{\mathbf{j}}) cm \newline
+$$
+
+Find the unit-vector notation for the resultant displacement and it's magnitude.
+
+This problem is simple because we can first solve for our resultant vector knowing the prior displacement. Because of the notation we have all of the components needed to solve for the resultant vector $\overrightarrow{\mathbf{R}}$
+
+We can solve for the x-component like so:
+
+$$
+\newline
+{R}_x = \Delta{r_1}_x + \Delta{r_2}_x + \Delta{r_3}_x = 25 \newline
+$$
+
+Similarly for y:
+
+$$
+\newline
+{R}_y = \Delta{r_1}_y + \Delta{r_2}_y + \Delta{r_3}_y = 31 \newline
+$$
+
+Finally our z-component:
+
+$$
+\newline
+{R}_z = \Delta{r_1}_z + \Delta{r_2}_z + 0 = 7 \newline
+$$
+
+Which means that the components of our resultant vector are:
+
+$$
+\newline
+\Delta{R} = (25\hat{\mathbf{i}} + 31\hat{\mathbf{j}} + 7\hat{\mathbf{k}}) cm
+$$
+
+Now we can solve for the magnitude of the resultant vector using:
+
+$$
+\newline
+\mathbf{R} = \sqrt{R_x^2 + R_y^2 + R_z^2} \newline
+\newline
+\sqrt{25^2+31^2+7^2} \newline
+\newline
+= 40.4 cm
+\newline
+$$
+
+::: {.callout-note}
+So far we've been finding the $\theta$ from this point, however, since this is a 3 dimensional vector polar coordinates are no longer applicable. 
+:::
+
+# The Scalar Product of Two Vectors
+
+This section is about multiplying one vector by another vector. The tool used for doing this operation is called a **scalar product**. It is called scalar because the result of the of the process is a scalar.
+
+A scalar product of $\overrightarrow{\mathbf{A}}$ and $\overrightarrow{\mathbf{B}}$ is denoted by:
+
+$$
+\newline
+\overrightarrow{\mathbf{A}} \cdot \overrightarrow{\mathbf{B}}
+\newline
+$$
+
+Because of the dot symbol the scalar product is also called the **dot product**
+
+The scalar product of any two vectors is said to be a scalar quantity equal to the product of the magnitudes of the two vectors and the cosine of the angle $\theta$ between them. 
+
+$$
+\newline
+\overrightarrow{\mathbf{A}} \cdot \overrightarrow{\mathbf{B}} \equiv AB\cos{\theta}
+\newline
+$$
+
+As is the case with any multiplaction $\overrightarrow{\mathbf{A}}$ and $\overrightarrow{\mathbf{B}}$ do not need to have the same units. 
+
+![A figure representing the dot product of $\overrightarrow{\mathbf{A}} \cdot \overrightarrow{\mathbf{B}}$](Chatper2Figure20.png)
+
+The angle $\theta$ is an angle that exists between $\overrightarrow{\mathbf{A}}$ and $\overrightarrow{\mathbf{B}}$. We use $B \cos{\theta}$ to project $\overrightarrow{\mathbf{B}}$ onto $\overrightarrow{\mathbf{A}}$
+
+The scalar product is also **commutative**, or:
+
+$$
+\newline
+\overrightarrow{\mathbf{A}} \cdot \overrightarrow{\mathbf{B}} = \overrightarrow{\mathbf{B}} \cdot \overrightarrow{\mathbf{A}}
+\newline
+$$
+
+The scalar product also obeys the distributive law of multiplication so: 
+
+$$
+\newline
+\overrightarrow{\mathbf{A}} \cdot (\overrightarrow{\mathbf{B}}+\overrightarrow{\mathbf{C}}) = \overrightarrow{\mathbf{A}} \cdot \overrightarrow{\mathbf{B}} + \overrightarrow{\mathbf{A}} \cdot \overrightarrow{\mathbf{C}}
+\newline
+$$
+
+## Special Cases:
+
+There are a few cases where the dot product is easy to evaluate:
+
+1. When $\overrightarrow{\mathbf{A}}$ is perpendicular to $\mathbf{B}$ ergo $\theta = 90$, then $\overrightarrow{\mathbf{A}} \cdot \overrightarrow{\mathbf{B}} = 0$
+2. If either $\overrightarrow{\mathbf{A}}$ or $\overrightarrow{\mathbf{B}}$ are 0 then $\overrightarrow{\mathbf{A}} \cdot \overrightarrow{\mathbf{B}} = 0$ 
+3. If $\overrightarrow{\mathbf{A}}$ and $\overrightarrow{\mathbf{B}}$ are parallel and pointed in the same direction $\theta = 0$, then $\overrightarrow{\mathbf{A}} \cdot \overrightarrow{\mathbf{B}} = AB$
+4. If $\overrightarrow{\mathbf{A}}$ and $\overrightarrow{\mathbf{B}}$ are parallel but facing in the opposite direction $\theta=0$, then $\overrightarrow{\mathbf{A}} \cdot \overrightarrow{\mathbf{B}} = -AB$
+5. The scalar product is negative when $90^\circ \lt \theta \leq 180^\circ$
+
+---
+
+## Formulas
+
+Similar to the addition of two vectors via their components we can also multiply two vectors by their components:
+
+$$
+\newline
+\newline
+\overrightarrow{\mathbf{A}} \cdot \overrightarrow{\mathbf{B}} = A_xB_x+A_yB_Y+A_zB_z
+\newline
+\newline
+$$
+
+Additionally if $\overrightarrow{\mathbf{A}} = \overrightarrow{\mathbf{B}}$ then:
+
+$$
+\newline
+\newline
+\overrightarrow{\mathbf{A}} \cdot \overrightarrow{\mathbf{A}} = A_x^2 + A_y^2 + A_z^2 = A^2
+$$
+
+### Example Problem with Scalar Products 
+
+The vectors $\overrightarrow{\mathbf{A}}$ and $\overrightarrow{\mathbf{B}}$ are given:
+
+$$
+\newline
+\newline
+\overrightarrow{\mathbf{A}} = 2\hat{\mathbf{i}} + 3\hat{\mathbf{j}} \newline
+\overrightarrow{\mathbf{B}} = -1\hat{\mathbf{i}} + 2\hat{\mathbf{j}} \newline
+\newline
+$$
+
+Determine the scalar product $\overrightarrow{\mathbf{A}} \cdot \overrightarrow{\mathbf{B}}$
+
+::: {.callout-note}
+Normally just use the equation $A_xB_x + A_yB_y + A_zB_z = R$ but here we will show that the cross terms cancel out, cross terms referring to the technical distribution of $\hat{\mathbf{i}}$ and $\hat{\mathbf{j}}$ terms or any other being multiplied together. 
+
+Recall that since the dot product of two unit vectors is just the cosine of the angle between them (since both have a magnitude of 1) when the two unit vectors are perpendicular (such as the x-axis and y-axis in cartesian coordinates) that produces $\cos{90^\circ} = 0$.
+
+This is relevant because in the Cartesian coordinate system the x,y, and z axis are mutually perpendicular. Therefore a z axis component multiplied by other z axis components in a unit vector produces a coeffient of 1, however, that same component multiplied by either a x or y component will carry a zero coefficient because for example x and z are perpendicular and therefore $\cos{90^\circ} = 0$
+
+Whereas, two x-components produce $\cos{0^\circ} = 1$. This is particularly relevant to non unit vector scalar multiplication where the angle between $\overrightarrow{\mathbf{A}}$ and $\overrightarrow{\mathbf{B}}$ might be different. 
+:::
+
+So then:
+
+$$
+\newline
+\newline
+\overrightarrow{\mathbf{A}} \cdot \overrightarrow{\mathbf{B}} = (2\hat{\mathbf{i}}+3\hat{\mathbf{j}}) \cdot ({-\hat{\mathbf{i}}+2\hat{\mathbf{j}}})
+\newline
+\newline
+= 2\hat{\mathbf{i}} \cdot -\hat{\mathbf{i}} + 2\hat{\mathbf{i}} \cdot 2\hat{\mathbf{j}} + 3\hat{\mathbf{j}} \cdot \hat{\mathbf{i}} + 3\hat{\mathbf{j}} \cdot 2\hat{\mathbf{j}}
+\newline
+\newline
+= -2(1) + 4(0) -3(0) + 6(1) = -2 +6 = 4
+\newline
+\newline
+$$
+
+We include the coeffecients of the dot products of the unit vectors in the parentheses, recall that the dot product of two unit vectors is just the cosine of the angle between them. Typically you can omit them when you know you're working with unit vectors but they do matter when you're not. 
+
+From there if we want to the find the angle $\theta$ between vector $\overrightarrow{\mathbf{A}}$ and $\overrightarrow{\mathbf{B}}$ we would need to get the magnitudes of $\overrightarrow{\mathbf{A}}$ and $\overrightarrow{\mathbf{B}}$ using:
+
+$$
+\newline
+\newline
+A = \sqrt{A_x^2+A_y^2} = \sqrt{13} \newline
+B = \sqrt{B_x^2+A_y^2} = \sqrt{5} \newline
+\newline
+$$
+
+From there we can use $\overrightarrow{\mathbf{A}} \cdot \overrightarrow{\mathbf{B}} = AB \space cos \theta$ and solve for $\theta$
+
+$$
+\newline
+\newline
+\theta = \cos^{-1}{\frac{4}{\sqrt{13}\sqrt{5}}}
+\newline
+\newline
+\theta = \cos^{-1}{\frac{4}{\sqrt{65}}} = 60.3^\circ
+\newline
+\newline
+$$
+
+
+
 
 
 
