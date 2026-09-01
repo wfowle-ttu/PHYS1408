@@ -220,6 +220,15 @@ window.Quarto = {
   <li><a href="#adding-vectors-using-their-components" id="toc-adding-vectors-using-their-components" class="nav-link" data-scroll-target="#adding-vectors-using-their-components">Adding Vectors Using Their Components</a>
   <ul class="collapse">
   <li><a href="#adding-vectors-using-their-components-example-problem" id="toc-adding-vectors-using-their-components-example-problem" class="nav-link" data-scroll-target="#adding-vectors-using-their-components-example-problem">Adding Vectors Using Their Components Example Problem</a></li>
+  <li><a href="#example-problem-resultant-displacement" id="toc-example-problem-resultant-displacement" class="nav-link" data-scroll-target="#example-problem-resultant-displacement">Example Problem: Resultant Displacement</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#the-scalar-product-of-two-vectors" id="toc-the-scalar-product-of-two-vectors" class="nav-link" data-scroll-target="#the-scalar-product-of-two-vectors">The Scalar Product of Two Vectors</a>
+  <ul class="collapse">
+  <li><a href="#special-cases" id="toc-special-cases" class="nav-link" data-scroll-target="#special-cases">Special Cases:</a></li>
+  <li><a href="#formulas" id="toc-formulas" class="nav-link" data-scroll-target="#formulas">Formulas</a>
+  <ul class="collapse">
+  <li><a href="#example-problem-with-scalar-products" id="toc-example-problem-with-scalar-products" class="nav-link" data-scroll-target="#example-problem-with-scalar-products">Example Problem with Scalar Products</a></li>
   </ul></li>
   </ul></li>
   </ul>
@@ -302,9 +311,9 @@ r = \sqrt{x^2+y^2} \newline
 <p>Then to solve for <span class="math inline">\(\theta\)</span> we can use the arc tangent of <span class="math inline">\(x,y\)</span>:</p>
 <p><span class="math display">\[
 \newline
-\theta = \arctan{\frac{\lvert{x}\rvert{}}{\lvert{y}\rvert{}}} \newline
+\theta = \tan^{-1}{\frac{\lvert{x}\rvert{}}{\lvert{y}\rvert{}}} \newline
 \newline
-35.5^\circ = \arctan{\frac{\lvert{-2.50m}\rvert{}}{\lvert{-3.50m}\rvert{}}} \newline
+35.5^\circ = \tan^{-1}{\frac{\lvert{-2.50m}\rvert{}}{\lvert{-3.50m}\rvert{}}} \newline
 \newline
 \newline
 \theta = 35.5^\circ + 180^\circ = 216^\circ
@@ -545,9 +554,191 @@ R = \sqrt{R_x^2 + R_y^2} = \sqrt{4^2 + -2^2} = \sqrt{20} \newline
 <p>We can also find the direction of <span class="math inline">\(\overrightarrow{\mathbf{R}}\)</span> by using:</p>
 <p><span class="math display">\[
 \newline
-\theta = \arctan{\frac{\lvert R_y\rvert}{\lvert R_x \rvert}} = \arctan{\frac{\lvert -2.0 \rvert }{\lvert 4.0 \rvert }} = 27^\circ
+\theta = \tan^{-1}{\frac{\lvert R_y\rvert}{\lvert R_x \rvert}} = \tan^{-1}{\frac{\lvert -2.0 \rvert }{\lvert 4.0 \rvert }} = 27^\circ
 \]</span></p>
 <p>The vector <span class="math inline">\(\overrightarrow{\mathbf{R}}\)</span> has a positive <span class="math inline">\(x\)</span> component and a negative <span class="math inline">\(y\)</span> component meaning that the vector is in the 4th quadrant and the angle <span class="math inline">\(\theta\)</span> is measured below the positive <span class="math inline">\(x\)</span> axis. Therefore we can express this angle as <span class="math inline">\(\theta = 360^\circ - 27^\circ = 333^\circ\)</span>.</p>
+</section>
+<section id="example-problem-resultant-displacement" class="level3">
+<h3 class="anchored" data-anchor-id="example-problem-resultant-displacement">Example Problem: Resultant Displacement</h3>
+<p>A particle undergoes three consectuive displacements:</p>
+<p><span class="math display">\[
+\Delta{r_1} = (15\hat{\mathbf{i}}+30\hat{\mathbf{j}}+12\hat{\mathbf{k}}) cm \newline
+\Delta{r_2} = (23\hat{\mathbf{i}}-14\hat{\mathbf{j}}-5.0\hat{\mathbf{k}})cm \newline
+\Delta{r_3} = (-13\hat{\mathbf{i}}+15\hat{\mathbf{j}}) cm \newline
+\]</span></p>
+<p>Find the unit-vector notation for the resultant displacement and it’s magnitude.</p>
+<p>This problem is simple because we can first solve for our resultant vector knowing the prior displacement. Because of the notation we have all of the components needed to solve for the resultant vector <span class="math inline">\(\overrightarrow{\mathbf{R}}\)</span></p>
+<p>We can solve for the x-component like so:</p>
+<p><span class="math display">\[
+\newline
+{R}_x = \Delta{r_1}_x + \Delta{r_2}_x + \Delta{r_3}_x = 25 \newline
+\]</span></p>
+<p>Similarly for y:</p>
+<p><span class="math display">\[
+\newline
+{R}_y = \Delta{r_1}_y + \Delta{r_2}_y + \Delta{r_3}_y = 31 \newline
+\]</span></p>
+<p>Finally our z-component:</p>
+<p><span class="math display">\[
+\newline
+{R}_z = \Delta{r_1}_z + \Delta{r_2}_z + 0 = 7 \newline
+\]</span></p>
+<p>Which means that the components of our resultant vector are:</p>
+<p><span class="math display">\[
+\newline
+\Delta{R} = (25\hat{\mathbf{i}} + 31\hat{\mathbf{j}} + 7\hat{\mathbf{k}}) cm
+\]</span></p>
+<p>Now we can solve for the magnitude of the resultant vector using:</p>
+<p><span class="math display">\[
+\newline
+\mathbf{R} = \sqrt{R_x^2 + R_y^2 + R_z^2} \newline
+\newline
+\sqrt{25^2+31^2+7^2} \newline
+\newline
+= 40.4 cm
+\newline
+\]</span></p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>So far we’ve been finding the <span class="math inline">\(\theta\)</span> from this point, however, since this is a 3 dimensional vector polar coordinates are no longer applicable.</p>
+</div>
+</div>
+</section>
+</section>
+</section>
+<section id="the-scalar-product-of-two-vectors" class="level1">
+<h1>The Scalar Product of Two Vectors</h1>
+<p>This section is about multiplying one vector by another vector. The tool used for doing this operation is called a <strong>scalar product</strong>. It is called scalar because the result of the of the process is a scalar.</p>
+<p>A scalar product of <span class="math inline">\(\overrightarrow{\mathbf{A}}\)</span> and <span class="math inline">\(\overrightarrow{\mathbf{B}}\)</span> is denoted by:</p>
+<p><span class="math display">\[
+\newline
+\overrightarrow{\mathbf{A}} \cdot \overrightarrow{\mathbf{B}}
+\newline
+\]</span></p>
+<p>Because of the dot symbol the scalar product is also called the <strong>dot product</strong></p>
+<p>The scalar product of any two vectors is said to be a scalar quantity equal to the product of the magnitudes of the two vectors and the cosine of the angle <span class="math inline">\(\theta\)</span> between them.</p>
+<p><span class="math display">\[
+\newline
+\overrightarrow{\mathbf{A}} \cdot \overrightarrow{\mathbf{B}} \equiv AB\cos{\theta}
+\newline
+\]</span></p>
+<p>As is the case with any multiplaction <span class="math inline">\(\overrightarrow{\mathbf{A}}\)</span> and <span class="math inline">\(\overrightarrow{\mathbf{B}}\)</span> do not need to have the same units.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Chatper2Figure20.png" class="img-fluid figure-img"></p>
+<figcaption>A figure representing the dot product of <span class="math inline">\(\overrightarrow{\mathbf{A}} \cdot \overrightarrow{\mathbf{B}}\)</span></figcaption>
+</figure>
+</div>
+<p>The angle <span class="math inline">\(\theta\)</span> is an angle that exists between <span class="math inline">\(\overrightarrow{\mathbf{A}}\)</span> and <span class="math inline">\(\overrightarrow{\mathbf{B}}\)</span>. We use <span class="math inline">\(B \cos{\theta}\)</span> to project <span class="math inline">\(\overrightarrow{\mathbf{B}}\)</span> onto <span class="math inline">\(\overrightarrow{\mathbf{A}}\)</span></p>
+<p>The scalar product is also <strong>commutative</strong>, or:</p>
+<p><span class="math display">\[
+\newline
+\overrightarrow{\mathbf{A}} \cdot \overrightarrow{\mathbf{B}} = \overrightarrow{\mathbf{B}} \cdot \overrightarrow{\mathbf{A}}
+\newline
+\]</span></p>
+<p>The scalar product also obeys the distributive law of multiplication so:</p>
+<p><span class="math display">\[
+\newline
+\overrightarrow{\mathbf{A}} \cdot (\overrightarrow{\mathbf{B}}+\overrightarrow{\mathbf{C}}) = \overrightarrow{\mathbf{A}} \cdot \overrightarrow{\mathbf{B}} + \overrightarrow{\mathbf{A}} \cdot \overrightarrow{\mathbf{C}}
+\newline
+\]</span></p>
+<section id="special-cases" class="level2">
+<h2 class="anchored" data-anchor-id="special-cases">Special Cases:</h2>
+<p>There are a few cases where the dot product is easy to evaluate:</p>
+<ol type="1">
+<li>When <span class="math inline">\(\overrightarrow{\mathbf{A}}\)</span> is perpendicular to <span class="math inline">\(\mathbf{B}\)</span> ergo <span class="math inline">\(\theta = 90\)</span>, then <span class="math inline">\(\overrightarrow{\mathbf{A}} \cdot \overrightarrow{\mathbf{B}} = 0\)</span></li>
+<li>If either <span class="math inline">\(\overrightarrow{\mathbf{A}}\)</span> or <span class="math inline">\(\overrightarrow{\mathbf{B}}\)</span> are 0 then <span class="math inline">\(\overrightarrow{\mathbf{A}} \cdot \overrightarrow{\mathbf{B}} = 0\)</span></li>
+<li>If <span class="math inline">\(\overrightarrow{\mathbf{A}}\)</span> and <span class="math inline">\(\overrightarrow{\mathbf{B}}\)</span> are parallel and pointed in the same direction <span class="math inline">\(\theta = 0\)</span>, then <span class="math inline">\(\overrightarrow{\mathbf{A}} \cdot \overrightarrow{\mathbf{B}} = AB\)</span></li>
+<li>If <span class="math inline">\(\overrightarrow{\mathbf{A}}\)</span> and <span class="math inline">\(\overrightarrow{\mathbf{B}}\)</span> are parallel but facing in the opposite direction <span class="math inline">\(\theta=0\)</span>, then <span class="math inline">\(\overrightarrow{\mathbf{A}} \cdot \overrightarrow{\mathbf{B}} = -AB\)</span></li>
+<li>The scalar product is negative when <span class="math inline">\(90^\circ \lt \theta \leq 180^\circ\)</span></li>
+</ol>
+<hr>
+</section>
+<section id="formulas" class="level2">
+<h2 class="anchored" data-anchor-id="formulas">Formulas</h2>
+<p>Similar to the addition of two vectors via their components we can also multiply two vectors by their components:</p>
+<p><span class="math display">\[
+\newline
+\newline
+\overrightarrow{\mathbf{A}} \cdot \overrightarrow{\mathbf{B}} = A_xB_x+A_yB_Y+A_zB_z
+\newline
+\newline
+\]</span></p>
+<p>Additionally if <span class="math inline">\(\overrightarrow{\mathbf{A}} = \overrightarrow{\mathbf{B}}\)</span> then:</p>
+<p><span class="math display">\[
+\newline
+\newline
+\overrightarrow{\mathbf{A}} \cdot \overrightarrow{\mathbf{A}} = A_x^2 + A_y^2 + A_z^2 = A^2
+\]</span></p>
+<section id="example-problem-with-scalar-products" class="level3">
+<h3 class="anchored" data-anchor-id="example-problem-with-scalar-products">Example Problem with Scalar Products</h3>
+<p>The vectors <span class="math inline">\(\overrightarrow{\mathbf{A}}\)</span> and <span class="math inline">\(\overrightarrow{\mathbf{B}}\)</span> are given:</p>
+<p><span class="math display">\[
+\newline
+\newline
+\overrightarrow{\mathbf{A}} = 2\hat{\mathbf{i}} + 3\hat{\mathbf{j}} \newline
+\overrightarrow{\mathbf{B}} = -1\hat{\mathbf{i}} + 2\hat{\mathbf{j}} \newline
+\newline
+\]</span></p>
+<p>Determine the scalar product <span class="math inline">\(\overrightarrow{\mathbf{A}} \cdot \overrightarrow{\mathbf{B}}\)</span></p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Normally just use the equation <span class="math inline">\(A_xB_x + A_yB_y + A_zB_z = R\)</span> but here we will show that the cross terms cancel out, cross terms referring to the technical distribution of <span class="math inline">\(\hat{\mathbf{i}}\)</span> and <span class="math inline">\(\hat{\mathbf{j}}\)</span> terms or any other being multiplied together.</p>
+<p>Recall that since the dot product of two unit vectors is just the cosine of the angle between them (since both have a magnitude of 1) when the two unit vectors are perpendicular (such as the x-axis and y-axis in cartesian coordinates) that produces <span class="math inline">\(\cos{90^\circ} = 0\)</span>.</p>
+<p>This is relevant because in the Cartesian coordinate system the x,y, and z axis are mutually perpendicular. Therefore a z axis component multiplied by other z axis components in a unit vector produces a coeffient of 1, however, that same component multiplied by either a x or y component will carry a zero coefficient because for example x and z are perpendicular and therefore <span class="math inline">\(\cos{90^\circ} = 0\)</span></p>
+<p>Whereas, two x-components produce <span class="math inline">\(\cos{0^\circ} = 1\)</span>. This is particularly relevant to non unit vector scalar multiplication where the angle between <span class="math inline">\(\overrightarrow{\mathbf{A}}\)</span> and <span class="math inline">\(\overrightarrow{\mathbf{B}}\)</span> might be different.</p>
+</div>
+</div>
+<p>So then:</p>
+<p><span class="math display">\[
+\newline
+\newline
+\overrightarrow{\mathbf{A}} \cdot \overrightarrow{\mathbf{B}} = (2\hat{\mathbf{i}}+3\hat{\mathbf{j}}) \cdot ({-\hat{\mathbf{i}}+2\hat{\mathbf{j}}})
+\newline
+\newline
+= 2\hat{\mathbf{i}} \cdot -\hat{\mathbf{i}} + 2\hat{\mathbf{i}} \cdot 2\hat{\mathbf{j}} + 3\hat{\mathbf{j}} \cdot \hat{\mathbf{i}} + 3\hat{\mathbf{j}} \cdot 2\hat{\mathbf{j}}
+\newline
+\newline
+= -2(1) + 4(0) -3(0) + 6(1) = -2 +6 = 4
+\newline
+\newline
+\]</span></p>
+<p>We include the coeffecients of the dot products of the unit vectors in the parentheses, recall that the dot product of two unit vectors is just the cosine of the angle between them. Typically you can omit them when you know you’re working with unit vectors but they do matter when you’re not.</p>
+<p>From there if we want to the find the angle <span class="math inline">\(\theta\)</span> between vector <span class="math inline">\(\overrightarrow{\mathbf{A}}\)</span> and <span class="math inline">\(\overrightarrow{\mathbf{B}}\)</span> we would need to get the magnitudes of <span class="math inline">\(\overrightarrow{\mathbf{A}}\)</span> and <span class="math inline">\(\overrightarrow{\mathbf{B}}\)</span> using:</p>
+<p><span class="math display">\[
+\newline
+\newline
+A = \sqrt{A_x^2+A_y^2} = \sqrt{13} \newline
+B = \sqrt{B_x^2+A_y^2} = \sqrt{5} \newline
+\newline
+\]</span></p>
+<p>From there we can use <span class="math inline">\(\overrightarrow{\mathbf{A}} \cdot \overrightarrow{\mathbf{B}} = AB \space cos \theta\)</span> and solve for <span class="math inline">\(\theta\)</span></p>
+<p><span class="math display">\[
+\newline
+\newline
+\theta = \cos^{-1}{\frac{4}{\sqrt{13}\sqrt{5}}}
+\newline
+\newline
+\theta = \cos^{-1}{\frac{4}{\sqrt{65}}} = 60.3^\circ
+\newline
+\newline
+\]</span></p>
 
 
 </section>
