@@ -50,7 +50,7 @@ We’ll start by using \\r = \sqrt{(x^2+y^2)}\\ to find \\r\\.
 
 Then to solve for \\\theta\\ we can use the arc tangent of \\x,y\\:
 
-\\ \newline \theta = \tan^{-1}{\frac{\lvert{x}\rvert{}}{\lvert{y}\rvert{}}} \newline \newline 35.5^\circ = \tan^{-1}{\frac{\lvert{-2.50m}\rvert{}}{\lvert{-3.50m}\rvert{}}} \newline \newline \newline \theta = 35.5^\circ + 180^\circ = 216^\circ \\
+\\ \newline \theta = \tan^{-1}{\frac{\lvert{y}\rvert{}}{\lvert{x}\rvert{}}} \newline \newline 35.5^\circ = \tan^{-1}{\frac{\lvert{-2.50m}\rvert{}}{\lvert{-3.50m}\rvert{}}} \newline \newline \newline \theta = 35.5^\circ + 180^\circ = 216^\circ \\
 
 > **IMPORTANT:**
 >
