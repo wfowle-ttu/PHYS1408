@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>About – PHYS 1408 Notes</title>
+<title>Chapter 2 - Motion in One Dimension – PHYS 1408 Notes</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -29,23 +29,23 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-56a7063a21dd4c20fbc96590a1db8d87.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-56a7063a21dd4c20fbc96590a1db8d87.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -74,8 +74,37 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
 
-<link rel="stylesheet" href="styles.css">
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../styles.css">
 </head>
 
 <body class="nav-sidebar docked quarto-light">
@@ -87,7 +116,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./about.html">About</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../book/chapter-1.html">Book</a></li><li class="breadcrumb-item"><a href="../book/chapter-3.html">Chapter 2 - Motion in One Dimension</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -102,7 +131,7 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">PHYS 1408 Notes</a> 
+      <a href="../">PHYS 1408 Notes</a> 
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -114,7 +143,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./about.html" class="sidebar-item-text sidebar-link active">
+  <a href="../about.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">About</span></a>
   </div>
 </li>
@@ -129,19 +158,19 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./book/chapter-1.html" class="sidebar-item-text sidebar-link">
+  <a href="../book/chapter-1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Chapter 1</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./book/chapter-2.html" class="sidebar-item-text sidebar-link">
+  <a href="../book/chapter-2.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Chapter 2 - Vectors</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./book/chapter-3.html" class="sidebar-item-text sidebar-link">
+  <a href="../book/chapter-3.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Chapter 2 - Motion in One Dimension</span></a>
   </div>
 </li>
@@ -158,7 +187,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./homework/assignment-1.html" class="sidebar-item-text sidebar-link">
+  <a href="../homework/assignment-1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Homework Assignement 1</span></a>
   </div>
 </li>
@@ -175,25 +204,25 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./lectures/lecture_82626.html" class="sidebar-item-text sidebar-link">
+  <a href="../lectures/lecture_82626.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lecture 8-26-2026</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./lectures/lecture_82826.html" class="sidebar-item-text sidebar-link">
+  <a href="../lectures/lecture_82826.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lecture 8-28-2026</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./lectures/lecture_83126.html" class="sidebar-item-text sidebar-link">
+  <a href="../lectures/lecture_83126.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lecture 8-31-2028</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./lectures/lecture_9226.html" class="sidebar-item-text sidebar-link">
+  <a href="../lectures/lecture_9226.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lecture 9-2-2026</span></a>
   </div>
 </li>
@@ -209,16 +238,26 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#auto-generation" id="toc-auto-generation" class="nav-link active" data-scroll-target="#auto-generation">Auto Generation</a></li>
+  <li><a href="#velocity-speed-of-a-particle" id="toc-velocity-speed-of-a-particle" class="nav-link active" data-scroll-target="#velocity-speed-of-a-particle">Velocity &amp; Speed of a Particle</a>
+  <ul class="collapse">
+  <li><a href="#average-velocity" id="toc-average-velocity" class="nav-link" data-scroll-target="#average-velocity">Average Velocity</a></li>
+  <li><a href="#average-speed" id="toc-average-speed" class="nav-link" data-scroll-target="#average-speed">Average Speed</a></li>
+  </ul></li>
+  <li><a href="#instantaneous-velocity-speed" id="toc-instantaneous-velocity-speed" class="nav-link" data-scroll-target="#instantaneous-velocity-speed">Instantaneous Velocity &amp; Speed</a></li>
+  <li><a href="#acceleration" id="toc-acceleration" class="nav-link" data-scroll-target="#acceleration">Acceleration</a>
+  <ul class="collapse">
+  <li><a href="#average-accleration" id="toc-average-accleration" class="nav-link" data-scroll-target="#average-accleration">Average Accleration</a></li>
+  <li><a href="#instant-acceleration" id="toc-instant-acceleration" class="nav-link" data-scroll-target="#instant-acceleration">Instant Acceleration</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../book/chapter-1.html">Book</a></li><li class="breadcrumb-item"><a href="../book/chapter-3.html">Chapter 2 - Motion in One Dimension</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">About</h1>
+<h1 class="title">Chapter 2 - Motion in One Dimension</h1>
 </div>
 
 
@@ -235,22 +274,157 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>This site is my documentation site for my notes taken during PHYS1408. Typically, I will either take notes by hand and then transcribe them into this site or I will just write them directly on a document.</p>
-<p>I will use this sidebar strategy for loading contents into the site:</p>
-<section id="auto-generation" class="level3">
-<h3 class="anchored" data-anchor-id="auto-generation">Auto Generation</h3>
-<p>Above we describe how to explicitly populate the contents of your sidebar with navigation items. You can also automatically generate sidebar navigation from the filesystem. The most straightforward way to do this is to specify the contents option as follows:</p>
-<p>sidebar: contents: auto</p>
-<p>Using contents: auto at the root level will result in all documents in your website being included within the navigation (save for the home page which can be navigated to via the title link). Navigation is constructed using the following rules:</p>
-<pre><code>Navigation item titles will be read from the title field of documents.
+<section id="velocity-speed-of-a-particle" class="level1">
+<h1>Velocity &amp; Speed of a Particle</h1>
+<p>A car moving between points on the <span class="math inline">\(x\)</span> axis.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Chapter3Figure1.png" class="img-fluid figure-img"></p>
+<figcaption>A representation of that graphically</figcaption>
+</figure>
+</div>
+<p>Additionally, from the graph we can extract a table of the position of the car at various times:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Position</th>
+<th><span class="math inline">\(t(s)\)</span></th>
+<th><span class="math inline">\(t(m)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>A</td>
+<td>0</td>
+<td>30</td>
+</tr>
+<tr class="even">
+<td>B</td>
+<td>10</td>
+<td>52</td>
+</tr>
+<tr class="odd">
+<td>C</td>
+<td>20</td>
+<td>38</td>
+</tr>
+<tr class="even">
+<td>D</td>
+<td>30</td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>E</td>
+<td>40</td>
+<td>-37</td>
+</tr>
+<tr class="even">
+<td>F</td>
+<td>50</td>
+<td>-53</td>
+</tr>
+</tbody>
+</table>
+<p>Now the motion of the particle is not entirely known because we don’t know it’s position at every time, only the provided times. The smooth curve only represents the <em>possibility</em> of the actual motion of the car.</p>
+<section id="average-velocity" class="level2">
+<h2 class="anchored" data-anchor-id="average-velocity">Average Velocity</h2>
+<p><span class="math inline">\(v_{x,avg} \equiv \frac{\Delta{x}}{\Delta{t}}\)</span></p>
+<p>From this formula we know that <strong>average velocity</strong> has dimensions of length divided by time (<span class="math inline">\(L/T\)</span>) or meters per second in SI units. Where <span class="math inline">\(\Delta{x}\)</span> is the displacement or change in <span class="math inline">\(x\)</span> over some period of time. <span class="math inline">\(X_f - X_i = \Delta{x}\)</span></p>
+<p>The average velocity of a particle in one dimension can be positive or negative depending on the sign of displacement. The time interval measured by <span class="math inline">\(\Delta{t}\)</span> is always positive. When the coordinate increases with time <span class="math inline">\(\Delta{x}\)</span> is then the average velocity is a positive number. If <span class="math inline">\(\Delta{x}\)</span> is negative then the average velocity is negative.</p>
+</section>
+<section id="average-speed" class="level2">
+<h2 class="anchored" data-anchor-id="average-speed">Average Speed</h2>
+<p><span class="math display">\[
+v_{avg} \equiv \frac{d}{\Delta{t}}
+\]</span></p>
+<p>Unlike velocity, speed has no direction and is always expressed as a positive number. Where average velocity is the <em>displacement</em> or <span class="math inline">\(\Delta{x}\)</span> divided by the change in time, the average speed is found by measuring the distance over the change in time.</p>
+<p>For example if it takes you 45 seconds to travel 100 m down a hallway and at the 100-m you turn around and walk back 25m in the opposite direction taking 10 seconds, the magnitude of your average velocity is found as:</p>
+<p><span class="math display">\[
+\newline
+\Delta{x} = X_f - X_i = 100-25 = 75m = \Delta{x}
+\newline
+\Delta{t} = 45s+10s = 55s \newline
+\newline
+\]</span></p>
+<p>And average velocity is <span class="math inline">\(v_{x,avg} = \frac{\Delta{x}}{\Delta{t}}\)</span></p>
+<p>So:</p>
+<p><span class="math display">\[
+\newline
+v_{x,avg} = \frac{75m}{55s} = 1.36m/s
+\newline
+\]</span></p>
+<p>Therefore your average velocity over the trip is <span class="math inline">\(1.36 m/s\)</span>. However, the average speed is the distance traveled <span class="math inline">\(d\)</span> divided by the change in time:</p>
+<p><span class="math display">\[
+\newline
+d = 100+25 = 125m
+\newline
+\]</span></p>
+<p>And <span class="math inline">\(\Delta{t}\)</span> remains the same:</p>
+<p><span class="math display">\[
+\newline
+v_{avg} = 125m/55s = 2.27 m/s
+\newline
+\]</span></p>
+<p>Therefore, your average <em>speed</em> is <span class="math inline">\(2.27 m/s\)</span></p>
+</section>
+</section>
+<section id="instantaneous-velocity-speed" class="level1">
+<h1>Instantaneous Velocity &amp; Speed</h1>
+<p>Sometimes we want to measure velocity at some instant of <span class="math inline">\(t\)</span> rather than over a time period.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Chapter3Figure2.png" class="img-fluid figure-img"></p>
+<figcaption>A figure showing us changing the position of B to become closer to A</figcaption>
+</figure>
+</div>
+<p>The above figure is effectively:</p>
+<p><span class="math display">\[
+\newline
+v_x \equiv \lim\limits_{\Delta{t} \to 0} \frac{\Delta{x}}{\Delta{t}}
+\newline
+\]</span></p>
+<p>The magnitude of the average velocity vector is not the average speed, how magnitude of the instantaneous velocity vector IS however the instantanous speed. In an infinitesimal time interval, the magnitude of the displacement is equal to the distance traveled by the particle.</p>
+<p>In Calculus the limit is called the <em>derivative of <span class="math inline">\(x\)</span> with respect to <span class="math inline">\(t\)</span></em>:</p>
+<p><span class="math display">\[
+v_x \equiv \lim\limits_{\Delta{t} \to 0} \frac{\Delta{x}}{\Delta{t}} = \frac{dx}{dt}
+\]</span></p>
+<p>The instantaneous velocity can be postive, negative, or zero.</p>
+<p>The <strong>Instantaneous Speed</strong> of a particle is defined as the magnitude of its instantaneous velocity. As with average speed, instant speed has no direction associated with it. If one particle has an instant velocity of <span class="math inline">\(25m/s\)</span> and another particle <span class="math inline">\(-25m/s\)</span> both particles are said to have an instant speed of <span class="math inline">\(25m/s\)</span>.</p>
+</section>
+<section id="acceleration" class="level1">
+<h1>Acceleration</h1>
+<p>The average acceleration of a particle is defined as the change in velocity <span class="math inline">\(\Delta{v_x}\)</span> divded b the time interval <span class="math inline">\(\Delta{t}\)</span> during which that change occurs:</p>
+<section id="average-accleration" class="level2">
+<h2 class="anchored" data-anchor-id="average-accleration">Average Accleration</h2>
+<p><span class="math display">\[
+a_{x,avg} \equiv \frac{\Delta{v_x}}{\Delta{t}} = \frac{v_{xf} - v_{xi}}{t_f - t_i}
+\]</span></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Chapter3Figure5.png" class="img-fluid figure-img"></p>
+<figcaption>Figure depicting the graphical relations of average accleration and instant acceleration</figcaption>
+</figure>
+</div>
+<p>A positive acceleration indicates that velocity is moving towards having a positive value over time. And a negative value means that velocity is decreasing in value over time.</p>
+</section>
+<section id="instant-acceleration" class="level2">
+<h2 class="anchored" data-anchor-id="instant-acceleration">Instant Acceleration</h2>
+<p><span class="math display">\[
+a_x \equiv \lim\limits_{\Delta{t} \to 0} \frac{\Delta{v_x}}{\Delta{t}} = \frac{dv_x}{dt}
+\]</span></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Chapter3Figure6.png" class="img-fluid figure-img"></p>
+<figcaption>The graphical relationship</figcaption>
+</figure>
+</div>
+<p>The <strong>net force on an object is proportional to the acceleration of the object</strong></p>
+<p><span class="math display">\[
+F_x \propto a_x
+\]</span></p>
 
-Sub-directories will create sections and will be automatically titled based on the directory name (including adding capitalization and substituting spaces for dashes and underscores). Use an index.qmd in the directory to provide an explicit title if you don’t like the automatic one.
 
-Order is alphabetical (by filename) unless a numeric order field is provided in document metadata.</code></pre>
-<p>Automatic navigation automatically includes items in sub-directories. If you prefer not to do this, use an explicit /* to indicate only the documents in the root directory:</p>
-<p>Ergo notes and their section layout are determined by Quarto’s automatic layout from the contents being set to auto.</p>
-
-
+</section>
 </section>
 
 </main> <!-- /main -->

@@ -1,5 +1,48 @@
 [
   {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "This site is my documentation site for my notes taken during PHYS1408. Typically, I will either take notes by hand and then transcribe them into this site or I will just write them directly on a document.\nI will use this sidebar strategy for loading contents into the site:\n\nAuto Generation\nAbove we describe how to explicitly populate the contents of your sidebar with navigation items. You can also automatically generate sidebar navigation from the filesystem. The most straightforward way to do this is to specify the contents option as follows:\nsidebar: contents: auto\nUsing contents: auto at the root level will result in all documents in your website being included within the navigation (save for the home page which can be navigated to via the title link). Navigation is constructed using the following rules:\nNavigation item titles will be read from the title field of documents.\n\nSub-directories will create sections and will be automatically titled based on the directory name (including adding capitalization and substituting spaces for dashes and underscores). Use an index.qmd in the directory to provide an explicit title if you don’t like the automatic one.\n\nOrder is alphabetical (by filename) unless a numeric order field is provided in document metadata.\nAutomatic navigation automatically includes items in sub-directories. If you prefer not to do this, use an explicit /* to indicate only the documents in the root directory:\nErgo notes and their section layout are determined by Quarto’s automatic layout from the contents being set to auto.",
+    "crumbs": [
+      "About"
+    ]
+  },
+  {
+    "objectID": "lectures/lecture_82826.html",
+    "href": "lectures/lecture_82826.html",
+    "title": "Lecture 8-28-2026",
+    "section": "",
+    "text": "Reference The first lecture for kinematic equations.",
+    "crumbs": [
+      "Lectures",
+      "Lecture 8-28-2026"
+    ]
+  },
+  {
+    "objectID": "lectures/lecture_82826.html#example-problem-4",
+    "href": "lectures/lecture_82826.html#example-problem-4",
+    "title": "Lecture 8-28-2026",
+    "section": "Example Problem 4",
+    "text": "Example Problem 4\nA penny is dropped down a well and his water after 2 seconds, how deep is the well?\n\n\n\nExample problem 4 visualization\n\n\nGiven the variables we have that would mean we need to use Kinematic 4 as we are trying to solve for \\(y_f\\)\n\\[\nX_f = X_i+V_i*t+\\frac{1}{2}a*t^2\n\\]\nRemoving the variables we know equate to zero our equation shifts: \\[\ny_f = y_i + \\frac{1}{2}(-g)t^2\n\\]\nAnd the final position of y is the depth of our well. \\[\ny_f = \\frac{1}{2}(-g)t^2\n\\]\nPlugging in our values we find:\n\\[\ny_f = \\frac{1}{2}(-9.81 m/s)2s^2 \\newline\ny_f = -19.6 \\space \\text{meters}\n\\]\nOur answer tells us that our well is around 19.6 meters deep.\n\nLet’s shuffle our previous problem slightly to reveal additional algebra within the 4th Kinematic equation.\nLet’s assume the penny is thrown down the well (rather than dropped) with a \\(V_i = -2m/s\\) and impacts in 1 second.\nThis effectively becomes the same problem but with different parameters:\n\\[\ny_f = y_i + v_{yi}*t + \\frac{1}{2}a_yt^2-V_{yi}t\n\\]\nPlugging in our known variables we find:\n\\[\ny_f = 0 + -2 m/s * 1 s + \\frac{1}{2}(-9.81)(1s)^2\n\\]\nSimplifying\n\\[\ny_f = -2 + -4.905\ny_f = -6.905 meters\n\\]\nIn another form of this equation the penny is thrown upwards at 5m/s and hits the bottom of the well after 3s.\nUsing the 4th equation again we get:\n\\[\nY_f = Y_i+V_i*t+\\frac{1}{2}a*t^2\n\\]\nIn which case we have \\[\nV_{yi} = 5 m/s \\newline\na_y = -g \\newline\ny_f = 0 \\newline\ny_i = \\space ? \\space \\text{(also known as h)}\n\\]\nPlugging that in\n\\[\n0 = h + V_{yi}t - \\frac{gt^2}{2}\n\\]\nWhich simplifies to:\n\\[\nh = \\frac{gt^2}{2}-V_{yi}t \\newline\nh = 9.8/2*3^2-5*3 \\newline\nh = 29.1 \\space \\text{meters deep}\n\\]",
+    "crumbs": [
+      "Lectures",
+      "Lecture 8-28-2026"
+    ]
+  },
+  {
+    "objectID": "lectures/lecture_82826.html#example-problem-1",
+    "href": "lectures/lecture_82826.html#example-problem-1",
+    "title": "Lecture 8-28-2026",
+    "section": "Example Problem 1",
+    "text": "Example Problem 1\nA ball rolling off of a table:\n\n\n\nExample problem 1 visualized\n\n\nTaking stock of the variables we know we will associate with the final position of the ball as \\(R\\)\nIn this problem we have to calculate both x and y indepdently in the same way we would normally calculate them.\nFirstly since the ball is rolling across the \\(x\\) axis at 1m/s and we know the x axis takes on no additional acceleration we can calculate the x position of the ball using one of the kinematic equations, specifically equation 4:\nWe will also have to calculate the y coordinate as well, using the same kinematic equation. Our example problem provides us with the necessary information to solve for both x and y.\nWe will want to solve for y first since it will tell us how long the ball takes to drop, from there we can pause and solve for x at the same time frame to find where r is.\n\nSolve for \\(Y_f\\) when",
+    "crumbs": [
+      "Lectures",
+      "Lecture 8-28-2026"
+    ]
+  },
+  {
     "objectID": "lectures/lecture_82626.html",
     "href": "lectures/lecture_82626.html",
     "title": "Lecture 8-26-2026",
@@ -55,13 +98,6 @@
     ]
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "notes",
-    "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
-  },
-  {
     "objectID": "book/chapter-1.html",
     "href": "book/chapter-1.html",
     "title": "Chapter 1",
@@ -95,14 +131,66 @@
     ]
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
+    "objectID": "homework/assignment-1.html",
+    "href": "homework/assignment-1.html",
+    "title": "Homework Assignement 1",
     "section": "",
-    "text": "This site is my documentation site for my notes taken during PHYS1408. Typically, I will either take notes by hand and then transcribe them into this site or I will just write them directly on a document.\nI will use this sidebar strategy for loading contents into the site:\n\nAuto Generation\nAbove we describe how to explicitly populate the contents of your sidebar with navigation items. You can also automatically generate sidebar navigation from the filesystem. The most straightforward way to do this is to specify the contents option as follows:\nsidebar: contents: auto\nUsing contents: auto at the root level will result in all documents in your website being included within the navigation (save for the home page which can be navigated to via the title link). Navigation is constructed using the following rules:\nNavigation item titles will be read from the title field of documents.\n\nSub-directories will create sections and will be automatically titled based on the directory name (including adding capitalization and substituting spaces for dashes and underscores). Use an index.qmd in the directory to provide an explicit title if you don’t like the automatic one.\n\nOrder is alphabetical (by filename) unless a numeric order field is provided in document metadata.\nAutomatic navigation automatically includes items in sub-directories. If you prefer not to do this, use an explicit /* to indicate only the documents in the root directory:\nErgo notes and their section layout are determined by Quarto’s automatic layout from the contents being set to auto.",
+    "text": "A person walks first at a constant speed of 5.10 m/s along a straight line from point circled A to point circled B and then back along the line from circled B to circled A at a constant speed of 3.15 m/s.\n\n\n\n\nRecall that we can find our average speed \\(S_{avg}\\) by using the distance traveled \\(d\\) divided by the change in time \\(\\Delta{t}\\)\nNow, since we measure our distance in meters and we measure our velocity in meters/second we can say that \\(t = d/speed\\)\nThis is mathematically true as:\n\\[\n\\frac{\\text{meters}}{\\text{meters/sec}} \\newline\n\\newline\n\\textnormal{meters cancels out in numerator and denominator}\n\\newline\n\\newline\n= seconds\n\\]\nTherefore our problem can be written as:\n\\[\n\\frac{2d}{\\frac{d}{5.10}+\\frac{d}{3.15}}\n\\newline\n\\newline\n\\]\nThe d’s cancel out:\n\\[\n\\frac{2}{\\frac{1}{5.10}+\\frac{1}{3.15}}\n\\]\nDividing by a fraction is the same as multiplying by it’s reciprocal:\n\\[\n\\frac{2(5.10)(3.15)}{5.10+3.15} = 3.89 m/s\n\\]\nTherefore we can say that the average speed is \\(3.89 \\space \\text{meters/second}\\)\n\n\n\n\nAverage velocity is based on displacement divided by change in time or: \\(v_{avg} = \\frac{\\text{displacement}}{{\\Delta{t}}}\\)\nDisplacement is a vector with a magnitude. Recall that adding two perfectly opposing vectors provides 0.\nErgo:\n\\(\\overrightarrow{\\mathbf{A}} = -\\overrightarrow{\\mathbf{B}}\\)\ntherefore\n\\(\\overrightarrow{\\mathbf{A}} + \\overrightarrow{\\mathbf{B}} = 0\\)\nThis is true in our problem as travel from point A to point B we can represent with Magnitude \\(d_1\\) and travel from point B to point A is simply \\(-d_1\\) or \\(d_2\\) which means that \\(d_1+d_2 = d_1+(-d_2) = 0\\)\nTherefore solving for average velocity provides:\n\\[\n\\newline\nv_{avg} = \\frac{0}{\\Delta{t}} = 0\n\\newline\n\\]\nTherfore our average velocity is 0. This doesn’t mean she never moved it just means that the net change in position is zero.",
     "crumbs": [
-      "About"
+      "Homework",
+      "Homework Assignement 1"
     ]
+  },
+  {
+    "objectID": "homework/assignment-1.html#a-what-is-her-average-speed-over-the-entire-trip",
+    "href": "homework/assignment-1.html#a-what-is-her-average-speed-over-the-entire-trip",
+    "title": "Homework Assignement 1",
+    "section": "",
+    "text": "Recall that we can find our average speed \\(S_{avg}\\) by using the distance traveled \\(d\\) divided by the change in time \\(\\Delta{t}\\)\nNow, since we measure our distance in meters and we measure our velocity in meters/second we can say that \\(t = d/speed\\)\nThis is mathematically true as:\n\\[\n\\frac{\\text{meters}}{\\text{meters/sec}} \\newline\n\\newline\n\\textnormal{meters cancels out in numerator and denominator}\n\\newline\n\\newline\n= seconds\n\\]\nTherefore our problem can be written as:\n\\[\n\\frac{2d}{\\frac{d}{5.10}+\\frac{d}{3.15}}\n\\newline\n\\newline\n\\]\nThe d’s cancel out:\n\\[\n\\frac{2}{\\frac{1}{5.10}+\\frac{1}{3.15}}\n\\]\nDividing by a fraction is the same as multiplying by it’s reciprocal:\n\\[\n\\frac{2(5.10)(3.15)}{5.10+3.15} = 3.89 m/s\n\\]\nTherefore we can say that the average speed is \\(3.89 \\space \\text{meters/second}\\)",
+    "crumbs": [
+      "Homework",
+      "Homework Assignement 1"
+    ]
+  },
+  {
+    "objectID": "homework/assignment-1.html#b-what-is-her-average-velocity-over-the-entire-trip",
+    "href": "homework/assignment-1.html#b-what-is-her-average-velocity-over-the-entire-trip",
+    "title": "Homework Assignement 1",
+    "section": "",
+    "text": "Average velocity is based on displacement divided by change in time or: \\(v_{avg} = \\frac{\\text{displacement}}{{\\Delta{t}}}\\)\nDisplacement is a vector with a magnitude. Recall that adding two perfectly opposing vectors provides 0.\nErgo:\n\\(\\overrightarrow{\\mathbf{A}} = -\\overrightarrow{\\mathbf{B}}\\)\ntherefore\n\\(\\overrightarrow{\\mathbf{A}} + \\overrightarrow{\\mathbf{B}} = 0\\)\nThis is true in our problem as travel from point A to point B we can represent with Magnitude \\(d_1\\) and travel from point B to point A is simply \\(-d_1\\) or \\(d_2\\) which means that \\(d_1+d_2 = d_1+(-d_2) = 0\\)\nTherefore solving for average velocity provides:\n\\[\n\\newline\nv_{avg} = \\frac{0}{\\Delta{t}} = 0\n\\newline\n\\]\nTherfore our average velocity is 0. This doesn’t mean she never moved it just means that the net change in position is zero.",
+    "crumbs": [
+      "Homework",
+      "Homework Assignement 1"
+    ]
+  },
+  {
+    "objectID": "homework/assignment-1.html#a-what-is-the-original-speed-of-the-truck",
+    "href": "homework/assignment-1.html#a-what-is-the-original-speed-of-the-truck",
+    "title": "Homework Assignement 1",
+    "section": "(a) What is the original speed of the truck?",
+    "text": "(a) What is the original speed of the truck?\nIn this problem we are given several variables:\nWe know the truck covers 37 meters so assume a starting point of \\(X_i = 0\\) and \\(X_f = 37.0\\) we know the change in time is \\(8.10s\\) from start to finish and we know the final velocity or \\(V_f = 3.00 m/s\\)\nUsing our kinematic equations we can find that kinematic 1 easily allows us to solve with our known values for \\(V_i\\)\nKinematic 1: \\[\nX_f = X_i + \\frac{V_i+V_f}{2}*t\n\\newline\n\\]\nFrom there we know that \\(X_i\\) is 0 so our full equation for this problem is:\n\\[\nX_f = \\frac{V_i+V_f}{2}*t\n\\newline\n\\]\nFrom there we rearrange to solve for \\(V_i\\)\n\\[\n\\frac{2X_f}{t}-V_f = V_i\n\\newline\n\\newline\n\\frac{2*37}{8.10}-3.00 = 6.13 m/s\n\\newline\n\\]\nTherefore the truck started at 6.13 meters per second.",
+    "crumbs": [
+      "Homework",
+      "Homework Assignement 1"
+    ]
+  },
+  {
+    "objectID": "homework/assignment-1.html#b-what-is-the-acceleration-of-the-truck",
+    "href": "homework/assignment-1.html#b-what-is-the-acceleration-of-the-truck",
+    "title": "Homework Assignement 1",
+    "section": "(b) What is the acceleration of the truck?",
+    "text": "(b) What is the acceleration of the truck?\nBased on the calculations from our previous problem we know that the \\(V_i\\) is 6.13 meters per second which combined as \\(V_f - V_i\\) = \\(\\Delta{V}\\) and:\n\\[\n\\frac{\\Delta{V}}{t} = a\n\\]\nThis is also just Kinematic 2 solved for a:\n\\[\n\\frac{V_f - V_i}{t} = a\n\\]\nPlugging in our values:\n\\[\n\\frac{3.00-6.13}{8.10} = -0.386 m/s\n\\]\nTherefore the truck decelerates at -0.386 meters per second.",
+    "crumbs": [
+      "Homework",
+      "Homework Assignement 1"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "notes",
+    "section": "",
+    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
   },
   {
     "objectID": "book/chapter-2.html",
@@ -193,36 +281,113 @@
     ]
   },
   {
-    "objectID": "lectures/lecture_82826.html",
-    "href": "lectures/lecture_82826.html",
-    "title": "Lecture 8-28-2026",
+    "objectID": "book/chapter-2.html#important-definitions-of-vector-products",
+    "href": "book/chapter-2.html#important-definitions-of-vector-products",
+    "title": "Chapter 2 - Vectors",
+    "section": "Important Definitions of Vector Products",
+    "text": "Important Definitions of Vector Products\n\nUnlike the scalar product or dot product, the vector product is not communitative. Instead, the order in which the two vectors are multiplied is important.\n\n\\[\n\\overrightarrow{\\mathbf{A}} \\times \\overrightarrow{\\mathbf{B}} = -\\overrightarrow{\\mathbf{B}} \\times \\overrightarrow{\\mathbf{A}}\n\\]\n\nIf \\(\\overrightarrow{\\mathbf{A}}\\) is perpendicular to \\(\\overrightarrow{\\mathbf{B}}\\) then \\(\\lvert \\overrightarrow{\\mathbf{A}} \\times \\overrightarrow{\\mathbf{B}} \\rvert = AB\\)\nIf \\(\\overrightarrow{\\mathbf{A}}\\) is parallel to \\(\\overrightarrow{\\mathbf{B}}\\) meaning \\(\\theta = 0^\\circ \\space \\text{or} \\space 180^\\circ\\) then \\(\\overrightarrow{\\mathbf{A}} \\times \\overrightarrow{\\mathbf{B}} = 0\\) which also means that \\(\\overrightarrow{\\mathbf{A}} \\times \\overrightarrow{\\mathbf{A}} = 0\\)\nThe vector product oberys the distributive law:\n\n\\[\n\\overrightarrow{\\mathbf{A}} \\times (\\overrightarrow{\\mathbf{B}} + \\overrightarrow{\\mathbf{C}}) = \\overrightarrow{\\mathbf{A}} \\times \\overrightarrow{\\mathbf{B}} + \\overrightarrow{\\mathbf{A}} \\times \\overrightarrow{\\mathbf{C}}\n\\]\n\nThe derivative of the vector product with respect to some variable such as \\(t\\) is:\n\n\\[\n\\newline\n\\frac{d}{dt}(\\overrightarrow{\\mathbf{A}} \\times \\overrightarrow{\\mathbf{B}}) = \\frac{d\\overrightarrow{\\mathbf{A}}}{dt} \\times \\overrightarrow{\\mathbf{B}} + \\overrightarrow{\\mathbf{A}}\n\\times \\frac{d\\overrightarrow{\\mathbf{B}}}{dt}\n\\newline\n\\]\nIt is important to preserve the multiplicative order of the terms on the right side.",
+    "crumbs": [
+      "Book",
+      "Chapter 2 - Vectors"
+    ]
+  },
+  {
+    "objectID": "book/chapter-2.html#cross-products-of-unit-vectors",
+    "href": "book/chapter-2.html#cross-products-of-unit-vectors",
+    "title": "Chapter 2 - Vectors",
+    "section": "Cross Products of Unit Vectors",
+    "text": "Cross Products of Unit Vectors\n\\[\n\\hat{\\mathbf{i}} \\times \\hat{\\mathbf{i}} = \\hat{\\mathbf{j}} \\times \\hat{\\mathbf{j}} = \\hat{\\mathbf{k}} \\times \\hat{\\mathbf{k}} = 0\n\\]\n\\[\n\\newline\n\\newline\n\\hat{\\mathbf{i}} \\times \\hat{\\mathbf{j}} = -\\hat{\\mathbf{j}} \\times \\hat{\\mathbf{i}} = \\hat{\\mathbf{k}}\n\\newline\n\\newline\n\\hat{\\mathbf{j}} \\times \\hat{\\mathbf{k}} = -\\hat{\\mathbf{k}} \\times \\hat{\\mathbf{j}} = \\hat{\\mathbf{i}}\n\\newline\n\\newline\n\\hat{\\mathbf{k}} \\times \\hat{\\mathbf{k}} = -\\hat{\\mathbf{i}} \\times \\hat{\\mathbf{k}} = \\hat{\\mathbf{j}}\n\\newline\n\\]\nSigns are interchangable in cross products:\n\\[\n\\newline\n\\overrightarrow{\\mathbf{A}} \\times (-\\overrightarrow{\\mathbf{B}}) = -\\overrightarrow{\\mathbf{A}} \\times \\overrightarrow{\\mathbf{B}}\n\\newline\n\\]\nAnd\n\\[\n\\hat{\\mathbf{i}} \\times (-\\hat{\\mathbf{j}}) = -\\hat{\\mathbf{i}} \\times \\hat{\\mathbf{j}}\n\\]\nThe cross product of two vectors can be expressed in unit-vector notation using this determinant:\n\\[\n\\overrightarrow{\\mathbf{A}} \\times \\overrightarrow{\\mathbf{B}} = \\begin{vmatrix} \\hat{\\mathbf{i}} & \\hat{\\mathbf{j}} & \\hat{\\mathbf{j}} \\\\\nA_x & A_y & A_z \\\\\nB_x & B_y & B_z \\end{vmatrix} =  \\begin{vmatrix} A_y & A_z \\\\ B_y & B_z\\end{vmatrix}\\hat{\\mathbf{i}}+\\begin{vmatrix}A_z & A_x \\\\ B_z & B_x \\end{vmatrix}\\hat{\\mathbf{j}} + \\begin{vmatrix}A_x & A_y \\\\ B_x & B_y\\end{vmatrix}\\hat{\\mathbf{k}}\n\\]\nExpanding these determinants gives:\n\\[\n\\overrightarrow{\\mathbf{A}} \\times \\overrightarrow{\\mathbf{B}} = (A_yB_z - A_zB_y)\\hat{\\mathbf{i}} + (A_zB_x-A_xB_z)\\hat{\\mathbf{j}}+(A_xB_y-A_yB_x)\\hat{\\mathbf{k}}\n\\]\n\n\n\n\n\n\nNote\n\n\n\nA determinant is a single number you compute from a square matrix that tells you how the matrix scales space.",
+    "crumbs": [
+      "Book",
+      "Chapter 2 - Vectors"
+    ]
+  },
+  {
+    "objectID": "book/chapter-2.html#example-problem---vector-product-between-two-vectors",
+    "href": "book/chapter-2.html#example-problem---vector-product-between-two-vectors",
+    "title": "Chapter 2 - Vectors",
+    "section": "Example Problem - Vector Product Between Two Vectors",
+    "text": "Example Problem - Vector Product Between Two Vectors\nTwo vectors in the \\(xy\\) plane are given by the equations: \\(\\overrightarrow{\\mathbf{A}} = 2\\hat{\\mathbf{i}} + 3\\hat{\\mathbf{j}}\\) and \\(\\overrightarrow{\\mathbf{B}} = -\\hat{\\mathbf{i}} + 2\\hat{\\mathbf{j}}\\), find \\(\\overrightarrow{\\mathbf{A}} \\times \\overrightarrow{\\mathbf{B}}\\)\n\nWrite the cross product of the two vectors:\n\n\\[\n\\overrightarrow{\\mathbf{A}} \\times \\overrightarrow{\\mathbf{B}} = (2\\hat{\\mathbf{i}}+3\\hat{\\mathbf{j}}) \\times (-\\hat{\\mathbf{i}}+2\\hat{\\mathbf{j}})\n\\]\nDistribution yields:\n\\[\n\\newline\n\\overrightarrow{\\mathbf{A}} \\times \\overrightarrow{\\mathbf{B}} = 2\\hat{\\mathbf{i}} \\times (-\\hat{\\mathbf{i}}) + 2\\hat{\\mathbf{i}} \\times 2\\hat{\\mathbf{j}} + 3\\hat{\\mathbf{j}} \\times -\\hat{\\mathbf{i}} + 3\\hat{\\mathbf{j}} \\times 2\\hat{\\mathbf{j}}\n\\]\nAnd recall these rules:\n\\[\n\\newline\n\\hat{\\mathbf{i}} \\times \\hat{\\mathbf{j}} = -\\hat{\\mathbf{j}} \\times \\hat{\\mathbf{i}} = \\hat{\\mathbf{k}}\n\\]\nAnd recall:\n\\[\n\\newline\n\\hat{\\mathbf{i}} \\times \\hat{\\mathbf{i}} = \\hat{\\mathbf{j}} \\times \\hat{\\mathbf{j}} = \\hat{\\mathbf{k}} \\times \\hat{\\mathbf{k}} = 0\n\\]\nMeaning that any unit vector that uses the same unit, regardless of coeffecient becomes 0. Cancelling out where that rule applies to our distributed unit vectors we find:\n\\[\n\\newline\n2\\hat{\\mathbf{i}} \\times 2\\hat{\\mathbf{j}} + 3\\hat{\\mathbf{j}} \\times -\\hat{\\mathbf{i}}\n\\]\nAnd also understand that \\(\\hat{\\mathbf{j}} \\times -\\hat{\\mathbf{i}} = -\\hat{\\mathbf{k}}\\)\nAnother somewhat easier way to remember this is that solving for the determinant like so:\n\\[\n\\overrightarrow{\\mathbf{A}} \\times \\overrightarrow{\\mathbf{B}} = \\begin{vmatrix} \\hat{\\mathbf{i}} & A_x & B_x \\\\ \\hat{\\mathbf{j}} & A_y & B_y \\\\ \\hat{\\mathbf{k}} & A_z & B_z \\end{vmatrix}\n\\]\nMost importantly remember that finding the determinant using this notation provides the components of the resulant vector:\n\\[\n\\newline\n\\newline\nR_x = (A_y \\cdot B_z) - (A_z \\cdot B_y) \\newline\nR_y = (A_z \\cdot B_x ) - (A_x \\cdot B_z) \\newline\nR_z = (A_x \\cdot B_y) - (A_y \\cdot B_x) \\newline\n\\newline\n\\]\nLet’s apply that to our example problem where \\(\\overrightarrow{\\mathbf{A}} = 2\\hat{\\mathbf{i}} + 3\\hat{\\mathbf{j}}\\) and \\(\\overrightarrow{\\mathbf{B}} = -\\hat{\\mathbf{i}} + 2\\hat{\\mathbf{j}}\\)\nOrganizing our components into the matrix for finding the determinant:\n\\[\n\\newline\n\\begin{vmatrix} R_x \\\\ R_y \\\\ R_z \\end{vmatrix} = \\begin{vmatrix}\\hat{\\mathbf{i}} & 2 & -1 \\\\ \\hat{\\mathbf{j}} & 3 & 2 \\\\ \\hat{\\mathbf{k}} & 0 & 0\\end{vmatrix}\n\\newline\n\\]\nThat breaks down into:\n\\[\n\\newline\nR_x = (3 \\cdot 0) - (0 \\cdot 2) \\newline\nR_y = (0 \\cdot -1) - (2 \\cdot 0) \\newline\nR_z = (2 \\cdot 2) - (3 \\cdot -1) \\newline\n\\newline\n\\]\nThis yields:\n\\[\nR_x = 0 \\newline\nR_y = 0 \\newline\nR_z = 7 \\newline\n\\]\nPutting that in unit notation form\n\\[\n\\overrightarrow{\\mathbf{R}} = 7\\hat{\\mathbf{k}}\n\\]\nThis is technically the harder way to do the calculation but is mechanically safer as you’ll reliably get the resultant vector of the cross product.",
+    "crumbs": [
+      "Book",
+      "Chapter 2 - Vectors"
+    ]
+  },
+  {
+    "objectID": "book/chapter-3.html",
+    "href": "book/chapter-3.html",
+    "title": "Chapter 2 - Motion in One Dimension",
     "section": "",
-    "text": "Reference The first lecture for kinematic equations.",
+    "text": "A car moving between points on the \\(x\\) axis.\n\n\n\nA representation of that graphically\n\n\nAdditionally, from the graph we can extract a table of the position of the car at various times:\n\n\n\nPosition\n\\(t(s)\\)\n\\(t(m)\\)\n\n\n\n\nA\n0\n30\n\n\nB\n10\n52\n\n\nC\n20\n38\n\n\nD\n30\n0\n\n\nE\n40\n-37\n\n\nF\n50\n-53\n\n\n\nNow the motion of the particle is not entirely known because we don’t know it’s position at every time, only the provided times. The smooth curve only represents the possibility of the actual motion of the car.\n\n\n\\(v_{x,avg} \\equiv \\frac{\\Delta{x}}{\\Delta{t}}\\)\nFrom this formula we know that average velocity has dimensions of length divided by time (\\(L/T\\)) or meters per second in SI units. Where \\(\\Delta{x}\\) is the displacement or change in \\(x\\) over some period of time. \\(X_f - X_i = \\Delta{x}\\)\nThe average velocity of a particle in one dimension can be positive or negative depending on the sign of displacement. The time interval measured by \\(\\Delta{t}\\) is always positive. When the coordinate increases with time \\(\\Delta{x}\\) is then the average velocity is a positive number. If \\(\\Delta{x}\\) is negative then the average velocity is negative.\n\n\n\n\\[\nv_{avg} \\equiv \\frac{d}{\\Delta{t}}\n\\]\nUnlike velocity, speed has no direction and is always expressed as a positive number. Where average velocity is the displacement or \\(\\Delta{x}\\) divided by the change in time, the average speed is found by measuring the distance over the change in time.\nFor example if it takes you 45 seconds to travel 100 m down a hallway and at the 100-m you turn around and walk back 25m in the opposite direction taking 10 seconds, the magnitude of your average velocity is found as:\n\\[\n\\newline\n\\Delta{x} = X_f - X_i = 100-25 = 75m = \\Delta{x}\n\\newline\n\\Delta{t} = 45s+10s = 55s \\newline\n\\newline\n\\]\nAnd average velocity is \\(v_{x,avg} = \\frac{\\Delta{x}}{\\Delta{t}}\\)\nSo:\n\\[\n\\newline\nv_{x,avg} = \\frac{75m}{55s} = 1.36m/s\n\\newline\n\\]\nTherefore your average velocity over the trip is \\(1.36 m/s\\). However, the average speed is the distance traveled \\(d\\) divided by the change in time:\n\\[\n\\newline\nd = 100+25 = 125m\n\\newline\n\\]\nAnd \\(\\Delta{t}\\) remains the same:\n\\[\n\\newline\nv_{avg} = 125m/55s = 2.27 m/s\n\\newline\n\\]\nTherefore, your average speed is \\(2.27 m/s\\)",
     "crumbs": [
-      "Lectures",
-      "Lecture 8-28-2026"
+      "Book",
+      "Chapter 2 - Motion in One Dimension"
     ]
   },
   {
-    "objectID": "lectures/lecture_82826.html#example-problem-4",
-    "href": "lectures/lecture_82826.html#example-problem-4",
-    "title": "Lecture 8-28-2026",
-    "section": "Example Problem 4",
-    "text": "Example Problem 4\nA penny is dropped down a well and his water after 2 seconds, how deep is the well?\n\n\n\nExample problem 4 visualization\n\n\nGiven the variables we have that would mean we need to use Kinematic 4 as we are trying to solve for \\(y_f\\)\n\\[\nX_f = X_i+V_i*t+\\frac{1}{2}a*t^2\n\\]\nRemoving the variables we know equate to zero our equation shifts: \\[\ny_f = y_i + \\frac{1}{2}(-g)t^2\n\\]\nAnd the final position of y is the depth of our well. \\[\ny_f = \\frac{1}{2}(-g)t^2\n\\]\nPlugging in our values we find:\n\\[\ny_f = \\frac{1}{2}(-9.81 m/s)2s^2 \\newline\ny_f = -19.6 \\space \\text{meters}\n\\]\nOur answer tells us that our well is around 19.6 meters deep.\n\nLet’s shuffle our previous problem slightly to reveal additional algebra within the 4th Kinematic equation.\nLet’s assume the penny is thrown down the well (rather than dropped) with a \\(V_i = -2m/s\\) and impacts in 1 second.\nThis effectively becomes the same problem but with different parameters:\n\\[\ny_f = y_i + v_{yi}*t + \\frac{1}{2}a_yt^2-V_{yi}t\n\\]\nPlugging in our known variables we find:\n\\[\ny_f = 0 + -2 m/s * 1 s + \\frac{1}{2}(-9.81)(1s)^2\n\\]\nSimplifying\n\\[\ny_f = -2 + -4.905\ny_f = -6.905 meters\n\\]\nIn another form of this equation the penny is thrown upwards at 5m/s and hits the bottom of the well after 3s.\nUsing the 4th equation again we get:\n\\[\nY_f = Y_i+V_i*t+\\frac{1}{2}a*t^2\n\\]\nIn which case we have \\[\nV_{yi} = 5 m/s \\newline\na_y = -g \\newline\ny_f = 0 \\newline\ny_i = \\space ? \\space \\text{(also known as h)}\n\\]\nPlugging that in\n\\[\n0 = h + V_{yi}t - \\frac{gt^2}{2}\n\\]\nWhich simplifies to:\n\\[\nh = \\frac{gt^2}{2}-V_{yi}t \\newline\nh = 9.8/2*3^2-5*3 \\newline\nh = 29.1 \\space \\text{meters deep}\n\\]",
+    "objectID": "book/chapter-3.html#average-velocity",
+    "href": "book/chapter-3.html#average-velocity",
+    "title": "Chapter 2 - Motion in One Dimension",
+    "section": "",
+    "text": "\\(v_{x,avg} \\equiv \\frac{\\Delta{x}}{\\Delta{t}}\\)\nFrom this formula we know that average velocity has dimensions of length divided by time (\\(L/T\\)) or meters per second in SI units. Where \\(\\Delta{x}\\) is the displacement or change in \\(x\\) over some period of time. \\(X_f - X_i = \\Delta{x}\\)\nThe average velocity of a particle in one dimension can be positive or negative depending on the sign of displacement. The time interval measured by \\(\\Delta{t}\\) is always positive. When the coordinate increases with time \\(\\Delta{x}\\) is then the average velocity is a positive number. If \\(\\Delta{x}\\) is negative then the average velocity is negative.",
     "crumbs": [
-      "Lectures",
-      "Lecture 8-28-2026"
+      "Book",
+      "Chapter 2 - Motion in One Dimension"
     ]
   },
   {
-    "objectID": "lectures/lecture_82826.html#example-problem-1",
-    "href": "lectures/lecture_82826.html#example-problem-1",
-    "title": "Lecture 8-28-2026",
-    "section": "Example Problem 1",
-    "text": "Example Problem 1\nA ball rolling off of a table:\n\n\n\nExample problem 1 visualized\n\n\nTaking stock of the variables we know we will associate with the final position of the ball as \\(R\\)\nIn this problem we have to calculate both x and y indepdently in the same way we would normally calculate them.\nFirstly since the ball is rolling across the \\(x\\) axis at 1m/s and we know the x axis takes on no additional acceleration we can calculate the x position of the ball using one of the kinematic equations, specifically equation 4:\nWe will also have to calculate the y coordinate as well, using the same kinematic equation. Our example problem provides us with the necessary information to solve for both x and y.\nWe will want to solve for y first since it will tell us how long the ball takes to drop, from there we can pause and solve for x at the same time frame to find where r is.\n\nSolve for \\(Y_f\\) when",
+    "objectID": "book/chapter-3.html#average-speed",
+    "href": "book/chapter-3.html#average-speed",
+    "title": "Chapter 2 - Motion in One Dimension",
+    "section": "",
+    "text": "\\[\nv_{avg} \\equiv \\frac{d}{\\Delta{t}}\n\\]\nUnlike velocity, speed has no direction and is always expressed as a positive number. Where average velocity is the displacement or \\(\\Delta{x}\\) divided by the change in time, the average speed is found by measuring the distance over the change in time.\nFor example if it takes you 45 seconds to travel 100 m down a hallway and at the 100-m you turn around and walk back 25m in the opposite direction taking 10 seconds, the magnitude of your average velocity is found as:\n\\[\n\\newline\n\\Delta{x} = X_f - X_i = 100-25 = 75m = \\Delta{x}\n\\newline\n\\Delta{t} = 45s+10s = 55s \\newline\n\\newline\n\\]\nAnd average velocity is \\(v_{x,avg} = \\frac{\\Delta{x}}{\\Delta{t}}\\)\nSo:\n\\[\n\\newline\nv_{x,avg} = \\frac{75m}{55s} = 1.36m/s\n\\newline\n\\]\nTherefore your average velocity over the trip is \\(1.36 m/s\\). However, the average speed is the distance traveled \\(d\\) divided by the change in time:\n\\[\n\\newline\nd = 100+25 = 125m\n\\newline\n\\]\nAnd \\(\\Delta{t}\\) remains the same:\n\\[\n\\newline\nv_{avg} = 125m/55s = 2.27 m/s\n\\newline\n\\]\nTherefore, your average speed is \\(2.27 m/s\\)",
+    "crumbs": [
+      "Book",
+      "Chapter 2 - Motion in One Dimension"
+    ]
+  },
+  {
+    "objectID": "book/chapter-3.html#average-accleration",
+    "href": "book/chapter-3.html#average-accleration",
+    "title": "Chapter 2 - Motion in One Dimension",
+    "section": "Average Accleration",
+    "text": "Average Accleration\n\\[\na_{x,avg} \\equiv \\frac{\\Delta{v_x}}{\\Delta{t}} = \\frac{v_{xf} - v_{xi}}{t_f - t_i}\n\\]\n\n\n\nFigure depicting the graphical relations of average accleration and instant acceleration\n\n\nA positive acceleration indicates that velocity is moving towards having a positive value over time. And a negative value means that velocity is decreasing in value over time.",
+    "crumbs": [
+      "Book",
+      "Chapter 2 - Motion in One Dimension"
+    ]
+  },
+  {
+    "objectID": "book/chapter-3.html#instant-acceleration",
+    "href": "book/chapter-3.html#instant-acceleration",
+    "title": "Chapter 2 - Motion in One Dimension",
+    "section": "Instant Acceleration",
+    "text": "Instant Acceleration\n\\[\na_x \\equiv \\lim\\limits_{\\Delta{t} \\to 0} \\frac{\\Delta{v_x}}{\\Delta{t}} = \\frac{dv_x}{dt}\n\\]\n\n\n\nThe graphical relationship\n\n\nThe net force on an object is proportional to the acceleration of the object\n\\[\nF_x \\propto a_x\n\\]",
+    "crumbs": [
+      "Book",
+      "Chapter 2 - Motion in One Dimension"
+    ]
+  },
+  {
+    "objectID": "lectures/lecture_83126.html",
+    "href": "lectures/lecture_83126.html",
+    "title": "Lecture 8-31-2028",
+    "section": "",
+    "text": "A ball rolling off of a counter top.\n\n\n\nVisualization of example problem 1",
     "crumbs": [
       "Lectures",
-      "Lecture 8-28-2026"
+      "Lecture 8-31-2028"
+    ]
+  },
+  {
+    "objectID": "lectures/lecture_83126.html#case-1-a-ball-rolling-off-of-a-table",
+    "href": "lectures/lecture_83126.html#case-1-a-ball-rolling-off-of-a-table",
+    "title": "Lecture 8-31-2028",
+    "section": "",
+    "text": "A ball rolling off of a counter top.\n\n\n\nVisualization of example problem 1",
+    "crumbs": [
+      "Lectures",
+      "Lecture 8-31-2028"
     ]
   }
 ]
