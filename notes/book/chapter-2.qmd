@@ -527,6 +527,193 @@ $$
 \newline
 $$
 
+# The Vector Product of Two Vectors
+
+Instead of multiplying two vectors to get a scalar here we are multiplying two vectors to get a new vector. 
+
+Given two vectors $\overrightarrow{\mathbf{A}}$ and $\overrightarrow{\mathbf{B}}$ the vector product of $\overrightarrow{\mathbf{A}} \times \overrightarrow{\mathbf{B}} = \overrightarrow{\mathbf{C}}$
+
+And $\overrightarrow{\mathbf{C}}$ has a magnitude of $C = AB \sin{\theta}$
+
+Because the notation for the vector product of two vectors uses $\times$ to indicate multiplication, it is commonly referred to as the "cross product" of the two vectors. 
+
+![A figure demonstrating the "right hand rule"](Chapter2Figure21.png)
+
+## Important Definitions of Vector Products
+
+1. Unlike the scalar product or dot product, the vector product is *not* communitative. Instead, the order in which the two vectors are multiplied is important. 
+
+$$
+\overrightarrow{\mathbf{A}} \times \overrightarrow{\mathbf{B}} = -\overrightarrow{\mathbf{B}} \times \overrightarrow{\mathbf{A}}
+$$
+
+2. If $\overrightarrow{\mathbf{A}}$ is perpendicular to $\overrightarrow{\mathbf{B}}$ then $\lvert \overrightarrow{\mathbf{A}} \times \overrightarrow{\mathbf{B}} \rvert = AB$
+
+3. If $\overrightarrow{\mathbf{A}}$ is parallel to $\overrightarrow{\mathbf{B}}$ meaning $\theta = 0^\circ \space \text{or} \space 180^\circ$ then $\overrightarrow{\mathbf{A}} \times \overrightarrow{\mathbf{B}} = 0$ which also means that $\overrightarrow{\mathbf{A}} \times \overrightarrow{\mathbf{A}} = 0$
+
+4. The vector product oberys the distributive law:
+
+$$
+\overrightarrow{\mathbf{A}} \times (\overrightarrow{\mathbf{B}} + \overrightarrow{\mathbf{C}}) = \overrightarrow{\mathbf{A}} \times \overrightarrow{\mathbf{B}} + \overrightarrow{\mathbf{A}} \times \overrightarrow{\mathbf{C}}
+$$
+
+5. The derivative of the vector product with respect to some variable such as $t$ is:
+
+$$
+\newline
+\frac{d}{dt}(\overrightarrow{\mathbf{A}} \times \overrightarrow{\mathbf{B}}) = \frac{d\overrightarrow{\mathbf{A}}}{dt} \times \overrightarrow{\mathbf{B}} + \overrightarrow{\mathbf{A}}
+ \times \frac{d\overrightarrow{\mathbf{B}}}{dt}
+\newline
+$$
+
+It is important to preserve the multiplicative order of the terms on the right side.
+
+## Cross Products of Unit Vectors
+
+$$
+\hat{\mathbf{i}} \times \hat{\mathbf{i}} = \hat{\mathbf{j}} \times \hat{\mathbf{j}} = \hat{\mathbf{k}} \times \hat{\mathbf{k}} = 0
+$$
+
+$$
+\newline 
+\newline
+\hat{\mathbf{i}} \times \hat{\mathbf{j}} = -\hat{\mathbf{j}} \times \hat{\mathbf{i}} = \hat{\mathbf{k}}
+\newline
+\newline
+\hat{\mathbf{j}} \times \hat{\mathbf{k}} = -\hat{\mathbf{k}} \times \hat{\mathbf{j}} = \hat{\mathbf{i}}
+\newline
+\newline
+\hat{\mathbf{k}} \times \hat{\mathbf{k}} = -\hat{\mathbf{i}} \times \hat{\mathbf{k}} = \hat{\mathbf{j}}
+\newline
+$$
+
+Signs are interchangable in cross products:
+
+$$
+\newline
+\overrightarrow{\mathbf{A}} \times (-\overrightarrow{\mathbf{B}}) = -\overrightarrow{\mathbf{A}} \times \overrightarrow{\mathbf{B}}
+\newline
+$$
+
+And
+
+$$
+\hat{\mathbf{i}} \times (-\hat{\mathbf{j}}) = -\hat{\mathbf{i}} \times \hat{\mathbf{j}}
+$$
+
+The cross product of two vectors can be expressed in unit-vector notation using this determinant:
+
+$$
+\overrightarrow{\mathbf{A}} \times \overrightarrow{\mathbf{B}} = \begin{vmatrix} \hat{\mathbf{i}} & \hat{\mathbf{j}} & \hat{\mathbf{j}} \\ 
+A_x & A_y & A_z \\ 
+B_x & B_y & B_z \end{vmatrix} =  \begin{vmatrix} A_y & A_z \\ B_y & B_z\end{vmatrix}\hat{\mathbf{i}}+\begin{vmatrix}A_z & A_x \\ B_z & B_x \end{vmatrix}\hat{\mathbf{j}} + \begin{vmatrix}A_x & A_y \\ B_x & B_y\end{vmatrix}\hat{\mathbf{k}}
+$$
+
+Expanding these determinants gives:
+
+$$
+\overrightarrow{\mathbf{A}} \times \overrightarrow{\mathbf{B}} = (A_yB_z - A_zB_y)\hat{\mathbf{i}} + (A_zB_x-A_xB_z)\hat{\mathbf{j}}+(A_xB_y-A_yB_x)\hat{\mathbf{k}}
+$$
+
+::: {.callout-note}
+A determinant is a single number you compute from a square matrix that tells you how the matrix scales space. 
+:::
+
+## Example Problem - Vector Product Between Two Vectors
+
+Two vectors in the $xy$ plane are given by the equations: $\overrightarrow{\mathbf{A}} = 2\hat{\mathbf{i}} + 3\hat{\mathbf{j}}$ and $\overrightarrow{\mathbf{B}} = -\hat{\mathbf{i}} + 2\hat{\mathbf{j}}$, find $\overrightarrow{\mathbf{A}} \times \overrightarrow{\mathbf{B}}$
+
+1. Write the cross product of the two vectors:
+
+$$
+\overrightarrow{\mathbf{A}} \times \overrightarrow{\mathbf{B}} = (2\hat{\mathbf{i}}+3\hat{\mathbf{j}}) \times (-\hat{\mathbf{i}}+2\hat{\mathbf{j}})
+$$
+
+Distribution yields:
+
+$$
+\newline
+\overrightarrow{\mathbf{A}} \times \overrightarrow{\mathbf{B}} = 2\hat{\mathbf{i}} \times (-\hat{\mathbf{i}}) + 2\hat{\mathbf{i}} \times 2\hat{\mathbf{j}} + 3\hat{\mathbf{j}} \times -\hat{\mathbf{i}} + 3\hat{\mathbf{j}} \times 2\hat{\mathbf{j}}
+$$
+
+And recall these rules:
+
+$$
+\newline
+\hat{\mathbf{i}} \times \hat{\mathbf{j}} = -\hat{\mathbf{j}} \times \hat{\mathbf{i}} = \hat{\mathbf{k}}
+$$
+
+And recall:
+
+$$
+\newline
+\hat{\mathbf{i}} \times \hat{\mathbf{i}} = \hat{\mathbf{j}} \times \hat{\mathbf{j}} = \hat{\mathbf{k}} \times \hat{\mathbf{k}} = 0
+$$
+
+Meaning that any unit vector that uses the same unit, regardless of coeffecient becomes 0. Cancelling out where that rule applies to our distributed unit vectors we find:
+
+$$
+\newline
+2\hat{\mathbf{i}} \times 2\hat{\mathbf{j}} + 3\hat{\mathbf{j}} \times -\hat{\mathbf{i}}
+$$
+
+And also understand that $\hat{\mathbf{j}} \times -\hat{\mathbf{i}} = -\hat{\mathbf{k}}$ 
+
+Another somewhat easier way to remember this is that solving for the determinant like so:
+
+$$
+\overrightarrow{\mathbf{A}} \times \overrightarrow{\mathbf{B}} = \begin{vmatrix} \hat{\mathbf{i}} & A_x & B_x \\ \hat{\mathbf{j}} & A_y & B_y \\ \hat{\mathbf{k}} & A_z & B_z \end{vmatrix}
+$$
+
+Most importantly remember that finding the determinant using this notation provides the components of the resulant vector:
+
+$$
+\newline
+\newline
+R_x = (A_y \cdot B_z) - (A_z \cdot B_y) \newline
+R_y = (A_z \cdot B_x ) - (A_x \cdot B_z) \newline
+R_z = (A_x \cdot B_y) - (A_y \cdot B_x) \newline
+\newline
+$$
+
+Let's apply that to our example problem where $\overrightarrow{\mathbf{A}} = 2\hat{\mathbf{i}} + 3\hat{\mathbf{j}}$ and $\overrightarrow{\mathbf{B}} = -\hat{\mathbf{i}} + 2\hat{\mathbf{j}}$
+
+Organizing our components into the matrix for finding the determinant:
+
+$$
+\newline
+\begin{vmatrix} R_x \\ R_y \\ R_z \end{vmatrix} = \begin{vmatrix}\hat{\mathbf{i}} & 2 & -1 \\ \hat{\mathbf{j}} & 3 & 2 \\ \hat{\mathbf{k}} & 0 & 0\end{vmatrix}
+\newline
+$$
+
+That breaks down into:
+
+$$
+\newline
+R_x = (3 \cdot 0) - (0 \cdot 2) \newline
+R_y = (0 \cdot -1) - (2 \cdot 0) \newline
+R_z = (2 \cdot 2) - (3 \cdot -1) \newline
+\newline
+$$
+
+This yields:
+
+$$
+R_x = 0 \newline
+R_y = 0 \newline
+R_z = 7 \newline
+$$
+
+Putting that in unit notation form 
+
+$$
+\overrightarrow{\mathbf{R}} = 7\hat{\mathbf{k}}
+$$
+
+This is technically the harder way to do the calculation but is mechanically safer as you'll reliably get the resultant vector of the cross product. 
+
+
+
 
 
 

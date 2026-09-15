@@ -1,0 +1,137 @@
+---
+title: "Homework Assignement 1"
+---
+
+
+# Question 1
+
+A person walks first at a constant speed of 5.10 m/s along a straight line from point circled A to point circled B and then back along the line from circled B to circled A at a constant speed of 3.15 m/s. 
+
+## (a): What is her average speed over the entire trip?
+
+### Solution: 
+
+Recall that we can find our average speed $S_{avg}$ by using the distance traveled $d$ divided by the change in time $\Delta{t}$
+
+Now, since we measure our distance in meters and we measure our velocity in meters/second we can say that $t = d/speed$
+
+This is mathematically true as:
+
+$$
+\frac{\text{meters}}{\text{meters/sec}} \newline
+\newline
+\textnormal{meters cancels out in numerator and denominator}
+\newline
+\newline
+= seconds
+$$
+
+Therefore our problem can be written as:
+
+$$
+\frac{2d}{\frac{d}{5.10}+\frac{d}{3.15}}
+\newline
+\newline
+$$
+
+The d's cancel out:
+
+$$
+\frac{2}{\frac{1}{5.10}+\frac{1}{3.15}}
+$$
+
+Dividing by a fraction is the same as multiplying by it's reciprocal:
+
+$$
+\frac{2(5.10)(3.15)}{5.10+3.15} = 3.89 m/s
+$$
+
+Therefore we can say that the average speed is $3.89 \space \text{meters/second}$
+
+
+## (b): What is her average velocity over the entire trip?
+
+Average velocity is based on displacement divided by change in time or: $v_{avg} = \frac{\text{displacement}}{{\Delta{t}}}$
+
+Displacement is a vector with a magnitude. Recall that adding two perfectly opposing vectors provides 0. 
+
+Ergo:
+
+$\overrightarrow{\mathbf{A}} = -\overrightarrow{\mathbf{B}}$ 
+
+therefore
+
+$\overrightarrow{\mathbf{A}} + \overrightarrow{\mathbf{B}} = 0$
+
+This is true in our problem as travel from point A to point B we can represent with Magnitude $d_1$ and travel from point B to point A is simply $-d_1$ or $d_2$ which means that $d_1+d_2 = d_1+(-d_2) = 0$
+
+Therefore solving for average velocity provides:
+
+$$
+\newline
+v_{avg} = \frac{0}{\Delta{t}} = 0
+\newline
+$$
+
+Therfore our average velocity is 0. This doesn't mean she never moved it just means that the net change in position is zero. 
+
+# Question 2
+
+A truck covers 37.0 m in 8.10 s while smoothly slowing to a final speed of 3.00 m/s 
+
+## (a) What is the original speed of the truck?
+
+In this problem we are given several variables:
+
+We know the truck covers 37 meters so assume a starting point of $X_i = 0$ and $X_f = 37.0$ we know the change in time is $8.10s$ from start to finish and we know the final velocity or $V_f = 3.00 m/s$
+
+Using our [kinematic equations](../lectures/lecture_82626.qmd#kinematic-equation-1) we can find that kinematic 1 easily allows us to solve with our known values for $V_i$
+
+Kinematic 1:
+$$
+X_f = X_i + \frac{V_i+V_f}{2}*t
+\newline
+$$
+
+From there we know that $X_i$ is 0 so our full equation for this problem is:
+
+$$
+X_f = \frac{V_i+V_f}{2}*t
+\newline
+$$
+
+From there we rearrange to solve for $V_i$
+
+$$
+\frac{2X_f}{t}-V_f = V_i
+\newline
+\newline
+\frac{2*37}{8.10}-3.00 = 6.13 m/s
+\newline
+$$
+
+Therefore the truck started at 6.13 meters per second. 
+
+## (b) What is the acceleration of the truck?
+
+Based on the calculations from our previous problem we know that the $V_i$ is 6.13 meters per second which combined as $V_f - V_i$ = $\Delta{V}$ and:
+
+$$
+\frac{\Delta{V}}{t} = a
+$$
+
+This is also just [Kinematic 2](../lectures/lecture_82626.qmd#kinematic-equation-2) solved for a:
+
+$$
+\frac{V_f - V_i}{t} = a
+$$
+
+Plugging in our values:
+
+$$
+\frac{3.00-6.13}{8.10} = -0.386 m/s
+$$
+
+Therefore the truck decelerates at -0.386 meters per second. 
+
+\frac{v_f^2-v_i^2}{2(x_f-x_i)}
