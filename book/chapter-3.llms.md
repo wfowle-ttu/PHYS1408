@@ -1,4 +1,4 @@
-# Chapter 2 - Motion in One Dimension
+# Chapter 3 - Motion in One Dimension
 
 # Velocity & Speed of a Particle
 

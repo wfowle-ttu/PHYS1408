@@ -98,99 +98,15 @@
     ]
   },
   {
-    "objectID": "book/chapter-1.html",
-    "href": "book/chapter-1.html",
-    "title": "Chapter 1",
+    "objectID": "book/chapter-5.html",
+    "href": "book/chapter-5.html",
+    "title": "Chapter 5 - The Concept of Force",
     "section": "",
-    "text": "Book Resource Found Here",
+    "text": "The word force refers to an interaction with an object by some means (sometimes muscular activity) and resulting in some change in the objects velocity. Forces, do not always cause motion.\nIn order to change an object’s velocity, Newton found that you must excert some force on that object.\n\n\n\nExample of contact forces\n\n\nContact forces invovle physical contact between two objects. Like a punter punting a football. Or the force excerted by a gas molecule on the walls of a container.\nAnother type of force are field forces, these forces do not involve physical contact between two objects, instead they act through empty space. The gravitational force of attraction between two objects such as the earth and moon are an example of a field force.\nAnother common field force is the electric force that one electric charge exerts on another, such as the attractive electric force between an electron and a proton that form a hydrogen atom. Or consider the force a bar magnet exerts on a piece of iron.\nThe fundamental forces known in nature: 1. Gravitational forces between objects 2. Electromagnetic forces between electric charges 3. Strong forces between subatomic particles 4. Weak forces that arise in certain radioactive decay processes.\nIn physics we only tend to worry about gravitational and electromagnetic forces. See Chapter 44 for strong and weak forces.\n\nThe Vector Nature of Force\nWe can use a spring mounted vertically to measure force.\nSuppose that with some initial force \\(\\overrightarrow{F_1}\\) applied to the spring yields a measured reading of 1.0 cm. Now if we apply \\(\\overrightarrow{F_2}\\) and that force is exactly twice in magnitude as \\(\\overrightarrow{F_1}\\) then the reading of force shall show the spring at 2.0 cm.\nThe combined effect of two collinear forces is the sum of the effects of the individual forces. So if we apply both \\(\\overrightarrow{F_1}\\) and \\(overrightarrow{F_2}\\) at the same time, the spring will show 3.0 cm.\n\n\n\nExample of force applied to springs\n\n\nIn the case where \\(\\overrightarrow{F_1}\\) is applied vertically and \\(\\overrightarrow{F_2}\\) is applied horizontally, the vector nature of forces allow us to use vector addition to find the reading of the spring by doing vector addition with \\(\\overrightarrow{F_1}\\) and \\(\\overrightarrow{F_2}\\).\n\\[\n\\lvert \\overrightarrow{F_1} \\rvert = \\sqrt{F_1^2 + F_2^2} = 2.24 cm\n\\]\nAnd the direction of this force is:\n\\[\n\\theta = \\tan^-1{\\frac{\\lvert F_1 \\rvert}{\\lvert F_2 \\rvert}} = 26.6^\\circ\n\\]\nGiven that this is a reference angle evaluating that our components for y and x yield a quadrant 4 location:\n\\[\n\\theta = 360^\\circ - 26.6^\\circ = 333^\\circ \\space or \\space -26.6^\\circ\n\\]",
     "crumbs": [
       "Book",
-      "Chapter 1"
+      "Chapter 5 - The Concept of Force"
     ]
-  },
-  {
-    "objectID": "book/chapter-1.html#types-of-models",
-    "href": "book/chapter-1.html#types-of-models",
-    "title": "Chapter 1",
-    "section": "Types of Models",
-    "text": "Types of Models\nUsing geometry to model a problem into a solvable solution.\nExample:\n\n\n\nFinding the height of a tree\n\n\nYou want to find the height of a tree but cannot measure it directly. You stand 50 meters from the tree and determine that the line of sight from the group to the top of the tree makes an angle of 25° with the ground.\nTo determine the height of the tree we can use a right triangle and recall SOH CAH TOA\nIn this case given our variables we would like to use \\(\\tan{\\theta} = \\frac{\\text{opposite side}}{\\text{adjacent side}}\\)\nAnd that allows us to see that:\n\\[\n\\tan{\\theta} = \\frac{h}{50}\n\\]\nSolving for h by multiplying both sides by 50:\n\\[\nh = 50 * \\tan{25^\\circ} = h \\newline\nh = 23.3 m\n\\]\nThe particle model is an example of a simplification model where details that are not significant in determining the outcome of the problem are ignored.\nAnother category of models is an analysis model and then there are structural models which are used to understand the behavior of a system that is far different in scale from our macroscopic world, either much larger or much smaller.",
-    "crumbs": [
-      "Book",
-      "Chapter 1"
-    ]
-  },
-  {
-    "objectID": "book/chapter-1.html#definitions",
-    "href": "book/chapter-1.html#definitions",
-    "title": "Chapter 1",
-    "section": "Definitions",
-    "text": "Definitions\nThe three fundamental physical quantities of mechanics are length, mass, and time, of which the SI units are meter (m), kilogram (kg) and seconds (s) respectively.\nThe density of a substance is defined as its mass per unit volume:\n\\[\n\\rho \\equiv \\frac{m}{V}\n\\]\n[There are other concepts in chapter one that are worth covering and they have about 30 practice problems we should highly consider taking on]",
-    "crumbs": [
-      "Book",
-      "Chapter 1"
-    ]
-  },
-  {
-    "objectID": "homework/assignment-1.html",
-    "href": "homework/assignment-1.html",
-    "title": "Homework Assignement 1",
-    "section": "",
-    "text": "A person walks first at a constant speed of 5.10 m/s along a straight line from point circled A to point circled B and then back along the line from circled B to circled A at a constant speed of 3.15 m/s.\n\n\n\n\nRecall that we can find our average speed \\(S_{avg}\\) by using the distance traveled \\(d\\) divided by the change in time \\(\\Delta{t}\\)\nNow, since we measure our distance in meters and we measure our velocity in meters/second we can say that \\(t = d/speed\\)\nThis is mathematically true as:\n\\[\n\\frac{\\text{meters}}{\\text{meters/sec}} \\newline\n\\newline\n\\textnormal{meters cancels out in numerator and denominator}\n\\newline\n\\newline\n= seconds\n\\]\nTherefore our problem can be written as:\n\\[\n\\frac{2d}{\\frac{d}{5.10}+\\frac{d}{3.15}}\n\\newline\n\\newline\n\\]\nThe d’s cancel out:\n\\[\n\\frac{2}{\\frac{1}{5.10}+\\frac{1}{3.15}}\n\\]\nDividing by a fraction is the same as multiplying by it’s reciprocal:\n\\[\n\\frac{2(5.10)(3.15)}{5.10+3.15} = 3.89 m/s\n\\]\nTherefore we can say that the average speed is \\(3.89 \\space \\text{meters/second}\\)\n\n\n\n\nAverage velocity is based on displacement divided by change in time or: \\(v_{avg} = \\frac{\\text{displacement}}{{\\Delta{t}}}\\)\nDisplacement is a vector with a magnitude. Recall that adding two perfectly opposing vectors provides 0.\nErgo:\n\\(\\overrightarrow{\\mathbf{A}} = -\\overrightarrow{\\mathbf{B}}\\)\ntherefore\n\\(\\overrightarrow{\\mathbf{A}} + \\overrightarrow{\\mathbf{B}} = 0\\)\nThis is true in our problem as travel from point A to point B we can represent with Magnitude \\(d_1\\) and travel from point B to point A is simply \\(-d_1\\) or \\(d_2\\) which means that \\(d_1+d_2 = d_1+(-d_2) = 0\\)\nTherefore solving for average velocity provides:\n\\[\n\\newline\nv_{avg} = \\frac{0}{\\Delta{t}} = 0\n\\newline\n\\]\nTherfore our average velocity is 0. This doesn’t mean she never moved it just means that the net change in position is zero.",
-    "crumbs": [
-      "Homework",
-      "Homework Assignement 1"
-    ]
-  },
-  {
-    "objectID": "homework/assignment-1.html#a-what-is-her-average-speed-over-the-entire-trip",
-    "href": "homework/assignment-1.html#a-what-is-her-average-speed-over-the-entire-trip",
-    "title": "Homework Assignement 1",
-    "section": "",
-    "text": "Recall that we can find our average speed \\(S_{avg}\\) by using the distance traveled \\(d\\) divided by the change in time \\(\\Delta{t}\\)\nNow, since we measure our distance in meters and we measure our velocity in meters/second we can say that \\(t = d/speed\\)\nThis is mathematically true as:\n\\[\n\\frac{\\text{meters}}{\\text{meters/sec}} \\newline\n\\newline\n\\textnormal{meters cancels out in numerator and denominator}\n\\newline\n\\newline\n= seconds\n\\]\nTherefore our problem can be written as:\n\\[\n\\frac{2d}{\\frac{d}{5.10}+\\frac{d}{3.15}}\n\\newline\n\\newline\n\\]\nThe d’s cancel out:\n\\[\n\\frac{2}{\\frac{1}{5.10}+\\frac{1}{3.15}}\n\\]\nDividing by a fraction is the same as multiplying by it’s reciprocal:\n\\[\n\\frac{2(5.10)(3.15)}{5.10+3.15} = 3.89 m/s\n\\]\nTherefore we can say that the average speed is \\(3.89 \\space \\text{meters/second}\\)",
-    "crumbs": [
-      "Homework",
-      "Homework Assignement 1"
-    ]
-  },
-  {
-    "objectID": "homework/assignment-1.html#b-what-is-her-average-velocity-over-the-entire-trip",
-    "href": "homework/assignment-1.html#b-what-is-her-average-velocity-over-the-entire-trip",
-    "title": "Homework Assignement 1",
-    "section": "",
-    "text": "Average velocity is based on displacement divided by change in time or: \\(v_{avg} = \\frac{\\text{displacement}}{{\\Delta{t}}}\\)\nDisplacement is a vector with a magnitude. Recall that adding two perfectly opposing vectors provides 0.\nErgo:\n\\(\\overrightarrow{\\mathbf{A}} = -\\overrightarrow{\\mathbf{B}}\\)\ntherefore\n\\(\\overrightarrow{\\mathbf{A}} + \\overrightarrow{\\mathbf{B}} = 0\\)\nThis is true in our problem as travel from point A to point B we can represent with Magnitude \\(d_1\\) and travel from point B to point A is simply \\(-d_1\\) or \\(d_2\\) which means that \\(d_1+d_2 = d_1+(-d_2) = 0\\)\nTherefore solving for average velocity provides:\n\\[\n\\newline\nv_{avg} = \\frac{0}{\\Delta{t}} = 0\n\\newline\n\\]\nTherfore our average velocity is 0. This doesn’t mean she never moved it just means that the net change in position is zero.",
-    "crumbs": [
-      "Homework",
-      "Homework Assignement 1"
-    ]
-  },
-  {
-    "objectID": "homework/assignment-1.html#a-what-is-the-original-speed-of-the-truck",
-    "href": "homework/assignment-1.html#a-what-is-the-original-speed-of-the-truck",
-    "title": "Homework Assignement 1",
-    "section": "(a) What is the original speed of the truck?",
-    "text": "(a) What is the original speed of the truck?\nIn this problem we are given several variables:\nWe know the truck covers 37 meters so assume a starting point of \\(X_i = 0\\) and \\(X_f = 37.0\\) we know the change in time is \\(8.10s\\) from start to finish and we know the final velocity or \\(V_f = 3.00 m/s\\)\nUsing our kinematic equations we can find that kinematic 1 easily allows us to solve with our known values for \\(V_i\\)\nKinematic 1: \\[\nX_f = X_i + \\frac{V_i+V_f}{2}*t\n\\newline\n\\]\nFrom there we know that \\(X_i\\) is 0 so our full equation for this problem is:\n\\[\nX_f = \\frac{V_i+V_f}{2}*t\n\\newline\n\\]\nFrom there we rearrange to solve for \\(V_i\\)\n\\[\n\\frac{2X_f}{t}-V_f = V_i\n\\newline\n\\newline\n\\frac{2*37}{8.10}-3.00 = 6.13 m/s\n\\newline\n\\]\nTherefore the truck started at 6.13 meters per second.",
-    "crumbs": [
-      "Homework",
-      "Homework Assignement 1"
-    ]
-  },
-  {
-    "objectID": "homework/assignment-1.html#b-what-is-the-acceleration-of-the-truck",
-    "href": "homework/assignment-1.html#b-what-is-the-acceleration-of-the-truck",
-    "title": "Homework Assignement 1",
-    "section": "(b) What is the acceleration of the truck?",
-    "text": "(b) What is the acceleration of the truck?\nBased on the calculations from our previous problem we know that the \\(V_i\\) is 6.13 meters per second which combined as \\(V_f - V_i\\) = \\(\\Delta{V}\\) and:\n\\[\n\\frac{\\Delta{V}}{t} = a\n\\]\nThis is also just Kinematic 2 solved for a:\n\\[\n\\frac{V_f - V_i}{t} = a\n\\]\nPlugging in our values:\n\\[\n\\frac{3.00-6.13}{8.10} = -0.386 m/s\n\\]\nTherefore the truck decelerates at -0.386 meters per second.",
-    "crumbs": [
-      "Homework",
-      "Homework Assignement 1"
-    ]
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "notes",
-    "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
   },
   {
     "objectID": "book/chapter-2.html",
@@ -314,58 +230,153 @@
     ]
   },
   {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "notes",
+    "section": "",
+    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
+  },
+  {
+    "objectID": "homework/assignment-1.html",
+    "href": "homework/assignment-1.html",
+    "title": "Homework Assignement 1",
+    "section": "",
+    "text": "A person walks first at a constant speed of 5.10 m/s along a straight line from point circled A to point circled B and then back along the line from circled B to circled A at a constant speed of 3.15 m/s.\n\n\n\n\nRecall that we can find our average speed \\(S_{avg}\\) by using the distance traveled \\(d\\) divided by the change in time \\(\\Delta{t}\\)\nNow, since we measure our distance in meters and we measure our velocity in meters/second we can say that \\(t = d/speed\\)\nThis is mathematically true as:\n\\[\n\\frac{\\text{meters}}{\\text{meters/sec}} \\newline\n\\newline\n\\textnormal{meters cancels out in numerator and denominator}\n\\newline\n\\newline\n= seconds\n\\]\nTherefore our problem can be written as:\n\\[\n\\frac{2d}{\\frac{d}{5.10}+\\frac{d}{3.15}}\n\\newline\n\\newline\n\\]\nThe d’s cancel out:\n\\[\n\\frac{2}{\\frac{1}{5.10}+\\frac{1}{3.15}}\n\\]\nDividing by a fraction is the same as multiplying by it’s reciprocal:\n\\[\n\\frac{2(5.10)(3.15)}{5.10+3.15} = 3.89 m/s\n\\]\nTherefore we can say that the average speed is \\(3.89 \\space \\text{meters/second}\\)\n\n\n\n\nAverage velocity is based on displacement divided by change in time or: \\(v_{avg} = \\frac{\\text{displacement}}{{\\Delta{t}}}\\)\nDisplacement is a vector with a magnitude. Recall that adding two perfectly opposing vectors provides 0.\nErgo:\n\\(\\overrightarrow{\\mathbf{A}} = -\\overrightarrow{\\mathbf{B}}\\)\ntherefore\n\\(\\overrightarrow{\\mathbf{A}} + \\overrightarrow{\\mathbf{B}} = 0\\)\nThis is true in our problem as travel from point A to point B we can represent with Magnitude \\(d_1\\) and travel from point B to point A is simply \\(-d_1\\) or \\(d_2\\) which means that \\(d_1+d_2 = d_1+(-d_2) = 0\\)\nTherefore solving for average velocity provides:\n\\[\n\\newline\nv_{avg} = \\frac{0}{\\Delta{t}} = 0\n\\newline\n\\]\nTherfore our average velocity is 0. This doesn’t mean she never moved it just means that the net change in position is zero.",
+    "crumbs": [
+      "Homework",
+      "Homework Assignement 1"
+    ]
+  },
+  {
+    "objectID": "homework/assignment-1.html#a-what-is-her-average-speed-over-the-entire-trip",
+    "href": "homework/assignment-1.html#a-what-is-her-average-speed-over-the-entire-trip",
+    "title": "Homework Assignement 1",
+    "section": "",
+    "text": "Recall that we can find our average speed \\(S_{avg}\\) by using the distance traveled \\(d\\) divided by the change in time \\(\\Delta{t}\\)\nNow, since we measure our distance in meters and we measure our velocity in meters/second we can say that \\(t = d/speed\\)\nThis is mathematically true as:\n\\[\n\\frac{\\text{meters}}{\\text{meters/sec}} \\newline\n\\newline\n\\textnormal{meters cancels out in numerator and denominator}\n\\newline\n\\newline\n= seconds\n\\]\nTherefore our problem can be written as:\n\\[\n\\frac{2d}{\\frac{d}{5.10}+\\frac{d}{3.15}}\n\\newline\n\\newline\n\\]\nThe d’s cancel out:\n\\[\n\\frac{2}{\\frac{1}{5.10}+\\frac{1}{3.15}}\n\\]\nDividing by a fraction is the same as multiplying by it’s reciprocal:\n\\[\n\\frac{2(5.10)(3.15)}{5.10+3.15} = 3.89 m/s\n\\]\nTherefore we can say that the average speed is \\(3.89 \\space \\text{meters/second}\\)",
+    "crumbs": [
+      "Homework",
+      "Homework Assignement 1"
+    ]
+  },
+  {
+    "objectID": "homework/assignment-1.html#b-what-is-her-average-velocity-over-the-entire-trip",
+    "href": "homework/assignment-1.html#b-what-is-her-average-velocity-over-the-entire-trip",
+    "title": "Homework Assignement 1",
+    "section": "",
+    "text": "Average velocity is based on displacement divided by change in time or: \\(v_{avg} = \\frac{\\text{displacement}}{{\\Delta{t}}}\\)\nDisplacement is a vector with a magnitude. Recall that adding two perfectly opposing vectors provides 0.\nErgo:\n\\(\\overrightarrow{\\mathbf{A}} = -\\overrightarrow{\\mathbf{B}}\\)\ntherefore\n\\(\\overrightarrow{\\mathbf{A}} + \\overrightarrow{\\mathbf{B}} = 0\\)\nThis is true in our problem as travel from point A to point B we can represent with Magnitude \\(d_1\\) and travel from point B to point A is simply \\(-d_1\\) or \\(d_2\\) which means that \\(d_1+d_2 = d_1+(-d_2) = 0\\)\nTherefore solving for average velocity provides:\n\\[\n\\newline\nv_{avg} = \\frac{0}{\\Delta{t}} = 0\n\\newline\n\\]\nTherfore our average velocity is 0. This doesn’t mean she never moved it just means that the net change in position is zero.",
+    "crumbs": [
+      "Homework",
+      "Homework Assignement 1"
+    ]
+  },
+  {
+    "objectID": "homework/assignment-1.html#a-what-is-the-original-speed-of-the-truck",
+    "href": "homework/assignment-1.html#a-what-is-the-original-speed-of-the-truck",
+    "title": "Homework Assignement 1",
+    "section": "(a) What is the original speed of the truck?",
+    "text": "(a) What is the original speed of the truck?\nIn this problem we are given several variables:\nWe know the truck covers 37 meters so assume a starting point of \\(X_i = 0\\) and \\(X_f = 37.0\\) we know the change in time is \\(8.10s\\) from start to finish and we know the final velocity or \\(V_f = 3.00 m/s\\)\nUsing our kinematic equations we can find that kinematic 1 easily allows us to solve with our known values for \\(V_i\\)\nKinematic 1: \\[\nX_f = X_i + \\frac{V_i+V_f}{2}*t\n\\newline\n\\]\nFrom there we know that \\(X_i\\) is 0 so our full equation for this problem is:\n\\[\nX_f = \\frac{V_i+V_f}{2}*t\n\\newline\n\\]\nFrom there we rearrange to solve for \\(V_i\\)\n\\[\n\\frac{2X_f}{t}-V_f = V_i\n\\newline\n\\newline\n\\frac{2*37}{8.10}-3.00 = 6.13 m/s\n\\newline\n\\]\nTherefore the truck started at 6.13 meters per second.",
+    "crumbs": [
+      "Homework",
+      "Homework Assignement 1"
+    ]
+  },
+  {
+    "objectID": "homework/assignment-1.html#b-what-is-the-acceleration-of-the-truck",
+    "href": "homework/assignment-1.html#b-what-is-the-acceleration-of-the-truck",
+    "title": "Homework Assignement 1",
+    "section": "(b) What is the acceleration of the truck?",
+    "text": "(b) What is the acceleration of the truck?\nBased on the calculations from our previous problem we know that the \\(V_i\\) is 6.13 meters per second which combined as \\(V_f - V_i\\) = \\(\\Delta{V}\\) and:\n\\[\n\\frac{\\Delta{V}}{t} = a\n\\]\nThis is also just Kinematic 2 solved for a:\n\\[\n\\frac{V_f - V_i}{t} = a\n\\]\nPlugging in our values:\n\\[\n\\frac{3.00-6.13}{8.10} = -0.386 m/s\n\\]\nTherefore the truck decelerates at -0.386 meters per second.",
+    "crumbs": [
+      "Homework",
+      "Homework Assignement 1"
+    ]
+  },
+  {
+    "objectID": "book/chapter-1.html",
+    "href": "book/chapter-1.html",
+    "title": "Chapter 1",
+    "section": "",
+    "text": "Book Resource Found Here",
+    "crumbs": [
+      "Book",
+      "Chapter 1"
+    ]
+  },
+  {
+    "objectID": "book/chapter-1.html#types-of-models",
+    "href": "book/chapter-1.html#types-of-models",
+    "title": "Chapter 1",
+    "section": "Types of Models",
+    "text": "Types of Models\nUsing geometry to model a problem into a solvable solution.\nExample:\n\n\n\nFinding the height of a tree\n\n\nYou want to find the height of a tree but cannot measure it directly. You stand 50 meters from the tree and determine that the line of sight from the group to the top of the tree makes an angle of 25° with the ground.\nTo determine the height of the tree we can use a right triangle and recall SOH CAH TOA\nIn this case given our variables we would like to use \\(\\tan{\\theta} = \\frac{\\text{opposite side}}{\\text{adjacent side}}\\)\nAnd that allows us to see that:\n\\[\n\\tan{\\theta} = \\frac{h}{50}\n\\]\nSolving for h by multiplying both sides by 50:\n\\[\nh = 50 * \\tan{25^\\circ} = h \\newline\nh = 23.3 m\n\\]\nThe particle model is an example of a simplification model where details that are not significant in determining the outcome of the problem are ignored.\nAnother category of models is an analysis model and then there are structural models which are used to understand the behavior of a system that is far different in scale from our macroscopic world, either much larger or much smaller.",
+    "crumbs": [
+      "Book",
+      "Chapter 1"
+    ]
+  },
+  {
+    "objectID": "book/chapter-1.html#definitions",
+    "href": "book/chapter-1.html#definitions",
+    "title": "Chapter 1",
+    "section": "Definitions",
+    "text": "Definitions\nThe three fundamental physical quantities of mechanics are length, mass, and time, of which the SI units are meter (m), kilogram (kg) and seconds (s) respectively.\nThe density of a substance is defined as its mass per unit volume:\n\\[\n\\rho \\equiv \\frac{m}{V}\n\\]\n[There are other concepts in chapter one that are worth covering and they have about 30 practice problems we should highly consider taking on]",
+    "crumbs": [
+      "Book",
+      "Chapter 1"
+    ]
+  },
+  {
     "objectID": "book/chapter-3.html",
     "href": "book/chapter-3.html",
-    "title": "Chapter 2 - Motion in One Dimension",
+    "title": "Chapter 3 - Motion in One Dimension",
     "section": "",
     "text": "A car moving between points on the \\(x\\) axis.\n\n\n\nA representation of that graphically\n\n\nAdditionally, from the graph we can extract a table of the position of the car at various times:\n\n\n\nPosition\n\\(t(s)\\)\n\\(t(m)\\)\n\n\n\n\nA\n0\n30\n\n\nB\n10\n52\n\n\nC\n20\n38\n\n\nD\n30\n0\n\n\nE\n40\n-37\n\n\nF\n50\n-53\n\n\n\nNow the motion of the particle is not entirely known because we don’t know it’s position at every time, only the provided times. The smooth curve only represents the possibility of the actual motion of the car.\n\n\n\\(v_{x,avg} \\equiv \\frac{\\Delta{x}}{\\Delta{t}}\\)\nFrom this formula we know that average velocity has dimensions of length divided by time (\\(L/T\\)) or meters per second in SI units. Where \\(\\Delta{x}\\) is the displacement or change in \\(x\\) over some period of time. \\(X_f - X_i = \\Delta{x}\\)\nThe average velocity of a particle in one dimension can be positive or negative depending on the sign of displacement. The time interval measured by \\(\\Delta{t}\\) is always positive. When the coordinate increases with time \\(\\Delta{x}\\) is then the average velocity is a positive number. If \\(\\Delta{x}\\) is negative then the average velocity is negative.\n\n\n\n\\[\nv_{avg} \\equiv \\frac{d}{\\Delta{t}}\n\\]\nUnlike velocity, speed has no direction and is always expressed as a positive number. Where average velocity is the displacement or \\(\\Delta{x}\\) divided by the change in time, the average speed is found by measuring the distance over the change in time.\nFor example if it takes you 45 seconds to travel 100 m down a hallway and at the 100-m you turn around and walk back 25m in the opposite direction taking 10 seconds, the magnitude of your average velocity is found as:\n\\[\n\\newline\n\\Delta{x} = X_f - X_i = 100-25 = 75m = \\Delta{x}\n\\newline\n\\Delta{t} = 45s+10s = 55s \\newline\n\\newline\n\\]\nAnd average velocity is \\(v_{x,avg} = \\frac{\\Delta{x}}{\\Delta{t}}\\)\nSo:\n\\[\n\\newline\nv_{x,avg} = \\frac{75m}{55s} = 1.36m/s\n\\newline\n\\]\nTherefore your average velocity over the trip is \\(1.36 m/s\\). However, the average speed is the distance traveled \\(d\\) divided by the change in time:\n\\[\n\\newline\nd = 100+25 = 125m\n\\newline\n\\]\nAnd \\(\\Delta{t}\\) remains the same:\n\\[\n\\newline\nv_{avg} = 125m/55s = 2.27 m/s\n\\newline\n\\]\nTherefore, your average speed is \\(2.27 m/s\\)",
     "crumbs": [
       "Book",
-      "Chapter 2 - Motion in One Dimension"
+      "Chapter 3 - Motion in One Dimension"
     ]
   },
   {
     "objectID": "book/chapter-3.html#average-velocity",
     "href": "book/chapter-3.html#average-velocity",
-    "title": "Chapter 2 - Motion in One Dimension",
+    "title": "Chapter 3 - Motion in One Dimension",
     "section": "",
     "text": "\\(v_{x,avg} \\equiv \\frac{\\Delta{x}}{\\Delta{t}}\\)\nFrom this formula we know that average velocity has dimensions of length divided by time (\\(L/T\\)) or meters per second in SI units. Where \\(\\Delta{x}\\) is the displacement or change in \\(x\\) over some period of time. \\(X_f - X_i = \\Delta{x}\\)\nThe average velocity of a particle in one dimension can be positive or negative depending on the sign of displacement. The time interval measured by \\(\\Delta{t}\\) is always positive. When the coordinate increases with time \\(\\Delta{x}\\) is then the average velocity is a positive number. If \\(\\Delta{x}\\) is negative then the average velocity is negative.",
     "crumbs": [
       "Book",
-      "Chapter 2 - Motion in One Dimension"
+      "Chapter 3 - Motion in One Dimension"
     ]
   },
   {
     "objectID": "book/chapter-3.html#average-speed",
     "href": "book/chapter-3.html#average-speed",
-    "title": "Chapter 2 - Motion in One Dimension",
+    "title": "Chapter 3 - Motion in One Dimension",
     "section": "",
     "text": "\\[\nv_{avg} \\equiv \\frac{d}{\\Delta{t}}\n\\]\nUnlike velocity, speed has no direction and is always expressed as a positive number. Where average velocity is the displacement or \\(\\Delta{x}\\) divided by the change in time, the average speed is found by measuring the distance over the change in time.\nFor example if it takes you 45 seconds to travel 100 m down a hallway and at the 100-m you turn around and walk back 25m in the opposite direction taking 10 seconds, the magnitude of your average velocity is found as:\n\\[\n\\newline\n\\Delta{x} = X_f - X_i = 100-25 = 75m = \\Delta{x}\n\\newline\n\\Delta{t} = 45s+10s = 55s \\newline\n\\newline\n\\]\nAnd average velocity is \\(v_{x,avg} = \\frac{\\Delta{x}}{\\Delta{t}}\\)\nSo:\n\\[\n\\newline\nv_{x,avg} = \\frac{75m}{55s} = 1.36m/s\n\\newline\n\\]\nTherefore your average velocity over the trip is \\(1.36 m/s\\). However, the average speed is the distance traveled \\(d\\) divided by the change in time:\n\\[\n\\newline\nd = 100+25 = 125m\n\\newline\n\\]\nAnd \\(\\Delta{t}\\) remains the same:\n\\[\n\\newline\nv_{avg} = 125m/55s = 2.27 m/s\n\\newline\n\\]\nTherefore, your average speed is \\(2.27 m/s\\)",
     "crumbs": [
       "Book",
-      "Chapter 2 - Motion in One Dimension"
+      "Chapter 3 - Motion in One Dimension"
     ]
   },
   {
     "objectID": "book/chapter-3.html#average-accleration",
     "href": "book/chapter-3.html#average-accleration",
-    "title": "Chapter 2 - Motion in One Dimension",
+    "title": "Chapter 3 - Motion in One Dimension",
     "section": "Average Accleration",
     "text": "Average Accleration\n\\[\na_{x,avg} \\equiv \\frac{\\Delta{v_x}}{\\Delta{t}} = \\frac{v_{xf} - v_{xi}}{t_f - t_i}\n\\]\n\n\n\nFigure depicting the graphical relations of average accleration and instant acceleration\n\n\nA positive acceleration indicates that velocity is moving towards having a positive value over time. And a negative value means that velocity is decreasing in value over time.",
     "crumbs": [
       "Book",
-      "Chapter 2 - Motion in One Dimension"
+      "Chapter 3 - Motion in One Dimension"
     ]
   },
   {
     "objectID": "book/chapter-3.html#instant-acceleration",
     "href": "book/chapter-3.html#instant-acceleration",
-    "title": "Chapter 2 - Motion in One Dimension",
+    "title": "Chapter 3 - Motion in One Dimension",
     "section": "Instant Acceleration",
     "text": "Instant Acceleration\n\\[\na_x \\equiv \\lim\\limits_{\\Delta{t} \\to 0} \\frac{\\Delta{v_x}}{\\Delta{t}} = \\frac{dv_x}{dt}\n\\]\n\n\n\nThe graphical relationship\n\n\nThe net force on an object is proportional to the acceleration of the object\n\\[\nF_x \\propto a_x\n\\]",
     "crumbs": [
       "Book",
-      "Chapter 2 - Motion in One Dimension"
+      "Chapter 3 - Motion in One Dimension"
     ]
   },
   {
