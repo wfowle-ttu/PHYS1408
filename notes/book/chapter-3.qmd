@@ -1,5 +1,5 @@
 ---
-title: "Chapter 2 - Motion in One Dimension"
+title: "Chapter 3 - Motion in One Dimension"
 ---
 
 # Velocity & Speed of a Particle
