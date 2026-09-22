@@ -10,102 +10,58 @@
     ]
   },
   {
-    "objectID": "lectures/lecture_82826.html",
-    "href": "lectures/lecture_82826.html",
-    "title": "Lecture 8-28-2026",
+    "objectID": "book/chapter-3.html",
+    "href": "book/chapter-3.html",
+    "title": "Chapter 3 - Motion in One Dimension",
     "section": "",
-    "text": "Reference The first lecture for kinematic equations.",
-    "crumbs": [
-      "Lectures",
-      "Lecture 8-28-2026"
-    ]
-  },
-  {
-    "objectID": "lectures/lecture_82826.html#example-problem-4",
-    "href": "lectures/lecture_82826.html#example-problem-4",
-    "title": "Lecture 8-28-2026",
-    "section": "Example Problem 4",
-    "text": "Example Problem 4\nA penny is dropped down a well and his water after 2 seconds, how deep is the well?\n\n\n\nExample problem 4 visualization\n\n\nGiven the variables we have that would mean we need to use Kinematic 4 as we are trying to solve for \\(y_f\\)\n\\[\nX_f = X_i+V_i*t+\\frac{1}{2}a*t^2\n\\]\nRemoving the variables we know equate to zero our equation shifts: \\[\ny_f = y_i + \\frac{1}{2}(-g)t^2\n\\]\nAnd the final position of y is the depth of our well. \\[\ny_f = \\frac{1}{2}(-g)t^2\n\\]\nPlugging in our values we find:\n\\[\ny_f = \\frac{1}{2}(-9.81 m/s)2s^2 \\newline\ny_f = -19.6 \\space \\text{meters}\n\\]\nOur answer tells us that our well is around 19.6 meters deep.\n\nLet’s shuffle our previous problem slightly to reveal additional algebra within the 4th Kinematic equation.\nLet’s assume the penny is thrown down the well (rather than dropped) with a \\(V_i = -2m/s\\) and impacts in 1 second.\nThis effectively becomes the same problem but with different parameters:\n\\[\ny_f = y_i + v_{yi}*t + \\frac{1}{2}a_yt^2-V_{yi}t\n\\]\nPlugging in our known variables we find:\n\\[\ny_f = 0 + -2 m/s * 1 s + \\frac{1}{2}(-9.81)(1s)^2\n\\]\nSimplifying\n\\[\ny_f = -2 + -4.905\ny_f = -6.905 meters\n\\]\nIn another form of this equation the penny is thrown upwards at 5m/s and hits the bottom of the well after 3s.\nUsing the 4th equation again we get:\n\\[\nY_f = Y_i+V_i*t+\\frac{1}{2}a*t^2\n\\]\nIn which case we have \\[\nV_{yi} = 5 m/s \\newline\na_y = -g \\newline\ny_f = 0 \\newline\ny_i = \\space ? \\space \\text{(also known as h)}\n\\]\nPlugging that in\n\\[\n0 = h + V_{yi}t - \\frac{gt^2}{2}\n\\]\nWhich simplifies to:\n\\[\nh = \\frac{gt^2}{2}-V_{yi}t \\newline\nh = 9.8/2*3^2-5*3 \\newline\nh = 29.1 \\space \\text{meters deep}\n\\]",
-    "crumbs": [
-      "Lectures",
-      "Lecture 8-28-2026"
-    ]
-  },
-  {
-    "objectID": "lectures/lecture_82826.html#example-problem-1",
-    "href": "lectures/lecture_82826.html#example-problem-1",
-    "title": "Lecture 8-28-2026",
-    "section": "Example Problem 1",
-    "text": "Example Problem 1\nA ball rolling off of a table:\n\n\n\nExample problem 1 visualized\n\n\nTaking stock of the variables we know we will associate with the final position of the ball as \\(R\\)\nIn this problem we have to calculate both x and y indepdently in the same way we would normally calculate them.\nFirstly since the ball is rolling across the \\(x\\) axis at 1m/s and we know the x axis takes on no additional acceleration we can calculate the x position of the ball using one of the kinematic equations, specifically equation 4:\nWe will also have to calculate the y coordinate as well, using the same kinematic equation. Our example problem provides us with the necessary information to solve for both x and y.\nWe will want to solve for y first since it will tell us how long the ball takes to drop, from there we can pause and solve for x at the same time frame to find where r is.\n\nSolve for \\(Y_f\\) when",
-    "crumbs": [
-      "Lectures",
-      "Lecture 8-28-2026"
-    ]
-  },
-  {
-    "objectID": "lectures/lecture_82626.html",
-    "href": "lectures/lecture_82626.html",
-    "title": "Lecture 8-26-2026",
-    "section": "",
-    "text": "Solve for the final position of something given it’s initial position and the amount of time. \\[\nX_f = X_i + \\frac{V_i+v_f}{2}*t\n\\]\n\n\n\nSolve for the final velocity of something given an initial velocity, acceleration, and time. \\[\nV_f = V_i + a*t\n\\]\n\n\n\nFind the acceleration of something when given it’s initial velocity, it’s final position, and initial position. \\[\nV_f^2 = V_i^2+2a(X_f-X_i)\n\\]\n\n\n\nFind the final position of something given it’s initial position, initial velocity, time, and acceleration. \\[\nX_f = X_i+V_i*t+\\frac{1}{2}a*t^2\n\\]\nFor each of the above equations X can be substituted for Y and the same calculations can be used to find Vertical motion in 1D.\n\n\n\n\nTwo cars 1000 meters apart approach eachother. Initially they are at rest, Car 1 accelerates at \\(3 m/s^2\\) and Car 2 acclerates at \\(-2 m/s^2\\). When do they collide?\nGiven that we know several properties about both vehicles and that we are solving for \\(t\\) we are going to want to select the Kinematic Equation that includes all of the variables we know.\nIn this case we know:\nFor Car 1: \\[\nX_{i1} = 0 \\newline\nA_1 = 3 m/s^2\n\\]\nFor Car 2: \\[\nX_{i2} = 1000 \\newline\nA_2 = -2 m/s^2\n\\]\n\n\n\nExample Problem 1 Visualized\n\n\nWe can take the variables that we know and plug them into Kinematic equation 1. The reason we choose kinematic equation 1 is because it includes all of the variables we know and doesn’t have variables that we do not know the value of (at least not more than one).\nTherefore from here we can plug in our known values. Recall that Kinematic equation 1 is:\n\\[\nX_f = X_i + \\frac{V_i+v_f}{2}*t\n\\]\nNow, we can fill out some portion of that equation for both cars.\nFor Car 1:\nWe cancel out \\(X_{1i}\\) and \\(V_{1i}\\) because they are both zero.\n\\[\nX_{1f} = 0 + 0 + \\frac{1}{2}a_2*t^2\n\\]\nAnd this then simplifies to:\n\\[\nX_{1f} = \\frac{1}{2}a_2*t^2\n\\]\nFor Car 2 we have a non-zero X initial point therefore X initial doesn’t cancel out there.\n\\[\nX_{2f} = 1000 + 0 \\frac{1}{2}a_2*t^2\n\\]\nTherefore \\(V_{2i}\\) is cancelled out to give us:\n\\[\nX_{2f} = X_{2i} \\frac{1}{2}a_2*t^2\n\\]\nConsidering that both vehicles are moving across a one dimension plane, and that both are head on. What we really want to find to solve for WHEN (that is at what Time \\(t\\)) do both vehicles have the same position or where \\(X_1 = X_2\\)\n\n\n\n\n\n\nImportant\n\n\n\nProfessor Lamp warned in this lecture that it can be tempting to plug in numbers early, however this makes isolating the variable we’re solving for confusing.\nTherefore, in order to properly solve this equation we’re going to hold off on plugging in any numbers until we’ve isolated \\(t\\) which is the variable we’re solving for!\n\n\n\nWhat we can do to make that happen is set the equation to find \\(X_{fn}\\) for either car equal to eachother. In other words:\n\\[\n\\frac{1}{2}a_1*t^2 = X_{2i} + \\frac{1}{2}a_2*t^2\n\\]\nWhich is effectively where \\(X_{1f} = X_{2f}\\)\nFrom there we can use alegbra to solve for \\(t\\)\n1. Subtract \\(\\frac{1}{2}*a_2*t^2\\) from both sides.\nThis gives us:\n\\[\n\\frac{1}{2}a_1*t^2 - \\frac{1}{2}*a_2*t^2 = X_{2i}\n\\]\nWe can refactor\n\\[\n\\frac{1}{2}a_1*t^2 - \\frac{1}{2}*a_2*t^2\n\\]\nBecause both terms share \\(\\frac{1}{2}t^2\\) the left side becomes:\n\\[\n\\frac{1}{2}(a_1 - a_2)*t^2\n\\]\nAnd in totality:\n\\[\n\\frac{1}{2}(a_1 - a_2)*t^2 = X_{2i}\n\\]\n2. Divide both sides by \\(\\frac{1}{2}(a_1 - a_2)\\) in order to isolate \\(t\\)\nWhen dividing by a fraction you are effectively multiplying by the reciprocal of that fraction.\nErgo \\(\\frac{X_{2i}}{\\frac{1}{2}} = \\frac{2}{1} * X_{2i}\\)\nSince our right side would become:\n\\[\nt^2 = \\frac{X_{2i}}{\\frac{1}{2}(a_1 - a_2)}\n\\]\nWe can simplify to\n\\[\nt^2 = X_{2i} * \\frac{2}{a_1 - a_2}\n\\]\nAnd that further simplifies to\n\\[\nt^2 = \\frac{2X_{2i}}{a_1 - a_2}\n\\]\n3. Take the square root of both sides to solve for \\(t\\)\nIn our final step to solve for \\(t\\) we take the square root of both sides and that should give us the time at which \\(X_1 = X_2\\) or in other words where our vehicles collide.\n\\[\nt = \\sqrt{\\frac{2X_{2i}}{a_1 - a_2}}\n\\]\nAnd since we have values for each of our variables on the right side, we can plug those in now, this gives us:\n\\[\nt = \\sqrt{\\frac{2*1000}{3 - (-2)}}\n\\]\nNow \\(3 - (-2)\\) becomes \\(3+2\\) once you workout the signs and you end up with:\n\\[\nt = \\sqrt{\\frac{2*1000}{5}}\n\\]\nor\n\\[\nt = \\sqrt{\\frac{2000}{5}}\n\\]\n\\[\nt = \\sqrt{400}\n\\]\n\n\n\n\n\n\nNote\n\n\n\nSince our unit of acceleration is in \\(m/s^2\\) and our distance is in meters the new unit when dividing meters by \\(m/s^2\\) is \\(m^2/s^2\\).\n\n\nSo we’re effectively getting the square root of 400 seconds squared here. That means that the result of the square root is just seconds (not seconds squared).\nPlugging that into a calculator we find that \\(t = 20\\)\n\n\n\n\n\n\nTip\n\n\n\nTechnically because we’re working with a square root \\(t = \\pm 20\\), but since we don’t care about a negative time (since that doesn’t necessarily matter here) we just say that \\(t = 20\\).\n\n\nTherefore, given the parameters of the problem we find that the cars will both be at the same X position at 20 seconds.\n\nIf we wanted to further explore this problem we might also ask at what X position do both cars collide. This is easy to solve because we only need to find the position of one of the vehicles since it’s a collision at \\(t = 20\\) that means the position of either car 1 or car 2 at \\(t=20\\) is the same position the other car is at.\nTherefore finding the position of car 1 at \\(t=20\\) will give us the position of both cars:\n\\[\nX_{1f} = \\frac{1}{2}a_1t^2 \\newline\n\\frac{1}{2}*3*20^2 = 600\n\\]\nTherefore, at X of 600 both vehicles collide or 600 meters since X is a measure of meters.\n\n\n\nA plane lands at \\(70 m/s^2\\) on a carrier deck that is 100 meters long. In order to stop before the end of the carrier how quickly must the aircraft decelerate?\n\n\n\nExample Problem 2 Visualized\n\n\nTaking stock of what variables the problem offers us we know that:\n\\[\nX_i = 0 \\newline\nX_f = 100 \\newline\nV_i = 70 m/s^2 \\newline\nV_f = 0 \\newline\na = ?\n\\]\nSo taking in those values and solving for acceleration would require us to use Kinematic equation #3 because we do not have time \\(t\\).\nTherfore we will use: \\[\nV_f^2 = V_i^2+2a(X_f-X_i)\n\\]\nLet’s go through the steps of solving this problem using Kinematic Equation #3:\n1. Refactor the equation to isolate \\(a\\)\nFirst we will subract \\(V_i^2\\) from both sides: \\[\nV_f^2-V_i^2=2a(X_f-X_i)\n\\]\n\n\n\n\n\n\nNote\n\n\n\nProfessor Lamp refers to \\(X_f - X_i\\) simply as \\(\\Delta{X}\\) we will do the same here on occasion.\n\n\n2. Divide both sides by 2\nSince \\(2a\\Delta{X}\\) are all the same factor we can choose to divide by \\(2\\Delta{X}\\) treating it as a coeffecient of a. This enables us to easily isolate a on the right side.\n\n\n\n\n\n\nNote\n\n\n\nTerms are seperated by \\(+\\) and \\(-\\), they are pieces of an expression you add or subtract together. Factors are seperated by multiplication, they are multipled inside a single term. Ergo \\(2a(X_f - X_i)\\) is all one term. And you can divide a term by any of it’s factors and they cancel!\n\n\n\\[\n\\frac{V_f^2-V_i^2}{2\\Delta{X}}=a\n\\]\n3. Now that we have \\(a\\) isolated we can solve the equation by plugging in our known numbers\n\\[\n\\frac{V_f^2-V_i^2}{2\\Delta{X}}=a\n\\]\nBecomes:\n\\[\n\\frac{0^2-70^2}{2*\\Delta{100}}=a\n\\]\nWhich further simplifies to:\n\\[\n\\frac{-70^2}{200} = a \\newline\n\\frac{-4900}{200} = a \\newline\n-24.5m/s^2 = a\n\\]\nTherefore the aircraft must decelerate at \\(-24.5m\\s^2\\) to come to a complete stop before the end of the carrier deck.\n\n\n\n\n\n\nNote\n\n\n\nThis amount of deceleration is equivalent to 2.5 g’s!\n\n\n\n\n\nWile E. Coyote unexpectadly runs off the end of a 100 meter tall cliff in pursuit of the road runner. How long will Wile E. Coyote fall before reaching initial impact?\n\n\n\nVisualization of example problem 3\n\n\nTaking stock of the variables we know and don’t know, we have:\n\\[\nV_i = 0 \\newline\nY_i = 100 \\newline\na = -9.81 m/s^2 \\newline\ny_f = 0\nt = ?\n\\]\nTherefore in order to find \\(t\\) we can use Kinematic Equation 4:\n\\[\nY_f = Y_i+V_i*t+\\frac{1}{2}a*t^2\n\\]\nWhich will allow us to isolate and solve for \\(t\\).\n1. Remove variables that cancel out\nSince \\(V_i\\) is 0, that makes the term \\(V_i*t\\) irrelevant to this equation as it’s value is simply zero regardless of what \\(t\\) is.\nTherefore we can simplify to:\n\\[\nY_f = Y_i + \\frac{1}{2}at^2\n\\]\nThis equation likely looks familiar from earlier in our problem questions:\n2. Subtract \\(Y_i\\) from both sides\n\\[\nY_f - Y_i = \\frac{1}{2}at^2\n\\]\n3. Divide both sides by \\(\\frac{1}{2}a\\)\n\\[\n\\frac{Y_f - Y_i}{\\frac{1}{2}a} = t^2\n\\]\nThis simplifies to:\n\\[\n\\frac{2(Y_f - Y_i)}{a} = t^2\n\\]\nHere we can refer to \\(Y_f - Y_i\\) as simply \\(\\Delta{Y}\\)\n\n\n\n\n\n\nTip\n\n\n\n\\(\\Delta{Y}\\) can also be referred to as \\(h\\) or height on occasion, especially when \\(y_f = 0\\) and \\(y_i\\) is some non-zero number.\n\n\nSo:\n\\[\n\\frac{2\\Delta{Y}}{a} = t^2\n\\]\n4. Solve for \\(t\\) by taking the square root of the left side\n\\[\n\\sqrt{\\frac{2\\Delta{Y}}{a}} = t\n\\]\nNow that \\(t\\) is isolated we can plug in our values and find:\n\\[\n\\sqrt{\\frac{2*-100}{-9.81m/s^2}}\n\\]\nWhich becomes\n\\[\n\\sqrt{\\frac{-200}{-9.81}}\n\\]\nfurther:\n\\[\n\\sqrt{20.30} = 4.52 \\space \\text{seconds} = t\n\\]\nTherefore it takes Wile E. Coyote 4.52 seconds after realizing his grave error until he impacts near the base of the cliff.\nNow how quickly was he travelling when he impacted the ground?\nIn order to figure this out we will use kinematic equation 3, we use specially 3 because it avoid the use of \\(t\\) which even though we calculated, if we incorrectly calculated could lead us to a wrong answer here.\n\\[\nV_f^2 = V_i^2+2a(X_f-X_i)\n\\]\nTaking stock we know:\n\\[\nV_i^2 = 0\na = -9.81m/s^2\nY_f = 0\nY_i = 100\n\\]\nSolving we find that\n\\[\nV_f^2 = 2a\\Delta{y} \\newline\nV_f = \\sqrt{2a\\Delta{y}}\n\\]\n\\[\nV_f = \\sqrt{2*-9.81*-100} = \\pm{44.27}m/s^2\n\\]\nGiving us a \\(V_f\\) of -44.27 m/s at the time of impact.\n\n\n\n\n\n\nTip\n\n\n\nWe use the negative result of the square root because the coyote is descending which is a negative movement across our established \\(y\\) axis.",
-    "crumbs": [
-      "Lectures",
-      "Lecture 8-26-2026"
-    ]
-  },
-  {
-    "objectID": "lectures/lecture_82626.html#kinematic-equations",
-    "href": "lectures/lecture_82626.html#kinematic-equations",
-    "title": "Lecture 8-26-2026",
-    "section": "",
-    "text": "Solve for the final position of something given it’s initial position and the amount of time. \\[\nX_f = X_i + \\frac{V_i+v_f}{2}*t\n\\]\n\n\n\nSolve for the final velocity of something given an initial velocity, acceleration, and time. \\[\nV_f = V_i + a*t\n\\]\n\n\n\nFind the acceleration of something when given it’s initial velocity, it’s final position, and initial position. \\[\nV_f^2 = V_i^2+2a(X_f-X_i)\n\\]\n\n\n\nFind the final position of something given it’s initial position, initial velocity, time, and acceleration. \\[\nX_f = X_i+V_i*t+\\frac{1}{2}a*t^2\n\\]\nFor each of the above equations X can be substituted for Y and the same calculations can be used to find Vertical motion in 1D.",
-    "crumbs": [
-      "Lectures",
-      "Lecture 8-26-2026"
-    ]
-  },
-  {
-    "objectID": "lectures/lecture_82626.html#example-problem-1",
-    "href": "lectures/lecture_82626.html#example-problem-1",
-    "title": "Lecture 8-26-2026",
-    "section": "",
-    "text": "Two cars 1000 meters apart approach eachother. Initially they are at rest, Car 1 accelerates at \\(3 m/s^2\\) and Car 2 acclerates at \\(-2 m/s^2\\). When do they collide?\nGiven that we know several properties about both vehicles and that we are solving for \\(t\\) we are going to want to select the Kinematic Equation that includes all of the variables we know.\nIn this case we know:\nFor Car 1: \\[\nX_{i1} = 0 \\newline\nA_1 = 3 m/s^2\n\\]\nFor Car 2: \\[\nX_{i2} = 1000 \\newline\nA_2 = -2 m/s^2\n\\]\n\n\n\nExample Problem 1 Visualized\n\n\nWe can take the variables that we know and plug them into Kinematic equation 1. The reason we choose kinematic equation 1 is because it includes all of the variables we know and doesn’t have variables that we do not know the value of (at least not more than one).\nTherefore from here we can plug in our known values. Recall that Kinematic equation 1 is:\n\\[\nX_f = X_i + \\frac{V_i+v_f}{2}*t\n\\]\nNow, we can fill out some portion of that equation for both cars.\nFor Car 1:\nWe cancel out \\(X_{1i}\\) and \\(V_{1i}\\) because they are both zero.\n\\[\nX_{1f} = 0 + 0 + \\frac{1}{2}a_2*t^2\n\\]\nAnd this then simplifies to:\n\\[\nX_{1f} = \\frac{1}{2}a_2*t^2\n\\]\nFor Car 2 we have a non-zero X initial point therefore X initial doesn’t cancel out there.\n\\[\nX_{2f} = 1000 + 0 \\frac{1}{2}a_2*t^2\n\\]\nTherefore \\(V_{2i}\\) is cancelled out to give us:\n\\[\nX_{2f} = X_{2i} \\frac{1}{2}a_2*t^2\n\\]\nConsidering that both vehicles are moving across a one dimension plane, and that both are head on. What we really want to find to solve for WHEN (that is at what Time \\(t\\)) do both vehicles have the same position or where \\(X_1 = X_2\\)\n\n\n\n\n\n\nImportant\n\n\n\nProfessor Lamp warned in this lecture that it can be tempting to plug in numbers early, however this makes isolating the variable we’re solving for confusing.\nTherefore, in order to properly solve this equation we’re going to hold off on plugging in any numbers until we’ve isolated \\(t\\) which is the variable we’re solving for!\n\n\n\nWhat we can do to make that happen is set the equation to find \\(X_{fn}\\) for either car equal to eachother. In other words:\n\\[\n\\frac{1}{2}a_1*t^2 = X_{2i} + \\frac{1}{2}a_2*t^2\n\\]\nWhich is effectively where \\(X_{1f} = X_{2f}\\)\nFrom there we can use alegbra to solve for \\(t\\)\n1. Subtract \\(\\frac{1}{2}*a_2*t^2\\) from both sides.\nThis gives us:\n\\[\n\\frac{1}{2}a_1*t^2 - \\frac{1}{2}*a_2*t^2 = X_{2i}\n\\]\nWe can refactor\n\\[\n\\frac{1}{2}a_1*t^2 - \\frac{1}{2}*a_2*t^2\n\\]\nBecause both terms share \\(\\frac{1}{2}t^2\\) the left side becomes:\n\\[\n\\frac{1}{2}(a_1 - a_2)*t^2\n\\]\nAnd in totality:\n\\[\n\\frac{1}{2}(a_1 - a_2)*t^2 = X_{2i}\n\\]\n2. Divide both sides by \\(\\frac{1}{2}(a_1 - a_2)\\) in order to isolate \\(t\\)\nWhen dividing by a fraction you are effectively multiplying by the reciprocal of that fraction.\nErgo \\(\\frac{X_{2i}}{\\frac{1}{2}} = \\frac{2}{1} * X_{2i}\\)\nSince our right side would become:\n\\[\nt^2 = \\frac{X_{2i}}{\\frac{1}{2}(a_1 - a_2)}\n\\]\nWe can simplify to\n\\[\nt^2 = X_{2i} * \\frac{2}{a_1 - a_2}\n\\]\nAnd that further simplifies to\n\\[\nt^2 = \\frac{2X_{2i}}{a_1 - a_2}\n\\]\n3. Take the square root of both sides to solve for \\(t\\)\nIn our final step to solve for \\(t\\) we take the square root of both sides and that should give us the time at which \\(X_1 = X_2\\) or in other words where our vehicles collide.\n\\[\nt = \\sqrt{\\frac{2X_{2i}}{a_1 - a_2}}\n\\]\nAnd since we have values for each of our variables on the right side, we can plug those in now, this gives us:\n\\[\nt = \\sqrt{\\frac{2*1000}{3 - (-2)}}\n\\]\nNow \\(3 - (-2)\\) becomes \\(3+2\\) once you workout the signs and you end up with:\n\\[\nt = \\sqrt{\\frac{2*1000}{5}}\n\\]\nor\n\\[\nt = \\sqrt{\\frac{2000}{5}}\n\\]\n\\[\nt = \\sqrt{400}\n\\]\n\n\n\n\n\n\nNote\n\n\n\nSince our unit of acceleration is in \\(m/s^2\\) and our distance is in meters the new unit when dividing meters by \\(m/s^2\\) is \\(m^2/s^2\\).\n\n\nSo we’re effectively getting the square root of 400 seconds squared here. That means that the result of the square root is just seconds (not seconds squared).\nPlugging that into a calculator we find that \\(t = 20\\)\n\n\n\n\n\n\nTip\n\n\n\nTechnically because we’re working with a square root \\(t = \\pm 20\\), but since we don’t care about a negative time (since that doesn’t necessarily matter here) we just say that \\(t = 20\\).\n\n\nTherefore, given the parameters of the problem we find that the cars will both be at the same X position at 20 seconds.\n\nIf we wanted to further explore this problem we might also ask at what X position do both cars collide. This is easy to solve because we only need to find the position of one of the vehicles since it’s a collision at \\(t = 20\\) that means the position of either car 1 or car 2 at \\(t=20\\) is the same position the other car is at.\nTherefore finding the position of car 1 at \\(t=20\\) will give us the position of both cars:\n\\[\nX_{1f} = \\frac{1}{2}a_1t^2 \\newline\n\\frac{1}{2}*3*20^2 = 600\n\\]\nTherefore, at X of 600 both vehicles collide or 600 meters since X is a measure of meters.",
-    "crumbs": [
-      "Lectures",
-      "Lecture 8-26-2026"
-    ]
-  },
-  {
-    "objectID": "lectures/lecture_82626.html#example-problem-2",
-    "href": "lectures/lecture_82626.html#example-problem-2",
-    "title": "Lecture 8-26-2026",
-    "section": "",
-    "text": "A plane lands at \\(70 m/s^2\\) on a carrier deck that is 100 meters long. In order to stop before the end of the carrier how quickly must the aircraft decelerate?\n\n\n\nExample Problem 2 Visualized\n\n\nTaking stock of what variables the problem offers us we know that:\n\\[\nX_i = 0 \\newline\nX_f = 100 \\newline\nV_i = 70 m/s^2 \\newline\nV_f = 0 \\newline\na = ?\n\\]\nSo taking in those values and solving for acceleration would require us to use Kinematic equation #3 because we do not have time \\(t\\).\nTherfore we will use: \\[\nV_f^2 = V_i^2+2a(X_f-X_i)\n\\]\nLet’s go through the steps of solving this problem using Kinematic Equation #3:\n1. Refactor the equation to isolate \\(a\\)\nFirst we will subract \\(V_i^2\\) from both sides: \\[\nV_f^2-V_i^2=2a(X_f-X_i)\n\\]\n\n\n\n\n\n\nNote\n\n\n\nProfessor Lamp refers to \\(X_f - X_i\\) simply as \\(\\Delta{X}\\) we will do the same here on occasion.\n\n\n2. Divide both sides by 2\nSince \\(2a\\Delta{X}\\) are all the same factor we can choose to divide by \\(2\\Delta{X}\\) treating it as a coeffecient of a. This enables us to easily isolate a on the right side.\n\n\n\n\n\n\nNote\n\n\n\nTerms are seperated by \\(+\\) and \\(-\\), they are pieces of an expression you add or subtract together. Factors are seperated by multiplication, they are multipled inside a single term. Ergo \\(2a(X_f - X_i)\\) is all one term. And you can divide a term by any of it’s factors and they cancel!\n\n\n\\[\n\\frac{V_f^2-V_i^2}{2\\Delta{X}}=a\n\\]\n3. Now that we have \\(a\\) isolated we can solve the equation by plugging in our known numbers\n\\[\n\\frac{V_f^2-V_i^2}{2\\Delta{X}}=a\n\\]\nBecomes:\n\\[\n\\frac{0^2-70^2}{2*\\Delta{100}}=a\n\\]\nWhich further simplifies to:\n\\[\n\\frac{-70^2}{200} = a \\newline\n\\frac{-4900}{200} = a \\newline\n-24.5m/s^2 = a\n\\]\nTherefore the aircraft must decelerate at \\(-24.5m\\s^2\\) to come to a complete stop before the end of the carrier deck.\n\n\n\n\n\n\nNote\n\n\n\nThis amount of deceleration is equivalent to 2.5 g’s!",
-    "crumbs": [
-      "Lectures",
-      "Lecture 8-26-2026"
-    ]
-  },
-  {
-    "objectID": "lectures/lecture_82626.html#example-problem-3",
-    "href": "lectures/lecture_82626.html#example-problem-3",
-    "title": "Lecture 8-26-2026",
-    "section": "",
-    "text": "Wile E. Coyote unexpectadly runs off the end of a 100 meter tall cliff in pursuit of the road runner. How long will Wile E. Coyote fall before reaching initial impact?\n\n\n\nVisualization of example problem 3\n\n\nTaking stock of the variables we know and don’t know, we have:\n\\[\nV_i = 0 \\newline\nY_i = 100 \\newline\na = -9.81 m/s^2 \\newline\ny_f = 0\nt = ?\n\\]\nTherefore in order to find \\(t\\) we can use Kinematic Equation 4:\n\\[\nY_f = Y_i+V_i*t+\\frac{1}{2}a*t^2\n\\]\nWhich will allow us to isolate and solve for \\(t\\).\n1. Remove variables that cancel out\nSince \\(V_i\\) is 0, that makes the term \\(V_i*t\\) irrelevant to this equation as it’s value is simply zero regardless of what \\(t\\) is.\nTherefore we can simplify to:\n\\[\nY_f = Y_i + \\frac{1}{2}at^2\n\\]\nThis equation likely looks familiar from earlier in our problem questions:\n2. Subtract \\(Y_i\\) from both sides\n\\[\nY_f - Y_i = \\frac{1}{2}at^2\n\\]\n3. Divide both sides by \\(\\frac{1}{2}a\\)\n\\[\n\\frac{Y_f - Y_i}{\\frac{1}{2}a} = t^2\n\\]\nThis simplifies to:\n\\[\n\\frac{2(Y_f - Y_i)}{a} = t^2\n\\]\nHere we can refer to \\(Y_f - Y_i\\) as simply \\(\\Delta{Y}\\)\n\n\n\n\n\n\nTip\n\n\n\n\\(\\Delta{Y}\\) can also be referred to as \\(h\\) or height on occasion, especially when \\(y_f = 0\\) and \\(y_i\\) is some non-zero number.\n\n\nSo:\n\\[\n\\frac{2\\Delta{Y}}{a} = t^2\n\\]\n4. Solve for \\(t\\) by taking the square root of the left side\n\\[\n\\sqrt{\\frac{2\\Delta{Y}}{a}} = t\n\\]\nNow that \\(t\\) is isolated we can plug in our values and find:\n\\[\n\\sqrt{\\frac{2*-100}{-9.81m/s^2}}\n\\]\nWhich becomes\n\\[\n\\sqrt{\\frac{-200}{-9.81}}\n\\]\nfurther:\n\\[\n\\sqrt{20.30} = 4.52 \\space \\text{seconds} = t\n\\]\nTherefore it takes Wile E. Coyote 4.52 seconds after realizing his grave error until he impacts near the base of the cliff.\nNow how quickly was he travelling when he impacted the ground?\nIn order to figure this out we will use kinematic equation 3, we use specially 3 because it avoid the use of \\(t\\) which even though we calculated, if we incorrectly calculated could lead us to a wrong answer here.\n\\[\nV_f^2 = V_i^2+2a(X_f-X_i)\n\\]\nTaking stock we know:\n\\[\nV_i^2 = 0\na = -9.81m/s^2\nY_f = 0\nY_i = 100\n\\]\nSolving we find that\n\\[\nV_f^2 = 2a\\Delta{y} \\newline\nV_f = \\sqrt{2a\\Delta{y}}\n\\]\n\\[\nV_f = \\sqrt{2*-9.81*-100} = \\pm{44.27}m/s^2\n\\]\nGiving us a \\(V_f\\) of -44.27 m/s at the time of impact.\n\n\n\n\n\n\nTip\n\n\n\nWe use the negative result of the square root because the coyote is descending which is a negative movement across our established \\(y\\) axis.",
-    "crumbs": [
-      "Lectures",
-      "Lecture 8-26-2026"
-    ]
-  },
-  {
-    "objectID": "book/chapter-5.html",
-    "href": "book/chapter-5.html",
-    "title": "Chapter 5 - The Concept of Force",
-    "section": "",
-    "text": "The word force refers to an interaction with an object by some means (sometimes muscular activity) and resulting in some change in the objects velocity. Forces, do not always cause motion.\nIn order to change an object’s velocity, Newton found that you must excert some force on that object.\n\n\n\nExample of contact forces\n\n\nContact forces invovle physical contact between two objects. Like a punter punting a football. Or the force excerted by a gas molecule on the walls of a container.\nAnother type of force are field forces, these forces do not involve physical contact between two objects, instead they act through empty space. The gravitational force of attraction between two objects such as the earth and moon are an example of a field force.\nAnother common field force is the electric force that one electric charge exerts on another, such as the attractive electric force between an electron and a proton that form a hydrogen atom. Or consider the force a bar magnet exerts on a piece of iron.\nThe fundamental forces known in nature: 1. Gravitational forces between objects 2. Electromagnetic forces between electric charges 3. Strong forces between subatomic particles 4. Weak forces that arise in certain radioactive decay processes.\nIn physics we only tend to worry about gravitational and electromagnetic forces. See Chapter 44 for strong and weak forces.\n\nThe Vector Nature of Force\nWe can use a spring mounted vertically to measure force.\nSuppose that with some initial force \\(\\overrightarrow{F_1}\\) applied to the spring yields a measured reading of 1.0 cm. Now if we apply \\(\\overrightarrow{F_2}\\) and that force is exactly twice in magnitude as \\(\\overrightarrow{F_1}\\) then the reading of force shall show the spring at 2.0 cm.\nThe combined effect of two collinear forces is the sum of the effects of the individual forces. So if we apply both \\(\\overrightarrow{F_1}\\) and \\(overrightarrow{F_2}\\) at the same time, the spring will show 3.0 cm.\n\n\n\nExample of force applied to springs\n\n\nIn the case where \\(\\overrightarrow{F_1}\\) is applied vertically and \\(\\overrightarrow{F_2}\\) is applied horizontally, the vector nature of forces allow us to use vector addition to find the reading of the spring by doing vector addition with \\(\\overrightarrow{F_1}\\) and \\(\\overrightarrow{F_2}\\).\n\\[\n\\lvert \\overrightarrow{F_1} \\rvert = \\sqrt{F_1^2 + F_2^2} = 2.24 cm\n\\]\nAnd the direction of this force is:\n\\[\n\\theta = \\tan^-1{\\frac{\\lvert F_1 \\rvert}{\\lvert F_2 \\rvert}} = 26.6^\\circ\n\\]\nGiven that this is a reference angle evaluating that our components for y and x yield a quadrant 4 location:\n\\[\n\\theta = 360^\\circ - 26.6^\\circ = 333^\\circ \\space or \\space -26.6^\\circ\n\\]",
+    "text": "A car moving between points on the \\(x\\) axis.\n\n\n\nA representation of that graphically\n\n\nAdditionally, from the graph we can extract a table of the position of the car at various times:\n\n\n\nPosition\n\\(t(s)\\)\n\\(t(m)\\)\n\n\n\n\nA\n0\n30\n\n\nB\n10\n52\n\n\nC\n20\n38\n\n\nD\n30\n0\n\n\nE\n40\n-37\n\n\nF\n50\n-53\n\n\n\nNow the motion of the particle is not entirely known because we don’t know it’s position at every time, only the provided times. The smooth curve only represents the possibility of the actual motion of the car.\n\n\n\\(v_{x,avg} \\equiv \\frac{\\Delta{x}}{\\Delta{t}}\\)\nFrom this formula we know that average velocity has dimensions of length divided by time (\\(L/T\\)) or meters per second in SI units. Where \\(\\Delta{x}\\) is the displacement or change in \\(x\\) over some period of time. \\(X_f - X_i = \\Delta{x}\\)\nThe average velocity of a particle in one dimension can be positive or negative depending on the sign of displacement. The time interval measured by \\(\\Delta{t}\\) is always positive. When the coordinate increases with time \\(\\Delta{x}\\) is then the average velocity is a positive number. If \\(\\Delta{x}\\) is negative then the average velocity is negative.\n\n\n\n\\[\nv_{avg} \\equiv \\frac{d}{\\Delta{t}}\n\\]\nUnlike velocity, speed has no direction and is always expressed as a positive number. Where average velocity is the displacement or \\(\\Delta{x}\\) divided by the change in time, the average speed is found by measuring the distance over the change in time.\nFor example if it takes you 45 seconds to travel 100 m down a hallway and at the 100-m you turn around and walk back 25m in the opposite direction taking 10 seconds, the magnitude of your average velocity is found as:\n\\[\n\\newline\n\\Delta{x} = X_f - X_i = 100-25 = 75m = \\Delta{x}\n\\newline\n\\Delta{t} = 45s+10s = 55s \\newline\n\\newline\n\\]\nAnd average velocity is \\(v_{x,avg} = \\frac{\\Delta{x}}{\\Delta{t}}\\)\nSo:\n\\[\n\\newline\nv_{x,avg} = \\frac{75m}{55s} = 1.36m/s\n\\newline\n\\]\nTherefore your average velocity over the trip is \\(1.36 m/s\\). However, the average speed is the distance traveled \\(d\\) divided by the change in time:\n\\[\n\\newline\nd = 100+25 = 125m\n\\newline\n\\]\nAnd \\(\\Delta{t}\\) remains the same:\n\\[\n\\newline\nv_{avg} = 125m/55s = 2.27 m/s\n\\newline\n\\]\nTherefore, your average speed is \\(2.27 m/s\\)",
     "crumbs": [
       "Book",
-      "Chapter 5 - The Concept of Force"
+      "Chapter 3 - Motion in One Dimension"
+    ]
+  },
+  {
+    "objectID": "book/chapter-3.html#average-velocity",
+    "href": "book/chapter-3.html#average-velocity",
+    "title": "Chapter 3 - Motion in One Dimension",
+    "section": "",
+    "text": "\\(v_{x,avg} \\equiv \\frac{\\Delta{x}}{\\Delta{t}}\\)\nFrom this formula we know that average velocity has dimensions of length divided by time (\\(L/T\\)) or meters per second in SI units. Where \\(\\Delta{x}\\) is the displacement or change in \\(x\\) over some period of time. \\(X_f - X_i = \\Delta{x}\\)\nThe average velocity of a particle in one dimension can be positive or negative depending on the sign of displacement. The time interval measured by \\(\\Delta{t}\\) is always positive. When the coordinate increases with time \\(\\Delta{x}\\) is then the average velocity is a positive number. If \\(\\Delta{x}\\) is negative then the average velocity is negative.",
+    "crumbs": [
+      "Book",
+      "Chapter 3 - Motion in One Dimension"
+    ]
+  },
+  {
+    "objectID": "book/chapter-3.html#average-speed",
+    "href": "book/chapter-3.html#average-speed",
+    "title": "Chapter 3 - Motion in One Dimension",
+    "section": "",
+    "text": "\\[\nv_{avg} \\equiv \\frac{d}{\\Delta{t}}\n\\]\nUnlike velocity, speed has no direction and is always expressed as a positive number. Where average velocity is the displacement or \\(\\Delta{x}\\) divided by the change in time, the average speed is found by measuring the distance over the change in time.\nFor example if it takes you 45 seconds to travel 100 m down a hallway and at the 100-m you turn around and walk back 25m in the opposite direction taking 10 seconds, the magnitude of your average velocity is found as:\n\\[\n\\newline\n\\Delta{x} = X_f - X_i = 100-25 = 75m = \\Delta{x}\n\\newline\n\\Delta{t} = 45s+10s = 55s \\newline\n\\newline\n\\]\nAnd average velocity is \\(v_{x,avg} = \\frac{\\Delta{x}}{\\Delta{t}}\\)\nSo:\n\\[\n\\newline\nv_{x,avg} = \\frac{75m}{55s} = 1.36m/s\n\\newline\n\\]\nTherefore your average velocity over the trip is \\(1.36 m/s\\). However, the average speed is the distance traveled \\(d\\) divided by the change in time:\n\\[\n\\newline\nd = 100+25 = 125m\n\\newline\n\\]\nAnd \\(\\Delta{t}\\) remains the same:\n\\[\n\\newline\nv_{avg} = 125m/55s = 2.27 m/s\n\\newline\n\\]\nTherefore, your average speed is \\(2.27 m/s\\)",
+    "crumbs": [
+      "Book",
+      "Chapter 3 - Motion in One Dimension"
+    ]
+  },
+  {
+    "objectID": "book/chapter-3.html#average-accleration",
+    "href": "book/chapter-3.html#average-accleration",
+    "title": "Chapter 3 - Motion in One Dimension",
+    "section": "Average Accleration",
+    "text": "Average Accleration\n\\[\na_{x,avg} \\equiv \\frac{\\Delta{v_x}}{\\Delta{t}} = \\frac{v_{xf} - v_{xi}}{t_f - t_i}\n\\]\n\n\n\nFigure depicting the graphical relations of average accleration and instant acceleration\n\n\nA positive acceleration indicates that velocity is moving towards having a positive value over time. And a negative value means that velocity is decreasing in value over time.",
+    "crumbs": [
+      "Book",
+      "Chapter 3 - Motion in One Dimension"
+    ]
+  },
+  {
+    "objectID": "book/chapter-3.html#instant-acceleration",
+    "href": "book/chapter-3.html#instant-acceleration",
+    "title": "Chapter 3 - Motion in One Dimension",
+    "section": "Instant Acceleration",
+    "text": "Instant Acceleration\n\\[\na_x \\equiv \\lim\\limits_{\\Delta{t} \\to 0} \\frac{\\Delta{v_x}}{\\Delta{t}} = \\frac{dv_x}{dt}\n\\]\n\n\n\nThe graphical relationship\n\n\nThe net force on an object is proportional to the acceleration of the object\n\\[\nF_x \\propto a_x\n\\]",
+    "crumbs": [
+      "Book",
+      "Chapter 3 - Motion in One Dimension"
     ]
   },
   {
@@ -237,6 +193,116 @@
     "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
   },
   {
+    "objectID": "lectures/lecture_82626.html",
+    "href": "lectures/lecture_82626.html",
+    "title": "Lecture 8-26-2026",
+    "section": "",
+    "text": "Solve for the final position of something given it’s initial position and the amount of time. \\[\nX_f = X_i + \\frac{V_i+v_f}{2}*t\n\\]\n\n\n\nSolve for the final velocity of something given an initial velocity, acceleration, and time. \\[\nV_f = V_i + a*t\n\\]\n\n\n\nFind the acceleration of something when given it’s initial velocity, it’s final position, and initial position. \\[\nV_f^2 = V_i^2+2a(X_f-X_i)\n\\]\n\n\n\nFind the final position of something given it’s initial position, initial velocity, time, and acceleration. \\[\nX_f = X_i+V_i*t+\\frac{1}{2}a*t^2\n\\]\nFor each of the above equations X can be substituted for Y and the same calculations can be used to find Vertical motion in 1D.\n\n\n\n\nTwo cars 1000 meters apart approach eachother. Initially they are at rest, Car 1 accelerates at \\(3 m/s^2\\) and Car 2 acclerates at \\(-2 m/s^2\\). When do they collide?\nGiven that we know several properties about both vehicles and that we are solving for \\(t\\) we are going to want to select the Kinematic Equation that includes all of the variables we know.\nIn this case we know:\nFor Car 1: \\[\nX_{i1} = 0 \\newline\nA_1 = 3 m/s^2\n\\]\nFor Car 2: \\[\nX_{i2} = 1000 \\newline\nA_2 = -2 m/s^2\n\\]\n\n\n\nExample Problem 1 Visualized\n\n\nWe can take the variables that we know and plug them into Kinematic equation 1. The reason we choose kinematic equation 1 is because it includes all of the variables we know and doesn’t have variables that we do not know the value of (at least not more than one).\nTherefore from here we can plug in our known values. Recall that Kinematic equation 1 is:\n\\[\nX_f = X_i + \\frac{V_i+v_f}{2}*t\n\\]\nNow, we can fill out some portion of that equation for both cars.\nFor Car 1:\nWe cancel out \\(X_{1i}\\) and \\(V_{1i}\\) because they are both zero.\n\\[\nX_{1f} = 0 + 0 + \\frac{1}{2}a_2*t^2\n\\]\nAnd this then simplifies to:\n\\[\nX_{1f} = \\frac{1}{2}a_2*t^2\n\\]\nFor Car 2 we have a non-zero X initial point therefore X initial doesn’t cancel out there.\n\\[\nX_{2f} = 1000 + 0 \\frac{1}{2}a_2*t^2\n\\]\nTherefore \\(V_{2i}\\) is cancelled out to give us:\n\\[\nX_{2f} = X_{2i} \\frac{1}{2}a_2*t^2\n\\]\nConsidering that both vehicles are moving across a one dimension plane, and that both are head on. What we really want to find to solve for WHEN (that is at what Time \\(t\\)) do both vehicles have the same position or where \\(X_1 = X_2\\)\n\n\n\n\n\n\nImportant\n\n\n\nProfessor Lamp warned in this lecture that it can be tempting to plug in numbers early, however this makes isolating the variable we’re solving for confusing.\nTherefore, in order to properly solve this equation we’re going to hold off on plugging in any numbers until we’ve isolated \\(t\\) which is the variable we’re solving for!\n\n\n\nWhat we can do to make that happen is set the equation to find \\(X_{fn}\\) for either car equal to eachother. In other words:\n\\[\n\\frac{1}{2}a_1*t^2 = X_{2i} + \\frac{1}{2}a_2*t^2\n\\]\nWhich is effectively where \\(X_{1f} = X_{2f}\\)\nFrom there we can use alegbra to solve for \\(t\\)\n1. Subtract \\(\\frac{1}{2}*a_2*t^2\\) from both sides.\nThis gives us:\n\\[\n\\frac{1}{2}a_1*t^2 - \\frac{1}{2}*a_2*t^2 = X_{2i}\n\\]\nWe can refactor\n\\[\n\\frac{1}{2}a_1*t^2 - \\frac{1}{2}*a_2*t^2\n\\]\nBecause both terms share \\(\\frac{1}{2}t^2\\) the left side becomes:\n\\[\n\\frac{1}{2}(a_1 - a_2)*t^2\n\\]\nAnd in totality:\n\\[\n\\frac{1}{2}(a_1 - a_2)*t^2 = X_{2i}\n\\]\n2. Divide both sides by \\(\\frac{1}{2}(a_1 - a_2)\\) in order to isolate \\(t\\)\nWhen dividing by a fraction you are effectively multiplying by the reciprocal of that fraction.\nErgo \\(\\frac{X_{2i}}{\\frac{1}{2}} = \\frac{2}{1} * X_{2i}\\)\nSince our right side would become:\n\\[\nt^2 = \\frac{X_{2i}}{\\frac{1}{2}(a_1 - a_2)}\n\\]\nWe can simplify to\n\\[\nt^2 = X_{2i} * \\frac{2}{a_1 - a_2}\n\\]\nAnd that further simplifies to\n\\[\nt^2 = \\frac{2X_{2i}}{a_1 - a_2}\n\\]\n3. Take the square root of both sides to solve for \\(t\\)\nIn our final step to solve for \\(t\\) we take the square root of both sides and that should give us the time at which \\(X_1 = X_2\\) or in other words where our vehicles collide.\n\\[\nt = \\sqrt{\\frac{2X_{2i}}{a_1 - a_2}}\n\\]\nAnd since we have values for each of our variables on the right side, we can plug those in now, this gives us:\n\\[\nt = \\sqrt{\\frac{2*1000}{3 - (-2)}}\n\\]\nNow \\(3 - (-2)\\) becomes \\(3+2\\) once you workout the signs and you end up with:\n\\[\nt = \\sqrt{\\frac{2*1000}{5}}\n\\]\nor\n\\[\nt = \\sqrt{\\frac{2000}{5}}\n\\]\n\\[\nt = \\sqrt{400}\n\\]\n\n\n\n\n\n\nNote\n\n\n\nSince our unit of acceleration is in \\(m/s^2\\) and our distance is in meters the new unit when dividing meters by \\(m/s^2\\) is \\(m^2/s^2\\).\n\n\nSo we’re effectively getting the square root of 400 seconds squared here. That means that the result of the square root is just seconds (not seconds squared).\nPlugging that into a calculator we find that \\(t = 20\\)\n\n\n\n\n\n\nTip\n\n\n\nTechnically because we’re working with a square root \\(t = \\pm 20\\), but since we don’t care about a negative time (since that doesn’t necessarily matter here) we just say that \\(t = 20\\).\n\n\nTherefore, given the parameters of the problem we find that the cars will both be at the same X position at 20 seconds.\n\nIf we wanted to further explore this problem we might also ask at what X position do both cars collide. This is easy to solve because we only need to find the position of one of the vehicles since it’s a collision at \\(t = 20\\) that means the position of either car 1 or car 2 at \\(t=20\\) is the same position the other car is at.\nTherefore finding the position of car 1 at \\(t=20\\) will give us the position of both cars:\n\\[\nX_{1f} = \\frac{1}{2}a_1t^2 \\newline\n\\frac{1}{2}*3*20^2 = 600\n\\]\nTherefore, at X of 600 both vehicles collide or 600 meters since X is a measure of meters.\n\n\n\nA plane lands at \\(70 m/s^2\\) on a carrier deck that is 100 meters long. In order to stop before the end of the carrier how quickly must the aircraft decelerate?\n\n\n\nExample Problem 2 Visualized\n\n\nTaking stock of what variables the problem offers us we know that:\n\\[\nX_i = 0 \\newline\nX_f = 100 \\newline\nV_i = 70 m/s^2 \\newline\nV_f = 0 \\newline\na = ?\n\\]\nSo taking in those values and solving for acceleration would require us to use Kinematic equation #3 because we do not have time \\(t\\).\nTherfore we will use: \\[\nV_f^2 = V_i^2+2a(X_f-X_i)\n\\]\nLet’s go through the steps of solving this problem using Kinematic Equation #3:\n1. Refactor the equation to isolate \\(a\\)\nFirst we will subract \\(V_i^2\\) from both sides: \\[\nV_f^2-V_i^2=2a(X_f-X_i)\n\\]\n\n\n\n\n\n\nNote\n\n\n\nProfessor Lamp refers to \\(X_f - X_i\\) simply as \\(\\Delta{X}\\) we will do the same here on occasion.\n\n\n2. Divide both sides by 2\nSince \\(2a\\Delta{X}\\) are all the same factor we can choose to divide by \\(2\\Delta{X}\\) treating it as a coeffecient of a. This enables us to easily isolate a on the right side.\n\n\n\n\n\n\nNote\n\n\n\nTerms are seperated by \\(+\\) and \\(-\\), they are pieces of an expression you add or subtract together. Factors are seperated by multiplication, they are multipled inside a single term. Ergo \\(2a(X_f - X_i)\\) is all one term. And you can divide a term by any of it’s factors and they cancel!\n\n\n\\[\n\\frac{V_f^2-V_i^2}{2\\Delta{X}}=a\n\\]\n3. Now that we have \\(a\\) isolated we can solve the equation by plugging in our known numbers\n\\[\n\\frac{V_f^2-V_i^2}{2\\Delta{X}}=a\n\\]\nBecomes:\n\\[\n\\frac{0^2-70^2}{2*\\Delta{100}}=a\n\\]\nWhich further simplifies to:\n\\[\n\\frac{-70^2}{200} = a \\newline\n\\frac{-4900}{200} = a \\newline\n-24.5m/s^2 = a\n\\]\nTherefore the aircraft must decelerate at \\(-24.5m\\s^2\\) to come to a complete stop before the end of the carrier deck.\n\n\n\n\n\n\nNote\n\n\n\nThis amount of deceleration is equivalent to 2.5 g’s!\n\n\n\n\n\nWile E. Coyote unexpectadly runs off the end of a 100 meter tall cliff in pursuit of the road runner. How long will Wile E. Coyote fall before reaching initial impact?\n\n\n\nVisualization of example problem 3\n\n\nTaking stock of the variables we know and don’t know, we have:\n\\[\nV_i = 0 \\newline\nY_i = 100 \\newline\na = -9.81 m/s^2 \\newline\ny_f = 0\nt = ?\n\\]\nTherefore in order to find \\(t\\) we can use Kinematic Equation 4:\n\\[\nY_f = Y_i+V_i*t+\\frac{1}{2}a*t^2\n\\]\nWhich will allow us to isolate and solve for \\(t\\).\n1. Remove variables that cancel out\nSince \\(V_i\\) is 0, that makes the term \\(V_i*t\\) irrelevant to this equation as it’s value is simply zero regardless of what \\(t\\) is.\nTherefore we can simplify to:\n\\[\nY_f = Y_i + \\frac{1}{2}at^2\n\\]\nThis equation likely looks familiar from earlier in our problem questions:\n2. Subtract \\(Y_i\\) from both sides\n\\[\nY_f - Y_i = \\frac{1}{2}at^2\n\\]\n3. Divide both sides by \\(\\frac{1}{2}a\\)\n\\[\n\\frac{Y_f - Y_i}{\\frac{1}{2}a} = t^2\n\\]\nThis simplifies to:\n\\[\n\\frac{2(Y_f - Y_i)}{a} = t^2\n\\]\nHere we can refer to \\(Y_f - Y_i\\) as simply \\(\\Delta{Y}\\)\n\n\n\n\n\n\nTip\n\n\n\n\\(\\Delta{Y}\\) can also be referred to as \\(h\\) or height on occasion, especially when \\(y_f = 0\\) and \\(y_i\\) is some non-zero number.\n\n\nSo:\n\\[\n\\frac{2\\Delta{Y}}{a} = t^2\n\\]\n4. Solve for \\(t\\) by taking the square root of the left side\n\\[\n\\sqrt{\\frac{2\\Delta{Y}}{a}} = t\n\\]\nNow that \\(t\\) is isolated we can plug in our values and find:\n\\[\n\\sqrt{\\frac{2*-100}{-9.81m/s^2}}\n\\]\nWhich becomes\n\\[\n\\sqrt{\\frac{-200}{-9.81}}\n\\]\nfurther:\n\\[\n\\sqrt{20.30} = 4.52 \\space \\text{seconds} = t\n\\]\nTherefore it takes Wile E. Coyote 4.52 seconds after realizing his grave error until he impacts near the base of the cliff.\nNow how quickly was he travelling when he impacted the ground?\nIn order to figure this out we will use kinematic equation 3, we use specially 3 because it avoid the use of \\(t\\) which even though we calculated, if we incorrectly calculated could lead us to a wrong answer here.\n\\[\nV_f^2 = V_i^2+2a(X_f-X_i)\n\\]\nTaking stock we know:\n\\[\nV_i^2 = 0\na = -9.81m/s^2\nY_f = 0\nY_i = 100\n\\]\nSolving we find that\n\\[\nV_f^2 = 2a\\Delta{y} \\newline\nV_f = \\sqrt{2a\\Delta{y}}\n\\]\n\\[\nV_f = \\sqrt{2*-9.81*-100} = \\pm{44.27}m/s^2\n\\]\nGiving us a \\(V_f\\) of -44.27 m/s at the time of impact.\n\n\n\n\n\n\nTip\n\n\n\nWe use the negative result of the square root because the coyote is descending which is a negative movement across our established \\(y\\) axis.",
+    "crumbs": [
+      "Lectures",
+      "Lecture 8-26-2026"
+    ]
+  },
+  {
+    "objectID": "lectures/lecture_82626.html#kinematic-equations",
+    "href": "lectures/lecture_82626.html#kinematic-equations",
+    "title": "Lecture 8-26-2026",
+    "section": "",
+    "text": "Solve for the final position of something given it’s initial position and the amount of time. \\[\nX_f = X_i + \\frac{V_i+v_f}{2}*t\n\\]\n\n\n\nSolve for the final velocity of something given an initial velocity, acceleration, and time. \\[\nV_f = V_i + a*t\n\\]\n\n\n\nFind the acceleration of something when given it’s initial velocity, it’s final position, and initial position. \\[\nV_f^2 = V_i^2+2a(X_f-X_i)\n\\]\n\n\n\nFind the final position of something given it’s initial position, initial velocity, time, and acceleration. \\[\nX_f = X_i+V_i*t+\\frac{1}{2}a*t^2\n\\]\nFor each of the above equations X can be substituted for Y and the same calculations can be used to find Vertical motion in 1D.",
+    "crumbs": [
+      "Lectures",
+      "Lecture 8-26-2026"
+    ]
+  },
+  {
+    "objectID": "lectures/lecture_82626.html#example-problem-1",
+    "href": "lectures/lecture_82626.html#example-problem-1",
+    "title": "Lecture 8-26-2026",
+    "section": "",
+    "text": "Two cars 1000 meters apart approach eachother. Initially they are at rest, Car 1 accelerates at \\(3 m/s^2\\) and Car 2 acclerates at \\(-2 m/s^2\\). When do they collide?\nGiven that we know several properties about both vehicles and that we are solving for \\(t\\) we are going to want to select the Kinematic Equation that includes all of the variables we know.\nIn this case we know:\nFor Car 1: \\[\nX_{i1} = 0 \\newline\nA_1 = 3 m/s^2\n\\]\nFor Car 2: \\[\nX_{i2} = 1000 \\newline\nA_2 = -2 m/s^2\n\\]\n\n\n\nExample Problem 1 Visualized\n\n\nWe can take the variables that we know and plug them into Kinematic equation 1. The reason we choose kinematic equation 1 is because it includes all of the variables we know and doesn’t have variables that we do not know the value of (at least not more than one).\nTherefore from here we can plug in our known values. Recall that Kinematic equation 1 is:\n\\[\nX_f = X_i + \\frac{V_i+v_f}{2}*t\n\\]\nNow, we can fill out some portion of that equation for both cars.\nFor Car 1:\nWe cancel out \\(X_{1i}\\) and \\(V_{1i}\\) because they are both zero.\n\\[\nX_{1f} = 0 + 0 + \\frac{1}{2}a_2*t^2\n\\]\nAnd this then simplifies to:\n\\[\nX_{1f} = \\frac{1}{2}a_2*t^2\n\\]\nFor Car 2 we have a non-zero X initial point therefore X initial doesn’t cancel out there.\n\\[\nX_{2f} = 1000 + 0 \\frac{1}{2}a_2*t^2\n\\]\nTherefore \\(V_{2i}\\) is cancelled out to give us:\n\\[\nX_{2f} = X_{2i} \\frac{1}{2}a_2*t^2\n\\]\nConsidering that both vehicles are moving across a one dimension plane, and that both are head on. What we really want to find to solve for WHEN (that is at what Time \\(t\\)) do both vehicles have the same position or where \\(X_1 = X_2\\)\n\n\n\n\n\n\nImportant\n\n\n\nProfessor Lamp warned in this lecture that it can be tempting to plug in numbers early, however this makes isolating the variable we’re solving for confusing.\nTherefore, in order to properly solve this equation we’re going to hold off on plugging in any numbers until we’ve isolated \\(t\\) which is the variable we’re solving for!\n\n\n\nWhat we can do to make that happen is set the equation to find \\(X_{fn}\\) for either car equal to eachother. In other words:\n\\[\n\\frac{1}{2}a_1*t^2 = X_{2i} + \\frac{1}{2}a_2*t^2\n\\]\nWhich is effectively where \\(X_{1f} = X_{2f}\\)\nFrom there we can use alegbra to solve for \\(t\\)\n1. Subtract \\(\\frac{1}{2}*a_2*t^2\\) from both sides.\nThis gives us:\n\\[\n\\frac{1}{2}a_1*t^2 - \\frac{1}{2}*a_2*t^2 = X_{2i}\n\\]\nWe can refactor\n\\[\n\\frac{1}{2}a_1*t^2 - \\frac{1}{2}*a_2*t^2\n\\]\nBecause both terms share \\(\\frac{1}{2}t^2\\) the left side becomes:\n\\[\n\\frac{1}{2}(a_1 - a_2)*t^2\n\\]\nAnd in totality:\n\\[\n\\frac{1}{2}(a_1 - a_2)*t^2 = X_{2i}\n\\]\n2. Divide both sides by \\(\\frac{1}{2}(a_1 - a_2)\\) in order to isolate \\(t\\)\nWhen dividing by a fraction you are effectively multiplying by the reciprocal of that fraction.\nErgo \\(\\frac{X_{2i}}{\\frac{1}{2}} = \\frac{2}{1} * X_{2i}\\)\nSince our right side would become:\n\\[\nt^2 = \\frac{X_{2i}}{\\frac{1}{2}(a_1 - a_2)}\n\\]\nWe can simplify to\n\\[\nt^2 = X_{2i} * \\frac{2}{a_1 - a_2}\n\\]\nAnd that further simplifies to\n\\[\nt^2 = \\frac{2X_{2i}}{a_1 - a_2}\n\\]\n3. Take the square root of both sides to solve for \\(t\\)\nIn our final step to solve for \\(t\\) we take the square root of both sides and that should give us the time at which \\(X_1 = X_2\\) or in other words where our vehicles collide.\n\\[\nt = \\sqrt{\\frac{2X_{2i}}{a_1 - a_2}}\n\\]\nAnd since we have values for each of our variables on the right side, we can plug those in now, this gives us:\n\\[\nt = \\sqrt{\\frac{2*1000}{3 - (-2)}}\n\\]\nNow \\(3 - (-2)\\) becomes \\(3+2\\) once you workout the signs and you end up with:\n\\[\nt = \\sqrt{\\frac{2*1000}{5}}\n\\]\nor\n\\[\nt = \\sqrt{\\frac{2000}{5}}\n\\]\n\\[\nt = \\sqrt{400}\n\\]\n\n\n\n\n\n\nNote\n\n\n\nSince our unit of acceleration is in \\(m/s^2\\) and our distance is in meters the new unit when dividing meters by \\(m/s^2\\) is \\(m^2/s^2\\).\n\n\nSo we’re effectively getting the square root of 400 seconds squared here. That means that the result of the square root is just seconds (not seconds squared).\nPlugging that into a calculator we find that \\(t = 20\\)\n\n\n\n\n\n\nTip\n\n\n\nTechnically because we’re working with a square root \\(t = \\pm 20\\), but since we don’t care about a negative time (since that doesn’t necessarily matter here) we just say that \\(t = 20\\).\n\n\nTherefore, given the parameters of the problem we find that the cars will both be at the same X position at 20 seconds.\n\nIf we wanted to further explore this problem we might also ask at what X position do both cars collide. This is easy to solve because we only need to find the position of one of the vehicles since it’s a collision at \\(t = 20\\) that means the position of either car 1 or car 2 at \\(t=20\\) is the same position the other car is at.\nTherefore finding the position of car 1 at \\(t=20\\) will give us the position of both cars:\n\\[\nX_{1f} = \\frac{1}{2}a_1t^2 \\newline\n\\frac{1}{2}*3*20^2 = 600\n\\]\nTherefore, at X of 600 both vehicles collide or 600 meters since X is a measure of meters.",
+    "crumbs": [
+      "Lectures",
+      "Lecture 8-26-2026"
+    ]
+  },
+  {
+    "objectID": "lectures/lecture_82626.html#example-problem-2",
+    "href": "lectures/lecture_82626.html#example-problem-2",
+    "title": "Lecture 8-26-2026",
+    "section": "",
+    "text": "A plane lands at \\(70 m/s^2\\) on a carrier deck that is 100 meters long. In order to stop before the end of the carrier how quickly must the aircraft decelerate?\n\n\n\nExample Problem 2 Visualized\n\n\nTaking stock of what variables the problem offers us we know that:\n\\[\nX_i = 0 \\newline\nX_f = 100 \\newline\nV_i = 70 m/s^2 \\newline\nV_f = 0 \\newline\na = ?\n\\]\nSo taking in those values and solving for acceleration would require us to use Kinematic equation #3 because we do not have time \\(t\\).\nTherfore we will use: \\[\nV_f^2 = V_i^2+2a(X_f-X_i)\n\\]\nLet’s go through the steps of solving this problem using Kinematic Equation #3:\n1. Refactor the equation to isolate \\(a\\)\nFirst we will subract \\(V_i^2\\) from both sides: \\[\nV_f^2-V_i^2=2a(X_f-X_i)\n\\]\n\n\n\n\n\n\nNote\n\n\n\nProfessor Lamp refers to \\(X_f - X_i\\) simply as \\(\\Delta{X}\\) we will do the same here on occasion.\n\n\n2. Divide both sides by 2\nSince \\(2a\\Delta{X}\\) are all the same factor we can choose to divide by \\(2\\Delta{X}\\) treating it as a coeffecient of a. This enables us to easily isolate a on the right side.\n\n\n\n\n\n\nNote\n\n\n\nTerms are seperated by \\(+\\) and \\(-\\), they are pieces of an expression you add or subtract together. Factors are seperated by multiplication, they are multipled inside a single term. Ergo \\(2a(X_f - X_i)\\) is all one term. And you can divide a term by any of it’s factors and they cancel!\n\n\n\\[\n\\frac{V_f^2-V_i^2}{2\\Delta{X}}=a\n\\]\n3. Now that we have \\(a\\) isolated we can solve the equation by plugging in our known numbers\n\\[\n\\frac{V_f^2-V_i^2}{2\\Delta{X}}=a\n\\]\nBecomes:\n\\[\n\\frac{0^2-70^2}{2*\\Delta{100}}=a\n\\]\nWhich further simplifies to:\n\\[\n\\frac{-70^2}{200} = a \\newline\n\\frac{-4900}{200} = a \\newline\n-24.5m/s^2 = a\n\\]\nTherefore the aircraft must decelerate at \\(-24.5m\\s^2\\) to come to a complete stop before the end of the carrier deck.\n\n\n\n\n\n\nNote\n\n\n\nThis amount of deceleration is equivalent to 2.5 g’s!",
+    "crumbs": [
+      "Lectures",
+      "Lecture 8-26-2026"
+    ]
+  },
+  {
+    "objectID": "lectures/lecture_82626.html#example-problem-3",
+    "href": "lectures/lecture_82626.html#example-problem-3",
+    "title": "Lecture 8-26-2026",
+    "section": "",
+    "text": "Wile E. Coyote unexpectadly runs off the end of a 100 meter tall cliff in pursuit of the road runner. How long will Wile E. Coyote fall before reaching initial impact?\n\n\n\nVisualization of example problem 3\n\n\nTaking stock of the variables we know and don’t know, we have:\n\\[\nV_i = 0 \\newline\nY_i = 100 \\newline\na = -9.81 m/s^2 \\newline\ny_f = 0\nt = ?\n\\]\nTherefore in order to find \\(t\\) we can use Kinematic Equation 4:\n\\[\nY_f = Y_i+V_i*t+\\frac{1}{2}a*t^2\n\\]\nWhich will allow us to isolate and solve for \\(t\\).\n1. Remove variables that cancel out\nSince \\(V_i\\) is 0, that makes the term \\(V_i*t\\) irrelevant to this equation as it’s value is simply zero regardless of what \\(t\\) is.\nTherefore we can simplify to:\n\\[\nY_f = Y_i + \\frac{1}{2}at^2\n\\]\nThis equation likely looks familiar from earlier in our problem questions:\n2. Subtract \\(Y_i\\) from both sides\n\\[\nY_f - Y_i = \\frac{1}{2}at^2\n\\]\n3. Divide both sides by \\(\\frac{1}{2}a\\)\n\\[\n\\frac{Y_f - Y_i}{\\frac{1}{2}a} = t^2\n\\]\nThis simplifies to:\n\\[\n\\frac{2(Y_f - Y_i)}{a} = t^2\n\\]\nHere we can refer to \\(Y_f - Y_i\\) as simply \\(\\Delta{Y}\\)\n\n\n\n\n\n\nTip\n\n\n\n\\(\\Delta{Y}\\) can also be referred to as \\(h\\) or height on occasion, especially when \\(y_f = 0\\) and \\(y_i\\) is some non-zero number.\n\n\nSo:\n\\[\n\\frac{2\\Delta{Y}}{a} = t^2\n\\]\n4. Solve for \\(t\\) by taking the square root of the left side\n\\[\n\\sqrt{\\frac{2\\Delta{Y}}{a}} = t\n\\]\nNow that \\(t\\) is isolated we can plug in our values and find:\n\\[\n\\sqrt{\\frac{2*-100}{-9.81m/s^2}}\n\\]\nWhich becomes\n\\[\n\\sqrt{\\frac{-200}{-9.81}}\n\\]\nfurther:\n\\[\n\\sqrt{20.30} = 4.52 \\space \\text{seconds} = t\n\\]\nTherefore it takes Wile E. Coyote 4.52 seconds after realizing his grave error until he impacts near the base of the cliff.\nNow how quickly was he travelling when he impacted the ground?\nIn order to figure this out we will use kinematic equation 3, we use specially 3 because it avoid the use of \\(t\\) which even though we calculated, if we incorrectly calculated could lead us to a wrong answer here.\n\\[\nV_f^2 = V_i^2+2a(X_f-X_i)\n\\]\nTaking stock we know:\n\\[\nV_i^2 = 0\na = -9.81m/s^2\nY_f = 0\nY_i = 100\n\\]\nSolving we find that\n\\[\nV_f^2 = 2a\\Delta{y} \\newline\nV_f = \\sqrt{2a\\Delta{y}}\n\\]\n\\[\nV_f = \\sqrt{2*-9.81*-100} = \\pm{44.27}m/s^2\n\\]\nGiving us a \\(V_f\\) of -44.27 m/s at the time of impact.\n\n\n\n\n\n\nTip\n\n\n\nWe use the negative result of the square root because the coyote is descending which is a negative movement across our established \\(y\\) axis.",
+    "crumbs": [
+      "Lectures",
+      "Lecture 8-26-2026"
+    ]
+  },
+  {
+    "objectID": "lectures/lecture_82826.html",
+    "href": "lectures/lecture_82826.html",
+    "title": "Lecture 8-28-2026",
+    "section": "",
+    "text": "Reference The first lecture for kinematic equations.",
+    "crumbs": [
+      "Lectures",
+      "Lecture 8-28-2026"
+    ]
+  },
+  {
+    "objectID": "lectures/lecture_82826.html#example-problem-4",
+    "href": "lectures/lecture_82826.html#example-problem-4",
+    "title": "Lecture 8-28-2026",
+    "section": "Example Problem 4",
+    "text": "Example Problem 4\nA penny is dropped down a well and his water after 2 seconds, how deep is the well?\n\n\n\nExample problem 4 visualization\n\n\nGiven the variables we have that would mean we need to use Kinematic 4 as we are trying to solve for \\(y_f\\)\n\\[\nX_f = X_i+V_i*t+\\frac{1}{2}a*t^2\n\\]\nRemoving the variables we know equate to zero our equation shifts: \\[\ny_f = y_i + \\frac{1}{2}(-g)t^2\n\\]\nAnd the final position of y is the depth of our well. \\[\ny_f = \\frac{1}{2}(-g)t^2\n\\]\nPlugging in our values we find:\n\\[\ny_f = \\frac{1}{2}(-9.81 m/s)2s^2 \\newline\ny_f = -19.6 \\space \\text{meters}\n\\]\nOur answer tells us that our well is around 19.6 meters deep.\n\nLet’s shuffle our previous problem slightly to reveal additional algebra within the 4th Kinematic equation.\nLet’s assume the penny is thrown down the well (rather than dropped) with a \\(V_i = -2m/s\\) and impacts in 1 second.\nThis effectively becomes the same problem but with different parameters:\n\\[\ny_f = y_i + v_{yi}*t + \\frac{1}{2}a_yt^2-V_{yi}t\n\\]\nPlugging in our known variables we find:\n\\[\ny_f = 0 + -2 m/s * 1 s + \\frac{1}{2}(-9.81)(1s)^2\n\\]\nSimplifying\n\\[\ny_f = -2 + -4.905\ny_f = -6.905 meters\n\\]\nIn another form of this equation the penny is thrown upwards at 5m/s and hits the bottom of the well after 3s.\nUsing the 4th equation again we get:\n\\[\nY_f = Y_i+V_i*t+\\frac{1}{2}a*t^2\n\\]\nIn which case we have \\[\nV_{yi} = 5 m/s \\newline\na_y = -g \\newline\ny_f = 0 \\newline\ny_i = \\space ? \\space \\text{(also known as h)}\n\\]\nPlugging that in\n\\[\n0 = h + V_{yi}t - \\frac{gt^2}{2}\n\\]\nWhich simplifies to:\n\\[\nh = \\frac{gt^2}{2}-V_{yi}t \\newline\nh = 9.8/2*3^2-5*3 \\newline\nh = 29.1 \\space \\text{meters deep}\n\\]",
+    "crumbs": [
+      "Lectures",
+      "Lecture 8-28-2026"
+    ]
+  },
+  {
+    "objectID": "lectures/lecture_82826.html#example-problem-1",
+    "href": "lectures/lecture_82826.html#example-problem-1",
+    "title": "Lecture 8-28-2026",
+    "section": "Example Problem 1",
+    "text": "Example Problem 1\nA ball rolling off of a table:\n\n\n\nExample problem 1 visualized\n\n\nTaking stock of the variables we know we will associate with the final position of the ball as \\(R\\)\nIn this problem we have to calculate both x and y indepdently in the same way we would normally calculate them.\nFirstly since the ball is rolling across the \\(x\\) axis at 1m/s and we know the x axis takes on no additional acceleration we can calculate the x position of the ball using one of the kinematic equations, specifically equation 4:\nWe will also have to calculate the y coordinate as well, using the same kinematic equation. Our example problem provides us with the necessary information to solve for both x and y.\nWe will want to solve for y first since it will tell us how long the ball takes to drop, from there we can pause and solve for x at the same time frame to find where r is.\n\nSolve for \\(Y_f\\) when",
+    "crumbs": [
+      "Lectures",
+      "Lecture 8-28-2026"
+    ]
+  },
+  {
+    "objectID": "lectures/lecture_83126.html",
+    "href": "lectures/lecture_83126.html",
+    "title": "Lecture 8-31-2028",
+    "section": "",
+    "text": "A ball rolling off of a counter top.\n\n\n\nVisualization of example problem 1",
+    "crumbs": [
+      "Lectures",
+      "Lecture 8-31-2028"
+    ]
+  },
+  {
+    "objectID": "lectures/lecture_83126.html#case-1-a-ball-rolling-off-of-a-table",
+    "href": "lectures/lecture_83126.html#case-1-a-ball-rolling-off-of-a-table",
+    "title": "Lecture 8-31-2028",
+    "section": "",
+    "text": "A ball rolling off of a counter top.\n\n\n\nVisualization of example problem 1",
+    "crumbs": [
+      "Lectures",
+      "Lecture 8-31-2028"
+    ]
+  },
+  {
     "objectID": "homework/assignment-1.html",
     "href": "homework/assignment-1.html",
     "title": "Homework Assignement 1",
@@ -292,6 +358,17 @@
     ]
   },
   {
+    "objectID": "book/chapter-5.html",
+    "href": "book/chapter-5.html",
+    "title": "Chapter 5 - The Concept of Force",
+    "section": "",
+    "text": "The word force refers to an interaction with an object by some means (sometimes muscular activity) and resulting in some change in the objects velocity. Forces, do not always cause motion.\nIn order to change an object’s velocity, Newton found that you must excert some force on that object.\n\n\n\nExample of contact forces\n\n\nContact forces invovle physical contact between two objects. Like a punter punting a football. Or the force excerted by a gas molecule on the walls of a container.\nAnother type of force are field forces, these forces do not involve physical contact between two objects, instead they act through empty space. The gravitational force of attraction between two objects such as the earth and moon are an example of a field force.\nAnother common field force is the electric force that one electric charge exerts on another, such as the attractive electric force between an electron and a proton that form a hydrogen atom. Or consider the force a bar magnet exerts on a piece of iron.\nThe fundamental forces known in nature: 1. Gravitational forces between objects 2. Electromagnetic forces between electric charges 3. Strong forces between subatomic particles 4. Weak forces that arise in certain radioactive decay processes.\nIn physics we only tend to worry about gravitational and electromagnetic forces. See Chapter 44 for strong and weak forces.\n\nThe Vector Nature of Force\nWe can use a spring mounted vertically to measure force.\nSuppose that with some initial force \\(\\overrightarrow{F_1}\\) applied to the spring yields a measured reading of 1.0 cm. Now if we apply \\(\\overrightarrow{F_2}\\) and that force is exactly twice in magnitude as \\(\\overrightarrow{F_1}\\) then the reading of force shall show the spring at 2.0 cm.\nThe combined effect of two collinear forces is the sum of the effects of the individual forces. So if we apply both \\(\\overrightarrow{F_1}\\) and \\(overrightarrow{F_2}\\) at the same time, the spring will show 3.0 cm.\n\n\n\nExample of force applied to springs\n\n\nIn the case where \\(\\overrightarrow{F_1}\\) is applied vertically and \\(\\overrightarrow{F_2}\\) is applied horizontally, the vector nature of forces allow us to use vector addition to find the reading of the spring by doing vector addition with \\(\\overrightarrow{F_1}\\) and \\(\\overrightarrow{F_2}\\).\n\\[\n\\lvert \\overrightarrow{F_1} \\rvert = \\sqrt{F_1^2 + F_2^2} = 2.24 cm\n\\]\nAnd the direction of this force is:\n\\[\n\\theta = \\tan^-1{\\frac{\\lvert F_1 \\rvert}{\\lvert F_2 \\rvert}} = 26.6^\\circ\n\\]\nGiven that this is a reference angle evaluating that our components for y and x yield a quadrant 4 location:\n\\[\n\\theta = 360^\\circ - 26.6^\\circ = 333^\\circ \\space or \\space -26.6^\\circ\n\\]",
+    "crumbs": [
+      "Book",
+      "Chapter 5 - The Concept of Force"
+    ]
+  },
+  {
     "objectID": "book/chapter-1.html",
     "href": "book/chapter-1.html",
     "title": "Chapter 1",
@@ -322,83 +399,6 @@
     "crumbs": [
       "Book",
       "Chapter 1"
-    ]
-  },
-  {
-    "objectID": "book/chapter-3.html",
-    "href": "book/chapter-3.html",
-    "title": "Chapter 3 - Motion in One Dimension",
-    "section": "",
-    "text": "A car moving between points on the \\(x\\) axis.\n\n\n\nA representation of that graphically\n\n\nAdditionally, from the graph we can extract a table of the position of the car at various times:\n\n\n\nPosition\n\\(t(s)\\)\n\\(t(m)\\)\n\n\n\n\nA\n0\n30\n\n\nB\n10\n52\n\n\nC\n20\n38\n\n\nD\n30\n0\n\n\nE\n40\n-37\n\n\nF\n50\n-53\n\n\n\nNow the motion of the particle is not entirely known because we don’t know it’s position at every time, only the provided times. The smooth curve only represents the possibility of the actual motion of the car.\n\n\n\\(v_{x,avg} \\equiv \\frac{\\Delta{x}}{\\Delta{t}}\\)\nFrom this formula we know that average velocity has dimensions of length divided by time (\\(L/T\\)) or meters per second in SI units. Where \\(\\Delta{x}\\) is the displacement or change in \\(x\\) over some period of time. \\(X_f - X_i = \\Delta{x}\\)\nThe average velocity of a particle in one dimension can be positive or negative depending on the sign of displacement. The time interval measured by \\(\\Delta{t}\\) is always positive. When the coordinate increases with time \\(\\Delta{x}\\) is then the average velocity is a positive number. If \\(\\Delta{x}\\) is negative then the average velocity is negative.\n\n\n\n\\[\nv_{avg} \\equiv \\frac{d}{\\Delta{t}}\n\\]\nUnlike velocity, speed has no direction and is always expressed as a positive number. Where average velocity is the displacement or \\(\\Delta{x}\\) divided by the change in time, the average speed is found by measuring the distance over the change in time.\nFor example if it takes you 45 seconds to travel 100 m down a hallway and at the 100-m you turn around and walk back 25m in the opposite direction taking 10 seconds, the magnitude of your average velocity is found as:\n\\[\n\\newline\n\\Delta{x} = X_f - X_i = 100-25 = 75m = \\Delta{x}\n\\newline\n\\Delta{t} = 45s+10s = 55s \\newline\n\\newline\n\\]\nAnd average velocity is \\(v_{x,avg} = \\frac{\\Delta{x}}{\\Delta{t}}\\)\nSo:\n\\[\n\\newline\nv_{x,avg} = \\frac{75m}{55s} = 1.36m/s\n\\newline\n\\]\nTherefore your average velocity over the trip is \\(1.36 m/s\\). However, the average speed is the distance traveled \\(d\\) divided by the change in time:\n\\[\n\\newline\nd = 100+25 = 125m\n\\newline\n\\]\nAnd \\(\\Delta{t}\\) remains the same:\n\\[\n\\newline\nv_{avg} = 125m/55s = 2.27 m/s\n\\newline\n\\]\nTherefore, your average speed is \\(2.27 m/s\\)",
-    "crumbs": [
-      "Book",
-      "Chapter 3 - Motion in One Dimension"
-    ]
-  },
-  {
-    "objectID": "book/chapter-3.html#average-velocity",
-    "href": "book/chapter-3.html#average-velocity",
-    "title": "Chapter 3 - Motion in One Dimension",
-    "section": "",
-    "text": "\\(v_{x,avg} \\equiv \\frac{\\Delta{x}}{\\Delta{t}}\\)\nFrom this formula we know that average velocity has dimensions of length divided by time (\\(L/T\\)) or meters per second in SI units. Where \\(\\Delta{x}\\) is the displacement or change in \\(x\\) over some period of time. \\(X_f - X_i = \\Delta{x}\\)\nThe average velocity of a particle in one dimension can be positive or negative depending on the sign of displacement. The time interval measured by \\(\\Delta{t}\\) is always positive. When the coordinate increases with time \\(\\Delta{x}\\) is then the average velocity is a positive number. If \\(\\Delta{x}\\) is negative then the average velocity is negative.",
-    "crumbs": [
-      "Book",
-      "Chapter 3 - Motion in One Dimension"
-    ]
-  },
-  {
-    "objectID": "book/chapter-3.html#average-speed",
-    "href": "book/chapter-3.html#average-speed",
-    "title": "Chapter 3 - Motion in One Dimension",
-    "section": "",
-    "text": "\\[\nv_{avg} \\equiv \\frac{d}{\\Delta{t}}\n\\]\nUnlike velocity, speed has no direction and is always expressed as a positive number. Where average velocity is the displacement or \\(\\Delta{x}\\) divided by the change in time, the average speed is found by measuring the distance over the change in time.\nFor example if it takes you 45 seconds to travel 100 m down a hallway and at the 100-m you turn around and walk back 25m in the opposite direction taking 10 seconds, the magnitude of your average velocity is found as:\n\\[\n\\newline\n\\Delta{x} = X_f - X_i = 100-25 = 75m = \\Delta{x}\n\\newline\n\\Delta{t} = 45s+10s = 55s \\newline\n\\newline\n\\]\nAnd average velocity is \\(v_{x,avg} = \\frac{\\Delta{x}}{\\Delta{t}}\\)\nSo:\n\\[\n\\newline\nv_{x,avg} = \\frac{75m}{55s} = 1.36m/s\n\\newline\n\\]\nTherefore your average velocity over the trip is \\(1.36 m/s\\). However, the average speed is the distance traveled \\(d\\) divided by the change in time:\n\\[\n\\newline\nd = 100+25 = 125m\n\\newline\n\\]\nAnd \\(\\Delta{t}\\) remains the same:\n\\[\n\\newline\nv_{avg} = 125m/55s = 2.27 m/s\n\\newline\n\\]\nTherefore, your average speed is \\(2.27 m/s\\)",
-    "crumbs": [
-      "Book",
-      "Chapter 3 - Motion in One Dimension"
-    ]
-  },
-  {
-    "objectID": "book/chapter-3.html#average-accleration",
-    "href": "book/chapter-3.html#average-accleration",
-    "title": "Chapter 3 - Motion in One Dimension",
-    "section": "Average Accleration",
-    "text": "Average Accleration\n\\[\na_{x,avg} \\equiv \\frac{\\Delta{v_x}}{\\Delta{t}} = \\frac{v_{xf} - v_{xi}}{t_f - t_i}\n\\]\n\n\n\nFigure depicting the graphical relations of average accleration and instant acceleration\n\n\nA positive acceleration indicates that velocity is moving towards having a positive value over time. And a negative value means that velocity is decreasing in value over time.",
-    "crumbs": [
-      "Book",
-      "Chapter 3 - Motion in One Dimension"
-    ]
-  },
-  {
-    "objectID": "book/chapter-3.html#instant-acceleration",
-    "href": "book/chapter-3.html#instant-acceleration",
-    "title": "Chapter 3 - Motion in One Dimension",
-    "section": "Instant Acceleration",
-    "text": "Instant Acceleration\n\\[\na_x \\equiv \\lim\\limits_{\\Delta{t} \\to 0} \\frac{\\Delta{v_x}}{\\Delta{t}} = \\frac{dv_x}{dt}\n\\]\n\n\n\nThe graphical relationship\n\n\nThe net force on an object is proportional to the acceleration of the object\n\\[\nF_x \\propto a_x\n\\]",
-    "crumbs": [
-      "Book",
-      "Chapter 3 - Motion in One Dimension"
-    ]
-  },
-  {
-    "objectID": "lectures/lecture_83126.html",
-    "href": "lectures/lecture_83126.html",
-    "title": "Lecture 8-31-2028",
-    "section": "",
-    "text": "A ball rolling off of a counter top.\n\n\n\nVisualization of example problem 1",
-    "crumbs": [
-      "Lectures",
-      "Lecture 8-31-2028"
-    ]
-  },
-  {
-    "objectID": "lectures/lecture_83126.html#case-1-a-ball-rolling-off-of-a-table",
-    "href": "lectures/lecture_83126.html#case-1-a-ball-rolling-off-of-a-table",
-    "title": "Lecture 8-31-2028",
-    "section": "",
-    "text": "A ball rolling off of a counter top.\n\n\n\nVisualization of example problem 1",
-    "crumbs": [
-      "Lectures",
-      "Lecture 8-31-2028"
     ]
   }
 ]
