@@ -45,7 +45,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-9f363ccb86392c29656d21c3a07aec93.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-24c09a13944ec7e1f31d2917b1251fc2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -276,6 +276,21 @@ window.Quarto = {
   </ul></li>
   </ul></li>
   <li><a href="#mass-sliding-up-an-incline" id="toc-mass-sliding-up-an-incline" class="nav-link" data-scroll-target="#mass-sliding-up-an-incline">Mass Sliding Up An Incline</a></li>
+  <li><a href="#mass-sliding-up-an-incline-with-friction" id="toc-mass-sliding-up-an-incline-with-friction" class="nav-link" data-scroll-target="#mass-sliding-up-an-incline-with-friction">Mass Sliding Up An Incline With Friction</a>
+  <ul class="collapse">
+  <li><a href="#determining-deltax-when-v_f-0" id="toc-determining-deltax-when-v_f-0" class="nav-link" data-scroll-target="#determining-deltax-when-v_f-0">Determining <span class="math inline">\(\Delta{x}\)</span> When <span class="math inline">\(V_f = 0\)</span></a></li>
+  <li><a href="#mass-sliding-down" id="toc-mass-sliding-down" class="nav-link" data-scroll-target="#mass-sliding-down">Mass Sliding Down</a></li>
+  </ul></li>
+  <li><a href="#hookes-law-springs" id="toc-hookes-law-springs" class="nav-link" data-scroll-target="#hookes-law-springs">Hooke’s Law Springs</a>
+  <ul class="collapse">
+  <li><a href="#mass-sliding-into-a-spring" id="toc-mass-sliding-into-a-spring" class="nav-link" data-scroll-target="#mass-sliding-into-a-spring">Mass Sliding Into A Spring</a></li>
+  </ul></li>
+  <li><a href="#power-work-and-force" id="toc-power-work-and-force" class="nav-link" data-scroll-target="#power-work-and-force">Power, Work, and Force</a>
+  <ul class="collapse">
+  <li><a href="#work" id="toc-work" class="nav-link" data-scroll-target="#work">Work</a></li>
+  <li><a href="#power" id="toc-power" class="nav-link" data-scroll-target="#power">Power</a></li>
+  </ul></li>
+  <li><a href="#man-climbing-stairs" id="toc-man-climbing-stairs" class="nav-link" data-scroll-target="#man-climbing-stairs">Man Climbing Stairs</a></li>
   </ul>
 </nav>
     </div>
@@ -514,6 +529,228 @@ v_f = \sqrt{v_o^2-2g\Delta{x}\sin{\theta}}
 v_f = \sqrt{4^2-(2)(9.8)(3)(0.174)} \approx 2.41 \space \text {m/s}
 \]</span></p>
 <p>And recall that our object is moving to the right (which is our positive x-direction) therefore it’s <span class="math inline">\(v_f\)</span> is continuning to moving to the right (positive x-direction).</p>
+<hr>
+</section>
+<section id="mass-sliding-up-an-incline-with-friction" class="level1">
+<h1>Mass Sliding Up An Incline With Friction</h1>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="BlockSlidingUpPlaneFriction.png" class="img-fluid figure-img"></p>
+<figcaption>Problem description</figcaption>
+</figure>
+</div>
+<p>In this problem we are effectively going to use conservation of energy as a means to determine where the block will end up as well as it’s speed.</p>
+<p>Given <span class="math inline">\(\theta = 30^\circ\)</span>, <span class="math inline">\(\mu_k = 0.1\)</span> and our <span class="math inline">\(\Delta{x}\)</span> or <span class="math inline">\(L\)</span> is 0.5 meters, and our initial velocity <span class="math inline">\(\v_0 = 2.5\)</span> m/s.</p>
+<p>We know that <span class="math inline">\(E_i = E_f + E_lost\)</span> in this case because we lose energy to friction while no energy is added into the system.</p>
+<p>We know that our starting height is considered zero on the plane, therefore on the initial energy side we do not repersent gravitational potential energy.</p>
+<p><span class="math display">\[
+\frac{1}{2}mv_0^2 = mgh + \frac{1}{2}mv_f^2+E_{lost}
+\]</span></p>
+<p>Our energy is lost is due to friction on an inclined plane which we can represent as <span class="math inline">\(\mu_k mg \cos{\theta}\)</span></p>
+<p>Plugging that term in for <span class="math inline">\(E_{lost}\)</span> gives us:</p>
+<p><span class="math display">\[
+\newline
+\frac{1}{2}mv_0^2 = mgh + \frac{1}{2}mv_f^2+ \mu_kmg\cos{\theta}
+\newline
+\]</span></p>
+<p>Solving for <span class="math inline">\(V_f\)</span> yields:</p>
+<p><span class="math display">\[
+v_f = \sqrt{v_0^2-2gL(\sin{\theta}+\mu_k\cos{\theta})}
+\]</span></p>
+<p>Plugging in our respective values from the above problem statement yields:</p>
+<p><span class="math display">\[
+\newline
+v_f \approx 0.708 m/s
+\newline
+\]</span></p>
+<p>An important distinction to make during this problem is that when evaluating terms under the square root, if our terms combine to yield a negative number, that means the mass did not slide the required distance <span class="math inline">\(L\)</span> or <span class="math inline">\(\Delta{x}\)</span> and instead came to rest somewhere short of it.</p>
+<section id="determining-deltax-when-v_f-0" class="level2">
+<h2 class="anchored" data-anchor-id="determining-deltax-when-v_f-0">Determining <span class="math inline">\(\Delta{x}\)</span> When <span class="math inline">\(V_f = 0\)</span></h2>
+<p>To determine the distance the block slid before coming to rest consider the following problem:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="BlockSlidingUpVfImagiary.png" class="img-fluid figure-img"></p>
+<figcaption>Problem description</figcaption>
+</figure>
+</div>
+<p>Here we can use the same approach as above to solve for <span class="math inline">\(v_f\)</span> when <span class="math inline">\(\Delta{x} =\)</span> 2m.</p>
+<p>Recall that, <span class="math inline">\(v_f = \sqrt{v_0^2-2g\Delta{x}(\mu_k\cos{\theta}+\sin{\theta})}\)</span></p>
+<p>Plugging in the numbers from the problem description where <span class="math inline">\(v_0 = 3\)</span>m/s, <span class="math inline">\(\theta = 10^\circ\)</span>, <span class="math inline">\(\mu_k=0.2\)</span> and <span class="math inline">\(\Delta{x}=2\)</span>m</p>
+<p>We find that:</p>
+<p><span class="math display">\[
+v_f = \sqrt{9-14.54}
+\]</span></p>
+<p>The result of that square root would result in an imaginary number. This means that the block did not slide a distance <span class="math inline">\(\Delta{x}\)</span> before coming to rest.</p>
+<p>Therefore, instead we will solve for <span class="math inline">\(\Delta{x}\)</span> when <span class="math inline">\(v_f = 0\)</span></p>
+<p>To do this you can plug in our terms into a kinematic equation:</p>
+<p><span class="math display">\[
+v_f^2 = v_0^2 +2a(X_f - X_i)
+\]</span></p>
+<p>Pluggin in our terms yields:</p>
+<p><span class="math display">\[
+0 = v_0^2-2g\Delta{x}(\mu_kcos{\theta}+\sin{\theta})
+\]</span></p>
+<p>Solving for <span class="math inline">\(\Delta{x}\)</span> yields:</p>
+<p><span class="math display">\[
+\Delta{x} = \frac{v_0^2}{2g(\mu_k\cos{\theta}+\sin{\theta})}
+\]</span></p>
+<p>Pluggin in our values:</p>
+<p><span class="math display">\[
+\Delta{x} = \frac{9}{(2)(9.8)(0.371)} = 1.24 \space \text{m}
+\]</span></p>
+<p>The mass therefore will slide 1.24 meters up before stopping.</p>
+</section>
+<section id="mass-sliding-down" class="level2">
+<h2 class="anchored" data-anchor-id="mass-sliding-down">Mass Sliding Down</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="MassSlidingDown.png" class="img-fluid figure-img"></p>
+<figcaption>Mass sliding down problem description</figcaption>
+</figure>
+</div>
+<p>In this problem our mass is sliding down the incline rather than up. Firstly, we will solve for <span class="math inline">\(v_f\)</span> after 2 meters, this will let us know if our mass is speeding up or slowing down.</p>
+<p>We can arrange our conservation of energy problem as such:</p>
+<p><span class="math display">\[
+mgh_i + \frac{1}{2}mv_0^2 = \frac{1}{2}mv_f^2+\mu_kg\Delta{x}\cos{\theta}
+\]</span></p>
+<p>And recall that our <span class="math inline">\(h_i\)</span> can be determined using a triginometric function.</p>
+<p><span class="math display">\[
+g\Delta{x}\sin{\theta} + \frac{1}{2}v_0^2 = \frac{1}{2}v_f^2 + \mu_kg\Delta{x}\cos{\theta}
+\]</span></p>
+<p>From there solving for <span class="math inline">\(v_f\)</span> yields:</p>
+<p><span class="math display">\[
+v_f = \sqrt{v_0^2+2g\Delta{x}(\sin(\theta)- \mu_k\cos{\theta}}
+\]</span></p>
+<p>Pluggin in our values we find that</p>
+<p><span class="math display">\[
+\newline
+v_f = \sqrt{8.0984} \approx 2.85 \space \text{m/s}
+\]</span></p>
+<p>That means that our mass is slowing down after 2 meters of displacement. Next we can solve for how far it travels before stopping:</p>
+<p>Recall that, <span class="math display">\[
+\Delta{x} = \frac{-v_0^2}{2g(\sin{\theta}-\mu_k\cos{\theta})}
+\]</span></p>
+<p>Since our velocity is in the negative direction and therefore our velocity value is negative we can drop the sign from the <span class="math inline">\(\v_0^2\)</span> term to yield:</p>
+<p><span class="math display">\[
+\Delta{x} = \frac{v_0^2}{2g(\sin{\theta}-\mu_k\cos{\theta})}
+\newline
+\Delta{x} = \frac{9}{(2)(9.8)(0.2*0.988-0.174)} = 19.96 \space \text{meters}
+\newline
+\]</span></p>
+<p>Therefore, our mass will slide 19.96 meters before coming to rest.</p>
+<hr>
+</section>
+</section>
+<section id="hookes-law-springs" class="level1">
+<h1>Hooke’s Law Springs</h1>
+<p>A Hooke’s law spring is a spring that attempts to retract when stretched and attempts to expand when compressed.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="HookesLawSpringsExample.png" class="img-fluid figure-img"></p>
+<figcaption>Exmaple depicting Hooke’s Law Spring</figcaption>
+</figure>
+</div>
+<p>The spring constant <span class="math inline">\(k\)</span> represents the force a spring will attempt to apply when compressed or retracted.</p>
+<p>Assume the spring is at rest when <span class="math inline">\(x=0\)</span>. Assume then a force applies pressure to the spring in a negative <span class="math inline">\(x\)</span> direction. The further that force presses the spring in the more force the spring will push back with wanting to return to a <span class="math inline">\(x=0\)</span> position.</p>
+<p>This can be represented as <span class="math inline">\(F_{spring} = -kx\)</span>. And the potential energy of the spring <span class="math inline">\(U_{spring} = \frac{1}{2}kx^2\)</span></p>
+<p>Likewise, if the spring is stretched (<span class="math inline">\(x&gt;0\)</span>) then the spring will want to impart a force that tends towards it’s origin.</p>
+<section id="mass-sliding-into-a-spring" class="level2">
+<h2 class="anchored" data-anchor-id="mass-sliding-into-a-spring">Mass Sliding Into A Spring</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="MassSlidingIntoASpring.png" class="img-fluid figure-img"></p>
+<figcaption>Mass Sliding Into A Spring Problem</figcaption>
+</figure>
+</div>
+<p>Here a mass slides down an incline before colliding with our spring and compressing it. We want to first solve for <span class="math inline">\(x\)</span> or how far the spring will compress before our mass comes to a rest.</p>
+<p>Recall conservation of energy</p>
+<p><span class="math display">\[
+E_i = E_f
+\]</span></p>
+<p>And also recall that in the given problem at the top of the incline we have gravitational potential energy and no initial velocity.</p>
+<p>At the bottom of the ramp, once we collide with the spring our kinetic energy will have been converted to potential energy within the spring from compressing it.</p>
+<p>Therefore we can arrange the conservation of energy equation as such:</p>
+<p><span class="math display">\[
+mgh = \frac{1}{2}kx^2
+\]</span></p>
+<p>From there we can solve for <span class="math inline">\(x\)</span> by arranging as such:</p>
+<p><span class="math display">\[
+x = \sqrt{\frac{2mgh}{k}}
+\newline
+\]</span></p>
+<p>Plugging in our respective values:</p>
+<p><span class="math display">\[
+\sqrt{\frac{(2)(1)(9.8)(1)}{1000}} \approx 0.14 \space \text{m}
+\newline
+\]</span></p>
+<p>So we know that the spring then compresses 0.14 meters before our mass comes to rest.</p>
+<hr>
+</section>
+</section>
+<section id="power-work-and-force" class="level1">
+<h1>Power, Work, and Force</h1>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="PowerWorkForce.png" class="img-fluid figure-img"></p>
+<figcaption>Lecture Notes Brief Description</figcaption>
+</figure>
+</div>
+<section id="work" class="level2">
+<h2 class="anchored" data-anchor-id="work">Work</h2>
+<p>Work is a measurement of energy transfer. It is measured in Newton meters (<span class="math inline">\(\frac{N}{m}\)</span>) which is also referred to as a Joule (J).</p>
+<p>To find work you can use:</p>
+<p><span class="math display">\[
+W = \overrightarrow{F} \cdot \overrightarrow{\Delta{r}} = F\Delta{r}\cos{\theta}
+\]</span></p>
+<p>Therefore a force of 2N applied to an object that results in no displacement has done no work.</p>
+<p>A force of <span class="math inline">\(2N\)</span> that moves an object through a displacement of 1 meter does more work than a similar force of <span class="math inline">\(2N\)</span> that moves and object through a displacement of only 10 cm.</p>
+<p>A force of <span class="math inline">\(1N\)</span> that moves an object 1m does less work than a force of <span class="math inline">\(2N\)</span> that moves an object that same 1m.</p>
+<p>A force that is perpendicular to displacement does no work (does not transfer energy into the system) as <span class="math inline">\(\cos(90^\circ)=0\)</span></p>
+<p>Work carries a sign, and that sign depends on the direction of force and displacement.</p>
+<p>A force that is opposite in direction to displacement provides negative work, whereas when force and displacement occur in the same direction work’s sign is positive.</p>
+<p>Work done by a spring can be measured as such:</p>
+<p><span class="math display">\[
+W_{spring} = \frac{1}{2}kx_i^2 - \frac{1}{2}kx_f^2
+\]</span></p>
+<p>The total energy of a system is defined as that systems kinetic energy <span class="math inline">\(K\)</span> plus it’s potential energy <span class="math inline">\(U\)</span>.</p>
+<p><span class="math display">\[
+E + K + U
+\]</span></p>
+<p>Work is done on a system by external forces and the only change is in the speed of it’s members. Therefore work can be found via:</p>
+<p><span class="math display">\[
+W = K_f - K_i = \frac{1}{2}mv_f^2-\frac{1}{2}mv_0^2
+\]</span></p>
+<p>If the only change is the configuration of the system then work can be measured from the change in potential energy:</p>
+<p><span class="math display">\[
+W = U_f - U_i
+\]</span></p>
+<hr>
+</section>
+<section id="power" class="level2">
+<h2 class="anchored" data-anchor-id="power">Power</h2>
+<p>Work is a measurement of force relative to displacement. Power expands on work as it measures work done over the course of time.</p>
+<p><span class="math display">\[
+P = \frac{W}{\Delta{t}}
+\]</span></p>
+<p>Power’s SI unit is the Watt in which 1 Watt = 1 Joule/s = <span class="math inline">\(\frac{1 kg m^2}{s^3}\)</span></p>
+</section>
+</section>
+<section id="man-climbing-stairs" class="level1">
+<h1>Man Climbing Stairs</h1>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="ManMovesUpStairsProblem.png" class="img-fluid figure-img"></p>
+<figcaption>Man Climbs Stairs Problem</figcaption>
+</figure>
+</div>
+<p>In this problem a man climbs 25 meters of stairs in 20 seconds.</p>
+<p>We can find the mans work from his his potential energy where we know:</p>
+<p><span class="math inline">\(m=100\)</span> kg, and his displacement is <span class="math inline">\(\Delta{h}=25\)</span> meters.</p>
+<p>Therefore <span class="math inline">\(W = mgh\)</span>, and the time it took for him to to do this work was 20 seconds, therefore we know his power output was:</p>
+<p><span class="math display">\[
+P = \frac{(100)(9.8)(25)}{20} = 1225 \space \text{Watts}
+\]</span></p>
+<hr>
 
 
 </section>
