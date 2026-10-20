@@ -256,6 +256,291 @@ $$
 
 And recall that our object is moving to the right (which is our positive x-direction) therefore it's $v_f$ is continuning to moving to the right (positive x-direction).
 
+---
+
+# Mass Sliding Up An Incline With Friction
+
+![Problem description](BlockSlidingUpPlaneFriction.png)
+
+In this problem we are effectively going to use conservation of energy as a means to determine where the block will end up as well as it's speed. 
+
+Given $\theta = 30^\circ$, $\mu_k = 0.1$ and our $\Delta{x}$ or $L$ is 0.5 meters, and our initial velocity $\v_0 = 2.5$ m/s. 
+
+We know that $E_i = E_f + E_lost$ in this case because we lose energy to friction while no energy is added into the system. 
+
+We know that our starting height is considered zero on the plane, therefore on the initial energy side we do not repersent gravitational potential energy. 
+
+$$
+\frac{1}{2}mv_0^2 = mgh + \frac{1}{2}mv_f^2+E_{lost}
+$$
+
+Our energy is lost is due to friction on an inclined plane which we can represent as $\mu_k mg \cos{\theta}$
+
+Plugging that term in for $E_{lost}$ gives us:
+
+$$
+\newline
+\frac{1}{2}mv_0^2 = mgh + \frac{1}{2}mv_f^2+ \mu_kmg\cos{\theta}
+\newline
+$$
+
+
+Solving for $V_f$ yields:
+
+$$
+v_f = \sqrt{v_0^2-2gL(\sin{\theta}+\mu_k\cos{\theta})}
+$$
+
+Plugging in our respective values from the above problem statement yields:
+
+$$
+\newline 
+v_f \approx 0.708 m/s
+\newline
+$$
+
+
+An important distinction to make during this problem is that when evaluating terms under the square root, if our terms combine to yield a negative number, that means the mass did not slide the required distance $L$ or $\Delta{x}$ and instead came to rest somewhere short of it. 
+
+## Determining $\Delta{x}$ When $V_f = 0$ 
+
+To determine the distance the block slid before coming to rest consider the following problem:
+
+![Problem description](BlockSlidingUpVfImagiary.png)
+
+Here we can use the same approach as above to solve for $v_f$ when $\Delta{x} =$ 2m. 
+
+Recall that, $v_f = \sqrt{v_0^2-2g\Delta{x}(\mu_k\cos{\theta}+\sin{\theta})}$
+
+Plugging in the numbers from the problem description where $v_0 = 3$m/s, $\theta = 10^\circ$, $\mu_k=0.2$ and $\Delta{x}=2$m
+
+We find that:
+
+$$
+v_f = \sqrt{9-14.54}
+$$
+
+The result of that square root would result in an imaginary number. This means that the block did not slide a distance $\Delta{x}$ before coming to rest. 
+
+Therefore, instead we will solve for $\Delta{x}$ when $v_f = 0$
+
+To do this you can plug in our terms into a kinematic equation:
+
+$$
+v_f^2 = v_0^2 +2a(X_f - X_i)
+$$
+
+Pluggin in our terms yields:
+
+$$
+0 = v_0^2-2g\Delta{x}(\mu_kcos{\theta}+\sin{\theta})
+$$
+
+Solving for $\Delta{x}$ yields:
+
+$$
+\Delta{x} = \frac{v_0^2}{2g(\mu_k\cos{\theta}+\sin{\theta})}
+$$
+
+Pluggin in our values:
+
+$$
+\Delta{x} = \frac{9}{(2)(9.8)(0.371)} = 1.24 \space \text{m}
+$$
+
+The mass therefore will slide 1.24 meters up before stopping. 
+
+## Mass Sliding Down
+
+![Mass sliding down problem description](MassSlidingDown.png)
+
+In this problem our mass is sliding down the incline rather than up. Firstly, we will solve for $v_f$ after 2 meters, this will let us know if our mass is speeding up or slowing down. 
+
+We can arrange our conservation of energy problem as such:
+
+$$
+mgh_i + \frac{1}{2}mv_0^2 = \frac{1}{2}mv_f^2+\mu_kg\Delta{x}\cos{\theta}
+$$
+
+And recall that our $h_i$ can be determined using a triginometric function. 
+
+$$
+g\Delta{x}\sin{\theta} + \frac{1}{2}v_0^2 = \frac{1}{2}v_f^2 + \mu_kg\Delta{x}\cos{\theta}
+$$
+
+From there solving for $v_f$ yields:
+
+$$
+v_f = \sqrt{v_0^2+2g\Delta{x}(\sin(\theta)- \mu_k\cos{\theta}}
+$$
+
+Pluggin in our values we find that 
+
+$$
+\newline
+v_f = \sqrt{8.0984} \approx 2.85 \space \text{m/s}
+$$
+
+That means that our mass is slowing down after 2 meters of displacement. Next we can solve for how far it travels before stopping:
+
+Recall that,
+$$
+\Delta{x} = \frac{-v_0^2}{2g(\sin{\theta}-\mu_k\cos{\theta})}
+$$
+
+Since our velocity is in the negative direction and therefore our velocity value is negative we can drop the sign from the $\v_0^2$ term to yield:
+
+$$
+\Delta{x} = \frac{v_0^2}{2g(\sin{\theta}-\mu_k\cos{\theta})}
+\newline
+\Delta{x} = \frac{9}{(2)(9.8)(0.2*0.988-0.174)} = 19.96 \space \text{meters}
+\newline
+$$
+
+Therefore, our mass will slide 19.96 meters before coming to rest. 
+
+---
+
+# Hooke's Law Springs 
+
+A Hooke's law spring is a spring that attempts to retract when stretched and attempts to expand when compressed. 
+
+![Exmaple depicting Hooke's Law Spring](HookesLawSpringsExample.png)
+
+The spring constant $k$ represents the force a spring will attempt to apply when compressed or retracted. 
+
+Assume the spring is at rest when $x=0$. Assume then a force applies pressure to the spring in a negative $x$ direction. The further that force presses the spring in the more force the spring will push back with wanting to return to a $x=0$ position.
+
+This can be represented as $F_{spring} = -kx$. And the potential energy of the spring $U_{spring} = \frac{1}{2}kx^2$
+
+Likewise, if the spring is stretched ($x>0$) then the spring will want to impart a force that tends towards it's origin. 
+
+## Mass Sliding Into A Spring 
+
+![Mass Sliding Into A Spring Problem](MassSlidingIntoASpring.png)
+
+Here a mass slides down an incline before colliding with our spring and compressing it. We want to first solve for $x$ or how far the spring will compress before our mass comes to a rest. 
+
+Recall conservation of energy
+
+$$
+E_i = E_f 
+$$
+
+And also recall that in the given problem at the top of the incline we have gravitational potential energy and no initial velocity.
+
+At the bottom of the ramp, once we collide with the spring our kinetic energy will have been converted to potential energy within the spring from compressing it. 
+
+Therefore we can arrange the conservation of energy equation as such:
+
+$$
+mgh = \frac{1}{2}kx^2
+$$
+
+From there we can solve for $x$ by arranging as such:
+
+$$
+x = \sqrt{\frac{2mgh}{k}}
+\newline
+$$
+
+Plugging in our respective values:
+
+$$
+\sqrt{\frac{(2)(1)(9.8)(1)}{1000}} \approx 0.14 \space \text{m}
+\newline
+$$
+
+So we know that the spring then compresses 0.14 meters before our mass comes to rest. 
+
+---
+
+# Power, Work, and Force
+
+![Lecture Notes Brief Description](PowerWorkForce.png)
+
+## Work 
+
+Work is a measurement of energy transfer. It is measured in Newton meters ($\frac{N}{m}$) which is also referred to as a Joule (J).
+
+To find work you can use:
+
+$$
+W = \overrightarrow{F} \cdot \overrightarrow{\Delta{r}} = F\Delta{r}\cos{\theta}
+$$
+
+Therefore a force of 2N applied to an object that results in no displacement has done no work. 
+
+A force of $2N$ that moves an object through a displacement of 1 meter does more work than a similar force of $2N$ that moves and object through a displacement of only 10 cm.
+
+A force of $1N$ that moves an object 1m does less work than a force of $2N$ that moves an object that same 1m. 
+
+A force that is perpendicular to displacement does no work (does not transfer energy into the system) as $\cos(90^\circ)=0$ 
+
+Work carries a sign, and that sign depends on the direction of force and displacement. 
+
+A force that is opposite in direction to displacement provides negative work, whereas when force and displacement occur in the same direction work's sign is positive. 
+
+Work done by a spring can be measured as such:
+
+$$
+W_{spring} = \frac{1}{2}kx_i^2 - \frac{1}{2}kx_f^2
+$$
+
+The total energy of a system is defined as that systems kinetic energy $K$ plus it's potential energy $U$. 
+
+$$
+E + K + U
+$$
+
+Work is done on a system by external forces and the only change is in the speed of it's members. Therefore work can be found via:
+
+$$
+W = K_f - K_i = \frac{1}{2}mv_f^2-\frac{1}{2}mv_0^2
+$$
+
+If the only change is the configuration of the system then work can be measured from the change in potential energy:
+
+$$
+W = U_f - U_i
+$$
+
+---
+
+## Power 
+
+Work is a measurement of force relative to displacement. Power expands on work as it measures work done over the course of time. 
+
+$$
+P = \frac{W}{\Delta{t}}
+$$
+
+Power's SI unit is the Watt in which 1 Watt = 1 Joule/s = $\frac{1 kg m^2}{s^3}$
+
+# Man Climbing Stairs
+
+![Man Climbs Stairs Problem](ManMovesUpStairsProblem.png)
+
+In this problem a man climbs 25 meters of stairs in 20 seconds. 
+
+We can find the mans work from his his potential energy where we know:
+
+$m=100$ kg, and his displacement is $\Delta{h}=25$ meters. 
+
+Therefore $W = mgh$, and the time it took for him to to do this work was 20 seconds, therefore we know his power output was:
+
+$$
+P = \frac{(100)(9.8)(25)}{20} = 1225 \space \text{Watts}
+$$
+
+
+---
+
+
+
+
+
+
 
 
 
