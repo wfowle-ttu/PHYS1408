@@ -1,0 +1,226 @@
+---
+title: "PHYS1408 Practice Exam 2-1 — Answer Key"
+subtitle: "Worked solutions"
+format:
+  pdf:
+    geometry: margin=0.75in
+    fontsize: 11pt
+  html:
+    embed-resources: true
+    toc: true
+---
+
+All answers were checked numerically with `_scripts/verify_2_1.py`. $g = 9.8\ \text{m/s}^2$ throughout.
+
+| Q | Answer | Value | Topic (source) |
+|:-:|:-:|:-:|:--|
+| 1 | **a** | 4.8 m | Work–energy with friction, halfpipe (Exam 2 #1, Ch 7/8 notes p. 4–5) |
+| 2 | **c** | 13.0 m | Projectile max height, review (Exam 2 #2) |
+| 3 | **d** | 17.1 m/s | Loop-the-loop, $v_{top}=\sqrt{gR}$ (Exam 2 #3, Ch 7/8 notes p. 17–18) |
+| 4 | **b** | 0.98 s | Sliding up a rough ramp, review (Exam 2 #4) |
+| 5 | **d** | 20.9 m/s | Banked curve $v_{max}$ (Ch 6 notes p. 3–5) |
+| 6 | **c** | 1.2 m | Vertical spring launch (Exam 2 #5, Ch 7/8 notes p. 17) |
+| 7 | **d** | −1.0 m/s | 1-D elastic collision (Exam 2 #6, Ch 9 notes p. 2–3) |
+| 8 | **c** | 30–40% | Perfectly inelastic, KE fraction (Exam 2 #7, Ch 9 notes p. 1) |
+| 9 | **e** | 314 m/s | Ballistic pendulum (Exam 2 #8, Ch 9 notes p. 5) |
+| 10 | **b** | 3.4 m/s | Hanging mass on disk pulley (Exam 2 #9, Ch 10 notes p. 4–6) |
+| 11 | **c** | 102 rad/s | Rolling without slipping (Exam 2 #10, Ch 10 notes p. 6–8) |
+| 12 | **a** | +1.09 rad/s | Angular-momentum "collision" (Exam 2 #11, Ch 11 notes p. 1, 3) |
+| 13 | **b** | 0.82 rad/s | Running jump onto merry-go-round (Exam 2 #12, Ch 11 notes p. 4) |
+| 14 | **e** | 2.1 rad/s | Walking to the center (Ch 11 notes p. 7) |
+| 15 | **a** | 2.08 m/s | Incline + friction + pulley, energy (Exam 2 #13, Ch 7/8 notes p. 13–16) |
+
+# 1. Halfpipe with a rough patch — **a) 4.8 m**
+
+Energy is lost only on the rough patch: $E_i = E_f + E_{lost}$, with $E_{lost} = F_f L = \mu m g L$. She starts and ends at rest, so
+
+$$
+mgh_i = mgh_f + \mu m g L \quad\Rightarrow\quad h_f = h_i - \mu L = 6.0 - (0.15)(8.0) = 6.0 - 1.2 = 4.8\ \text{m}.
+$$
+
+Mass cancels. Distractor d) 6.0 m is the frictionless answer $h_f = h_i$.
+
+# 2. Projectile from a ledge — **c) 13.0 m**
+
+At the top, $v_y = 0$. Use $v_y^2 = v_{0y}^2 - 2g\,\Delta y$:
+
+$$
+\Delta y = \frac{(v_0\sin\theta)^2}{2g} = \frac{(25 \sin 30^\circ)^2}{2(9.8)} = \frac{(12.5)^2}{19.6} = 7.97\ \text{m}.
+$$
+
+Height above the ground is $H = h + \Delta y = 5.0 + 7.97 = 13.0$ m. Distractor b) 8.0 m forgets to add the ledge.
+
+# 3. Loop-the-loop — **d) 17.1 m/s**
+
+To "barely" stay on at the top, the normal force there is zero, so gravity alone supplies the centripetal force:
+
+$$
+mg = \frac{m v_{top}^2}{R} \quad\Rightarrow\quad v_{top}^2 = gR.
+$$
+
+Energy conservation from the bottom ($h=0$) to the top ($h=2R$):
+
+$$
+\tfrac12 m v_b^2 = \tfrac12 m v_{top}^2 + mg(2R) \quad\Rightarrow\quad v_b^2 = gR + 4gR = 5gR.
+$$
+
+$$
+v_b = \sqrt{5gR} = \sqrt{5(9.8)(6.0)} = \sqrt{294} = 17.1\ \text{m/s}.
+$$
+
+Distractor a) 7.7 m/s is $\sqrt{gR}$ (the speed needed at the *top*).
+
+# 4. Sliding up a rough ramp — **b) 0.98 s**
+
+Going up, both gravity's component and kinetic friction point down the slope:
+
+$$
+a = g(\sin\theta + \mu_k\cos\theta) = 9.8(\sin 20^\circ + 0.30\cos 20^\circ) = 9.8(0.342 + 0.282) = 6.11\ \text{m/s}^2 \text{ (decelerating)}.
+$$
+
+$$
+v_f = v_i - a t = 0 \quad\Rightarrow\quad t = \frac{v_i}{a} = \frac{6.0}{6.11} = 0.98\ \text{s}.
+$$
+
+The 3.0 kg mass cancels. Distractor d) 1.8 s ignores friction ($a = g\sin\theta$).
+
+# 5. Banked curve, maximum speed — **d) 20.9 m/s**
+
+At $v_{max}$ the car tends to slide *up* the bank, so static friction points *down* the bank. Summing forces (the professor's derivation, Ch 6 p. 3–4):
+
+$$
+v_{max} = \sqrt{gr\,\frac{\mu_s + \tan\theta}{1 - \mu_s\tan\theta}}.
+$$
+
+With $\tan 15^\circ = 0.268$:
+
+$$
+v_{max} = \sqrt{9.8(80)\,\frac{0.25 + 0.268}{1 - (0.25)(0.268)}} = \sqrt{784\,\frac{0.518}{0.933}} = \sqrt{435} = 20.9\ \text{m/s}.
+$$
+
+Distractors: a) $\sqrt{\mu_s g r} = 14.0$ (flat curve), b) $\sqrt{gr\tan\theta} = 14.5$ (frictionless bank).
+
+# 6. Vertical spring launch — **c) 1.2 m**
+
+Measure height from the release point. Spring potential energy becomes gravitational potential energy at the top (where $v=0$):
+
+$$
+\tfrac12 k x^2 = mgh \quad\Rightarrow\quad h = \frac{k x^2}{2 m g} = \frac{1500(0.040)^2}{2(0.10)(9.8)} = \frac{2.4}{1.96} = 1.2\ \text{m}.
+$$
+
+Distractor d) 2.4 m forgets the $\tfrac12$.
+
+# 7. 1-D elastic collision — **d) −1.0 m/s**
+
+Use the notecard formulas from Ch 9 (p. 3), with right positive: $m_1 = 3.0$, $v_{1i} = +4.0$, $m_2 = 1.0$, $v_{2i} = -6.0$.
+
+$$
+v_{1f} = \frac{(m_1 - m_2)v_{1i} + 2m_2 v_{2i}}{m_1 + m_2} = \frac{(2)(4.0) + 2(1)(-6.0)}{4.0} = \frac{8 - 12}{4} = -1.0\ \text{m/s}.
+$$
+
+Check: $v_{2f} = v_{1i} + v_{1f} - v_{2i} = 4 - 1 + 6 = +9.0$ m/s.
+Momentum: $3(4) + 1(-6) = 6$ before, and $3(-1) + 1(9) = 6$ after. (checks)
+KE: $24 + 18 = 42$ J before, and $1.5 + 40.5 = 42$ J after. (checks)
+
+The 3 kg ball bounces back to the left at 1.0 m/s. Distractor a) +9.0 m/s is the 1 kg ball's final velocity.
+
+# 8. Perfectly inelastic, KE fraction — **c) 30–40%**
+
+Momentum is conserved: $m(3v) + 2m(0) = (3m)v_f$, so $v_f = v$.
+
+$$
+K_i = \tfrac12 m (3v)^2 = \tfrac92 m v^2, \qquad K_f = \tfrac12 (3m) v^2 = \tfrac32 m v^2.
+$$
+
+$$
+\frac{K_f}{K_i} = \frac{3/2}{9/2} = \frac13 \approx 33\%.
+$$
+
+# 9. Ballistic pendulum — **e) 314 m/s**
+
+There are two stages (Ch 9 p. 5).
+
+1. **Swing (energy conserved):** $\tfrac12 (M+m)V^2 = (M+m)gh$, so $V = \sqrt{2gh} = \sqrt{2(9.8)(0.080)} = 1.25$ m/s.
+2. **Collision (momentum conserved):** $m v = (M+m)V$, so
+
+$$
+v = \frac{M+m}{m}\sqrt{2gh} = \frac{2.008}{0.0080}(1.25) = 251 \times 1.25 = 314\ \text{m/s}.
+$$
+
+Do **not** use energy conservation across the collision; most of the KE is lost there. Distractor a) 1.25 m/s is $V$ itself, and d) 251 is just the mass ratio.
+
+# 10. Hanging mass on a disk pulley — **b) 3.4 m/s**
+
+**Energy route:** with $v = R\omega$ and $I = \tfrac12 MR^2$, the pulley's KE is $\tfrac12 I\omega^2 = \tfrac14 M v^2$.
+
+$$
+mgh = \tfrac12 m v^2 + \tfrac14 M v^2 \quad\Rightarrow\quad v = \sqrt{\frac{2mgh}{m + M/2}} = \sqrt{\frac{2(2.0)(9.8)(1.5)}{2.0 + 3.0}} = \sqrt{11.76} = 3.43\ \text{m/s}.
+$$
+
+**Torque route (check):** $RT = I\alpha$ gives $T = \tfrac12 Ma$. Then $mg - T = ma$ gives $a = \dfrac{mg}{m + M/2} = \dfrac{19.6}{5.0} = 3.92$ m/s², and $v = \sqrt{2ah} = \sqrt{2(3.92)(1.5)} = 3.43$ m/s. (checks)
+
+$R$ cancels. Distractor d) 5.4 m/s is free fall, $\sqrt{2gh}$.
+
+# 11. Rolling solid cylinder — **c) 102 rad/s**
+
+Rolling without slipping means $v = R\omega$:
+
+$$
+mgh = \tfrac12 m v^2 + \tfrac12\left(\tfrac12 m R^2\right)\frac{v^2}{R^2} = \tfrac34 m v^2 \quad\Rightarrow\quad v = \sqrt{\tfrac43 g h} = \sqrt{\tfrac43(9.8)(2.0)} = 5.11\ \text{m/s}.
+$$
+
+$$
+\omega = \frac{v}{R} = \frac{5.11}{0.050} = 102\ \text{rad/s}.
+$$
+
+Distractors: a) 5.1 is $v$, not $\omega$; b) 89 uses the ring formula $\sqrt{gh}$; d) 125 uses the sliding formula $\sqrt{2gh}$.
+
+# 12. Counter-rotating ring dropped on disk — **a) +1.09 rad/s**
+
+$$
+I_{disk} = \tfrac12(300)(2.0)^2 = 600\ \text{kg·m}^2, \qquad I_{ring} = (100)(1.5)^2 = 225\ \text{kg·m}^2.
+$$
+
+$$
+L_i = L_f: \quad \omega_f = \frac{I_{disk}\,\omega_{disk} + I_{ring}\,\omega_{ring}}{I_{disk} + I_{ring}} = \frac{600(3.0) + 225(-4.0)}{825} = \frac{1800 - 900}{825} = +1.09\ \text{rad/s}.
+$$
+
+The sign matters: e) +3.27 is what you get by forgetting the minus sign on the ring.
+
+# 13. Child jumps onto the rim — **b) 0.82 rad/s**
+
+The child's angular momentum about the axle before landing is $L = m v R$ (Ch 11 p. 4). After landing, the child is a point mass at $R$.
+
+$$
+\omega_f = \frac{\tfrac12 MR^2\omega_i + m v R}{\tfrac12 MR^2 + mR^2} = \frac{\tfrac12(400)(2.5)^2(0.50) + 40(6.0)(2.5)}{\tfrac12(400)(2.5)^2 + 40(2.5)^2} = \frac{625 + 600}{1250 + 250} = \frac{1225}{1500} = 0.82\ \text{rad/s}.
+$$
+
+Distractors: a) 0.42 ignores the child's running momentum; c) 0.98 forgets to add the child's $mR^2$ to the final $I$.
+
+# 14. Walking from the rim to the center — **e) 2.1 rad/s**
+
+No external torque, so $L_i = L_f$. At the center the person contributes $md^2 = 0$.
+
+$$
+\left(\tfrac12 MR^2 + mR^2\right)\omega_i = \tfrac12 MR^2\,\omega_f \quad\Rightarrow\quad \omega_f = \frac{M + 2m}{M}\,\omega_i = \frac{400 + 160}{400}(1.5) = 1.4(1.5) = 2.1\ \text{rad/s}.
+$$
+
+The merry-go-round speeds up, and its KE *increases* (the person does work walking inward; Ch 11 p. 8).
+
+# 15. Incline + friction + disk pulley — **a) 2.08 m/s**
+
+$E_i = E_f + E_{lost}$. As the block slides a distance $d$ down the slope, it loses height $d\sin\theta$, friction removes $\mu_k m g\cos\theta\, d$, and the pulley spins with $\omega = v/R$, which adds $\tfrac14 M v^2$ of KE (as in #10).
+
+$$
+\tfrac12\left(m + \tfrac{M}{2}\right)v_f^2 = \tfrac12\left(m + \tfrac{M}{2}\right)v_i^2 + m g d(\sin\theta - \mu_k\cos\theta).
+$$
+
+$$
+m g d(\sin\theta - \mu_k\cos\theta) = 4.0(9.8)(1.0)(0.4226 - 0.15 \times 0.9063) = 39.2(0.2867) = 11.24\ \text{J}.
+$$
+
+$$
+v_f^2 = 0.50^2 + \frac{2(11.24)}{4.0 + 1.5} = 0.25 + 4.087 = 4.337 \quad\Rightarrow\quad v_f = 2.08\ \text{m/s}.
+$$
+
+The term in parentheses is positive, so the block speeds up and does not stop (e is wrong). Distractors: b) 2.42 ignores the pulley; c) 2.50 ignores friction; d) 2.92 ignores both.
