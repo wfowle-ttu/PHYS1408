@@ -16,10 +16,10 @@ All answers were checked numerically with `_scripts/verify_2_1.py`. $g = 9.8\ \t
 |:-:|:-:|:-:|:--|
 | 1 | **a** | 4.8 m | Work–energy with friction, halfpipe (Exam 2 #1, Ch 7/8 notes p. 4–5) |
 | 2 | **c** | 13.0 m | Projectile max height, review (Exam 2 #2) |
-| 3 | **d** | 17.1 m/s | Loop-the-loop, $v_{top}=\sqrt{gR}$ (Exam 2 #3, Ch 7/8 notes p. 17–18) |
+| 3 | **d** | 17.1 m/s | Loop-the-loop, minimum entry speed $v_{bottom}=\sqrt{5gR}$ (Exam 2 #3, Ch 7/8 notes p. 12/18–13/18) |
 | 4 | **b** | 0.98 s | Sliding up a rough ramp, review (Exam 2 #4) |
 | 5 | **d** | 20.9 m/s | Banked curve $v_{max}$ (Ch 6 notes p. 3–5) |
-| 6 | **c** | 1.2 m | Vertical spring launch (Exam 2 #5, Ch 7/8 notes p. 17) |
+| 6 | **c** | 1.2 m | Vertical spring launch (Exam 2 #5, Ch 7/8 notes p. 12/18) |
 | 7 | **d** | −1.0 m/s | 1-D elastic collision (Exam 2 #6, Ch 9 notes p. 2–3) |
 | 8 | **c** | 30–40% | Perfectly inelastic, KE fraction (Exam 2 #7, Ch 9 notes p. 1) |
 | 9 | **e** | 314 m/s | Ballistic pendulum (Exam 2 #8, Ch 9 notes p. 5) |
@@ -32,43 +32,102 @@ All answers were checked numerically with `_scripts/verify_2_1.py`. $g = 9.8\ \t
 
 # 1. Halfpipe with a rough patch — **a) 4.8 m**
 
-Energy is lost only on the rough patch: $E_i = E_f + E_{lost}$, with $E_{lost} = F_f L = \mu m g L$. She starts and ends at rest, so
+Work–energy theorem, $E_i = E_f + E_{lost}$. Energy is lost only on the rough patch. She starts and ends at rest, so only PE appears.
+
+**Energy terms:**
+
+$$E_i = mgh_i$$
+
+$$E_f = mgh_f$$
+
+$$E_{lost} = F_f L = \mu NL = \mu mgL$$
+
+**Solve for $h_f$:**
 
 $$
-mgh_i = mgh_f + \mu m g L \quad\Rightarrow\quad h_f = h_i - \mu L = 6.0 - (0.15)(8.0) = 6.0 - 1.2 = 4.8\ \text{m}.
+\begin{aligned}
+mgh_i &= mgh_f + \mu mgL \\[8pt]
+h_i &= h_f + \mu L \\[8pt]
+h_f &= h_i - \mu L
+\end{aligned}
 $$
 
-Mass cancels. Distractor d) 6.0 m is the frictionless answer $h_f = h_i$.
+**Plug in:**
+
+$$h_f = 6.0 - (0.15)(8.0) = 6.0 - 1.2 = 4.8\ \text{m}$$
+
+Mass cancels. Distractor d) 6.0 m is the frictionless answer, $h_f = h_i$.
 
 # 2. Projectile from a ledge — **c) 13.0 m**
 
-At the top, $v_y = 0$. Use $v_y^2 = v_{0y}^2 - 2g\,\Delta y$:
+Only the vertical motion decides the height. At the top the vertical velocity is zero. Take up as $+$, so the vertical acceleration is $-g$ (worked example: Worked Problems R.1).
+
+**Vertical launch speed:**
+
+$$v_{0y} = v_0\sin\theta$$
+
+**Vertical kinematics, launch point to the top** ($v_y = 0$):
 
 $$
-\Delta y = \frac{(v_0\sin\theta)^2}{2g} = \frac{(25 \sin 30^\circ)^2}{2(9.8)} = \frac{(12.5)^2}{19.6} = 7.97\ \text{m}.
+\begin{aligned}
+v_y^2 &= v_{0y}^2 - 2g\,\Delta y \\[8pt]
+0 &= (v_0\sin\theta)^2 - 2g\,\Delta y \\[8pt]
+\Delta y &= \frac{(v_0\sin\theta)^2}{2g}
+\end{aligned}
 $$
 
-Height above the ground is $H = h + \Delta y = 5.0 + 7.97 = 13.0$ m. Distractor b) 8.0 m forgets to add the ledge.
+**Add the ledge:**
+
+$$H = h + \frac{(v_0\sin\theta)^2}{2g}$$
+
+**Plug in:**
+
+$$
+\begin{aligned}
+H &= 5.0 + \frac{(25\sin 30^\circ)^2}{2(9.8)} \\[8pt]
+&= 5.0 + \frac{(12.5)^2}{19.6} = 5.0 + 7.97 = 13.0\ \text{m}
+\end{aligned}
+$$
+
+Distractors:
+
+* a) 5.0 m is just the ledge.
+* b) 8.0 m forgets to add the ledge.
+* d) 21.0 m forgets the 2 in $2g$: $5.0 + (v_0\sin\theta)^2/g = 5.0 + 15.9$.
+* e) 36.9 m is $h + v_0^2/2g$, as if launched straight up.
 
 # 3. Loop-the-loop — **d) 17.1 m/s**
 
-To "barely" stay on at the top, the normal force there is zero, so gravity alone supplies the centripetal force:
+**Top of the loop (forces).** To "barely" stay on, $N = 0$ at the top, so gravity alone supplies the centripetal force:
 
 $$
-mg = \frac{m v_{top}^2}{R} \quad\Rightarrow\quad v_{top}^2 = gR.
+\begin{aligned}
+mg &= \frac{mv_{top}^2}{R} \\[8pt]
+v_{top}^2 &= gR
+\end{aligned}
 $$
 
-Energy conservation from the bottom ($h=0$) to the top ($h=2R$):
+**Bottom to top (energy), $E_i = E_f$.** Put $h = 0$ at the bottom; the top is at $2R$.
+
+$$E_i = \tfrac12 mv_b^2$$
+
+$$E_f = \tfrac12 mv_{top}^2 + mg(2R)$$
+
+**Solve for $v_b$:**
 
 $$
-\tfrac12 m v_b^2 = \tfrac12 m v_{top}^2 + mg(2R) \quad\Rightarrow\quad v_b^2 = gR + 4gR = 5gR.
+\begin{aligned}
+\tfrac12 mv_b^2 &= \tfrac12 mv_{top}^2 + 2mgR \\[8pt]
+v_b^2 &= v_{top}^2 + 4gR = gR + 4gR = 5gR \\[8pt]
+v_b &= \sqrt{5gR}
+\end{aligned}
 $$
 
-$$
-v_b = \sqrt{5gR} = \sqrt{5(9.8)(6.0)} = \sqrt{294} = 17.1\ \text{m/s}.
-$$
+**Plug in:**
 
-Distractor a) 7.7 m/s is $\sqrt{gR}$ (the speed needed at the *top*).
+$$v_b = \sqrt{5(9.8)(6.0)} = \sqrt{294} = 17.1\ \text{m/s}$$
+
+Distractor a) 7.7 m/s is $\sqrt{gR}$, the speed needed at the *top*.
 
 # 4. Sliding up a rough ramp — **b) 0.98 s**
 
@@ -102,11 +161,26 @@ Distractors: a) $\sqrt{\mu_s g r} = 14.0$ (flat curve), b) $\sqrt{gr\tan\theta} 
 
 # 6. Vertical spring launch — **c) 1.2 m**
 
-Measure height from the release point. Spring potential energy becomes gravitational potential energy at the top (where $v=0$):
+$E_i = E_f$. Put $h = 0$ at the release point. Spring PE becomes gravitational PE at the top, where $v = 0$.
+
+**Energy terms:**
+
+$$E_i = \tfrac12 kx^2$$
+
+$$E_f = mgh$$
+
+**Solve for $h$:**
 
 $$
-\tfrac12 k x^2 = mgh \quad\Rightarrow\quad h = \frac{k x^2}{2 m g} = \frac{1500(0.040)^2}{2(0.10)(9.8)} = \frac{2.4}{1.96} = 1.2\ \text{m}.
+\begin{aligned}
+\tfrac12 kx^2 &= mgh \\[8pt]
+h &= \frac{kx^2}{2mg}
+\end{aligned}
 $$
+
+**Plug in:**
+
+$$h = \frac{1500(0.040)^2}{2(0.10)(9.8)} = \frac{2.4}{1.96} = 1.2\ \text{m}$$
 
 Distractor d) 2.4 m forgets the $\tfrac12$.
 
@@ -151,29 +225,71 @@ Do **not** use energy conservation across the collision; most of the KE is lost 
 
 # 10. Hanging mass on a disk pulley — **b) 3.4 m/s**
 
-**Energy route:** with $v = R\omega$ and $I = \tfrac12 MR^2$, the pulley's KE is $\tfrac12 I\omega^2 = \tfrac14 M v^2$.
+**Energy route, $E_i = E_f$.** Put $h = 0$ where the mass ends up. It starts from rest, and the pulley is a disk with $I = \tfrac12 MR^2$ turning at $\omega = v/R$.
+
+**Energy terms:**
+
+$$E_i = mgh$$
+
+$$E_f = \tfrac12 mv^2 + \tfrac12 I\omega^2$$
+
+**Pulley KE in terms of $v$:**
+
+$$\tfrac12 I\omega^2 = \tfrac12\left(\tfrac12 MR^2\right)\left(\frac{v}{R}\right)^2 = \tfrac14 Mv^2$$
+
+**Solve for $v$:**
 
 $$
-mgh = \tfrac12 m v^2 + \tfrac14 M v^2 \quad\Rightarrow\quad v = \sqrt{\frac{2mgh}{m + M/2}} = \sqrt{\frac{2(2.0)(9.8)(1.5)}{2.0 + 3.0}} = \sqrt{11.76} = 3.43\ \text{m/s}.
+\begin{aligned}
+mgh &= \tfrac12 mv^2 + \tfrac14 Mv^2 = \tfrac12\left(m + \tfrac{M}{2}\right)v^2 \\[8pt]
+v^2 &= \frac{2mgh}{m + \tfrac{M}{2}} \\[8pt]
+v &= \sqrt{\frac{2mgh}{m + \tfrac{M}{2}}}
+\end{aligned}
 $$
 
-**Torque route (check):** $RT = I\alpha$ gives $T = \tfrac12 Ma$. Then $mg - T = ma$ gives $a = \dfrac{mg}{m + M/2} = \dfrac{19.6}{5.0} = 3.92$ m/s², and $v = \sqrt{2ah} = \sqrt{2(3.92)(1.5)} = 3.43$ m/s. (checks)
+**Plug in:**
+
+$$v = \sqrt{\frac{2(2.0)(9.8)(1.5)}{2.0 + 3.0}} = \sqrt{11.76} = 3.43\ \text{m/s}$$
+
+**Torque route (check).** From $RT = I\alpha$, $T = \tfrac12 Ma$. From $mg - T = ma$:
+
+$$a = \frac{mg}{m + \tfrac{M}{2}} = \frac{19.6}{5.0} = 3.92\ \text{m/s}^2$$
+
+$$v = \sqrt{2ah} = \sqrt{2(3.92)(1.5)} = 3.43\ \text{m/s (checks)}$$
 
 $R$ cancels. Distractor d) 5.4 m/s is free fall, $\sqrt{2gh}$.
 
 # 11. Rolling solid cylinder — **c) 102 rad/s**
 
-Rolling without slipping means $v = R\omega$:
+$E_i = E_f$. Put $h = 0$ at the bottom. Rolling without slipping means $v = R\omega$, and a solid cylinder has $I = \tfrac12 mR^2$.
+
+**Energy terms:**
+
+$$E_i = mgh$$
+
+$$E_f = \tfrac12 mv^2 + \tfrac12 I\omega^2$$
+
+**Solve for $v$, then $\omega$:**
 
 $$
-mgh = \tfrac12 m v^2 + \tfrac12\left(\tfrac12 m R^2\right)\frac{v^2}{R^2} = \tfrac34 m v^2 \quad\Rightarrow\quad v = \sqrt{\tfrac43 g h} = \sqrt{\tfrac43(9.8)(2.0)} = 5.11\ \text{m/s}.
+\begin{aligned}
+mgh &= \tfrac12 mv^2 + \tfrac12\left(\tfrac12 mR^2\right)\frac{v^2}{R^2} = \tfrac12 mv^2 + \tfrac14 mv^2 = \tfrac34 mv^2 \\[8pt]
+v &= \sqrt{\tfrac43 gh} \\[8pt]
+\omega &= \frac{v}{R} = \frac{1}{R}\sqrt{\tfrac43 gh}
+\end{aligned}
 $$
 
-$$
-\omega = \frac{v}{R} = \frac{5.11}{0.050} = 102\ \text{rad/s}.
-$$
+**Plug in:**
 
-Distractors: a) 5.1 is $v$, not $\omega$; b) 89 uses the ring formula $\sqrt{gh}$; d) 125 uses the sliding formula $\sqrt{2gh}$.
+$$v = \sqrt{\tfrac43(9.8)(2.0)} = 5.11\ \text{m/s}$$
+
+$$\omega = \frac{5.11}{0.050} = 102\ \text{rad/s}$$
+
+Distractors:
+
+* a) 5.1 is $v$, not $\omega$.
+* b) 89 uses the ring formula, $\sqrt{gh}$.
+* d) 125 uses the sliding formula, $\sqrt{2gh}$.
 
 # 12. Counter-rotating ring dropped on disk — **a) +1.09 rad/s**
 
@@ -209,18 +325,52 @@ The merry-go-round speeds up, and its KE *increases* (the person does work walki
 
 # 15. Incline + friction + disk pulley — **a) 2.08 m/s**
 
-$E_i = E_f + E_{lost}$. As the block slides a distance $d$ down the slope, it loses height $d\sin\theta$, friction removes $\mu_k m g\cos\theta\, d$, and the pulley spins with $\omega = v/R$, which adds $\tfrac14 M v^2$ of KE (as in #10).
+Work–energy theorem, $E_i = E_f + E_{lost}$.
+
+* Put $h = 0$ at the block's final position, so it starts $d\sin\theta$ higher.
+* The pulley is a disk, $I = \tfrac12 MR^2$, turning at $\omega = v/R$.
+* On the incline, $N = mg\cos\theta$.
+
+**Energy terms:**
+
+$$E_i = \tfrac12 mv_i^2 + \tfrac12 I\omega_i^2 + mgd\sin\theta$$
+
+$$E_f = \tfrac12 mv_f^2 + \tfrac12 I\omega_f^2$$
+
+$$E_{lost} = \mu_k mg\cos\theta\,d$$
+
+**Pulley KE in terms of $v$:**
+
+$$\tfrac12 I\omega^2 = \tfrac12\left(\tfrac12 MR^2\right)\left(\frac{v}{R}\right)^2 = \tfrac14 Mv^2$$
+
+**Substitute and solve for $v_f^2$:**
 
 $$
-\tfrac12\left(m + \tfrac{M}{2}\right)v_f^2 = \tfrac12\left(m + \tfrac{M}{2}\right)v_i^2 + m g d(\sin\theta - \mu_k\cos\theta).
+\begin{aligned}
+\tfrac12 mv_i^2 + \tfrac14 Mv_i^2 + mgd\sin\theta &= \tfrac12 mv_f^2 + \tfrac14 Mv_f^2 + \mu_k mg\cos\theta\,d \\[8pt]
+\tfrac12\left(m + \tfrac{M}{2}\right)v_f^2 &= \tfrac12\left(m + \tfrac{M}{2}\right)v_i^2 + mgd(\sin\theta - \mu_k\cos\theta) \\[8pt]
+v_f^2 &= v_i^2 + \frac{2mgd(\sin\theta - \mu_k\cos\theta)}{m + \tfrac{M}{2}}
+\end{aligned}
 $$
 
-$$
-m g d(\sin\theta - \mu_k\cos\theta) = 4.0(9.8)(1.0)(0.4226 - 0.15 \times 0.9063) = 39.2(0.2867) = 11.24\ \text{J}.
-$$
+**Take the square root:**
+
+$$v_f = \sqrt{v_i^2 + \frac{2mgd(\sin\theta - \mu_k\cos\theta)}{m + \tfrac{M}{2}}}$$
+
+**Plug in:**
 
 $$
-v_f^2 = 0.50^2 + \frac{2(11.24)}{4.0 + 1.5} = 0.25 + 4.087 = 4.337 \quad\Rightarrow\quad v_f = 2.08\ \text{m/s}.
+\begin{aligned}
+v_f &= \sqrt{0.50^2 + \frac{2(4.0)(9.8)(1.0)(0.4226 - 0.15 \times 0.9063)}{4.0 + \tfrac{3.0}{2}}} \\[8pt]
+&= \sqrt{0.25 + \frac{22.48}{5.5}} = \sqrt{0.25 + 4.087} = \sqrt{4.337} = 2.08\ \text{m/s}
+\end{aligned}
 $$
 
-The term in parentheses is positive, so the block speeds up and does not stop (e is wrong). Distractors: b) 2.42 ignores the pulley; c) 2.50 ignores friction; d) 2.92 ignores both.
+The bracket $(\sin\theta - \mu_k\cos\theta)$ is positive, so the block speeds up and does not stop, which rules out e).
+
+Distractors:
+
+* b) 2.42 ignores the pulley.
+* c) 2.50 ignores friction.
+* d) 2.92 ignores both.
+

@@ -1,0 +1,407 @@
+---
+title: "PHYS1408 Practice Exam 2-2 — Answer Key"
+subtitle: "Worked solutions"
+format:
+  pdf:
+    geometry: margin=0.75in
+    fontsize: 11pt
+  html:
+    embed-resources: true
+    toc: true
+---
+
+All answers were checked numerically with `_scripts/verify_2_2.py`. $g = 9.8\ \text{m/s}^2$ throughout.
+
+This exam covers 15 problem types that are **not** on Practice Exam 2-1. Together, 2-1 and 2-2 cover 30 different question types from the professor's notes and the 2015 exam.
+
+| Q | Answer | Value | Topic (source) |
+|:-:|:-:|:-:|:--|
+| 1 | **b** | 11.7 m/s | Flat curve $v_{max}$ (Ch 6 notes p. 2/7) |
+| 2 | **c** | 18.6 m/s → 20 | Banked curve $v_{min}$, round **up** (Ch 6 notes p. 7/7, handout 2/3) |
+| 3 | **b** | 2.05 m/s | Atwood's machine by energy (Ch 7/8 notes p. 2/18) |
+| 4 | **d** | 32.8 m/s | Roller coaster (Ch 7/8 notes p. 3/18) |
+| 5 | **a** | 3.5 m/s | Frictionless incline, sliding up (Ch 7/8 notes p. 6/18) |
+| 6 | **c** | 6.1 m | Sliding down a rough incline, stopping distance (Ch 7/8 notes p. 10/18) |
+| 7 | **e** | stops at 1.36 m | Incline + hanging mass, stops early (Ch 7/8 notes p. 15/18–16/18) |
+| 8 | **d** | 0.15 m | Mass slides into a spring (Ch 7/8 notes p. 11/18) |
+| 9 | **c** | 1030 W | Power climbing stairs (Ch 7/8 notes p. 14/18) |
+| 10 | **e** | 900 N | Force from a bounce (Ch 9 notes p. 1/5) |
+| 11 | **d** | 3.0 s | Rotational kinematics (Ch 10 notes p. 1/8, Ch 11 notes p. 6/8) |
+| 12 | **e** | 0.63 kg·m² | Parallel axis theorem (Ch 10 notes p. 2/8) |
+| 13 | **b** | 2.96 m/s² | Rolling acceleration $\tfrac57 g\sin\theta$ (Ch 10 notes p. 3/8) |
+| 14 | **a** | 1.05 rad/s | Person drops onto MGR at $r < R$ (Ch 11 notes p. 2/8) |
+| 15 | **a** | 1.36 rad/s | Rod dropped center to edge (Ch 11 notes p. 5/8) |
+
+# 1. Flat curve — **b) 11.7 m/s**
+
+Static friction is the only horizontal force, so it supplies the centripetal force. At $v_{max}$, friction is at its limit, $F_f = \mu_s N$ ("max it can be!").
+
+$$
+N = mg, \qquad \mu_s mg = \frac{mv^2}{r} \quad\Rightarrow\quad v_{max} = \sqrt{\mu_s g r} = \sqrt{0.40 \times 9.8 \times 35} = \sqrt{137.2} = 11.7\ \text{m/s}.
+$$
+
+($N$ = normal force, $\mu_s$ = coefficient of static friction, $r$ = radius of the curve.)
+
+Distractors:
+
+* a) 3.7 forgets $g$: $\sqrt{\mu_s r}$.
+* c) 16.6 has an extra 2: $\sqrt{2\mu_s gr}$.
+* d) 18.5 drops $\mu_s$: $\sqrt{gr}$.
+* e) 137 forgets the square root.
+
+# 2. Banked curve, minimum speed — **c) 20 m/s**
+
+At $v_{min}$ the car tends to slide **down** the bank, so static friction points **up** the bank. This flips every $\mu$ sign compared with $v_{max}$ (Ch 6 notes p. 7/7):
+
+$$
+v_{min} = \sqrt{gr\,\frac{\tan\theta - \mu_s}{1 + \mu_s\tan\theta}} = \sqrt{9.8 \times 90 \times \frac{0.5774 - 0.15}{1 + 0.15 \times 0.5774}} = \sqrt{882 \times \frac{0.4274}{1.0866}} = \sqrt{346.9} = 18.6\ \text{m/s}.
+$$
+
+($\theta$ = bank angle from the horizontal.)
+
+**Answer-choice trap.** 18.6 m/s is a **minimum**. A car going 18 m/s slides down the bank, so b) 18 doesn't work even though it's the closest number. The smallest choice that works is **c) 20 m/s**.
+
+Distractors:
+
+* a) 12 is the flat-curve formula, $\sqrt{\mu_s gr} = 11.5$.
+* d) 23 is the frictionless bank, $\sqrt{gr\tan\theta} = 22.6$.
+* e) 27 is $v_{max}$ = 26.5.
+
+# 3. Atwood's machine — **b) 2.05 m/s**
+
+$E_i = E_f$ for both masses together (Ch 7/8 notes p. 2/18). $m_1$ starts at height $h$ and ends at 0; $m_2$ starts at 0 and ends at $h$. Both move at the same speed $v$, starting from rest.
+
+**Energy terms:**
+
+$$E_i = m_1gh$$
+
+$$E_f = \tfrac12 m_1v^2 + \tfrac12 m_2v^2 + m_2gh$$
+
+**Solve for $v$:**
+
+$$
+\begin{aligned}
+m_1gh &= \tfrac12(m_1 + m_2)v^2 + m_2gh \\[8pt]
+(m_1 - m_2)gh &= \tfrac12(m_1 + m_2)v^2 \\[8pt]
+v &= \sqrt{\frac{2gh(m_1 - m_2)}{m_1 + m_2}}
+\end{aligned}
+$$
+
+**Plug in:**
+
+$$v = \sqrt{\frac{2(9.8)(1.5)(8.0 - 6.0)}{8.0 + 6.0}} = \sqrt{4.20} = 2.05\ \text{m/s}$$
+
+Distractors:
+
+* a) 1.45 forgets the 2.
+* c) 2.71 divides by $m_1$ only.
+* d) 3.13 divides by $m_2$ only.
+* e) 5.42 is free fall, $\sqrt{2gh}$.
+
+# 4. Roller coaster — **d) 32.8 m/s**
+
+No friction, so $E_1 = E_n$ (Ch 7/8 notes p. 3/18). The hump in between doesn't matter, only the start and end heights.
+
+**Energy terms:**
+
+$$E_1 = mgh_1$$
+
+$$E_n = \tfrac12 mv^2 + mgh_n$$
+
+**Solve for $v$:**
+
+$$
+\begin{aligned}
+mgh_1 &= \tfrac12 mv^2 + mgh_n \\[8pt]
+v^2 &= 2g(h_1 - h_n) \\[8pt]
+v &= \sqrt{2g(h_1 - h_n)}
+\end{aligned}
+$$
+
+**Plug in:**
+
+$$v = \sqrt{2(9.8)(65 - 10)} = \sqrt{1078} = 32.8\ \text{m/s}$$
+
+Distractors:
+
+* a) 14.0 uses only the final 10 m.
+* b) 19.8 uses the 65 − 45 hump drop.
+* c) 23.2 forgets the 2.
+* e) 35.7 uses the full 65 m drop to the ground.
+
+# 5. Frictionless incline, sliding up — **a) 3.5 m/s**
+
+Frictionless, so $E_i = E_f$ (Ch 7/8 notes p. 6/18). Put $h = 0$ at the start; after sliding $\Delta x$ up the slope it is $\Delta x\sin\theta$ higher.
+
+**Energy terms:**
+
+$$E_i = \tfrac12 mv_i^2$$
+
+$$E_f = \tfrac12 mv_f^2 + mg\Delta x\sin\theta$$
+
+**Solve for $v_f$:**
+
+$$
+\begin{aligned}
+\tfrac12 mv_i^2 &= \tfrac12 mv_f^2 + mg\Delta x\sin\theta \\[8pt]
+v_f^2 &= v_i^2 - 2g\Delta x\sin\theta \\[8pt]
+v_f &= \sqrt{v_i^2 - 2g\Delta x\sin\theta}
+\end{aligned}
+$$
+
+**Plug in:**
+
+$$v_f = \sqrt{5.0^2 - 2(9.8)(2.5)(0.2588)} = \sqrt{25 - 12.68} = \sqrt{12.32} = 3.5\ \text{m/s}$$
+
+Distractors:
+
+* b) 4.3 forgets the 2.
+* c) 6.1 adds instead of subtracts.
+* d) 12.3 forgets the square root.
+* e) is what you get if you use $\cos\theta$, or treat 2.5 m as the height.
+
+# 6. Sliding down a rough incline, stopping distance — **c) 6.1 m**
+
+$E_i = E_f + E_{lost}$ (Ch 7/8 notes p. 10/18). Put $h = 0$ where the block stops, so it starts $\Delta x\sin\theta$ higher. Going down, gravity **adds** energy and friction removes it. $N = mg\cos\theta$ on the incline.
+
+**Energy terms** ($v_f = 0$):
+
+$$E_i = \tfrac12 mv_i^2 + mg\Delta x\sin\theta$$
+
+$$E_f = 0$$
+
+$$E_{lost} = \mu_k mg\cos\theta\,\Delta x$$
+
+**Solve for $\Delta x$:**
+
+$$
+\begin{aligned}
+\tfrac12 mv_i^2 + mg\Delta x\sin\theta &= \mu_k mg\cos\theta\,\Delta x \\[8pt]
+\tfrac12 v_i^2 &= g\Delta x(\mu_k\cos\theta - \sin\theta) \\[8pt]
+\Delta x &= \frac{v_i^2}{2g(\mu_k\cos\theta - \sin\theta)}
+\end{aligned}
+$$
+
+This is the professor's form, with the bracket written so the answer is positive.
+
+**Plug in:**
+
+$$\Delta x = \frac{4.0^2}{2(9.8)(0.35 \times 0.9781 - 0.2079)} = \frac{16}{19.6(0.1344)} = 6.1\ \text{m}$$
+
+It does stop, because $\mu_k\cos\theta = 0.342$ is bigger than $\sin\theta = 0.208$. That rules out e).
+
+Distractors:
+
+* a) 1.5 uses the sliding-**up** bracket, $(\sin\theta + \mu_k\cos\theta)$.
+* b) 2.4 drops the $\sin\theta$ term.
+* d) 12.1 forgets the 2.
+
+# 7. Incline + hanging mass — **e) it stops before 1.5 m**
+
+$E_i = E_f + E_{lost}$ for both masses (Ch 7/8 notes p. 15/18). Both move the same distance $\Delta x$ at the same speed.
+
+* $m_1$ starts at 0 and rises $\Delta x\sin\theta$.
+* $m_2$ starts at $\Delta x$ and drops to 0.
+* Friction acts on $m_1$, with $N = m_1g\cos\theta$.
+
+**Energy terms:**
+
+$$E_i = \tfrac12(m_1 + m_2)v_i^2 + m_2g\Delta x$$
+
+$$E_f = \tfrac12(m_1 + m_2)v_f^2 + m_1g\Delta x\sin\theta$$
+
+$$E_{lost} = \mu_k m_1g\cos\theta\,\Delta x$$
+
+**Solve for $v_f$:**
+
+$$
+\begin{aligned}
+\tfrac12(m_1 + m_2)v_i^2 + m_2g\Delta x &= \tfrac12(m_1 + m_2)v_f^2 + m_1g\Delta x\sin\theta + \mu_k m_1g\cos\theta\,\Delta x \\[8pt]
+v_f^2 &= v_i^2 + \frac{2g\Delta x}{m_1 + m_2}\left(m_2 - m_1\sin\theta - \mu_k m_1\cos\theta\right) \\[8pt]
+v_f &= \sqrt{v_i^2 + \frac{2g\Delta x}{m_1 + m_2}\left(m_2 - m_1\sin\theta - \mu_k m_1\cos\theta\right)}
+\end{aligned}
+$$
+
+**Plug in.** The bracket is $4.0 - 15(0.4226) - 0.30(15)(0.9063) = 4.0 - 6.339 - 4.078 = -6.417$ kg, so
+
+$$v_f = \sqrt{3.0^2 + \frac{2(9.8)(1.5)}{19}(-6.417)} = \sqrt{9.0 - 9.93} = \sqrt{-0.93}$$
+
+The number under the root is negative ("imaginary"), so it "doesn't go 1.5 m."
+
+**Where it does stop.** Set $v_f = 0$ in the $v_f^2$ line and solve for $\Delta x$:
+
+$$
+\begin{aligned}
+0 &= v_i^2 + \frac{2g\Delta x}{m_1 + m_2}\left(m_2 - m_1\sin\theta - \mu_k m_1\cos\theta\right) \\[8pt]
+\Delta x &= \frac{(m_1 + m_2)v_i^2}{-2g\left(m_2 - m_1\sin\theta - \mu_k m_1\cos\theta\right)}
+\end{aligned}
+$$
+
+$$\Delta x = \frac{19(9.0)}{2(9.8)(6.417)} = 1.36\ \text{m}$$
+
+Distractors:
+
+* a) 2.32 ignores friction.
+* b) 2.51 uses the sliding-down bracket.
+* c) 2.98 drops the $m_1\sin\theta$ term.
+* d) 4.35 adds the bracket instead of subtracting it.
+
+# 8. Mass slides into a spring — **d) 0.15 m**
+
+No friction, so $E_i = E_f$ (Ch 7/8 notes p. 11/18). Put $h = 0$ at the floor. All the gravitational PE becomes spring PE.
+
+**Energy terms** (at rest at both ends):
+
+$$E_i = mgh$$
+
+$$E_f = \tfrac12 kx^2$$
+
+**Solve for $x$:**
+
+$$
+\begin{aligned}
+mgh &= \tfrac12 kx^2 \\[8pt]
+x^2 &= \frac{2mgh}{k} \\[8pt]
+x &= \sqrt{\frac{2mgh}{k}}
+\end{aligned}
+$$
+
+**Plug in:**
+
+$$x = \sqrt{\frac{2(2.5)(9.8)(0.80)}{1800}} = \sqrt{0.02178} = 0.15\ \text{m}$$
+
+Distractors:
+
+* a) 0.011 is $mgh/k$.
+* b) 0.022 forgets the square root.
+* c) 0.10 forgets the 2.
+* e) 0.21 doubles it.
+
+# 9. Power — **c) 1030 W**
+
+Work done against gravity is $mgh$, and power is work per time (Ch 7/8 notes p. 14/18):
+
+$$
+P = \frac{mgh}{t} = \frac{70 \times 9.8 \times 12}{8.0} = 1029\ \text{W} \approx 1030\ \text{W}.
+$$
+
+Distractors:
+
+* a) 105 forgets $g$.
+* b) 457 swaps $h$ and $t$.
+* d) 8230 is the work $mgh$ in joules, not power.
+* e) 65,900 multiplies by $t$.
+
+# 10. Force from a bounce — **e) 900 N**
+
+$F = \dfrac{p_f - p_i}{t}$. The ball reverses direction, so $p_i = -p_f$ and $|F| = \dfrac{2p}{t}$ ("100% rebound", Ch 9 notes p. 1/5):
+
+$$
+|F| = \frac{2mv}{t} = \frac{2 \times 0.15 \times 30}{0.010} = 900\ \text{N}.
+$$
+
+Distractors:
+
+* a) 0 subtracts the speeds and ignores direction.
+* b) 4.5 is the momentum $p = mv$ (kg·m/s), not a force.
+* c) 9.0 is the change in momentum (N·s).
+* d) 450 forgets that a bounce doubles the change in momentum.
+
+# 11. Rotational kinematics — **d) 3.0 s**
+
+No $\alpha$ is given and $t$ is wanted, so use the average-velocity equation (Ch 10 notes p. 1/8):
+
+$$
+\theta_f - \theta_i = \frac{\omega_i + \omega_f}{2}t \quad\Rightarrow\quad t = \frac{\Delta\theta}{(\omega_i + \omega_f)/2} = \frac{90}{(10 + 50)/2} = \frac{90}{30} = 3.0\ \text{s}.
+$$
+
+Check: $\alpha = (\omega_f - \omega_i)/t = 13.3$ rad/s², and $\omega_f^2 = \omega_i^2 + 2\alpha\Delta\theta$ gives $100 + 2(13.3)(90) = 2500 = 50^2$.
+
+Distractors (each divides 90 rad by the wrong speed):
+
+* a) 1.5 divides by the sum, 60.
+* b) 1.8 divides by $\omega_f$.
+* c) 2.25 divides by $\Delta\omega$.
+* e) 9.0 divides by $\omega_i$.
+
+# 12. Parallel axis theorem — **e) 0.63 kg·m²**
+
+**Parallel axis theorem** (Ch 10 notes p. 2/8): $I = I_{cm} + md^2$, where **$d$ is measured from the rod's CENTER**, not from its end. (Worked guide 10.2, Example B.)
+
+**Step 1: $I_{cm}$ for a rod.**
+
+$$I_{cm} = \tfrac1{12}m\ell^2 = \tfrac1{12}(3.0)(1.2)^2 = 0.36\ \text{kg·m}^2$$
+
+**Step 2: $d$ from the center.** The center is $\ell/2 = 0.60$ m from the end; the axis is $a = 0.30$ m from that end:
+
+$$d = \frac{\ell}{2} - a = 0.60 - 0.30 = 0.30\ \text{m}$$
+
+**Step 3: Add $md^2$.**
+
+$$I = I_{cm} + md^2 = 0.36 + (3.0)(0.30)^2 = 0.36 + 0.27 = 0.63\ \text{kg·m}^2$$
+
+**Notecard shortcut:**
+
+$$
+\begin{aligned}
+I &= m\left[\frac{\ell^2}{12} + \left(\frac{\ell}{2} - a\right)^2\right] \\[8pt]
+&= 3.0\,(0.12 + 0.09) = 0.63\ \text{kg·m}^2
+\end{aligned}
+$$
+
+Distractors:
+
+* a) 0.09 is $\tfrac13 md^2$.
+* b) 0.27 is $md^2$ alone.
+* c) 0.36 is $I_{cm}$ alone (forgot to move the axis).
+* d) 0.50 uses $\tfrac12 md^2$.
+
+# 13. Rolling acceleration — **b) 2.96 m/s²**
+
+From forces and torque (Ch 10 notes p. 3/8):
+
+* Along the slope: $mg\sin\theta - f = ma$.
+* Torque about the center: $Rf = \tfrac25 mR^2\alpha$ with $R\alpha = a$, so $f = \tfrac25 ma$.
+
+Combining them, $g\sin\theta = \tfrac75 a$:
+
+$$
+a = \tfrac57 g\sin\theta = \tfrac57 \times 9.8 \times \sin 25^\circ = \tfrac57 \times 4.142 = 2.96\ \text{m/s}^2.
+$$
+
+Distractors:
+
+* a) 2.07 is a ring, $\tfrac12 g\sin\theta$.
+* c) 4.14 is sliding, $g\sin\theta$ ("less than sliding").
+* d) 6.34 uses $\cos\theta$.
+* e) 7.00 forgets $\sin\theta$.
+
+# 14. Person drops onto a merry-go-round — **a) 1.05 rad/s**
+
+$L_i = L_f$. The person is a point mass at $r = 1.5$ m, so by the parallel axis theorem $I = 0 + mr^2$ (Ch 11 notes p. 2/8). The person had no angular momentum before stepping on.
+
+$$
+\omega_f = \frac{\tfrac12 MR^2\omega_i}{\tfrac12 MR^2 + mr^2} = \frac{937.5 \times 1.2}{937.5 + 60(1.5)^2} = \frac{1125}{1072.5} = 1.05\ \text{rad/s}.
+$$
+
+Distractors:
+
+* b) 1.10 uses $mr$ instead of $mr^2$.
+* c) 1.12 treats the person as a disk, $\tfrac12 mr^2$.
+* d) 1.20 is no change.
+* e) 1.37 flips the ratio (as if the person stepped **off**).
+
+# 15. Rod dropped from the center to the edge — **a) 1.36 rad/s**
+
+The rod lies along a radius, so it rotates about **one end**: $I_{rod} = \tfrac13 m\ell^2$ (Ch 11 notes p. 5/8).
+
+$$
+\omega_f = \frac{\tfrac12 MR^2\omega_i}{\tfrac12 MR^2 + \tfrac13 m\ell^2} = \frac{1800 \times 1.5}{1800 + \tfrac13(60)(3.0)^2} = \frac{2700}{1980} = 1.36\ \text{rad/s}.
+$$
+
+Distractors:
+
+* b) 1.43 forgets the $\tfrac12$ on the disk.
+* c) 1.46 uses the rod-about-its-middle formula, $\tfrac1{12}m\ell^2$.
+* d) 1.50 ignores the rod.
+* e) 1.73 flips a mass ratio, $\omega_i(M + m)/M$.

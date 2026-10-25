@@ -1,0 +1,296 @@
+---
+title: "PHYS1408 Exam 2 Notecard"
+subtitle: "Every 3×5 notecard equation, one card per problem type"
+format:
+  html:
+    embed-resources: true
+    toc: true
+    toc-depth: 1
+  pdf:
+    geometry: margin=0.6in
+    fontsize: 10pt
+    toc: false
+---
+
+$g = 9.8$ m/s². Each card's links go to the fully worked problems in the [Exam 2 Worked Problems](study-guide-exam-2-worked.html). For a minimum, round **up** to an answer choice that works; for a maximum, round **down**.
+
+# Curves
+
+**Worked examples:** [6.1](study-guide-exam-2-worked.html#flat-curve-on-ice) · [6.2](study-guide-exam-2-worked.html#banked-curve-maximum-speed) · [6.3](study-guide-exam-2-worked.html#steep-banked-curve-maximum-and-minimum-speed) · [6.4](study-guide-exam-2-worked.html#banked-turn-handout-sincos-form)
+
+$$v_{max} = \sqrt{gr\,\frac{\tan\theta + \mu_s}{1 - \mu_s\tan\theta}}$$
+
+$$v_{min} = \sqrt{gr\,\frac{\tan\theta - \mu_s}{1 + \mu_s\tan\theta}}$$
+
+* $g = 9.8$ m/s², $r$ = radius of the curve (m).
+* $\theta$ = bank angle from the horizontal; $\mu_s$ = coefficient of static friction (tires on road).
+* **Flat curve:** $\theta = 0$ gives $v_{max} = \sqrt{\mu_s gr}$.
+* **No friction:** $\mu_s = 0$ gives the single speed $v = \sqrt{gr\tan\theta}$.
+* If $\tan\theta < \mu_s$, there is no $v_{min}$ (the car can sit still on the bank).
+* **Answer choices:** round a $v_{max}$ **down** and a $v_{min}$ **up** to a choice that works.
+
+# Free fall and roller coasters
+
+**Worked examples:** [7.1](study-guide-exam-2-worked.html#dropped-from-rest-coyote) · [7.3](study-guide-exam-2-worked.html#roller-coaster)
+
+$$v_f = \sqrt{v_i^2 + 2g(h_i - h_f)}$$
+
+* $v_i$, $v_f$ = speed at the start / end (m/s); $h_i$, $h_f$ = height at the start / end (m), from any reference level.
+* Frictionless only. Starting from rest: $v_f = \sqrt{2g\,\Delta h}$, where $\Delta h$ = the drop.
+* If the object **rises** ($h_f > h_i$), the bracket is negative and it slows down.
+
+# Atwood's machine and hanging mass on a pulley
+
+**Worked examples:** [7.2](study-guide-exam-2-worked.html#atwoods-machine-massless-pulley) · [10.4](study-guide-exam-2-worked.html#hanging-mass-on-a-pulley-with-mass-atwoods-machine-w-torque)
+
+$$v_f = \sqrt{v_i^2 + \frac{2gh(m_1 - m_2)}{m_1 + m_2 + \dfrac{I}{R^2}}}$$
+
+$$a = \frac{(m_1 - m_2)g}{m_1 + m_2 + \dfrac{I}{R^2}}$$
+
+* $m_1$ = the hanging mass that **falls**; $m_2$ = the hanging mass that **rises**.
+* $h$ = distance each mass moves (m); $v_i$, $v_f$ = their shared speed at the start / end.
+* $I$, $R$ = the pulley's moment of inertia and radius. Copy $I$ from the problem; $R$ cancels (disk $I/R^2 = \tfrac12 M$, ring $= M$, massless $= 0$).
+* **One hanging mass** (string wrapped on a pulley): set $m_2 = 0$.
+* String tension on the falling mass: $T = m_1(g - a)$.
+
+# Halfpipe
+
+**Worked examples:** [7.4](study-guide-exam-2-worked.html#halfpipe-frictionless-and-with-a-rough-patch)
+
+$$h_f = h_i + \frac{v_i^2}{2g} - n\,\mu L$$
+
+* $h_i$ = starting height (m); $h_f$ = height reached on the far side (m); $v_i$ = starting speed ($0$ if starting from rest).
+* $\mu$ = friction on the rough patch; $L$ = length of the rough patch (m); $n$ = number of times it crosses the patch.
+* Frictionless: $h_f = h_i$. One crossing from rest: $h_f = h_i - \mu L$.
+* **Number of full crossings before it stops** = the whole-number part of $\dfrac{h_i}{\mu L}$ (from rest).
+
+# Single block on an incline
+
+**Worked examples:** [7.5](study-guide-exam-2-worked.html#sliding-up-a-frictionless-incline) · [7.6](study-guide-exam-2-worked.html#sliding-up-a-rough-incline) · [7.7](study-guide-exam-2-worked.html#sliding-up-a-rough-incline-that-stops-early) · [7.8](study-guide-exam-2-worked.html#sliding-down-a-rough-incline) · [R.2](study-guide-exam-2-worked.html#r.2-sliding-up-a-rough-ramp-time-to-stop-ch-5)
+
+$$\textbf{Up the slope:}\quad v_f = \sqrt{v_i^2 - 2g\,\Delta x(\sin\theta + \mu_k\cos\theta)}$$
+
+$$\textbf{Down the slope:}\quad v_f = \sqrt{v_i^2 + 2g\,\Delta x(\sin\theta - \mu_k\cos\theta)}$$
+
+$$\textbf{Stops after (up):}\quad \Delta x = \frac{v_i^2}{2g(\sin\theta + \mu_k\cos\theta)}$$
+
+$$\textbf{Stops after (down):}\quad \Delta x = \frac{v_i^2}{2g(\mu_k\cos\theta - \sin\theta)}$$
+
+$$\textbf{Time:}\quad t = \frac{2\,\Delta x}{v_i + v_f}$$
+
+* $v_i$, $v_f$ = speed at the start / end (m/s); $\Delta x$ = distance **along the slope** (m).
+* $\theta$ = incline angle from the horizontal; $\mu_k$ = kinetic friction ($\mu_k = 0$ for frictionless).
+* **Negative under the root** = it stops first. Use the stopping-distance line.
+* Sliding down only stops if $\mu_k\cos\theta > \sin\theta$.
+* Time with forces instead: $a = g(\sin\theta \pm \mu_k\cos\theta)$ (+ going up, − going down), then $t = \dfrac{|v_f - v_i|}{a}$.
+
+# Springs
+
+**Worked examples:** [7.9](study-guide-exam-2-worked.html#mass-slides-down-a-ramp-into-a-spring) · [7.10](study-guide-exam-2-worked.html#vertical-spring-launch)
+
+$$\tfrac12 kx^2 = \tfrac12 mv^2 + mgh$$
+
+$$\text{Compression to stop a mass:}\quad x = \sqrt{\frac{2mgh + mv_i^2}{k}}$$
+
+$$\text{Launch straight up:}\quad h = \frac{kx^2}{2mg}$$
+
+$$\text{Launch along a level floor:}\quad v = x\sqrt{\frac{k}{m}}$$
+
+* $k$ = spring constant (N/m); $x$ = how far the spring is compressed or stretched (m).
+* $m$ = the mass (kg); $v$ = its speed when the spring is relaxed (m/s); $h$ = height above (or drop to) the spring's position (m).
+* For a launch, measure $h$ from the **release point**. Frictionless only.
+
+# Power
+
+**Worked examples:** [7.11](study-guide-exam-2-worked.html#power)
+
+$$P = \frac{W}{t} = \frac{mgh}{t} = Fv$$
+
+* $P$ = power (W = J/s); $W$ = work or energy (J); $t$ = time (s).
+* $m$ = mass lifted (kg); $h$ = height gained (m).
+* $F$ = force applied (N); $v$ = speed it moves at (m/s), for a lift or pull at steady speed.
+
+# Incline + hanging mass + pulley
+
+**Worked examples:** [7.12](study-guide-exam-2-worked.html#block-up-an-incline-pulled-by-a-hanging-mass-stops-early) · [7.13](study-guide-exam-2-worked.html#block-down-an-incline-held-back-by-a-hanging-mass) · [10.6](study-guide-exam-2-worked.html#block-down-a-rough-incline-with-a-massive-pulley)
+
+$$v_f = \sqrt{v_i^2 + \frac{2g\,\Delta x\,B}{m_1 + m_2 + \dfrac{I}{R^2}}}$$
+
+$$\text{Stops after:}\quad \Delta x = \frac{-\left(m_1 + m_2 + \dfrac{I}{R^2}\right)v_i^2}{2gB}$$
+
+* $m_1$ = block on the incline; $m_2$ = hanging block ($m_2 = 0$ if nothing hangs); $\theta$ = incline angle; $\mu_k$ = friction between $m_1$ and the incline.
+* $\Delta x$ = distance each block moves (m); $v_i$, $v_f$ = their shared speed at the start / end.
+* $I$, $R$ = pulley's moment of inertia and radius ($I = 0$ for a massless pulley; disk $I/R^2 = \tfrac12 M$).
+* $B$ = the "net pull" (kg), picked by direction of motion:
+    * $m_2$ falls, $m_1$ slides **up**: $B = m_2 - m_1\sin\theta - \mu_k m_1\cos\theta$.
+    * $m_1$ slides **down**, $m_2$ rises: $B = m_1\sin\theta - m_2 - \mu_k m_1\cos\theta$.
+* $B > 0$: speeds up. $B < 0$: slows down; a negative number under the root means it stops first, so use the second line.
+
+# Loop-the-loop
+
+**Worked examples:** [7.14](study-guide-exam-2-worked.html#loop-the-loop)
+
+$$v_{top,\,min} = \sqrt{gR}$$
+
+$$v_{bottom,\,min} = \sqrt{5gR}$$
+
+$$h_{min} = \tfrac52 R$$
+
+$$v_{top}^2 = v_{bottom}^2 - 4gR = 2g(h - 2R)$$
+
+$$\text{Top:}\quad N = \frac{mv_{top}^2}{R} - mg$$
+
+$$\text{Bottom:}\quad N = \frac{mv_{bottom}^2}{R} + mg$$
+
+* $R$ = loop radius (m); $h$ = starting height above the bottom of the loop, starting from rest (m); $m$ = mass (kg).
+* $v_{top}$, $v_{bottom}$ = speed at the top / bottom of the loop; $N$ = normal force from the track (N).
+* "Barely" makes it = $N = 0$ at the top. Launched from $h = \tfrac52 R$: $N_{bottom} = 6mg$.
+* **Answer choices:** these are minimums, so round **up** to a choice that works.
+
+# Force from a momentum change
+
+**Worked examples:** [9.1](study-guide-exam-2-worked.html#force-from-a-change-in-momentum)
+
+$$F = \frac{m(v_f - v_i)}{t}$$
+
+* $m$ = mass (kg); $v_i$, $v_f$ = velocity before / after **with signs** (reversing direction flips the sign); $t$ = contact time (s).
+* Bounces straight back at the same speed: $|F| = \dfrac{2mv}{t}$. Comes to a stop: $|F| = \dfrac{mv}{t}$.
+* $mv$ alone is momentum (kg·m/s), and $m(v_f - v_i)$ is the impulse (N·s); neither is a force.
+
+# Sticking collisions
+
+**Worked examples:** [9.2](study-guide-exam-2-worked.html#completely-inelastic-collision-they-stick)
+
+$$v_f = \frac{m_1v_{1i} + m_2v_{2i}}{m_1 + m_2}$$
+
+$$\frac{K_f}{K_i} = \frac{(m_1 + m_2)\,v_f^2}{m_1v_{1i}^2 + m_2v_{2i}^2}$$
+
+* $m_1$, $m_2$ = the two masses; $v_{1i}$, $v_{2i}$ = velocities before, **with signs** (pick a + direction).
+* $v_f$ = shared velocity after they stick; $K_i$, $K_f$ = total kinetic energy before / after.
+* One object at rest ($v_{2i} = 0$): $\dfrac{K_f}{K_i} = \dfrac{m_1}{m_1 + m_2}$.
+
+# Elastic collisions and the cue ball
+
+**Worked examples:** [9.3](study-guide-exam-2-worked.html#elastic-collision-in-1-d) · [9.4](study-guide-exam-2-worked.html#cue-ball-hits-the-8-ball)
+
+$$v_{1f} = \frac{(m_1 - m_2)v_{1i} + 2m_2v_{2i}}{m_1 + m_2}$$
+
+$$v_{2f} = v_{1i} + v_{1f} - v_{2i}$$
+
+* $m_1$, $m_2$ = the two masses; $v_{1i}$, $v_{2i}$ = velocities before; $v_{1f}$, $v_{2f}$ = velocities after.
+* **Every velocity has a sign.** Pick + (say, right); anything moving left is negative. A negative answer means it moves left.
+* Either object can be "object 1".
+* Equal masses, object 2 at rest (cue ball and 8-ball): $v_{1f} = 0$ and $v_{2f} = v_{1i}$.
+
+# Ballistic pendulum
+
+**Worked examples:** [9.5](study-guide-exam-2-worked.html#ballistic-pendulum)
+
+$$v = \frac{M + m}{m}\sqrt{2gh}$$
+
+$$h = \frac{1}{2g}\left(\frac{mv}{M + m}\right)^2$$
+
+$$\frac{K_f}{K_i} = \frac{m}{M + m}$$
+
+* $m$ = bullet mass; $M$ = block mass; $v$ = bullet speed before the hit (m/s); $h$ = height the block swings up (m).
+* Block + bullet speed right after the hit: $V = \dfrac{mv}{M + m} = \sqrt{2gh}$.
+* $K_f/K_i$ = fraction of the bullet's KE left in the swinging block.
+
+# Rotational kinematics
+
+**Worked examples:** [10.1](study-guide-exam-2-worked.html#rotational-kinematics)
+
+$$\omega_f = \omega_i + \alpha t$$
+
+$$\Delta\theta = \frac{\omega_i + \omega_f}{2}\,t$$
+
+$$\omega_f^2 = \omega_i^2 + 2\alpha\,\Delta\theta$$
+
+$$\Delta\theta = \omega_i t + \tfrac12\alpha t^2$$
+
+* $\omega_i$, $\omega_f$ = angular velocity at the start / end (rad/s); $\alpha$ = constant angular acceleration (rad/s²).
+* $\Delta\theta$ = angle turned (**radians**; 1 rev = $2\pi$ rad); $t$ = time (s).
+* Pick the equation that leaves out the one quantity you're not given and not asked for.
+
+# Parallel axis theorem
+
+**Worked examples:** [10.2](study-guide-exam-2-worked.html#moments-of-inertia-and-the-parallel-axis-theorem)
+
+$$I = I_{cm} + md^2$$
+
+**$d$ = distance from the object's CENTER to the new axis**, not from its end or edge.
+
+**Rod, axis a distance $a$ from one end:**
+
+$$I = m\left[\frac{\ell^2}{12} + \left(\frac{\ell}{2} - a\right)^2\right]$$
+
+**Rod about one end** ($a = 0$):
+
+$$I = \tfrac13 m\ell^2$$
+
+**Disk about a point on its rim:**
+
+$$I = \tfrac32 MR^2$$
+
+**Ring about a point on its rim:**
+
+$$I = 2MR^2$$
+
+**Point mass at distance $r$:**
+
+$$I = mr^2$$
+
+**System of pieces** (all about the same axis):
+
+$$I_{total} = I_1 + I_2 + \cdots$$
+
+* $I$ = moment of inertia about the new axis (kg·m²); $I_{cm}$ = about the object's own center (his $I_0$); $m$ or $M$ = the object's mass (kg).
+* $\ell$ = rod length (m); $a$ = how far the axis is from the **end** of the rod (m); $R$ = radius (m); $r$ = a point mass's distance from the axis (m).
+* $I_{cm}$ values: rod $\tfrac1{12}m\ell^2$, disk $\tfrac12 MR^2$, ring $MR^2$, sphere $\tfrac25 MR^2$, point mass $0$.
+* **Never** add $md^2$ to $\tfrac13 m\ell^2$. That value is already about the end.
+
+# Rolling acceleration
+
+**Worked examples:** [10.3](study-guide-exam-2-worked.html#rolling-ball-acceleration-from-forces-and-torque)
+
+$$a = \frac{g\sin\theta}{1 + \dfrac{I}{mR^2}}$$
+
+* $a$ = acceleration of the center down the incline (m/s²); $\theta$ = incline angle.
+* $I$ = the rolling object's moment of inertia; $m$, $R$ = its mass and radius.
+* Sphere $\tfrac57 g\sin\theta$; disk $\tfrac23 g\sin\theta$; ring $\tfrac12 g\sin\theta$; sliding $g\sin\theta$.
+
+# Rolling speed at the bottom
+
+**Worked examples:** [10.5](study-guide-exam-2-worked.html#rolling-down-an-incline-ring-disk-sphere)
+
+$$v = \sqrt{\frac{2gh}{1 + \dfrac{I}{mR^2}}}$$
+
+$$\omega = \frac{v}{R}$$
+
+* $v$ = speed of the center at the bottom (m/s); $\omega$ = spin rate at the bottom (rad/s); $h$ = vertical drop (m), starting from rest.
+* $I$ = the object's moment of inertia; $m$, $R$ = its mass and radius ($R$ matters for $\omega$, not for $v$).
+* Ring $\sqrt{gh}$; disk $\sqrt{\tfrac43 gh}$; sphere $\sqrt{\tfrac{10}{7}gh}$; sliding $\sqrt{2gh}$.
+
+# Angular momentum
+
+**Worked examples:** [11.1](study-guide-exam-2-worked.html#disk-dropped-on-a-spinning-disk) · [11.2](study-guide-exam-2-worked.html#person-drops-onto-a-merry-go-round) · [11.3](study-guide-exam-2-worked.html#counter-rotating-object-dropped-on-a-disk) · [11.4](study-guide-exam-2-worked.html#person-runs-and-jumps-onto-the-rim) · [11.5](study-guide-exam-2-worked.html#rod-dropped-from-the-center-to-the-edge) · [11.6](study-guide-exam-2-worked.html#person-walks-from-the-rim-to-the-center)
+
+$$\omega_f = \frac{I_1\omega_{1i} + I_2\omega_{2i} \pm mvr}{I_1 + I_2 + I_{added}}$$
+
+* $I_1$, $\omega_{1i}$ = the spinning platform's moment of inertia and starting spin (merry-go-round disk: $I_1 = \tfrac12 MR^2$).
+* $I_2$, $\omega_{2i}$ = a dropped object's moment of inertia and starting spin ($\omega_{2i} = 0$ if not spinning, **negative** if counter-rotating). Leave out if there isn't one.
+* $mvr$ = a person running and jumping on: $m$ = their mass, $v$ = their speed, $r$ = distance from the axis where they land. **+** if running the same way as the rim, **−** if against it. Leave out if they just step on.
+* $I_{added}$ = what joins the platform: person or point mass $mr^2$, rod lying center-to-edge $\tfrac13 m\ell^2$, dropped disk $\tfrac12 mr^2$, ring $mr^2$.
+* **Something moves in or out** (walking, pulling in arms): $\omega_f = \dfrac{I_i\,\omega_i}{I_f}$. Rim to center: $\omega_f = \dfrac{M + 2m}{M}\omega_i$.
+* KE check: $K = \tfrac12 I\omega^2$. It drops in a "rotational collision" and rises when someone walks inward.
+
+# Projectile from a ledge
+
+**Worked examples:** [R.1](study-guide-exam-2-worked.html#r.1-projectile-from-a-ledge-maximum-height-ch-4)
+
+$$H = h + \frac{(v_0\sin\theta)^2}{2g}$$
+
+$$t_{top} = \frac{v_0\sin\theta}{g}$$
+
+* $H$ = highest point above the ground (m); $h$ = launch height above the ground (m; $0$ if launched from the ground).
+* $v_0$ = launch speed (m/s); $\theta$ = launch angle above the horizontal; $t_{top}$ = time to reach the top (s).

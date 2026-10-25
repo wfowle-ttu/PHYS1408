@@ -2387,7 +2387,7 @@ window.Quarto = {
 <td style="text-align: center;">3</td>
 <td style="text-align: center;"><strong>d</strong></td>
 <td style="text-align: center;">17.1 m/s</td>
-<td style="text-align: left;">Loop-the-loop, <span class="math inline">\(v_{top}=\sqrt{gR}\)</span> (Exam 2 #3, Ch 7/8 notes p. 17–18)</td>
+<td style="text-align: left;">Loop-the-loop, minimum entry speed <span class="math inline">\(v_{bottom}=\sqrt{5gR}\)</span> (Exam 2 #3, Ch 7/8 notes p. 12/18–13/18)</td>
 </tr>
 <tr class="even">
 <td style="text-align: center;">4</td>
@@ -2405,7 +2405,7 @@ window.Quarto = {
 <td style="text-align: center;">6</td>
 <td style="text-align: center;"><strong>c</strong></td>
 <td style="text-align: center;">1.2 m</td>
-<td style="text-align: left;">Vertical spring launch (Exam 2 #5, Ch 7/8 notes p. 17)</td>
+<td style="text-align: left;">Vertical spring launch (Exam 2 #5, Ch 7/8 notes p. 12/18)</td>
 </tr>
 <tr class="odd">
 <td style="text-align: center;">7</td>
@@ -2465,34 +2465,84 @@ window.Quarto = {
 </table>
 <section id="halfpipe-with-a-rough-patch-a-4.8-m" class="level1">
 <h1>1. Halfpipe with a rough patch — <strong>a) 4.8 m</strong></h1>
-<p>Energy is lost only on the rough patch: <span class="math inline">\(E_i = E_f + E_{lost}\)</span>, with <span class="math inline">\(E_{lost} = F_f L = \mu m g L\)</span>. She starts and ends at rest, so</p>
+<p>Work–energy theorem, <span class="math inline">\(E_i = E_f + E_{lost}\)</span>. Energy is lost only on the rough patch. She starts and ends at rest, so only PE appears.</p>
+<p><strong>Energy terms:</strong></p>
+<p><span class="math display">\[E_i = mgh_i\]</span></p>
+<p><span class="math display">\[E_f = mgh_f\]</span></p>
+<p><span class="math display">\[E_{lost} = F_f L = \mu NL = \mu mgL\]</span></p>
+<p><strong>Solve for <span class="math inline">\(h_f\)</span>:</strong></p>
 <p><span class="math display">\[
-mgh_i = mgh_f + \mu m g L \quad\Rightarrow\quad h_f = h_i - \mu L = 6.0 - (0.15)(8.0) = 6.0 - 1.2 = 4.8\ \text{m}.
+\begin{aligned}
+mgh_i &amp;= mgh_f + \mu mgL \\[8pt]
+h_i &amp;= h_f + \mu L \\[8pt]
+h_f &amp;= h_i - \mu L
+\end{aligned}
 \]</span></p>
-<p>Mass cancels. Distractor d) 6.0 m is the frictionless answer <span class="math inline">\(h_f = h_i\)</span>.</p>
+<p><strong>Plug in:</strong></p>
+<p><span class="math display">\[h_f = 6.0 - (0.15)(8.0) = 6.0 - 1.2 = 4.8\ \text{m}\]</span></p>
+<p>Mass cancels. Distractor d) 6.0 m is the frictionless answer, <span class="math inline">\(h_f = h_i\)</span>.</p>
 </section>
 <section id="projectile-from-a-ledge-c-13.0-m" class="level1">
 <h1>2. Projectile from a ledge — <strong>c) 13.0 m</strong></h1>
-<p>At the top, <span class="math inline">\(v_y = 0\)</span>. Use <span class="math inline">\(v_y^2 = v_{0y}^2 - 2g\,\Delta y\)</span>:</p>
+<p>Only the vertical motion decides the height. At the top the vertical velocity is zero. Take up as <span class="math inline">\(+\)</span>, so the vertical acceleration is <span class="math inline">\(-g\)</span> (worked example: Worked Problems R.1).</p>
+<p><strong>Vertical launch speed:</strong></p>
+<p><span class="math display">\[v_{0y} = v_0\sin\theta\]</span></p>
+<p><strong>Vertical kinematics, launch point to the top</strong> (<span class="math inline">\(v_y = 0\)</span>):</p>
 <p><span class="math display">\[
-\Delta y = \frac{(v_0\sin\theta)^2}{2g} = \frac{(25 \sin 30^\circ)^2}{2(9.8)} = \frac{(12.5)^2}{19.6} = 7.97\ \text{m}.
+\begin{aligned}
+v_y^2 &amp;= v_{0y}^2 - 2g\,\Delta y \\[8pt]
+0 &amp;= (v_0\sin\theta)^2 - 2g\,\Delta y \\[8pt]
+\Delta y &amp;= \frac{(v_0\sin\theta)^2}{2g}
+\end{aligned}
 \]</span></p>
-<p>Height above the ground is <span class="math inline">\(H = h + \Delta y = 5.0 + 7.97 = 13.0\)</span> m. Distractor b) 8.0 m forgets to add the ledge.</p>
+<p><strong>Add the ledge:</strong></p>
+<p><span class="math display">\[H = h + \frac{(v_0\sin\theta)^2}{2g}\]</span></p>
+<p><strong>Plug in:</strong></p>
+<p><span class="math display">\[
+\begin{aligned}
+H &amp;= 5.0 + \frac{(25\sin 30^\circ)^2}{2(9.8)} \\[8pt]
+&amp;= 5.0 + \frac{(12.5)^2}{19.6} = 5.0 + 7.97 = 13.0\ \text{m}
+\end{aligned}
+\]</span></p>
+<p>Distractors:</p>
+<ul>
+<li><ol type="a">
+<li>5.0 m is just the ledge.</li>
+</ol></li>
+<li><ol start="2" type="a">
+<li>8.0 m forgets to add the ledge.</li>
+</ol></li>
+<li><ol start="4" type="a">
+<li>21.0 m forgets the 2 in <span class="math inline">\(2g\)</span>: <span class="math inline">\(5.0 + (v_0\sin\theta)^2/g = 5.0 + 15.9\)</span>.</li>
+</ol></li>
+<li><ol start="5" type="a">
+<li>36.9 m is <span class="math inline">\(h + v_0^2/2g\)</span>, as if launched straight up.</li>
+</ol></li>
+</ul>
 </section>
 <section id="loop-the-loop-d-17.1-ms" class="level1">
 <h1>3. Loop-the-loop — <strong>d) 17.1 m/s</strong></h1>
-<p>To “barely” stay on at the top, the normal force there is zero, so gravity alone supplies the centripetal force:</p>
+<p><strong>Top of the loop (forces).</strong> To “barely” stay on, <span class="math inline">\(N = 0\)</span> at the top, so gravity alone supplies the centripetal force:</p>
 <p><span class="math display">\[
-mg = \frac{m v_{top}^2}{R} \quad\Rightarrow\quad v_{top}^2 = gR.
+\begin{aligned}
+mg &amp;= \frac{mv_{top}^2}{R} \\[8pt]
+v_{top}^2 &amp;= gR
+\end{aligned}
 \]</span></p>
-<p>Energy conservation from the bottom (<span class="math inline">\(h=0\)</span>) to the top (<span class="math inline">\(h=2R\)</span>):</p>
+<p><strong>Bottom to top (energy), <span class="math inline">\(E_i = E_f\)</span>.</strong> Put <span class="math inline">\(h = 0\)</span> at the bottom; the top is at <span class="math inline">\(2R\)</span>.</p>
+<p><span class="math display">\[E_i = \tfrac12 mv_b^2\]</span></p>
+<p><span class="math display">\[E_f = \tfrac12 mv_{top}^2 + mg(2R)\]</span></p>
+<p><strong>Solve for <span class="math inline">\(v_b\)</span>:</strong></p>
 <p><span class="math display">\[
-\tfrac12 m v_b^2 = \tfrac12 m v_{top}^2 + mg(2R) \quad\Rightarrow\quad v_b^2 = gR + 4gR = 5gR.
+\begin{aligned}
+\tfrac12 mv_b^2 &amp;= \tfrac12 mv_{top}^2 + 2mgR \\[8pt]
+v_b^2 &amp;= v_{top}^2 + 4gR = gR + 4gR = 5gR \\[8pt]
+v_b &amp;= \sqrt{5gR}
+\end{aligned}
 \]</span></p>
-<p><span class="math display">\[
-v_b = \sqrt{5gR} = \sqrt{5(9.8)(6.0)} = \sqrt{294} = 17.1\ \text{m/s}.
-\]</span></p>
-<p>Distractor a) 7.7 m/s is <span class="math inline">\(\sqrt{gR}\)</span> (the speed needed at the <em>top</em>).</p>
+<p><strong>Plug in:</strong></p>
+<p><span class="math display">\[v_b = \sqrt{5(9.8)(6.0)} = \sqrt{294} = 17.1\ \text{m/s}\]</span></p>
+<p>Distractor a) 7.7 m/s is <span class="math inline">\(\sqrt{gR}\)</span>, the speed needed at the <em>top</em>.</p>
 </section>
 <section id="sliding-up-a-rough-ramp-b-0.98-s" class="level1">
 <h1>4. Sliding up a rough ramp — <strong>b) 0.98 s</strong></h1>
@@ -2519,10 +2569,19 @@ v_{max} = \sqrt{9.8(80)\,\frac{0.25 + 0.268}{1 - (0.25)(0.268)}} = \sqrt{784\,\f
 </section>
 <section id="vertical-spring-launch-c-1.2-m" class="level1">
 <h1>6. Vertical spring launch — <strong>c) 1.2 m</strong></h1>
-<p>Measure height from the release point. Spring potential energy becomes gravitational potential energy at the top (where <span class="math inline">\(v=0\)</span>):</p>
+<p><span class="math inline">\(E_i = E_f\)</span>. Put <span class="math inline">\(h = 0\)</span> at the release point. Spring PE becomes gravitational PE at the top, where <span class="math inline">\(v = 0\)</span>.</p>
+<p><strong>Energy terms:</strong></p>
+<p><span class="math display">\[E_i = \tfrac12 kx^2\]</span></p>
+<p><span class="math display">\[E_f = mgh\]</span></p>
+<p><strong>Solve for <span class="math inline">\(h\)</span>:</strong></p>
 <p><span class="math display">\[
-\tfrac12 k x^2 = mgh \quad\Rightarrow\quad h = \frac{k x^2}{2 m g} = \frac{1500(0.040)^2}{2(0.10)(9.8)} = \frac{2.4}{1.96} = 1.2\ \text{m}.
+\begin{aligned}
+\tfrac12 kx^2 &amp;= mgh \\[8pt]
+h &amp;= \frac{kx^2}{2mg}
+\end{aligned}
 \]</span></p>
+<p><strong>Plug in:</strong></p>
+<p><span class="math display">\[h = \frac{1500(0.040)^2}{2(0.10)(9.8)} = \frac{2.4}{1.96} = 1.2\ \text{m}\]</span></p>
 <p>Distractor d) 2.4 m forgets the <span class="math inline">\(\tfrac12\)</span>.</p>
 </section>
 <section id="d-elastic-collision-d-1.0-ms" class="level1">
@@ -2558,23 +2617,56 @@ v = \frac{M+m}{m}\sqrt{2gh} = \frac{2.008}{0.0080}(1.25) = 251 \times 1.25 = 314
 </section>
 <section id="hanging-mass-on-a-disk-pulley-b-3.4-ms" class="level1">
 <h1>10. Hanging mass on a disk pulley — <strong>b) 3.4 m/s</strong></h1>
-<p><strong>Energy route:</strong> with <span class="math inline">\(v = R\omega\)</span> and <span class="math inline">\(I = \tfrac12 MR^2\)</span>, the pulley’s KE is <span class="math inline">\(\tfrac12 I\omega^2 = \tfrac14 M v^2\)</span>.</p>
+<p><strong>Energy route, <span class="math inline">\(E_i = E_f\)</span>.</strong> Put <span class="math inline">\(h = 0\)</span> where the mass ends up. It starts from rest, and the pulley is a disk with <span class="math inline">\(I = \tfrac12 MR^2\)</span> turning at <span class="math inline">\(\omega = v/R\)</span>.</p>
+<p><strong>Energy terms:</strong></p>
+<p><span class="math display">\[E_i = mgh\]</span></p>
+<p><span class="math display">\[E_f = \tfrac12 mv^2 + \tfrac12 I\omega^2\]</span></p>
+<p><strong>Pulley KE in terms of <span class="math inline">\(v\)</span>:</strong></p>
+<p><span class="math display">\[\tfrac12 I\omega^2 = \tfrac12\left(\tfrac12 MR^2\right)\left(\frac{v}{R}\right)^2 = \tfrac14 Mv^2\]</span></p>
+<p><strong>Solve for <span class="math inline">\(v\)</span>:</strong></p>
 <p><span class="math display">\[
-mgh = \tfrac12 m v^2 + \tfrac14 M v^2 \quad\Rightarrow\quad v = \sqrt{\frac{2mgh}{m + M/2}} = \sqrt{\frac{2(2.0)(9.8)(1.5)}{2.0 + 3.0}} = \sqrt{11.76} = 3.43\ \text{m/s}.
+\begin{aligned}
+mgh &amp;= \tfrac12 mv^2 + \tfrac14 Mv^2 = \tfrac12\left(m + \tfrac{M}{2}\right)v^2 \\[8pt]
+v^2 &amp;= \frac{2mgh}{m + \tfrac{M}{2}} \\[8pt]
+v &amp;= \sqrt{\frac{2mgh}{m + \tfrac{M}{2}}}
+\end{aligned}
 \]</span></p>
-<p><strong>Torque route (check):</strong> <span class="math inline">\(RT = I\alpha\)</span> gives <span class="math inline">\(T = \tfrac12 Ma\)</span>. Then <span class="math inline">\(mg - T = ma\)</span> gives <span class="math inline">\(a = \dfrac{mg}{m + M/2} = \dfrac{19.6}{5.0} = 3.92\)</span> m/s², and <span class="math inline">\(v = \sqrt{2ah} = \sqrt{2(3.92)(1.5)} = 3.43\)</span> m/s. (checks)</p>
+<p><strong>Plug in:</strong></p>
+<p><span class="math display">\[v = \sqrt{\frac{2(2.0)(9.8)(1.5)}{2.0 + 3.0}} = \sqrt{11.76} = 3.43\ \text{m/s}\]</span></p>
+<p><strong>Torque route (check).</strong> From <span class="math inline">\(RT = I\alpha\)</span>, <span class="math inline">\(T = \tfrac12 Ma\)</span>. From <span class="math inline">\(mg - T = ma\)</span>:</p>
+<p><span class="math display">\[a = \frac{mg}{m + \tfrac{M}{2}} = \frac{19.6}{5.0} = 3.92\ \text{m/s}^2\]</span></p>
+<p><span class="math display">\[v = \sqrt{2ah} = \sqrt{2(3.92)(1.5)} = 3.43\ \text{m/s (checks)}\]</span></p>
 <p><span class="math inline">\(R\)</span> cancels. Distractor d) 5.4 m/s is free fall, <span class="math inline">\(\sqrt{2gh}\)</span>.</p>
 </section>
 <section id="rolling-solid-cylinder-c-102-rads" class="level1">
 <h1>11. Rolling solid cylinder — <strong>c) 102 rad/s</strong></h1>
-<p>Rolling without slipping means <span class="math inline">\(v = R\omega\)</span>:</p>
+<p><span class="math inline">\(E_i = E_f\)</span>. Put <span class="math inline">\(h = 0\)</span> at the bottom. Rolling without slipping means <span class="math inline">\(v = R\omega\)</span>, and a solid cylinder has <span class="math inline">\(I = \tfrac12 mR^2\)</span>.</p>
+<p><strong>Energy terms:</strong></p>
+<p><span class="math display">\[E_i = mgh\]</span></p>
+<p><span class="math display">\[E_f = \tfrac12 mv^2 + \tfrac12 I\omega^2\]</span></p>
+<p><strong>Solve for <span class="math inline">\(v\)</span>, then <span class="math inline">\(\omega\)</span>:</strong></p>
 <p><span class="math display">\[
-mgh = \tfrac12 m v^2 + \tfrac12\left(\tfrac12 m R^2\right)\frac{v^2}{R^2} = \tfrac34 m v^2 \quad\Rightarrow\quad v = \sqrt{\tfrac43 g h} = \sqrt{\tfrac43(9.8)(2.0)} = 5.11\ \text{m/s}.
+\begin{aligned}
+mgh &amp;= \tfrac12 mv^2 + \tfrac12\left(\tfrac12 mR^2\right)\frac{v^2}{R^2} = \tfrac12 mv^2 + \tfrac14 mv^2 = \tfrac34 mv^2 \\[8pt]
+v &amp;= \sqrt{\tfrac43 gh} \\[8pt]
+\omega &amp;= \frac{v}{R} = \frac{1}{R}\sqrt{\tfrac43 gh}
+\end{aligned}
 \]</span></p>
-<p><span class="math display">\[
-\omega = \frac{v}{R} = \frac{5.11}{0.050} = 102\ \text{rad/s}.
-\]</span></p>
-<p>Distractors: a) 5.1 is <span class="math inline">\(v\)</span>, not <span class="math inline">\(\omega\)</span>; b) 89 uses the ring formula <span class="math inline">\(\sqrt{gh}\)</span>; d) 125 uses the sliding formula <span class="math inline">\(\sqrt{2gh}\)</span>.</p>
+<p><strong>Plug in:</strong></p>
+<p><span class="math display">\[v = \sqrt{\tfrac43(9.8)(2.0)} = 5.11\ \text{m/s}\]</span></p>
+<p><span class="math display">\[\omega = \frac{5.11}{0.050} = 102\ \text{rad/s}\]</span></p>
+<p>Distractors:</p>
+<ul>
+<li><ol type="a">
+<li>5.1 is <span class="math inline">\(v\)</span>, not <span class="math inline">\(\omega\)</span>.</li>
+</ol></li>
+<li><ol start="2" type="a">
+<li>89 uses the ring formula, <span class="math inline">\(\sqrt{gh}\)</span>.</li>
+</ol></li>
+<li><ol start="4" type="a">
+<li>125 uses the sliding formula, <span class="math inline">\(\sqrt{2gh}\)</span>.</li>
+</ol></li>
+</ul>
 </section>
 <section id="counter-rotating-ring-dropped-on-disk-a-1.09-rads" class="level1">
 <h1>12. Counter-rotating ring dropped on disk — <strong>a) +1.09 rad/s</strong></h1>
@@ -2604,17 +2696,48 @@ L_i = L_f: \quad \omega_f = \frac{I_{disk}\,\omega_{disk} + I_{ring}\,\omega_{ri
 </section>
 <section id="incline-friction-disk-pulley-a-2.08-ms" class="level1">
 <h1>15. Incline + friction + disk pulley — <strong>a) 2.08 m/s</strong></h1>
-<p><span class="math inline">\(E_i = E_f + E_{lost}\)</span>. As the block slides a distance <span class="math inline">\(d\)</span> down the slope, it loses height <span class="math inline">\(d\sin\theta\)</span>, friction removes <span class="math inline">\(\mu_k m g\cos\theta\, d\)</span>, and the pulley spins with <span class="math inline">\(\omega = v/R\)</span>, which adds <span class="math inline">\(\tfrac14 M v^2\)</span> of KE (as in #10).</p>
+<p>Work–energy theorem, <span class="math inline">\(E_i = E_f + E_{lost}\)</span>.</p>
+<ul>
+<li>Put <span class="math inline">\(h = 0\)</span> at the block’s final position, so it starts <span class="math inline">\(d\sin\theta\)</span> higher.</li>
+<li>The pulley is a disk, <span class="math inline">\(I = \tfrac12 MR^2\)</span>, turning at <span class="math inline">\(\omega = v/R\)</span>.</li>
+<li>On the incline, <span class="math inline">\(N = mg\cos\theta\)</span>.</li>
+</ul>
+<p><strong>Energy terms:</strong></p>
+<p><span class="math display">\[E_i = \tfrac12 mv_i^2 + \tfrac12 I\omega_i^2 + mgd\sin\theta\]</span></p>
+<p><span class="math display">\[E_f = \tfrac12 mv_f^2 + \tfrac12 I\omega_f^2\]</span></p>
+<p><span class="math display">\[E_{lost} = \mu_k mg\cos\theta\,d\]</span></p>
+<p><strong>Pulley KE in terms of <span class="math inline">\(v\)</span>:</strong></p>
+<p><span class="math display">\[\tfrac12 I\omega^2 = \tfrac12\left(\tfrac12 MR^2\right)\left(\frac{v}{R}\right)^2 = \tfrac14 Mv^2\]</span></p>
+<p><strong>Substitute and solve for <span class="math inline">\(v_f^2\)</span>:</strong></p>
 <p><span class="math display">\[
-\tfrac12\left(m + \tfrac{M}{2}\right)v_f^2 = \tfrac12\left(m + \tfrac{M}{2}\right)v_i^2 + m g d(\sin\theta - \mu_k\cos\theta).
+\begin{aligned}
+\tfrac12 mv_i^2 + \tfrac14 Mv_i^2 + mgd\sin\theta &amp;= \tfrac12 mv_f^2 + \tfrac14 Mv_f^2 + \mu_k mg\cos\theta\,d \\[8pt]
+\tfrac12\left(m + \tfrac{M}{2}\right)v_f^2 &amp;= \tfrac12\left(m + \tfrac{M}{2}\right)v_i^2 + mgd(\sin\theta - \mu_k\cos\theta) \\[8pt]
+v_f^2 &amp;= v_i^2 + \frac{2mgd(\sin\theta - \mu_k\cos\theta)}{m + \tfrac{M}{2}}
+\end{aligned}
 \]</span></p>
+<p><strong>Take the square root:</strong></p>
+<p><span class="math display">\[v_f = \sqrt{v_i^2 + \frac{2mgd(\sin\theta - \mu_k\cos\theta)}{m + \tfrac{M}{2}}}\]</span></p>
+<p><strong>Plug in:</strong></p>
 <p><span class="math display">\[
-m g d(\sin\theta - \mu_k\cos\theta) = 4.0(9.8)(1.0)(0.4226 - 0.15 \times 0.9063) = 39.2(0.2867) = 11.24\ \text{J}.
+\begin{aligned}
+v_f &amp;= \sqrt{0.50^2 + \frac{2(4.0)(9.8)(1.0)(0.4226 - 0.15 \times 0.9063)}{4.0 + \tfrac{3.0}{2}}} \\[8pt]
+&amp;= \sqrt{0.25 + \frac{22.48}{5.5}} = \sqrt{0.25 + 4.087} = \sqrt{4.337} = 2.08\ \text{m/s}
+\end{aligned}
 \]</span></p>
-<p><span class="math display">\[
-v_f^2 = 0.50^2 + \frac{2(11.24)}{4.0 + 1.5} = 0.25 + 4.087 = 4.337 \quad\Rightarrow\quad v_f = 2.08\ \text{m/s}.
-\]</span></p>
-<p>The term in parentheses is positive, so the block speeds up and does not stop (e is wrong). Distractors: b) 2.42 ignores the pulley; c) 2.50 ignores friction; d) 2.92 ignores both.</p>
+<p>The bracket <span class="math inline">\((\sin\theta - \mu_k\cos\theta)\)</span> is positive, so the block speeds up and does not stop, which rules out e).</p>
+<p>Distractors:</p>
+<ul>
+<li><ol start="2" type="a">
+<li>2.42 ignores the pulley.</li>
+</ol></li>
+<li><ol start="3" type="a">
+<li>2.50 ignores friction.</li>
+</ol></li>
+<li><ol start="4" type="a">
+<li>2.92 ignores both.</li>
+</ol></li>
+</ul>
 </section>
 
 </main>

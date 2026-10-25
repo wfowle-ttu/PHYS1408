@@ -34,7 +34,12 @@ The comparison exam (Exam 2, Oct 23, 2015) has 13 multiple-choice problems, each
 
 Lecture-note examples that weren't on the 2015 exam but are fair game: flat and banked curves ($v_{max}$ and $v_{min}$), Atwood's machine, roller-coaster speeds, a spring stopping a sliding mass, power, impulse/force from a momentum change, the cue ball hitting an 8-ball, parallel axis theorem, rotational kinematics, the rod dropped on a merry-go-round, and a person walking to the center.
 
-**Strategy:** For each problem, first decide which conservation law applies, then write the before/after equation and solve symbolically before plugging in numbers. The five answer choices are usually spread far apart, so if your answer is far from all of them, recheck the physics, not the arithmetic.
+**Strategy:** For each problem, first decide which conservation law applies, then write the before/after equation and solve symbolically before plugging in numbers. If your answer is far from all five choices, recheck the physics, not the arithmetic.
+
+**Reading his answer choices.** The correct value is often *not* printed exactly. Two rules from the 2015 exam:
+
+1. **Minimum or maximum questions ("how fast must it be moving", "minimum speed", "maximum speed"):** pick the choice that actually *works*, not the closest number. For a minimum, take the smallest choice at or **above** your value. For a maximum, take the largest choice at or **below** it. On Exam 2 #3 (loop, $R = 10$ m), $\sqrt{5gR} = 22.1$ m/s. The answer is d) 23 m/s, because at 21 m/s the mass falls off the loop.
+2. **Plain "what is" questions:** take the nearest choice. On Exam 2 #11, the stack turns at 1.86 rad/s, so the answer is e) +2 rad/s (the other neighbor is d) 1.5).
 
 ## Which tool do I use?
 
@@ -47,6 +52,118 @@ Lecture-note examples that weren't on the 2015 exam but are fair game: flat and 
 | has something spinning that changes shape or picks up mass | **Angular momentum**: $L_i = L_f$ |
 | has something rolling or a pulley with mass | **Energy, with rotational KE** $\tfrac12 I\omega^2$ and $v = R\omega$ |
 
+# Symbol key
+
+Every symbol used in this guide is listed here. Each section also defines its symbols right below the equations. "Exam wording" is how the professor's exams and notes refer to the quantity.
+
+## Subscripts and modifiers
+
+| Mark ($\square$ = any symbol) | Meaning | Example |
+|:--|:--|:--|
+| $\square_i$ | **initial**, before the event | $v_i$ = speed at the start |
+| $\square_f$ | **final**, after the event | $v_f$ = speed at the end |
+| $\square_0$ | starting value (same as $\square_i$) | $v_0$ = launch speed |
+| $\square_1$, $\square_2$ | object 1, object 2 | $m_1$ = mass of object 1 |
+| $\square_{1i}$, $\square_{2f}$, … | object number **then** initial/final | $v_{2f}$ = final velocity of object 2 |
+| $\square_{max}$, $\square_{min}$ | largest / smallest value that still works | $v_{max}$ on a banked curve |
+| $\Delta$ ("delta") | **change in** a quantity: final minus initial | $\Delta x = x_f - x_i$ |
+| $\vec{\ }$ (arrow on top) | a vector, so direction matters | $\vec F$, $\vec p$ |
+| $\sum$ ("sigma") | **sum of** | $\sum F$ = net force |
+
+## Constants and material properties
+
+| Symbol | Name | Units | Meaning / exam wording |
+|:--|:--|:--|:--|
+| $g$ | gravitational acceleration | m/s² | always **9.8** m/s² |
+| $\mu_s$ | coefficient of **static** friction | none | grip before sliding starts (curves: tires don't slip) |
+| $\mu_k$ | coefficient of **kinetic** friction | none | friction while sliding (ramps, halfpipe patch) |
+| $\mu$ | coefficient of friction, type not stated | none | exams often write just "$\mu$"; sliding → treat as $\mu_k$, curves → $\mu_s$ |
+| $k$ | spring constant | N/m | "stiffness" of a Hooke's-law spring |
+
+## Motion (Ch 2–6)
+
+| Symbol | Name | Units | Meaning |
+|:--|:--|:--|:--|
+| $m$ | mass | kg | mass of the moving object (lowercase = the small object) |
+| $M$ | mass | kg | the big object: block of wood, pulley, disk, merry-go-round |
+| $v$ | speed / velocity | m/s | how fast it moves; sign gives direction in 1-D collisions |
+| $V$ | velocity | m/s | velocity of the combined block + bullet in the ballistic pendulum |
+| $a$ | acceleration | m/s² | rate of change of $v$ |
+| $t$, $\Delta t$ | time, time interval | s | $\Delta t$ in Ch 9 = how long the collision lasts |
+| $x$, $\Delta x$ | position, distance moved | m | on an incline, $\Delta x$ is measured **along the slope** |
+| $h$ | height | m | vertical height above a reference level you choose |
+| $H_{max}$ | maximum height | m | highest point of a projectile, measured from the ground |
+| $d$ | distance | m | distance moved ($W = Fd$, $E_{lost} = F_f d$) |
+| $\theta$ | angle | ° or rad | incline/bank angle **from the horizontal**, or launch angle above horizontal |
+| $\phi$ | angle | ° | angle **between** two vectors ($\vec F$ and $\vec d$, or $\vec r$ and $\vec F$) |
+| $r$ | radius | m | radius of a circular path; distance of a point mass from the axis |
+| $R$ | radius | m | radius of an object (loop, pulley, disk, ball, merry-go-round) |
+
+## Forces
+
+| Symbol | Name | Units | Meaning |
+|:--|:--|:--|:--|
+| $F$ | force | N (= kg·m/s²) | a push or pull |
+| $mg$ | weight | N | force of gravity on mass $m$ |
+| $N$ | normal force | N | surface pushing perpendicular to itself |
+| $F_f$ | friction force | N | $F_f = \mu N$; opposes sliding |
+| $T$ | tension | N | pull of a string |
+| $F_c$ | centripetal force | N | **net** force toward the center, $mv^2/r$ (not a new force) |
+
+## Energy (Ch 7/8)
+
+| Symbol | Name | Units | Meaning |
+|:--|:--|:--|:--|
+| $W$ | work | J | energy transferred by a force: $Fd\cos\phi$ |
+| $E$ | total mechanical energy | J (= kg·m²/s²) | $E = K + U$ |
+| $K$ | kinetic energy | J | energy of motion, $\tfrac12 mv^2$ |
+| $K_{rot}$ | rotational kinetic energy | J | energy of spinning, $\tfrac12 I\omega^2$ |
+| $U$ | potential energy | J | stored energy |
+| $U_g$ | gravitational PE | J | $mgh$ |
+| $U_s$ | spring PE | J | $\tfrac12 kx^2$ |
+| $x$ (springs) | stretch / compression | m | how far the spring is from its relaxed length |
+| $E_{added}$ | energy added | J | work by an outside push ("people pushing the skater") |
+| $E_{lost}$ | energy lost | J | energy removed by friction, $F_f d$ |
+| $P$ | power | W (= J/s) | work per unit time |
+| $\eta$ ("eta") | efficiency | fraction or % | $E_f/E_i$, the fraction of energy kept (ballistic pendulum) |
+
+## Momentum (Ch 9)
+
+| Symbol | Name | Units | Meaning |
+|:--|:--|:--|:--|
+| $p$ | linear momentum | kg·m/s | $p = mv$; conserved in every collision |
+| $p_i$, $p_f$ | momentum before / after | kg·m/s | |
+| $v_{1i}$, $v_{2i}$ | velocities before | m/s | object 1, object 2, **before** the collision (with sign) |
+| $v_{1f}$, $v_{2f}$ | velocities after | m/s | object 1, object 2, **after** the collision (with sign) |
+| $K_i$, $K_f$ | KE before / after | J | ratio $K_f/K_i$ = "fraction of KE retained" |
+
+## Rotation (Ch 10–11)
+
+| Symbol | Name | Units | Meaning / exam wording |
+|:--|:--|:--|:--|
+| $\theta$ (rotation) | angular position | **rad** | how far it has turned; $\Delta\theta$ = angle turned |
+| $s$ | arc length | m | distance along the rim, $s = R\theta$ |
+| $\omega$ ("omega") | angular velocity | rad/s | how fast it spins. Exams also call it "**rotational velocity**", "**angular velocity**" or "**rotation rate**" |
+| $\alpha$ ("alpha") | angular acceleration | rad/s² | how fast $\omega$ changes |
+| $\tau$ ("tau") | torque | N·m | twisting effect of a force, $\tau = rF\sin\phi$ |
+| $I$ | moment of inertia | kg·m² | "**resistance to rotation**"; the rotational version of mass |
+| $I_{cm}$ (also $I_0$) | moment of inertia about the center | kg·m² | used in the parallel axis theorem |
+| $d$ (parallel axis) | axis shift | m | distance the axis is moved away from the center |
+| $\ell$ | length of a rod | m | |
+| $L$ | angular momentum | kg·m²/s | $L = I\omega$; for a point mass moving past at speed $v$, $L = mvR$ |
+
+## Same letter, two meanings
+
+Read the problem to decide which one is meant:
+
+* **$L$:** the *length* of a rough patch (halfpipe, Ch 7/8) **or** *angular momentum* (Ch 11).
+* **$\theta$:** an *angle of a slope/launch* in degrees **or** the *angle turned* in rotational kinematics, which must be in **radians**.
+* **$d$:** a *distance moved* ($W = Fd$, friction) **or** the *axis shift* in $I = I_{cm} + md^2$.
+* **$x$:** a *position/distance* **or** a *spring's compression*.
+* **$r$ vs $R$:** $R$ is the object's own radius; $r$ is where something sits or the radius of a path. A person at the rim has $r = R$.
+* **$m$ vs $M$:** in two-object problems, $m$ is the small one (bullet, child, hanging mass) and $M$ the big one (block, merry-go-round, pulley).
+* **$V$ vs $v$:** in the ballistic pendulum, $v$ is the bullet and $V$ is block + bullet just after the hit.
+
 # Chapter 6 — Circular motion and centripetal force
 
 ## Key concept
@@ -57,6 +174,8 @@ $$
 F_c = \frac{m v^2}{r}.
 $$
 
+*where* $F_c$ = centripetal (center-pointing) net force (N), $m$ = mass (kg), $v$ = speed (m/s), $r$ = radius of the circle (m).
+
 $mv^2/r$ is **not** a new force. It is what the real forces (tension, gravity, normal force, friction) have to add up to. The professor draws it as a separate arrow next to the free-body diagram to remind you what $\sum F$ must equal ("no $ma$!").
 
 ## Flat curve (friction alone provides $F_c$)
@@ -64,6 +183,8 @@ $mv^2/r$ is **not** a new force. It is what the real forces (tension, gravity, n
 $$
 N = mg, \qquad \mu_s m g = \frac{m v^2}{r} \quad\Rightarrow\quad v_{max} = \sqrt{\mu_s g r}.
 $$
+
+*where* $N$ = normal force from the road (N), $\mu_s$ = coefficient of static friction (no units), $g$ = 9.8 m/s², $r$ = radius of the curve (m), $v_{max}$ = fastest speed before the car slides outward (m/s).
 
 Mass cancels. Example from the notes: $\mu_s = 0.1$, $r = 50$ m gives $v_{max} = 7$ m/s (15 mph on ice).
 
@@ -82,6 +203,8 @@ $$
 $$
 v_{min} = \sqrt{g r\,\frac{\tan\theta - \mu_s}{1 + \mu_s\tan\theta}} = \sqrt{g r\,\frac{\sin\theta - \mu_s\cos\theta}{\cos\theta + \mu_s\sin\theta}}.
 $$
+
+*where* $\theta$ = bank angle of the road measured from the horizontal, $\mu_s$ = coefficient of static friction, $r$ = radius of the curve (m), $v_{max}$ / $v_{min}$ = fastest / slowest speed at which the car doesn't slide up / down the bank (m/s).
 
 Both forms are equivalent; divide the top and bottom by $\cos\theta$. If $\tan\theta < \mu_s$, then $v_{min}$ doesn't exist: the car can sit still on the bank. Special case $\mu_s = 0$: $v = \sqrt{g r\tan\theta}$ (the only speed that works).
 
@@ -109,18 +232,22 @@ $$
 
 **Normal force at the bottom** (launched from $h = \tfrac52R$): $N - mg = mv^2/R$, which gives $N = 6mg$.
 
+*where* $R$ = radius of the loop (m), $N$ = normal force from the track (N), $v_{top}$ / $v_{bottom}$ = speed at the top / bottom of the loop (m/s), $\Delta h = 2R$ = height gained from bottom to top, $h$ = starting height of the ramp above the bottom of the loop (m).
+
+**Answer-choice trap:** $\sqrt{gR}$, $\sqrt{5gR}$ and $\tfrac52R$ are *minimums*. If your value falls between two choices, pick the **higher** one. Anything slower falls off the loop. (On Exam 2 #3, 22.1 m/s gives d) 23, not c) 21.) The same applies to a banked-curve $v_{min}$. For $v_{max}$, pick the **lower** choice.
+
 # Chapters 7 & 8 — Work, energy, conservation of energy
 
 ## Definitions
 
 | Quantity | Formula | Notes |
 |:--|:--|:--|
-| Work | $W = F d \cos\phi = \vec F\cdot\vec d$ | Only the component of $F$ along the motion does work. A scalar, in joules (J = kg·m²/s²). |
-| Kinetic energy | $K = \tfrac12 m v^2$ | |
-| Gravitational PE | $U_g = mgh$ | $h$ measured from any reference you choose; only *changes* matter. |
-| Spring force (Hooke) | $F = -kx$ | $x$ = stretch or compression from equilibrium. |
+| Work | $W = F d \cos\phi = \vec F\cdot\vec d$ | $F$ = force, $d$ = distance moved, $\phi$ = angle between the force and the motion. Only the component of $F$ along the motion does work. A scalar, in joules (J = kg·m²/s²). |
+| Kinetic energy | $K = \tfrac12 m v^2$ | $m$ = mass, $v$ = speed. |
+| Gravitational PE | $U_g = mgh$ | $h$ = height above a reference level you choose; only *changes* matter. |
+| Spring force (Hooke) | $F = -kx$ | $k$ = spring constant (N/m), $x$ = stretch or compression from equilibrium (m). The minus sign means the spring pushes back toward equilibrium. |
 | Spring PE | $U_s = \tfrac12 k x^2$ | Same for stretch or compression. |
-| Power | $P = \dfrac{W}{t} = \dfrac{mgh}{t}$, or $P = F v$ | Watts (J/s). |
+| Power | $P = \dfrac{W}{t} = \dfrac{mgh}{t}$, or $P = F v$ | $P$ = power in watts (J/s), $t$ = time taken (s), $v$ = speed (m/s). |
 
 ## Conservation of energy and the work–energy theorem
 
@@ -128,8 +255,10 @@ $$
 \boxed{E_i + E_{added} = E_f + E_{lost}} \qquad E = K + U_g + U_s\ (+\ K_{rot})
 $$
 
+*where* $E_i$ / $E_f$ = total energy at the start / end (J), $E_{added}$ = energy put in by an outside push, $E_{lost}$ = energy removed by friction, $K$ = kinetic, $U_g$ = gravitational potential, $U_s$ = spring potential, $K_{rot}$ = rotational kinetic energy.
+
 * **No friction, nothing pushing:** $E_i = E_f$.
-* **Friction:** $E_{lost} = F_f\,d = \mu_k N d$. On flat ground $N = mg$; on an incline $N = mg\cos\theta$.
+* **Friction:** $E_{lost} = F_f\,d = \mu_k N d$ ($F_f$ = friction force, $d$ = distance slid on the rough surface, $\mu_k$ = coefficient of kinetic friction, $N$ = normal force). On flat ground $N = mg$; on an incline $N = mg\cos\theta$.
 * $E_{added}$ is work done by an outside push (a person pushing the skater, a motor).
 
 ## Standard results (memorize the method, not just the formula)
@@ -142,10 +271,22 @@ $$
 | Frictionless incline, slide distance $\Delta x$ up | $\tfrac12 v_i^2 = \tfrac12 v_f^2 + g\Delta x\sin\theta$ | $v_f = \sqrt{v_i^2 - 2g\Delta x\sin\theta}$ |
 | Rough incline, sliding **up** | | $v_f = \sqrt{v_i^2 - 2g\Delta x(\sin\theta + \mu_k\cos\theta)}$ |
 | Rough incline, sliding **down** | | $v_f = \sqrt{v_i^2 + 2g\Delta x(\sin\theta - \mu_k\cos\theta)}$ |
-| Stopping distance on an incline (set $v_f = 0$) | | $\Delta x = \dfrac{v_i^2}{2g(\sin\theta \pm \mu_k\cos\theta)}$ (+ going up, − going down) |
+| Stopping distance sliding **up** (set $v_f = 0$) | | $\Delta x = \dfrac{v_i^2}{2g(\sin\theta + \mu_k\cos\theta)}$ |
+| Stopping distance sliding **down** (set $v_f = 0$; only if $\mu_k\cos\theta > \sin\theta$) | | $\Delta x = \dfrac{v_i^2}{2g(\mu_k\cos\theta - \sin\theta)}$ |
 | Mass slides into a spring, comes to rest | $mgh = \tfrac12 k x^2$ | $x = \sqrt{2mgh/k}$ |
 | Compressed spring launches a mass straight up | $\tfrac12 kx^2 = mgh$ | $h = \dfrac{kx^2}{2mg}$ (above the release point) |
 | Atwood's machine ($m_1 > m_2$, massless pulley), released from rest | $(m_1 - m_2)gh = \tfrac12(m_1 + m_2)v^2$ | $v = \sqrt{\dfrac{2gh(m_1 - m_2)}{m_1 + m_2}}$ |
+
+*Symbols in this table:*
+
+* $h$ = height fallen (or the starting height); $h_1$, $h_2$ = heights of two points on the track; $h_i$ / $h_f$ = starting / ending height.
+* $v$ = speed at the end; $v_2$ = speed at point 2; $v_i$ / $v_f$ = speed at the start / end.
+* $L$ = length of the rough patch (m); $\mu$ = its coefficient of friction.
+* $\Delta x$ = distance slid **along the incline** (m); $\theta$ = incline angle from the horizontal; $\mu_k$ = coefficient of kinetic friction.
+* $k$ = spring constant (N/m); $x$ = how far the spring is compressed (m).
+* $m_1$ = heavier hanging mass, which falls; $m_2$ = lighter hanging mass, which rises.
+
+**Sliding-down stopping distance, the professor's way (Ch 7/8 p. 10).** Solving $0 = v_i^2 + 2g\Delta x(\sin\theta - \mu_k\cos\theta)$ gives $\Delta x = \dfrac{-v_i^2}{2g(\sin\theta - \mu_k\cos\theta)}$. He then flips the bracket to clear the minus sign: $\Delta x = \dfrac{v_i^2}{2g(\mu_k\cos\theta - \sin\theta)}$. Write it his way so the answer comes out positive. His example ($v_i = 3$ m/s, $\theta = 10^\circ$, $\mu_k = 0.2$) gives $9/[2(9.8)(0.2 \cdot 0.985 - 0.174)] = 19.96$ m. If $\mu_k\cos\theta < \sin\theta$, the block speeds up and never stops.
 
 **If the square root comes out negative** ("imaginary"), the object stops before covering that distance. Solve for the stopping distance instead. This is a classic exam answer choice: "it stops before it slides the whole ___ m."
 
@@ -157,6 +298,8 @@ $$
 v_f^2 = v_i^2 + \frac{2g\Delta x}{m_1 + m_2}\left(m_2 - m_1\sin\theta - \mu_k m_1\cos\theta\right).
 $$
 
+*where* $m_1$ = mass of the block on the incline (kg), $m_2$ = mass of the hanging block (kg), $\Delta x$ = distance each block moves (m), $\theta$ = incline angle, $\mu_k$ = coefficient of kinetic friction between $m_1$ and the incline, $v_i$ / $v_f$ = shared speed at the start / end.
+
 If $m_1$ slides **down** the slope while $m_2$ rises, swap the signs: $(m_1\sin\theta - m_2 - \mu_k m_1\cos\theta)$. Friction **always** subtracts, whichever way things move.
 
 # Chapter 9 — Linear momentum and collisions
@@ -166,6 +309,8 @@ If $m_1$ slides **down** the slope while $m_2$ rises, swap the signs: $(m_1\sin\
 $$
 \vec p = m\vec v, \qquad \vec F = \frac{d\vec p}{dt} \approx \frac{p_f - p_i}{\Delta t}.
 $$
+
+*where* $\vec p$ = momentum (kg·m/s), $\vec F$ = average force during the hit (N), $p_i$ / $p_f$ = momentum before / after, $\Delta t$ = how long the contact lasts (s). $\frac{d\vec p}{dt}$ means "rate of change of momentum".
 
 **Ball bouncing straight back off a wall** at the same speed: $p_f = -p_i$, so $|F| = \dfrac{2p}{\Delta t}$. A bounce delivers twice the impulse of a ball that just stops.
 
@@ -182,13 +327,17 @@ $$
 v_f = \frac{m_1 v_{1i} + m_2 v_{2i}}{m_1 + m_2}.
 $$
 
-To find the **fraction of KE kept**, compute $K_f/K_i$. For symbolic problems (masses like $2m$, speeds like $2v$), the $m$'s and $v$'s cancel. Example: $2m$ at $2v$ hits $m$ at $v$ (same direction), giving $v_f = 5v/3$ and $K_f/K_i = 25/27 \approx 93\%$.
+*where* $m_1$, $m_2$ = the two masses, $v_{1i}$, $v_{2i}$ = their velocities **before** the collision (with + or − sign for direction), $v_f$ = the shared velocity after they stick.
+
+To find the **fraction of KE kept**, compute $K_f/K_i$ ($K_i$ = total KE before, $K_f$ = total KE after). For symbolic problems (masses like $2m$, speeds like $2v$), the $m$'s and $v$'s cancel. Example: $2m$ at $2v$ hits $m$ at $v$ (same direction), giving $v_f = 5v/3$ and $K_f/K_i = 25/27 \approx 93\%$.
 
 **Elastic, 1-D** (the "3×5 notecard" formulas):
 
 $$
 v_{1f} = \frac{(m_1 - m_2)v_{1i} + 2m_2 v_{2i}}{m_1 + m_2}, \qquad v_{2f} = v_{1i} + v_{1f} - v_{2i}.
 $$
+
+*where* $v_{1i}$, $v_{2i}$ = velocities of objects 1 and 2 **before**; $v_{1f}$, $v_{2f}$ = velocities **after** (all with signs). Object 1 is whichever one you call object 1; the formulas work either way.
 
 The second formula comes from combining momentum and KE conservation: $v_{1i} + v_{1f} = v_{2i} + v_{2f}$. **Signs matter.** Pick a positive direction and give left-moving objects negative velocities.
 
@@ -203,7 +352,9 @@ $$
 v_{bullet} = \frac{M + m}{m}\sqrt{2gh}, \qquad \frac{K_{after}}{K_{before}} = \frac{(M + m)gh}{\tfrac12 m v^2} = \frac{m}{M + m}.
 $$
 
-With a realistic bullet ($m \ll M$), the fraction of KE kept is tiny (well under 1%). Never use energy conservation through the collision itself.
+*where* $m$ = bullet mass, $M$ = block mass, $v$ = $v_{bullet}$ = bullet speed before the hit, $V$ = speed of block + bullet just after the hit, $h$ = height the block swings up (m), $K_{before}$ / $K_{after}$ = KE of the bullet before / of block + bullet after (the professor calls this ratio $\eta$, the efficiency).
+
+With a realistic bullet ($m \ll M$, "$\ll$" = much less than), the fraction of KE kept is tiny (well under 1%). Never use energy conservation through the collision itself.
 
 # Chapter 10 — Rotation
 
@@ -220,11 +371,25 @@ With a realistic bullet ($m \ll M$), the fraction of KE kept is tiny (well under
 | $p = mv$ | $L = I\omega$ | |
 | $F = dp/dt$ | $\tau = dL/dt$ | |
 
+*Rotational symbols:*
+
+* $\theta$ = angle turned, in **radians** (rad).
+* $\omega$ ("omega") = angular velocity in rad/s. Exams also say "rotational velocity" or "rotation rate".
+* $\alpha$ ("alpha") = angular acceleration (rad/s²).
+* $I$ = moment of inertia (kg·m²), "resistance to rotation".
+* $\tau$ ("tau") = torque (N·m).
+* $L$ = angular momentum (kg·m²/s).
+* $K_{rot}$ = rotational kinetic energy (J).
+* $s$ = arc length along the rim (m); $R$ = radius of the spinning object (m).
+* $r$ = distance from the axis to where the force acts (the lever arm); $\phi$ = angle between $\vec r$ and $\vec F$.
+
 ## Rotational kinematics (constant $\alpha$), same form as Ch 2
 
 $$
 \omega_f = \omega_i + \alpha t, \qquad \theta_f = \theta_i + \frac{\omega_i + \omega_f}{2}t, \qquad \omega_f^2 = \omega_i^2 + 2\alpha(\theta_f - \theta_i), \qquad \theta_f = \theta_i + \omega_i t + \tfrac12\alpha t^2.
 $$
+
+*where* $\omega_i$ / $\omega_f$ = angular velocity at the start / end (rad/s), $\theta_i$ / $\theta_f$ = angle at the start / end (rad), $\theta_f - \theta_i = \Delta\theta$ = angle turned, $\alpha$ = constant angular acceleration (rad/s²), $t$ = elapsed time (s).
 
 Pick the equation that doesn't need the unknown you aren't given. Notes: $50 \to 100$ rad/s in 10 s gives $\alpha = 5$ rad/s². $50 \to 100$ rad/s over 40 rad gives $\alpha = 93.75$ rad/s².
 
@@ -240,7 +405,9 @@ Pick the equation that doesn't need the unknown you aren't given. Notes: $50 \to
 
 **Parallel axis theorem:** $I = I_{cm} + m d^2$. Example: rod about its end $= \tfrac1{12}m\ell^2 + m(\ell/2)^2 = \tfrac13 m\ell^2$. A person (point mass, $I_{cm} \approx 0$) at distance $d$ from the axis has $I = md^2$.
 
-In general, $I = \sum m_i r_i^2$. Mass farther from the axis means more resistance to rotation.
+*where* $M$ or $m$ = mass of the object (kg), $R$ = its radius (m), $\ell$ = rod length (m), $r$ = distance of a point mass from the axis, $I_{cm}$ = moment of inertia about the object's own center (the professor writes $I_0$), $d$ = how far the new axis is from that center (m).
+
+In general, $I = \sum m_i r_i^2$: add up each piece's mass $m_i$ times the square of its distance $r_i$ from the axis. Mass farther from the axis means more resistance to rotation.
 
 ## Hanging mass on a pulley with mass
 
@@ -255,13 +422,17 @@ $$
 a = \frac{mg}{m + I/R^2} \quad\left(= \frac{mg}{m + M/2}\ \text{for a disk}\right).
 $$
 
-**Energy route** (often faster): $mgh + \tfrac12(m + I/R^2)v_i^2 = \tfrac12(m + I/R^2)v_f^2$. A pulley with mass acts like extra "effective mass" $I/R^2$ that has to be sped up but doesn't feel gravity.
+*where* $m$ = hanging mass (kg), $M$ = pulley mass (kg), $R$ = pulley radius (m), $I$ = pulley's moment of inertia, $T$ = string tension (N), $a$ = acceleration of the hanging mass (m/s²), $\alpha$ = angular acceleration of the pulley (rad/s²).
+
+**Energy route** (often faster; $h$ = distance the mass falls, $v_i$ / $v_f$ = its speed at the start / end): $mgh + \tfrac12(m + I/R^2)v_i^2 = \tfrac12(m + I/R^2)v_f^2$. A pulley with mass acts like extra "effective mass" $I/R^2$ that has to be sped up but doesn't feel gravity.
 
 ## Rolling without slipping
 
 $v = R\omega$, so $K_{total} = \tfrac12 mv^2 + \tfrac12 I\omega^2 = \tfrac12\left(m + \dfrac{I}{R^2}\right)v^2$.
 
-Rolling down from height $h$, starting at rest:
+*where* $v$ = speed of the center (m/s), $\omega$ = spin rate (rad/s), $R$ = radius of the rolling object, $m$ = its mass, $I$ = its moment of inertia, $K_{total}$ = total KE (moving + spinning).
+
+Rolling down from height $h$ (vertical drop, m) on an incline of angle $\theta$, starting at rest ($a$ = acceleration along the incline):
 
 | Object | $v$ at bottom | $a$ down the incline |
 |:--|:--|:--|
@@ -280,6 +451,8 @@ $$
 L = I\omega, \qquad \boxed{L_i = L_f} \quad\text{when there is no external torque.}
 $$
 
+*where* $L$ = angular momentum (kg·m²/s), $I$ = moment of inertia (kg·m²), $\omega$ = angular velocity (rad/s), $L_i$ / $L_f$ = total angular momentum before / after. Torque ($\tau$) is a twist from outside the system.
+
 Use it whenever something spinning **picks up mass**, **drops mass**, or **changes shape**. These are "rotational inelastic collisions": KE is generally **not** conserved.
 
 ## The standard problems
@@ -290,7 +463,15 @@ $$
 \omega_f = \frac{I_1\omega_{1i} + I_2\omega_{2i}}{I_1 + I_2}.
 $$
 
+*where* $I_1$, $\omega_{1i}$ = moment of inertia and starting spin of the bottom disk; $I_2$, $\omega_{2i}$ = the same for the dropped object; $\omega_f$ = their shared spin afterward.
+
 If the dropped object is counter-rotating, its $\omega$ is negative. If it isn't spinning, $\omega_{2i} = 0$. Notes examples: a disk on a disk gives 1.8 rad/s. A counter-rotating ring gives 1.45 rad/s. A rod from center to edge ($I = \tfrac13 m\ell^2$) gives 1.77 rad/s.
+
+*Merry-go-round symbols:*
+
+* $M$, $R$ = mass and radius of the merry-go-round (a disk, $I = \tfrac12 MR^2$).
+* $m$ = the person's mass; $r$ = their distance from the center; $v$ = their running speed (m/s).
+* $\omega_i$ / $\omega_f$ = rotation rate before / after (rad/s).
 
 **Person drops onto a merry-go-round at radius $r$** (no running start): $I_{person} = mr^2$, so
 
@@ -324,6 +505,8 @@ $$
 H_{max} = h_0 + \frac{(v_0\sin\theta)^2}{2g}, \qquad t_{top} = \frac{v_0\sin\theta}{g}.
 $$
 
+*where* $H_{max}$ = highest point above the ground (m), $h_0$ = height of the ledge it's launched from (m), $v_0$ = launch speed (m/s), $\theta$ = launch angle above the horizontal, $v_0\sin\theta$ = the vertical part of the launch velocity, $t_{top}$ = time to reach the top (s).
+
 ## Block sliding on a rough ramp, time to stop (Ch 5)
 
 Going **up**, gravity and friction both oppose the motion:
@@ -331,6 +514,8 @@ Going **up**, gravity and friction both oppose the motion:
 $$
 a = g(\sin\theta + \mu_k\cos\theta), \qquad t_{stop} = \frac{v_i}{a}, \qquad d_{stop} = \frac{v_i^2}{2a}.
 $$
+
+*where* $a$ = how fast the block slows (m/s²), $\theta$ = ramp angle, $\mu_k$ = coefficient of kinetic friction, $v_i$ = starting speed (m/s), $t_{stop}$ = time until it stops (s), $d_{stop}$ = distance it slides before stopping (m).
 
 Going **down**: $a = g(\sin\theta - \mu_k\cos\theta)$. If this is negative, the block decelerates.
 
@@ -346,6 +531,32 @@ Going **down**: $a = g(\sin\theta - \mu_k\cos\theta)$. If this is negative, the 
 8. **Negative under a square root.** It means the object stops first, which is usually an answer choice.
 9. **Spring launch height:** measure from the release point (the compressed position), as on Exam 2.
 10. **Normal force on an incline** is $mg\cos\theta$, not $mg$, so friction is $\mu_k mg\cos\theta$.
+11. **Rounding a minimum or maximum to the nearest choice.** For a minimum, round *up* to a choice that works. For a maximum, round *down*. (See "Reading his answer choices".)
+12. **Choices that aren't spread out.** Neighboring choices can be close (1.5 vs 2 rad/s, 21 vs 23 m/s), so carry three significant figures until the end.
+
+# The professor's own wording (for conceptual questions)
+
+On Exam 1, the graded answer was the professor's exact term ("mental model"), not the textbook one ("explanation"). If a conceptual question appears, answer with **his** phrase:
+
+| Concept | His wording | Notes |
+|:--|:--|:-:|
+| Energy | "Energy is the ability to do work" | Ch 7/8 p. 1 |
+| Work | $W = Fd = F_\parallel d = \vec F\cdot\vec d$; "W is a scalar"; $[W] = [E] = \text{kg·m}^2/\text{s}^2$ = joule | Ch 7/8 p. 1 |
+| Work–energy theorem | $E_i + E_{added} = E_f + E_{lost}$; "lost E is due to friction"; $E_{added}$ "could be people pushing the skater" | Ch 7/8 p. 5 |
+| Why use energy | "WET lets us revisit ugly old force and kinematic problems for short solutions" | Ch 7/8 p. 7 |
+| Imaginary $v_f$ | "it means block stops before traveling L" | Ch 7/8 p. 8 |
+| Hooke's-law spring | "Coils don't touch"; $F = -kx$, $U = \tfrac12 kx^2$ | Ch 7/8 p. 11 |
+| Power | $P = W/t$, J/s = watts; $P = Fd/t = Fv$ ("force at a speed v", the "power to move car") | Ch 7/8 p. 14 |
+| Loop | "barely means N = 0" | Ch 7/8 p. 17 |
+| Centripetal force | $mv^2/r$ is drawn beside the FBD: "no ma!" | Ch 6 p. 3 |
+| Static friction on a curve | $F_f = \mu_s N$ is the "max it can be!" | Ch 6 p. 2 |
+| Collisions | "2 types of collision": **inelastic** = p-conservation; **elastic** = p-conservation & K-conservation | Ch 9 p. 1 |
+| Elastic formulas | "These go on 3×5 notecard! Good for any 2 objects hitting elastically" | Ch 9 p. 3 |
+| Ballistic pendulum | collision = p-cons, swing = E-cons; efficiency $\eta = E_f/E_i$ | Ch 9 p. 5 |
+| Moment of inertia | "I is resistance to rotation" | Ch 10 p. 2 |
+| Rolling | rolling acceleration $\tfrac57 g\sin\theta$ is "less than sliding" | Ch 10 p. 3 |
+| Angular momentum | "Conservation of Angular Momentum $L_i = L_f$: inelastic collisions" | Ch 11 p. 1 |
+| Walking to the center | "It took energy to move from rim to the center" (KE increases) | Ch 11 p. 8 |
 
 # Equation sheet (one page)
 

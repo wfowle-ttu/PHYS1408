@@ -1,0 +1,376 @@
+---
+title: "PHYS1408 Practice Exam 2-3 — Answer Key"
+subtitle: "Worked solutions"
+format:
+  pdf:
+    geometry: margin=0.75in
+    fontsize: 11pt
+  html:
+    embed-resources: true
+    toc: true
+---
+
+All answers were checked numerically with `_scripts/verify_2_3.py`. $g = 9.8\ \text{m/s}^2$ throughout.
+
+**What this exam covers:**
+
+* **The four question types not on Exams 2-1 or 2-2:** free fall (Q4), work and the definition of energy (Q2, Q3), the cue ball and 8-ball (Q9), and a non-spinning disk dropped on a disk (Q14).
+* **Eleven twists on types you've already seen:** each asks a *different* unknown or adds a new condition.
+
+| Q | Answer | Value | Topic (source) | New or variation |
+|:-:|:-:|:-:|:--|:--|
+| 1 | **d** | 22.7 m/s → 21 | Banked $v_{max}$, round **down** (Ch 6 notes p. 3/7–5/7) | variation: max trap |
+| 2 | **e** | — | Definition of energy (Ch 7/8 notes p. 1/18) | **new** |
+| 3 | **c** | 520 J | Work $W = Fd\cos\phi$ (Ch 7/8 notes p. 1/18) | **new** |
+| 4 | **a** | 29.7 m/s | Free fall, "coyote" (Ch 7/8 notes p. 1/18) | **new** |
+| 5 | **d** | 4 crossings | Halfpipe, several passes (Ch 7/8 notes p. 4/18–5/18) | variation |
+| 6 | **e** | 4.85 m | Rough incline up, stopping distance (Ch 7/8 notes p. 9/18) | variation: distance, not time |
+| 7 | **b** | 6.32 m/s | Spring → kinetic energy (Ch 7/8 notes p. 11/18) | variation |
+| 8 | **b** | 4900 N | Loop, $N$ at the top (Ch 7/8 notes p. 12/18–13/18) | variation |
+| 9 | **c** | 0 | Cue ball hits 8-ball (Ch 9 notes p. 4/5) | **new** |
+| 10 | **e** | −0.67 m/s | Elastic, both moving the same way (Ch 9 notes p. 3/5) | variation |
+| 11 | **b** | 0.20 m | Ballistic pendulum, find $h$ (Ch 9 notes p. 5/5) | variation |
+| 12 | **c** | 16.8 N | Pulley with mass, tension (Ch 10 notes p. 4/8) | variation |
+| 13 | **a** | 3.83 m/s | Rolling hoop (Ch 10 notes p. 7/8–8/8) | variation |
+| 14 | **d** | 3.27 rad/s | Disk dropped on a disk (Ch 11 notes p. 1/8) | **new** |
+| 15 | **a** | 0.31 rad/s | Child runs **against** the rotation (Ch 11 notes p. 4/8) | variation |
+
+# 1. Banked curve, maximum speed — **d) 21 m/s**
+
+At $v_{max}$ the car tends to slide **up** the bank, so friction points **down** the bank (Ch 6 notes p. 4/7):
+
+$$
+v_{max} = \sqrt{gr\,\frac{\mu_s + \tan\theta}{1 - \mu_s\tan\theta}} = \sqrt{9.8 \times 78 \times \frac{0.25 + 0.364}{1 - 0.25 \times 0.364}} = \sqrt{764.4 \times 0.6754} = \sqrt{516.3} = 22.7\ \text{m/s}.
+$$
+
+**Answer-choice trap.** 22.7 m/s is a **maximum**. At 23 m/s the car slides up the bank, so e) 23 fails even though it's the closest number. The largest choice that works is **d) 21 m/s**.
+
+Distractors:
+
+* a) 9 is $v_{min}$ = 8.9.
+* b) 14 is the flat curve, $\sqrt{\mu_s gr} = 13.8$.
+* c) 17 is the frictionless bank, $\sqrt{gr\tan\theta} = 16.7$.
+
+# 2. Definition of energy — **e) the ability to do work**
+
+The professor's notes open Ch 7/8 with "**Energy is the ability to do work.**" Answer with his wording.
+
+Every distractor is his definition of something else:
+
+* a) is **power** ($P = W/t$).
+* b) is wrong twice: energy is a scalar, measured in joules.
+* c) is **momentum** ($p = mv$).
+* d) is the **moment of inertia** ("I is resistance to rotation").
+
+# 3. Work done by a rope at an angle — **c) 520 J**
+
+$W = Fd\cos\phi = \vec F\cdot\vec d$. Only the component of the force along the motion does work (Ch 7/8 notes p. 1/18):
+
+$$
+W = 50 \times 12 \times \cos 30^\circ = 600 \times 0.866 = 520\ \text{J}.
+$$
+
+($\phi$ = angle between the force and the direction of motion.)
+
+Distractors:
+
+* a) 0 is for a force perpendicular to the motion.
+* b) 300 uses $\sin\phi$, the vertical part, which does no work.
+* d) 600 ignores the angle.
+* e) 1200 doubles it.
+
+# 4. Coyote falls off a cliff — **a) 29.7 m/s**
+
+No friction, so $E_i = E_f$ (Ch 7/8 notes p. 1/18). Put $h = 0$ at the ground; it starts from rest.
+
+**Energy terms:**
+
+$$E_i = mgh$$
+
+$$E_f = \tfrac12 mv^2$$
+
+**Solve for $v$:**
+
+$$
+\begin{aligned}
+mgh &= \tfrac12 mv^2 \\[8pt]
+v^2 &= 2gh \\[8pt]
+v &= \sqrt{2gh}
+\end{aligned}
+$$
+
+**Plug in:**
+
+$$v = \sqrt{2(9.8)(45)} = \sqrt{882} = 29.7\ \text{m/s}$$
+
+Distractors:
+
+* b) 42.0 doubles the height.
+* c) 59.4 doubles the answer.
+* d) 441 is $gh$ with no root.
+* e) 882 is $2gh$ with no root.
+
+# 5. Halfpipe, several passes — **d) 4**
+
+Each crossing of the rough section removes $E_{lost} = \mu mgL$ (Ch 7/8 notes p. 5/18), so the height she can reach drops by $\mu L = 0.10 \times 4.0 = 0.40$ m per crossing:
+
+| Crossing | Height reached afterward |
+|:-:|:-:|
+| start | 1.8 m |
+| 1 | 1.4 m |
+| 2 | 1.0 m |
+| 3 | 0.6 m |
+| 4 | 0.2 m |
+| 5 | needs 0.40 m, only has 0.20 m, so she stops partway |
+
+On the fifth trip she has $mg(0.2)$ of energy left. Setting $mgh_{left} = \mu mg\,x$ gives $x = \dfrac{h_{left}}{\mu} = \dfrac{0.2}{0.10} = 2.0$ m, so she stops 2.0 m into the patch, halfway across. She crossed the **entire** section **4** times.
+
+Distractor e) 5 rounds $1.8/0.40 = 4.5$ up.
+
+# 6. Rough incline, sliding up, stopping distance — **e) 4.85 m**
+
+$E_i = E_f + E_{lost}$ (Ch 7/8 notes p. 9/18). Put $h = 0$ at the start; it rises $\Delta x\sin\theta$ and ends at rest. $N = mg\cos\theta$ on the incline.
+
+**Energy terms:**
+
+$$E_i = \tfrac12 mv_i^2$$
+
+$$E_f = mg\Delta x\sin\theta$$
+
+$$E_{lost} = \mu_k mg\cos\theta\,\Delta x$$
+
+**Solve for $\Delta x$:**
+
+$$
+\begin{aligned}
+\tfrac12 mv_i^2 &= mg\Delta x\sin\theta + \mu_k mg\cos\theta\,\Delta x \\[8pt]
+\tfrac12 v_i^2 &= g\Delta x(\sin\theta + \mu_k\cos\theta) \\[8pt]
+\Delta x &= \frac{v_i^2}{2g(\sin\theta + \mu_k\cos\theta)}
+\end{aligned}
+$$
+
+**Plug in:**
+
+$$\Delta x = \frac{8.0^2}{2(9.8)(0.5 + 0.20 \times 0.866)} = \frac{64}{19.6(0.673)} = 4.85\ \text{m}$$
+
+The 2.0 kg mass cancels. If you're also asked for the **time** (as on Exam 2-1 #4), use $\Delta x = \dfrac{v_i + 0}{2}t$, so $t = \dfrac{2\Delta x}{v_i} = 1.21$ s.
+
+Distractors:
+
+* a) 0.61 forgets to square $v_i$.
+* b) 2.42 has an extra 2.
+* c) 3.27 is $v_i^2/2g$, the height if it were thrown straight up.
+* d) 4.66 uses friction $\mu mg$ instead of $\mu mg\cos\theta$.
+
+# 7. Horizontal spring launcher — **b) 6.32 m/s**
+
+No friction, so $E_i = E_f$ (Ch 7/8 notes p. 11/18). The floor is level, so gravity does nothing. Spring PE becomes KE.
+
+**Energy terms:**
+
+$$E_i = \tfrac12 kx^2$$
+
+$$E_f = \tfrac12 mv^2$$
+
+**Solve for $v$:**
+
+$$
+\begin{aligned}
+\tfrac12 kx^2 &= \tfrac12 mv^2 \\[8pt]
+v^2 &= \frac{kx^2}{m} \\[8pt]
+v &= \sqrt{\frac{kx^2}{m}} = x\sqrt{\frac{k}{m}}
+\end{aligned}
+$$
+
+**Plug in:**
+
+$$v = 0.10\sqrt{\frac{800}{0.20}} = 0.10(63.2) = 6.32\ \text{m/s}$$
+
+Distractors:
+
+* a) 4.47 drops one $\tfrac12$.
+* c) 8.94 drops the other $\tfrac12$.
+* d) 20.0 forgets to square $x$.
+* e) 40.0 forgets the square root.
+
+# 8. Loop, normal force at the top — **b) 4900 N**
+
+**Step 1: Speed at the top (energy, $E_i = E_f$).** Put $h = 0$ at the bottom of the loop; the car starts at rest at $h$, and the top of the loop is at $2R$.
+
+$$E_i = mgh$$
+
+$$E_f = mg(2R) + \tfrac12 mv_{top}^2$$
+
+$$
+\begin{aligned}
+mgh &= mg(2R) + \tfrac12 mv_{top}^2 \\[8pt]
+v_{top}^2 &= 2g(h - 2R)
+\end{aligned}
+$$
+
+$$v_{top}^2 = 2(9.8)(30 - 20) = 196\ \text{m}^2/\text{s}^2$$
+
+**Step 2: Forces at the top.** $N$ and $mg$ both point **down**, toward the center (Ch 7/8 notes p. 12/18):
+
+$$
+\begin{aligned}
+N + mg &= \frac{mv_{top}^2}{R} \\[8pt]
+N &= \frac{mv_{top}^2}{R} - mg
+\end{aligned}
+$$
+
+**Step 3: Plug in.**
+
+$$N = \frac{500(196)}{10} - 500(9.8) = 9800 - 4900 = 4900\ \text{N}$$
+
+That's exactly $mg$: the track pushes down on the car with a force equal to the car's weight. Launching from the minimum height $h = \tfrac52 R = 25$ m would give $N = 0$.
+
+Distractors:
+
+* a) 0 is the "barely" case.
+* c) 9800 forgets to subtract $mg$.
+* d) 14,700 adds $mg$ (the bottom-of-loop sign).
+* e) 24,500 uses the full 30 m drop.
+
+# 9. Cue ball hits the 8-ball — **c) 0**
+
+For equal masses with the 8-ball at rest (Ch 9 notes p. 4/5):
+
+* Momentum: $v_{1i} = v_{1f} + v_{2f}$.
+* Elastic: $v_{1i} + v_{1f} = v_{2f}$.
+
+Substituting the second into the first gives $v_{1f} = 0$: "cue is still," and the 8-ball leaves at 3.0 m/s. The notecard formula agrees:
+
+$$
+v_{1f} = \frac{(m - m)v_{1i} + 2m(0)}{2m} = 0.
+$$
+
+Distractors:
+
+* d) +1.5 is the "they stick" (inelastic) answer.
+* e) +3.0 is the 8-ball's velocity, not the cue ball's.
+* a) −3.0 is a full bounce-back, as off a wall.
+
+# 10. Elastic collision, both moving right — **e) −0.67 m/s**
+
+Using the notecard formulas with right as positive (Ch 9 notes p. 3/5): $m_1 = 2.0$, $v_{1i} = +6.0$, $m_2 = 4.0$, $v_{2i} = +1.0$.
+
+$$
+v_{1f} = \frac{(m_1 - m_2)v_{1i} + 2m_2v_{2i}}{m_1 + m_2} = \frac{(-2)(6.0) + 2(4.0)(1.0)}{6.0} = \frac{-12 + 8}{6} = -0.67\ \text{m/s}.
+$$
+
+**Check:**
+
+* $v_{2f} = v_{1i} + v_{1f} - v_{2i} = 6 - 0.67 - 1 = +4.33$ m/s.
+* Momentum: $12 + 4 = 16$ before; $-1.33 + 17.33 = 16$ after. (checks)
+* KE: $36 + 2 = 38$ J before; $0.44 + 37.56 = 38$ J after. (checks)
+
+The 2 kg ball bounces back to the left.
+
+Distractors:
+
+* a) +4.33 is the 4 kg ball.
+* b) +2.67 is the stick-together answer.
+* c) +0.67 drops the sign.
+* d) 0 assumes the cue-ball result, which only works for equal masses with one at rest.
+
+# 11. Ballistic pendulum, swing height — **b) 0.20 m**
+
+Two stages, two laws (Ch 9 notes p. 5/5).
+
+1. **Collision** (momentum only): $mv = (M + m)V$, so $V = \dfrac{mv}{M + m} = \dfrac{0.010 \times 400}{2.010} = 1.99$ m/s.
+2. **Swing** (energy): $\tfrac12(M + m)V^2 = (M + m)gh$, so $h = \dfrac{V^2}{2g} = \dfrac{1.99^2}{19.6} = 0.20$ m.
+
+Distractors:
+
+* a) 0.10 forgets to square $V$.
+* c) 0.40 forgets the 2.
+* d) 1.99 is $V$, not a height.
+* e) 40.6 m uses energy conservation through the collision, $\tfrac12 mv^2 = (M + m)gh$. **Never** use energy through the collision: here 99.5% of the bullet's KE is lost in it.
+
+# 12. Tension over a ring pulley — **c) 16.8 N**
+
+Torque on the pulley comes from the tension (Ch 10 notes p. 4/8): $RT = I\alpha = MR^2(a/R)$, so $T = Ma$. For the hanging mass, $mg - T = ma$. Combining:
+
+$$
+a = \frac{mg}{m + M} = \frac{3.0 \times 9.8}{7.0} = 4.2\ \text{m/s}^2, \qquad T = Ma = 4.0 \times 4.2 = 16.8\ \text{N}.
+$$
+
+Check from the hanging mass: $T = m(g - a) = 3.0(9.8 - 4.2) = 16.8$ N. (checks)
+
+Distractors:
+
+* a) 0 treats the pulley as massless with nothing on the other side.
+* b) 11.8 uses the disk formula, $I = \tfrac12 MR^2$.
+* d) 29.4 is $mg$ (true only if nothing moves).
+* e) 42.0 is $m(g + a)$, a sign error.
+
+# 13. Rolling hoop — **a) 3.83 m/s**
+
+$E_i = E_f$ (Ch 10 notes p. 7/8). Put $h = 0$ at the bottom. Rolling means $R\omega = v$, and a hoop has $I = MR^2$.
+
+**Energy terms:**
+
+$$E_i = mgh$$
+
+$$E_f = \tfrac12 mv^2 + \tfrac12 I\omega^2$$
+
+**Solve for $v$:**
+
+$$
+\begin{aligned}
+mgh &= \tfrac12 mv^2 + \tfrac12\left(mR^2\right)\frac{v^2}{R^2} = \tfrac12 mv^2 + \tfrac12 mv^2 = mv^2 \\[8pt]
+v &= \sqrt{gh}
+\end{aligned}
+$$
+
+**Plug in:**
+
+$$v = \sqrt{9.8 \times 1.5} = 3.83\ \text{m/s}$$
+
+From his table: ring $\sqrt{1.0\,gh}$, disk $\sqrt{1.33\,gh}$, sphere $\sqrt{1.43\,gh}$, slide $\sqrt{2gh}$.
+
+Distractors:
+
+* b) 4.43 is a disk.
+* c) 4.58 is a sphere.
+* d) 5.42 is sliding.
+* e) 7.67 is $2\sqrt{gh}$.
+
+The hoop is slowest because half its energy goes into spinning.
+
+# 14. Non-spinning disk dropped on a spinning disk — **d) 3.27 rad/s**
+
+$L_i = L_f$, and the top disk starts with $\omega_{2i} = 0$ (Ch 11 notes p. 1/8):
+
+$$
+I_1 = \tfrac12(200)(1.5)^2 = 225\ \text{kg·m}^2, \qquad I_2 = \tfrac12(100)(1.0)^2 = 50\ \text{kg·m}^2.
+$$
+
+$$
+\omega_f = \frac{I_1\omega_{1i}}{I_1 + I_2} = \frac{225 \times 4.0}{275} = 3.27\ \text{rad/s}.
+$$
+
+Distractors:
+
+* a) 2.00 halves $\omega$.
+* b) 2.67 uses the mass ratio $200/300$ instead of $I$.
+* c) 2.77 treats the dropped disk as a point mass, $mr^2$.
+* e) 4.00 is no change.
+
+# 15. Child runs against the rotation — **a) 0.31 rad/s**
+
+The child's angular momentum about the axle is $L = mvR$ (Ch 11 notes p. 4/8). Because the child runs **opposite** to the rim, it is **negative** (counter-rotating, as in Ch 11 notes p. 3/8):
+
+$$
+\omega_f = \frac{\tfrac12 MR^2\omega_i - mvR}{\tfrac12 MR^2 + mR^2} = \frac{400(1.0) - 30(4.0)(2.0)}{400 + 30(2.0)^2} = \frac{400 - 240}{520} = 0.31\ \text{rad/s}.
+$$
+
+The merry-go-round slows down but keeps turning in its original direction.
+
+Distractors:
+
+* b) 0.40 forgets to add the child's $mR^2$.
+* c) 0.77 ignores the child's running.
+* d) 1.23 uses + instead of −.
+* e) 1.60 makes both mistakes.

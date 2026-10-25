@@ -1,0 +1,30 @@
+---
+format:
+  pdf:
+    documentclass: article
+    pdf-engine: lualatex
+    geometry:
+      - letterpaper
+      - margin=0in
+    include-in-header:
+      text: |
+        \usepackage{graphicx}
+        \pagestyle{empty}
+        \setlength{\parindent}{0pt}
+        \setlength{\fboxsep}{0pt}
+        \setlength{\fboxrule}{0.3pt}
+        \newcommand{\cardpage}[2]{%
+          \null\vfill
+          \begin{center}
+          {\footnotesize\sffamily #2}\par\vspace{6pt}
+          \fbox{\includegraphics[page=#1,width=5in,height=3in]{notecard-3x5.pdf}}\par
+          \vspace{6pt}{\footnotesize\sffamily Cut along the box. Print at 100\% / Actual size.}
+          \end{center}
+          \vfill\null}
+---
+
+```{=latex}
+\cardpage{1}{FRONT}
+\newpage
+\cardpage{2}{BACK}
+```

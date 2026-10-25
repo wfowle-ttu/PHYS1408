@@ -1,0 +1,3036 @@
+---
+title: "PHYS1408 Exam 2 Worked Problems"
+subtitle: "Every example from the professor's Ch 6–11 notes and every 2015 Exam 2 question, fully worked"
+format:
+  html:
+    embed-resources: true
+    toc: true
+    toc-depth: 2
+  pdf:
+    geometry: margin=0.75in
+    fontsize: 11pt
+    toc: true
+    toc-depth: 2
+---
+
+# How to use this guide
+
+This is the companion to the **Exam 2 Study Guide**. The two Ch 4/5 review problems from the 2015 exam (projectile from a ledge, time to stop on a ramp) are in **Review: Chapters 4 and 5**, just before the answer key. The study guide gives the formulas, the symbol key and the professor's wording. This guide works every problem the professor solved in his lecture notes, plus every question from the 2015 Exam 2, **using his numbers and his method**.
+
+Each problem has the same layout:
+
+* **Source:** where it is in his notes (page numbers are the ones he wrote, like "12/18") or on the 2015 exam.
+* **Given:** every number, with what its symbol means.
+* **Find:** what's being asked.
+* **Idea:** which law to use and why.
+* **Solve:** each step.
+* **Answer.** For 2015 exam questions, the letter he'd accept.
+* **3×5 notecard:** the general formula for the problem type, with every symbol defined.
+
+Every section ends with a **3×5 notecard** box: one general formula that solves that problem type in any variation, with every symbol defined in the box. All the cards are collected at the end in **The 3×5 notecard**. They are also in a separate document, [Exam 2 Notecard](notecard-exam-2.html), that has only the notecard equations.
+
+$g = 9.8\ \text{m/s}^2$ throughout. Every number below was recomputed with `_scripts/verify_worked.py`.
+
+**The professor rounds trig values by hand** (for example $\sin 10^\circ = 0.174$, $\cos 10^\circ = 0.985$). Usually that changes nothing. Where it does change the answer, both values are shown.
+
+# Chapter 6: Circular motion
+
+## 6.1 Flat curve on ice
+
+**Source:** Ch 6 notes, p. 2/7.
+
+**Given:**
+
+* A car rounds a **flat** (unbanked) curve on ice.
+* $\mu_s = 0.1$ (coefficient of static friction between the tires and the ice).
+* $r = 50$ m (radius of the curve).
+
+**Find:** $v_{max}$, the fastest speed before the car slides outward.
+
+**Idea:** static friction is the only sideways force, so it alone supplies the centripetal force $mv^2/r$ ($m$ = car's mass, $v$ = its speed). At $v_{max}$, friction is at its limit, $F_f = \mu_s N$ ("max it can be!"), where $N$ is the normal force from the road.
+
+**Step 1: Vertical forces** (no vertical motion):
+
+$$
+\begin{aligned}
+N - mg &= 0 \\[8pt]
+N &= mg
+\end{aligned}
+$$
+
+**Step 2: Forces toward the center** (friction is the only one):
+
+$$
+\begin{aligned}
+\mu_s N &= \frac{mv^2}{r} \\[8pt]
+\mu_s mg &= \frac{mv^2}{r}
+\end{aligned}
+$$
+
+**Step 3: Solve for $v$** ($m$ cancels):
+
+$$
+\begin{aligned}
+v^2 &= \mu_s gr \\[8pt]
+v_{max} &= \sqrt{\mu_s gr}
+\end{aligned}
+$$
+
+**Step 4: Plug in.**
+
+$$v_{max} = \sqrt{(0.1)(9.8)(50)} = \sqrt{49} = 7\ \text{m/s}$$
+
+**Answer:** $v_{max} = 7$ m/s (about 15 mph).
+
+::: {.callout-tip title="3×5 notecard"}
+
+$$v_{max} = \sqrt{gr\,\frac{\tan\theta + \mu_s}{1 - \mu_s\tan\theta}}$$
+
+$$v_{min} = \sqrt{gr\,\frac{\tan\theta - \mu_s}{1 + \mu_s\tan\theta}}$$
+
+* $g = 9.8$ m/s², $r$ = radius of the curve (m).
+* $\theta$ = bank angle from the horizontal; $\mu_s$ = coefficient of static friction (tires on road).
+* **Flat curve:** $\theta = 0$ gives $v_{max} = \sqrt{\mu_s gr}$.
+* **No friction:** $\mu_s = 0$ gives the single speed $v = \sqrt{gr\tan\theta}$.
+* If $\tan\theta < \mu_s$, there is no $v_{min}$ (the car can sit still on the bank).
+* **Answer choices:** round a $v_{max}$ **down** and a $v_{min}$ **up** to a choice that works.
+
+**Covers:** flat curves, banked curves (max or min), frictionless banks. To find $\mu_s$ or $r$ instead, solve the same equation for it.
+
+:::
+
+## 6.2 Banked curve, maximum speed
+
+**Source:** Ch 6 notes, p. 3/7–5/7.
+
+**Given:** $\theta = 10^\circ$ (bank angle from the horizontal), $\mu_s = 0.1$ (static friction), $r = 50$ m (radius of the curve).
+
+**Find:** $v_{max}$.
+
+**Idea:** at $v_{max}$ the car wants to slide **up** the bank, so friction points **down** the bank. Tilt the axes: $y$ perpendicular to the road, $x$ along it. $mv^2/r$ points horizontally toward the center, so it has a part $\frac{mv^2}{r}\cos\theta$ along $x$ and $\frac{mv^2}{r}\sin\theta$ along $y$. Draw $mv^2/r$ beside the free-body diagram, not on it: "no $ma$!"
+
+**Step 1: Forces perpendicular to the road ($y$).**
+
+$$
+\begin{aligned}
+N - mg\cos\theta &= \frac{mv^2}{r}\sin\theta \\[8pt]
+N &= mg\cos\theta + \frac{mv^2}{r}\sin\theta
+\end{aligned}
+$$
+
+**Step 2: Forces along the road ($x$)**, with friction $\mu_s N$ pointing down the bank:
+
+$$mg\sin\theta + \mu_s N = \frac{mv^2}{r}\cos\theta$$
+
+**Step 3: Substitute $N$ from Step 1.**
+
+$$mg\sin\theta + \mu_s mg\cos\theta + \mu_s\frac{mv^2}{r}\sin\theta = \frac{mv^2}{r}\cos\theta$$
+
+**Step 4: Cancel $m$, divide by $\cos\theta$, multiply by $r$** (his boxed "save eq"):
+
+$$gr\tan\theta + \mu_s gr + \mu_s v^2\tan\theta = v^2$$
+
+**Step 5: Collect the $v^2$ terms and solve.**
+
+$$
+\begin{aligned}
+gr\tan\theta + \mu_s gr &= v^2 - \mu_s v^2\tan\theta \\[8pt]
+gr(\tan\theta + \mu_s) &= v^2(1 - \mu_s\tan\theta) \\[8pt]
+v_{max} &= \sqrt{gr\,\frac{\tan\theta + \mu_s}{1 - \mu_s\tan\theta}}
+\end{aligned}
+$$
+
+**Step 6: Plug in** ($\tan 10^\circ = 0.176$).
+
+$$
+\begin{aligned}
+v_{max} &= \sqrt{(9.8)(50)\,\frac{0.176 + 0.1}{1 - (0.1)(0.176)}} \\[8pt]
+&= \sqrt{490 \times \frac{0.276}{0.982}} = \sqrt{137.7} = 11.7\ \text{m/s}
+\end{aligned}
+$$
+
+**Answer:** $v_{max} = 11.7$ m/s (26 mph).
+
+**His follow-ups (same formula):**
+
+| Change | $v_{max}$ |
+|:--|:--|
+| $\mu_s = 0.2$ | 13.8 m/s (31 mph) |
+| $\mu_s = 0.3$ | 15.7 m/s (35 mph) |
+| $\mu_s = 0.4$ | 17.4 m/s (39 mph) |
+| Cloverleaf: $r = 100$ m, $\theta = 20^\circ$ ($\tan 20^\circ = 0.364$), $\mu_s = 0.3$ | 27 m/s (60 mph) |
+
+"Why so slow? $r = 50$ m is tight, $\theta = 10^\circ$ is small."
+
+::: {.callout-tip title="3×5 notecard"}
+
+$$v_{max} = \sqrt{gr\,\frac{\tan\theta + \mu_s}{1 - \mu_s\tan\theta}}$$
+
+$$v_{min} = \sqrt{gr\,\frac{\tan\theta - \mu_s}{1 + \mu_s\tan\theta}}$$
+
+* $g = 9.8$ m/s², $r$ = radius of the curve (m).
+* $\theta$ = bank angle from the horizontal; $\mu_s$ = coefficient of static friction (tires on road).
+* **Flat curve:** $\theta = 0$ gives $v_{max} = \sqrt{\mu_s gr}$.
+* **No friction:** $\mu_s = 0$ gives the single speed $v = \sqrt{gr\tan\theta}$.
+* If $\tan\theta < \mu_s$, there is no $v_{min}$ (the car can sit still on the bank).
+* **Answer choices:** round a $v_{max}$ **down** and a $v_{min}$ **up** to a choice that works.
+
+**Covers:** flat curves, banked curves (max or min), frictionless banks. To find $\mu_s$ or $r$ instead, solve the same equation for it.
+
+:::
+
+## 6.3 Steep banked curve, maximum and minimum speed
+
+**Source:** Ch 6 notes, p. 6/7–7/7.
+
+**Given:** $\theta = 70^\circ$ (bank angle; he uses $\tan 70^\circ = 2.75$), $\mu_s = 0.2$ (static friction), $r = 60$ m (radius of the curve).
+
+**Find:** $v_{max}$ and $v_{min}$.
+
+**Idea:** $v_{max}$ is the 6.2 result. For $v_{min}$ the car wants to slide **down** the bank, so friction points **up** the bank, and every $\mu_s$ term flips sign.
+
+**Step 1: $v_{max}$** (from 6.2):
+
+$$v_{max} = \sqrt{gr\,\frac{\tan\theta + \mu_s}{1 - \mu_s\tan\theta}}$$
+
+**Step 2: Plug in.**
+
+$$
+\begin{aligned}
+v_{max} &= \sqrt{(9.8)(60)\,\frac{2.75 + 0.2}{1 - (0.2)(2.75)}} \\[8pt]
+&= \sqrt{588 \times \frac{2.95}{0.45}} = 62\ \text{m/s}
+\end{aligned}
+$$
+
+**Step 3: Derive $v_{min}$.** With friction up the bank, the "save eq" becomes
+
+$$
+\begin{aligned}
+gr\tan\theta - \mu_s gr - \mu_s v^2\tan\theta &= v^2 \\[8pt]
+gr(\tan\theta - \mu_s) &= v^2(1 + \mu_s\tan\theta) \\[8pt]
+v_{min} &= \sqrt{gr\,\frac{\tan\theta - \mu_s}{1 + \mu_s\tan\theta}}
+\end{aligned}
+$$
+
+**Step 4: Plug in.**
+
+$$
+\begin{aligned}
+v_{min} &= \sqrt{(9.8)(60)\,\frac{2.75 - 0.2}{1 + (0.2)(2.75)}} \\[8pt]
+&= \sqrt{588 \times \frac{2.55}{1.55}} = 31\ \text{m/s}
+\end{aligned}
+$$
+
+**Answer:** $v_{max} = 62$ m/s (138 mph), $v_{min} = 31$ m/s (69 mph). Below 31 m/s the car slides down the bank.
+
+::: {.callout-tip title="3×5 notecard"}
+
+$$v_{max} = \sqrt{gr\,\frac{\tan\theta + \mu_s}{1 - \mu_s\tan\theta}}$$
+
+$$v_{min} = \sqrt{gr\,\frac{\tan\theta - \mu_s}{1 + \mu_s\tan\theta}}$$
+
+* $g = 9.8$ m/s², $r$ = radius of the curve (m).
+* $\theta$ = bank angle from the horizontal; $\mu_s$ = coefficient of static friction (tires on road).
+* **Flat curve:** $\theta = 0$ gives $v_{max} = \sqrt{\mu_s gr}$.
+* **No friction:** $\mu_s = 0$ gives the single speed $v = \sqrt{gr\tan\theta}$.
+* If $\tan\theta < \mu_s$, there is no $v_{min}$ (the car can sit still on the bank).
+* **Answer choices:** round a $v_{max}$ **down** and a $v_{min}$ **up** to a choice that works.
+
+**Covers:** flat curves, banked curves (max or min), frictionless banks. To find $\mu_s$ or $r$ instead, solve the same equation for it.
+
+:::
+
+## 6.4 Banked turn handout (sin/cos form)
+
+**Source:** Ch 6 handout, p. 1/3–3/3.
+
+**Given:** $\mu = 0.2$ (static friction), $\theta = 40^\circ$ (bank angle), $r = 70$ m (radius of the curve).
+
+**Find:** the maximum and minimum speeds for the corner.
+
+**Idea:** same physics as 6.2 and 6.3, but he keeps $\sin\theta$ and $\cos\theta$ instead of dividing by $\cos\theta$. Both forms give the same number.
+
+**Step 1: $v_{max}$** (friction down the bank). Substituting $N$ into the along-the-road equation:
+
+$$
+\begin{aligned}
+mg\sin\theta + \mu mg\cos\theta + \mu\frac{mv^2}{r}\sin\theta &= \frac{mv^2}{r}\cos\theta \\[8pt]
+gr\sin\theta + \mu gr\cos\theta &= v^2(\cos\theta - \mu\sin\theta) \\[8pt]
+v_{max} &= \sqrt{gr\,\frac{\sin\theta + \mu\cos\theta}{\cos\theta - \mu\sin\theta}}
+\end{aligned}
+$$
+
+**Step 2: Plug in** ($\sin 40^\circ = 0.643$, $\cos 40^\circ = 0.766$).
+
+$$
+\begin{aligned}
+v_{max} &= \sqrt{(9.8)(70)\,\frac{0.643 + 0.2(0.766)}{0.766 - 0.2(0.643)}} \\[8pt]
+&= \sqrt{686 \times \frac{0.796}{0.637}} = 29.3\ \text{m/s}
+\end{aligned}
+$$
+
+**Step 3: $v_{min}$** (friction up the bank, so every $\mu$ term flips sign):
+
+$$
+\begin{aligned}
+mg\sin\theta - \mu mg\cos\theta - \mu\frac{mv^2}{r}\sin\theta &= \frac{mv^2}{r}\cos\theta \\[8pt]
+gr\sin\theta - \mu gr\cos\theta &= v^2(\cos\theta + \mu\sin\theta) \\[8pt]
+v_{min} &= \sqrt{gr\,\frac{\sin\theta - \mu\cos\theta}{\cos\theta + \mu\sin\theta}}
+\end{aligned}
+$$
+
+**Step 4: Plug in.**
+
+$$
+\begin{aligned}
+v_{min} &= \sqrt{(9.8)(70)\,\frac{0.643 - 0.2(0.766)}{0.766 + 0.2(0.643)}} \\[8pt]
+&= \sqrt{686 \times \frac{0.490}{0.895}} = 19.4\ \text{m/s}
+\end{aligned}
+$$
+
+**Answer:** $v_{max} = 29.3$ m/s (66 mph), $v_{min} = 19.4$ m/s (44 mph). "Seems pretty familiar doesn't it?" (Divide the top and bottom by $\cos\theta$ and you get the $\tan\theta$ form on the notecard.)
+
+::: {.callout-tip title="3×5 notecard"}
+
+$$v_{max} = \sqrt{gr\,\frac{\tan\theta + \mu_s}{1 - \mu_s\tan\theta}}$$
+
+$$v_{min} = \sqrt{gr\,\frac{\tan\theta - \mu_s}{1 + \mu_s\tan\theta}}$$
+
+* $g = 9.8$ m/s², $r$ = radius of the curve (m).
+* $\theta$ = bank angle from the horizontal; $\mu_s$ = coefficient of static friction (tires on road).
+* **Flat curve:** $\theta = 0$ gives $v_{max} = \sqrt{\mu_s gr}$.
+* **No friction:** $\mu_s = 0$ gives the single speed $v = \sqrt{gr\tan\theta}$.
+* If $\tan\theta < \mu_s$, there is no $v_{min}$ (the car can sit still on the bank).
+* **Answer choices:** round a $v_{max}$ **down** and a $v_{min}$ **up** to a choice that works.
+
+**Covers:** flat curves, banked curves (max or min), frictionless banks. To find $\mu_s$ or $r$ instead, solve the same equation for it.
+
+:::
+
+# Chapters 7 & 8: Work and energy
+
+## 7.1 Dropped from rest ("coyote")
+**Source:** Ch 7/8 notes, p. 1/18.
+
+**Given:** a mass starts at rest ($v_i = 0$) at height $h_i$ and falls to the ground ($h_f = 0$).
+
+**Find:** its speed $v_f$ at the bottom.
+
+**Idea:** no friction and nothing pushing, so $E_{added} = E_{lost} = 0$ and $E_i = E_f$. Put $h = 0$ at the ground.
+
+**Step 1: Write each energy term.**
+
+$$E_i = U_i + K_i = mgh_i + \tfrac12 m(0)^2 = mgh_i$$
+
+$$E_f = U_f + K_f = mg(0) + \tfrac12 mv_f^2 = \tfrac12 mv_f^2$$
+
+**Step 2: Set $E_i = E_f$ and solve for $v_f^2$.**
+
+$$
+\begin{aligned}
+mgh_i &= \tfrac12 mv_f^2 \\[8pt]
+v_f^2 &= 2gh_i
+\end{aligned}
+$$
+
+**Step 3: Take the square root.**
+
+$$v_f = \sqrt{2gh_i}$$
+
+**Answer:** $v_f = \sqrt{2gh_i}$. Mass cancels.
+
+::: {.callout-tip title="3×5 notecard"}
+
+$$v_f = \sqrt{v_i^2 + 2g(h_i - h_f)}$$
+
+* $v_i$, $v_f$ = speed at the start / end (m/s); $h_i$, $h_f$ = height at the start / end (m), from any reference level.
+* Frictionless only. Starting from rest: $v_f = \sqrt{2g\,\Delta h}$, where $\Delta h$ = the drop.
+* If the object **rises** ($h_f > h_i$), the bracket is negative and it slows down.
+
+**Covers:** dropped objects, roller coasters at any point on the track, frictionless slides from a height.
+
+:::
+
+## 7.2 Atwood's machine (massless pulley)
+**Source:** Ch 7/8 notes, p. 2/18.
+
+**Given:** $m_1 = 10$ kg (heavier, falls), $m_2 = 5$ kg (lighter, rises), $h = 2$ m (distance each moves), released from rest.
+
+**Find:** $v_f$ after $m_1$ falls 2 m.
+
+**Idea:** $E_i = E_f$ for both masses together (massless pulley, no friction). They're tied together, so both move at the same speed $v_f$. $m_1$ starts at height $h$ and ends at 0; $m_2$ starts at 0 and ends at $h$.
+
+**Step 1: Write each energy term.**
+
+$$E_i = \tfrac12 m_1(0)^2 + \tfrac12 m_2(0)^2 + m_1gh + m_2g(0) = m_1gh$$
+
+$$E_f = \tfrac12 m_1v_f^2 + \tfrac12 m_2v_f^2 + m_1g(0) + m_2gh$$
+
+**Step 2: Set $E_i = E_f$ and solve for $v_f^2$.**
+
+$$
+\begin{aligned}
+m_1gh &= \tfrac12 m_1v_f^2 + \tfrac12 m_2v_f^2 + m_2gh \\[8pt]
+m_1gh - m_2gh &= \tfrac12(m_1 + m_2)v_f^2 \\[8pt]
+(m_1 - m_2)gh &= \tfrac12(m_1 + m_2)v_f^2 \\[8pt]
+v_f^2 &= \frac{2gh(m_1 - m_2)}{m_1 + m_2}
+\end{aligned}
+$$
+
+**Step 3: Take the square root.**
+
+$$v_f = \sqrt{\frac{2gh(m_1 - m_2)}{m_1 + m_2}}$$
+
+**Step 4: Plug in.**
+
+$$v_f = \sqrt{\frac{2(9.8)(2)(10 - 5)}{10 + 5}} = \sqrt{13.07} = 3.61\ \text{m/s}$$
+
+**Answer:** $v_f = 3.61$ m/s, **up** for $m_2$ and **down** for $m_1$.
+
+::: {.callout-tip title="3×5 notecard"}
+
+$$v_f = \sqrt{v_i^2 + \frac{2gh(m_1 - m_2)}{m_1 + m_2 + \dfrac{I}{R^2}}}$$
+
+$$a = \frac{(m_1 - m_2)g}{m_1 + m_2 + \dfrac{I}{R^2}}$$
+
+* $m_1$ = the hanging mass that **falls**; $m_2$ = the hanging mass that **rises**.
+* $h$ = distance each mass moves (m); $v_i$, $v_f$ = their shared speed at the start / end.
+* $I$, $R$ = the pulley's moment of inertia and radius. Copy $I$ from the problem; $R$ cancels (disk $I/R^2 = \tfrac12 M$, ring $= M$, massless $= 0$).
+* **One hanging mass** (string wrapped on a pulley): set $m_2 = 0$.
+* String tension on the falling mass: $T = m_1(g - a)$.
+
+**Covers:** Atwood's machine with a massless or massive pulley, a single mass on a pulley with any shape. (A mass on an **incline** uses the 7.12 card.)
+
+:::
+
+## 7.3 Roller coaster
+**Source:** Ch 7/8 notes, p. 3/18.
+
+**Given:** starts at rest at $h_1 = 100$ m. Point 2 is at $h_2 = 20$ m, point 3 at $h_3 = 50$ m, point 4 at $h_4 = 0$ m. No friction.
+
+**Find:** the speeds $v_2$, $v_3$, $v_4$ at each point.
+
+**Idea:** no friction, so $E_1 = E_n$ for any point $n$. Only the height **drop** from the start matters.
+
+**Step 1: Write each energy term.**
+
+$$E_1 = \tfrac12 m(0)^2 + mgh_1 = mgh_1$$
+
+$$E_n = \tfrac12 mv_n^2 + mgh_n$$
+
+**Step 2: Set $E_1 = E_n$ and solve for $v_n^2$.**
+
+$$
+\begin{aligned}
+mgh_1 &= \tfrac12 mv_n^2 + mgh_n \\[8pt]
+mg(h_1 - h_n) &= \tfrac12 mv_n^2 \\[8pt]
+v_n^2 &= 2g(h_1 - h_n)
+\end{aligned}
+$$
+
+**Step 3: Take the square root.**
+
+$$v_n = \sqrt{2g(h_1 - h_n)}$$
+
+**Step 4: Plug in each point.**
+
+$$v_2 = \sqrt{2(9.8)(100 - 20)} = 39.6\ \text{m/s}$$
+
+$$v_3 = \sqrt{2(9.8)(100 - 50)} = 31.3\ \text{m/s}$$
+
+$$v_4 = \sqrt{2(9.8)(100 - 0)} = 44.3\ \text{m/s}$$
+
+**Answer:** 39.6, 31.3 and 44.3 m/s.
+
+::: {.callout-tip title="3×5 notecard"}
+
+$$v_f = \sqrt{v_i^2 + 2g(h_i - h_f)}$$
+
+* $v_i$, $v_f$ = speed at the start / end (m/s); $h_i$, $h_f$ = height at the start / end (m), from any reference level.
+* Frictionless only. Starting from rest: $v_f = \sqrt{2g\,\Delta h}$, where $\Delta h$ = the drop.
+* If the object **rises** ($h_f > h_i$), the bracket is negative and it slows down.
+
+**Covers:** dropped objects, roller coasters at any point on the track, frictionless slides from a height.
+
+:::
+
+## 7.4 Halfpipe, frictionless and with a rough patch
+**Source:** Ch 7/8 notes, p. 4/18–5/18. 2015 Exam 2 #1.
+
+**Part A, frictionless.** The skater starts at rest at $h_i$ and rises to rest at $h_f$. $E_i = E_f$ with $K_i = K_f = 0$:
+
+$$
+\begin{aligned}
+mgh_i &= mgh_f \\[8pt]
+h_i &= h_f
+\end{aligned}
+$$
+
+**Part B, notes example.** "It rains in the night" and leaves a strip $L = 10$ m long with $\mu_k = 0.01$. The skater starts at rest at $h_i = 3$ m.
+
+**Idea:** work–energy theorem, $E_i = E_f + E_{lost}$. She is at rest at both ends, so only PE appears.
+
+**Step 1: Write each energy term.**
+
+$$E_i = mgh_i$$
+
+$$E_f = mgh_f$$
+
+$$E_{lost} = F_f L = \mu_k NL = \mu_k mgL \quad (\text{flat floor, so } N = mg)$$
+
+**Step 2: Substitute and solve for $h_f$.**
+
+$$
+\begin{aligned}
+mgh_i &= mgh_f + \mu_k mgL \\[8pt]
+h_i &= h_f + \mu_k L \\[8pt]
+h_f &= h_i - \mu_k L
+\end{aligned}
+$$
+
+**Step 3: Plug in.**
+
+$$h_f = 3 - (0.01)(10) = 2.9\ \text{m}$$
+
+**Answer:** $h_f = 2.9$ m. "Energy was lost from the motion due to friction."
+
+**Part C, 2015 Exam 2 #1.** $h_i = 7.0$ m, rough region $L = 5.0$ m, $\mu = 0.1$. Same formula:
+
+$$h_f = h_i - \mu L = 7.0 - (0.1)(5.0) = 6.5\ \text{m}$$
+
+**Answer: e) 6.5 m.**
+
+**General work–energy theorem:** $E_i + E_{added} = E_f + E_{lost}$. $E_{added}$ "could be people pushing the skater."
+
+::: {.callout-tip title="3×5 notecard"}
+
+$$h_f = h_i + \frac{v_i^2}{2g} - n\,\mu L$$
+
+* $h_i$ = starting height (m); $h_f$ = height reached on the far side (m); $v_i$ = starting speed ($0$ if starting from rest).
+* $\mu$ = friction on the rough patch; $L$ = length of the rough patch (m); $n$ = number of times it crosses the patch.
+* Frictionless: $h_f = h_i$. One crossing from rest: $h_f = h_i - \mu L$.
+* **Number of full crossings before it stops** = the whole-number part of $\dfrac{h_i}{\mu L}$ (from rest).
+
+**Covers:** frictionless halfpipes, one rough crossing, several back-and-forth passes, a pushed start.
+
+:::
+
+## 7.5 Sliding up a frictionless incline
+**Source:** Ch 7/8 notes, p. 6/18.
+
+**Given:** $\theta = 10^\circ$ (incline angle), $\Delta x = 3$ m (distance along the slope), $v_i = 4$ m/s.
+
+**Find:** $v_f$ after sliding 3 m up the slope.
+
+**Idea:** frictionless, so $E_i = E_f$. Put $h = 0$ at the start; after sliding $\Delta x$ up the slope it is $h = \Delta x\sin\theta$ higher.
+
+**Step 1: Write each energy term.**
+
+$$E_i = \tfrac12 mv_i^2 + mg(0) = \tfrac12 mv_i^2$$
+
+$$E_f = \tfrac12 mv_f^2 + mg\Delta x\sin\theta$$
+
+**Step 2: Set $E_i = E_f$ and solve for $v_f^2$.**
+
+$$
+\begin{aligned}
+\tfrac12 mv_i^2 &= \tfrac12 mv_f^2 + mg\Delta x\sin\theta \\[8pt]
+v_i^2 &= v_f^2 + 2g\Delta x\sin\theta \\[8pt]
+v_f^2 &= v_i^2 - 2g\Delta x\sin\theta
+\end{aligned}
+$$
+
+**Step 3: Take the square root.**
+
+$$v_f = \sqrt{v_i^2 - 2g\Delta x\sin\theta}$$
+
+**Step 4: Plug in.**
+
+$$v_f = \sqrt{4^2 - 2(9.8)(3)(0.174)} = \sqrt{16 - 10.21} = \sqrt{5.79} = 2.41\ \text{m/s}$$
+
+**Answer:** $v_f = 2.41$ m/s, still moving up the slope.
+
+::: {.callout-tip title="3×5 notecard"}
+
+$$\textbf{Up the slope:}\quad v_f = \sqrt{v_i^2 - 2g\,\Delta x(\sin\theta + \mu_k\cos\theta)}$$
+
+$$\textbf{Down the slope:}\quad v_f = \sqrt{v_i^2 + 2g\,\Delta x(\sin\theta - \mu_k\cos\theta)}$$
+
+$$\textbf{Stops after (up):}\quad \Delta x = \frac{v_i^2}{2g(\sin\theta + \mu_k\cos\theta)}$$
+
+$$\textbf{Stops after (down):}\quad \Delta x = \frac{v_i^2}{2g(\mu_k\cos\theta - \sin\theta)}$$
+
+$$\textbf{Time:}\quad t = \frac{2\,\Delta x}{v_i + v_f}$$
+
+* $v_i$, $v_f$ = speed at the start / end (m/s); $\Delta x$ = distance **along the slope** (m).
+* $\theta$ = incline angle from the horizontal; $\mu_k$ = kinetic friction ($\mu_k = 0$ for frictionless).
+* **Negative under the root** = it stops first. Use the stopping-distance line.
+* Sliding down only stops if $\mu_k\cos\theta > \sin\theta$.
+* Time with forces instead: $a = g(\sin\theta \pm \mu_k\cos\theta)$ (+ going up, − going down), then $t = \dfrac{|v_f - v_i|}{a}$.
+
+**Covers:** frictionless or rough inclines, sliding up or down, how fast after a distance, how far until it stops, how long it takes.
+
+:::
+
+## 7.6 Sliding up a rough incline
+**Source:** Ch 7/8 notes, p. 7/18–8/18. "WET lets us revisit ugly old force and kinematic problems for short solutions."
+
+**Given:** a 5 kg block, $\theta = 30^\circ$, $v_i = 2.5$ m/s, $\mu_k = 0.1$, $L = 0.5$ m (distance slid up the slope).
+
+**Find:** $v_f$ after 0.5 m.
+
+**Idea:** $E_i = E_f + E_{lost}$. Put $h_i = 0$ at the start, so $h_f = L\sin\theta$. On an incline the normal force is $N = mg\cos\theta$, so friction is $F_f = \mu_k mg\cos\theta$.
+
+**Step 1: Write each energy term.**
+
+$$E_i = \tfrac12 mv_i^2 + mg(0) = \tfrac12 mv_i^2$$
+
+$$E_f = \tfrac12 mv_f^2 + mgL\sin\theta$$
+
+$$E_{lost} = F_f L = \mu_k mg\cos\theta\,L$$
+
+**Step 2: Substitute into $E_i = E_f + E_{lost}$ and solve for $v_f^2$.**
+
+$$
+\begin{aligned}
+\tfrac12 mv_i^2 &= \tfrac12 mv_f^2 + mgL\sin\theta + \mu_k mg\cos\theta\,L \\[8pt]
+v_i^2 &= v_f^2 + 2gL\sin\theta + 2\mu_k gL\cos\theta \\[8pt]
+v_f^2 &= v_i^2 - 2gL(\sin\theta + \mu_k\cos\theta)
+\end{aligned}
+$$
+
+**Step 3: Take the square root.**
+
+$$v_f = \sqrt{v_i^2 - 2gL(\sin\theta + \mu_k\cos\theta)}$$
+
+**Step 4: Plug in.**
+
+$$
+\begin{aligned}
+v_f &= \sqrt{2.5^2 - 2(9.8)(0.5)(0.5 + 0.1 \times 0.866)} \\[8pt]
+&= \sqrt{6.25 - 9.8(0.5866)} = \sqrt{6.25 - 5.75} = \sqrt{0.501} = 0.708\ \text{m/s}
+\end{aligned}
+$$
+
+**Answer:** $v_f = 0.708$ m/s. Mass cancels.
+
+**If the number under the root is negative**, "it means block stops before traveling L." Drop back to the $v_f^2$ line and solve for $L$:
+
+$$
+\begin{aligned}
+v_f^2 &= v_i^2 - 2gL(\sin\theta + \mu_k\cos\theta) \\[8pt]
+2gL(\sin\theta + \mu_k\cos\theta) &= v_i^2 - v_f^2 \\[8pt]
+L &= \frac{v_i^2 - v_f^2}{2g(\sin\theta + \mu_k\cos\theta)}
+\end{aligned}
+$$
+
+Set $v_f = 0$ to get the stopping distance.
+
+::: {.callout-tip title="3×5 notecard"}
+
+$$\textbf{Up the slope:}\quad v_f = \sqrt{v_i^2 - 2g\,\Delta x(\sin\theta + \mu_k\cos\theta)}$$
+
+$$\textbf{Down the slope:}\quad v_f = \sqrt{v_i^2 + 2g\,\Delta x(\sin\theta - \mu_k\cos\theta)}$$
+
+$$\textbf{Stops after (up):}\quad \Delta x = \frac{v_i^2}{2g(\sin\theta + \mu_k\cos\theta)}$$
+
+$$\textbf{Stops after (down):}\quad \Delta x = \frac{v_i^2}{2g(\mu_k\cos\theta - \sin\theta)}$$
+
+$$\textbf{Time:}\quad t = \frac{2\,\Delta x}{v_i + v_f}$$
+
+* $v_i$, $v_f$ = speed at the start / end (m/s); $\Delta x$ = distance **along the slope** (m).
+* $\theta$ = incline angle from the horizontal; $\mu_k$ = kinetic friction ($\mu_k = 0$ for frictionless).
+* **Negative under the root** = it stops first. Use the stopping-distance line.
+* Sliding down only stops if $\mu_k\cos\theta > \sin\theta$.
+* Time with forces instead: $a = g(\sin\theta \pm \mu_k\cos\theta)$ (+ going up, − going down), then $t = \dfrac{|v_f - v_i|}{a}$.
+
+**Covers:** frictionless or rough inclines, sliding up or down, how fast after a distance, how far until it stops, how long it takes.
+
+:::
+
+## 7.7 Sliding up a rough incline that stops early
+**Source:** Ch 7/8 notes, p. 9/18.
+
+**Given:** $v_i = 3$ m/s, $\theta = 10^\circ$, $\mu_k = 0.2$.
+
+**Find:** $v_f$ when $\Delta x = 2$ m.
+
+**Idea:** same energy terms as 7.6 ($E_i = \tfrac12 mv_i^2$, $E_f = \tfrac12 mv_f^2 + mg\Delta x\sin\theta$, $E_{lost} = \mu_k mg\cos\theta\,\Delta x$), so the same result:
+
+$$v_f = \sqrt{v_i^2 - 2g\Delta x(\mu_k\cos\theta + \sin\theta)}$$
+
+**Step 1: Plug in.**
+
+$$v_f = \sqrt{3^2 - 2(9.8)(2)(0.2 \times 0.985 + 0.174)} = \sqrt{9 - 14.54}$$
+
+**Step 2: The number under the root is negative ("imaginary").** The block stops before it gets to 2 m, so ask where it stops instead. Set $v_f = 0$ and solve for $\Delta x$:
+
+$$
+\begin{aligned}
+0 &= v_i^2 - 2g\Delta x(\mu_k\cos\theta + \sin\theta) \\[8pt]
+2g\Delta x(\mu_k\cos\theta + \sin\theta) &= v_i^2 \\[8pt]
+\Delta x &= \frac{v_i^2}{2g(\mu_k\cos\theta + \sin\theta)}
+\end{aligned}
+$$
+
+**Step 3: Plug in.**
+
+$$\Delta x = \frac{3^2}{2(9.8)(0.2 \times 0.985 + 0.174)} = \frac{9}{2(9.8)(0.371)} = 1.24\ \text{m}$$
+
+**Answer:** it stops after sliding $\Delta x = 1.24$ m up the slope, so it never reaches 2 m.
+
+::: {.callout-tip title="3×5 notecard"}
+
+$$\textbf{Up the slope:}\quad v_f = \sqrt{v_i^2 - 2g\,\Delta x(\sin\theta + \mu_k\cos\theta)}$$
+
+$$\textbf{Down the slope:}\quad v_f = \sqrt{v_i^2 + 2g\,\Delta x(\sin\theta - \mu_k\cos\theta)}$$
+
+$$\textbf{Stops after (up):}\quad \Delta x = \frac{v_i^2}{2g(\sin\theta + \mu_k\cos\theta)}$$
+
+$$\textbf{Stops after (down):}\quad \Delta x = \frac{v_i^2}{2g(\mu_k\cos\theta - \sin\theta)}$$
+
+$$\textbf{Time:}\quad t = \frac{2\,\Delta x}{v_i + v_f}$$
+
+* $v_i$, $v_f$ = speed at the start / end (m/s); $\Delta x$ = distance **along the slope** (m).
+* $\theta$ = incline angle from the horizontal; $\mu_k$ = kinetic friction ($\mu_k = 0$ for frictionless).
+* **Negative under the root** = it stops first. Use the stopping-distance line.
+* Sliding down only stops if $\mu_k\cos\theta > \sin\theta$.
+* Time with forces instead: $a = g(\sin\theta \pm \mu_k\cos\theta)$ (+ going up, − going down), then $t = \dfrac{|v_f - v_i|}{a}$.
+
+**Covers:** frictionless or rough inclines, sliding up or down, how fast after a distance, how far until it stops, how long it takes.
+
+:::
+
+## 7.8 Sliding down a rough incline
+**Source:** Ch 7/8 notes, p. 10/18.
+
+**Given:** sliding **down**, $v_i = 3$ m/s, $\theta = 10^\circ$, $\mu_k = 0.2$, $\Delta x = 2$ m.
+
+**Find:** $v_f$ after 2 m, and the total distance before it stops.
+
+**Idea:** $E_i = E_f + E_{lost}$. Put $h = 0$ at the end point, so the block **starts** $h_i = \Delta x\sin\theta$ higher. Going down, gravity adds energy and friction still removes it.
+
+**Step 1: Write each energy term.**
+
+$$E_i = \tfrac12 mv_i^2 + mg\Delta x\sin\theta$$
+
+$$E_f = \tfrac12 mv_f^2 + mg(0) = \tfrac12 mv_f^2$$
+
+$$E_{lost} = \mu_k mg\cos\theta\,\Delta x$$
+
+**Step 2: Substitute into $E_i = E_f + E_{lost}$ and solve for $v_f^2$.**
+
+$$
+\begin{aligned}
+\tfrac12 mv_i^2 + mg\Delta x\sin\theta &= \tfrac12 mv_f^2 + \mu_k mg\cos\theta\,\Delta x \\[8pt]
+v_i^2 + 2g\Delta x\sin\theta &= v_f^2 + 2\mu_k g\Delta x\cos\theta \\[8pt]
+v_f^2 &= v_i^2 + 2g\Delta x(\sin\theta - \mu_k\cos\theta)
+\end{aligned}
+$$
+
+**Step 3: Take the square root.**
+
+$$v_f = \sqrt{v_i^2 + 2g\Delta x(\sin\theta - \mu_k\cos\theta)}$$
+
+**Step 4: Plug in.**
+
+$$
+\begin{aligned}
+v_f &= \sqrt{3^2 + 2(9.8)(2)(0.174 - 0.2 \times 0.985)} \\[8pt]
+&= \sqrt{9 + 39.2(-0.023)} = \sqrt{8.0984} = 2.85\ \text{m/s}
+\end{aligned}
+$$
+
+That's less than 3 m/s, so it is **slowing down**.
+
+**Step 5: Stopping distance.** Set $v_f = 0$ in the $v_f^2$ line and solve for $\Delta x$:
+
+$$
+\begin{aligned}
+0 &= v_i^2 + 2g\Delta x(\sin\theta - \mu_k\cos\theta) \\[8pt]
+\Delta x &= \frac{-v_i^2}{2g(\sin\theta - \mu_k\cos\theta)} \\[8pt]
+\Delta x &= \frac{v_i^2}{2g(\mu_k\cos\theta - \sin\theta)}
+\end{aligned}
+$$
+
+The last line flips the bracket to clear the minus sign (his form).
+
+**Step 6: Plug in.**
+
+$$\Delta x = \frac{3^2}{2(9.8)(0.2 \times 0.985 - 0.174)} = 19.96\ \text{m}$$
+
+**Answer:** $v_f = 2.85$ m/s at 2 m. It slides **19.96 m** down before stopping.
+
+**Rounding warning:** the bracket $(\mu_k\cos\theta - \sin\theta)$ is tiny (0.023), so rounding the trig values matters a lot here. With exact trig, the answers are 2.84 m/s and **19.7 m**. If you get 19.7 and the choices show 20, that's the same answer. Use the closest choice.
+
+::: {.callout-tip title="3×5 notecard"}
+
+$$\textbf{Up the slope:}\quad v_f = \sqrt{v_i^2 - 2g\,\Delta x(\sin\theta + \mu_k\cos\theta)}$$
+
+$$\textbf{Down the slope:}\quad v_f = \sqrt{v_i^2 + 2g\,\Delta x(\sin\theta - \mu_k\cos\theta)}$$
+
+$$\textbf{Stops after (up):}\quad \Delta x = \frac{v_i^2}{2g(\sin\theta + \mu_k\cos\theta)}$$
+
+$$\textbf{Stops after (down):}\quad \Delta x = \frac{v_i^2}{2g(\mu_k\cos\theta - \sin\theta)}$$
+
+$$\textbf{Time:}\quad t = \frac{2\,\Delta x}{v_i + v_f}$$
+
+* $v_i$, $v_f$ = speed at the start / end (m/s); $\Delta x$ = distance **along the slope** (m).
+* $\theta$ = incline angle from the horizontal; $\mu_k$ = kinetic friction ($\mu_k = 0$ for frictionless).
+* **Negative under the root** = it stops first. Use the stopping-distance line.
+* Sliding down only stops if $\mu_k\cos\theta > \sin\theta$.
+* Time with forces instead: $a = g(\sin\theta \pm \mu_k\cos\theta)$ (+ going up, − going down), then $t = \dfrac{|v_f - v_i|}{a}$.
+
+**Covers:** frictionless or rough inclines, sliding up or down, how fast after a distance, how far until it stops, how long it takes.
+
+:::
+
+## 7.9 Mass slides down a ramp into a spring
+**Source:** Ch 7/8 notes, p. 11/18.
+
+**Given:** $m = 1$ kg starts at rest ($v_i = 0$) at $h_i = 1$ m on a frictionless ramp ($\mu = 0$). It slides onto the flat and into a spring with $k = 1000$ N/m (spring constant).
+
+**Find:** the spring compression $x$ when the mass stops ($v_f = 0$).
+
+**Idea:** no friction, so $E_i = E_f$. All the gravitational PE ends up as spring PE.
+
+**Step 1: Write each energy term.**
+
+$$E_i = mgh + \tfrac12 m(0)^2 + 0 = mgh$$
+
+$$E_f = mg(0) + \tfrac12 m(0)^2 + \tfrac12 kx^2 = \tfrac12 kx^2$$
+
+**Step 2: Set $E_i = E_f$ and solve for $x^2$.**
+
+$$
+\begin{aligned}
+mgh &= \tfrac12 kx^2 \\[8pt]
+x^2 &= \frac{2mgh}{k}
+\end{aligned}
+$$
+
+**Step 3: Take the square root.**
+
+$$x = \sqrt{\frac{2mgh}{k}}$$
+
+**Step 4: Plug in.**
+
+$$x = \sqrt{\frac{2(1)(9.8)(1)}{10^3}} = \sqrt{0.0196} = 0.14\ \text{m}$$
+
+**Answer:** $x = 0.14$ m.
+
+**Hooke's-law spring facts:** "coils don't touch". $F = -kx$ (the spring pushes back toward equilibrium) and $U = \tfrac12 kx^2$ (the same for stretch or compression).
+
+::: {.callout-tip title="3×5 notecard"}
+
+$$\tfrac12 kx^2 = \tfrac12 mv^2 + mgh$$
+
+$$\text{Compression to stop a mass:}\quad x = \sqrt{\frac{2mgh + mv_i^2}{k}}$$
+
+$$\text{Launch straight up:}\quad h = \frac{kx^2}{2mg}$$
+
+$$\text{Launch along a level floor:}\quad v = x\sqrt{\frac{k}{m}}$$
+
+* $k$ = spring constant (N/m); $x$ = how far the spring is compressed or stretched (m).
+* $m$ = the mass (kg); $v$ = its speed when the spring is relaxed (m/s); $h$ = height above (or drop to) the spring's position (m).
+* For a launch, measure $h$ from the **release point**. Frictionless only.
+
+**Covers:** a mass sliding down into a spring, vertical spring launches, horizontal spring launches.
+
+:::
+
+## 7.10 Vertical spring launch
+**Source:** Ch 7/8 notes, p. 12/18 (crossed out in his notes, but it appeared as 2015 Exam 2 #5).
+
+**Idea:** $E_i = E_f$. Put $h = 0$ at the release point. Spring PE becomes gravitational PE at the top, where $v = 0$.
+
+**Step 1: Write each energy term.**
+
+$$E_i = \tfrac12 kx^2 + mg(0) + \tfrac12 m(0)^2 = \tfrac12 kx^2$$
+
+$$E_f = 0 + mgh + \tfrac12 m(0)^2 = mgh$$
+
+**Step 2: Set $E_i = E_f$ and solve for $h$.**
+
+$$
+\begin{aligned}
+\tfrac12 kx^2 &= mgh \\[8pt]
+h &= \frac{kx^2}{2mg}
+\end{aligned}
+$$
+
+**Notes example. Given:** $k = 10^3$ N/m, $x = 0.01$ m (compression), $m = 0.01$ kg marble.
+
+$$h = \frac{(10^3)(0.01)^2}{2(0.01)(9.8)} = 0.51\ \text{m}$$
+
+**2015 Exam 2 #5. Given:** $m = 0.05$ kg, $k = 2000$ N/m, $x = 0.02$ m.
+
+$$h = \frac{(2000)(0.02)^2}{2(0.05)(9.8)} = \frac{0.8}{0.98} = 0.82\ \text{m above the release point}$$
+
+**Answer: b) 0.8 m.**
+
+::: {.callout-tip title="3×5 notecard"}
+
+$$\tfrac12 kx^2 = \tfrac12 mv^2 + mgh$$
+
+$$\text{Compression to stop a mass:}\quad x = \sqrt{\frac{2mgh + mv_i^2}{k}}$$
+
+$$\text{Launch straight up:}\quad h = \frac{kx^2}{2mg}$$
+
+$$\text{Launch along a level floor:}\quad v = x\sqrt{\frac{k}{m}}$$
+
+* $k$ = spring constant (N/m); $x$ = how far the spring is compressed or stretched (m).
+* $m$ = the mass (kg); $v$ = its speed when the spring is relaxed (m/s); $h$ = height above (or drop to) the spring's position (m).
+* For a launch, measure $h$ from the **release point**. Frictionless only.
+
+**Covers:** a mass sliding down into a spring, vertical spring launches, horizontal spring launches.
+
+:::
+
+## 7.11 Power
+
+**Source:** Ch 7/8 notes, p. 13/18–14/18.
+
+**Units:** $[F]$ = N, $[W]$ = energy = J, $[P] = W/t$ = J/s = watts.
+
+**Given:** a man with $m = 100$ kg (his mass) climbs $h = 25$ m (height of the stairs) in $t = 20$ s (time taken).
+
+**Find:** his power $P$.
+
+**Idea:** power is work per time. Climbing at a steady pace, the work he does is the gravitational PE he gains.
+
+**Step 1: Work done.**
+
+$$W = mgh$$
+
+**Step 2: Power.**
+
+$$P = \frac{W}{t} = \frac{mgh}{t}$$
+
+**Step 3: Plug in.**
+
+$$P = \frac{(100)(9.8)(25)}{20} = \frac{24{,}500}{20} = 1225\ \text{W}$$
+
+**Answer:** $P = 1225$ W ("hairdryer").
+
+**Also:** pushing with a force $F$ at a steady speed $v$, $P = \dfrac{Fd}{t} = Fv$ ("power to move car").
+
+::: {.callout-tip title="3×5 notecard"}
+
+$$P = \frac{W}{t} = \frac{mgh}{t} = Fv$$
+
+* $P$ = power (W = J/s); $W$ = work or energy (J); $t$ = time (s).
+* $m$ = mass lifted (kg); $h$ = height gained (m).
+* $F$ = force applied (N); $v$ = speed it moves at (m/s), for a lift or pull at steady speed.
+
+**Covers:** stairs, lifts, motors, pulling at constant speed.
+
+:::
+
+## 7.12 Block up an incline, pulled by a hanging mass (stops early)
+**Source:** Ch 7/8 notes, p. 15/18–16/18.
+
+**Given:**
+
+* $m_1 = 20$ kg block on the incline, moving **up** the slope at $v_i = 2$ m/s.
+* $m_2 = 2$ kg hanging mass, moving **down** at the same speed.
+* $\theta = 30^\circ$, $\mu_k = 0.4$ between $m_1$ and the incline. Massless pulley.
+
+**Find:** $v_f$ after $\Delta x = 0.5$ m.
+
+**Idea:** $E_i = E_f + E_{lost}$ for both masses together. Both move the same distance $\Delta x$ at the same speed. Heights: $m_1$ starts at 0 and rises $\Delta x\sin\theta$; $m_2$ starts at $\Delta x$ and drops to 0.
+
+**Step 1: Write each energy term.**
+
+$$E_i = \tfrac12(m_1 + m_2)v_i^2 + m_2g\Delta x$$
+
+$$E_f = \tfrac12(m_1 + m_2)v_f^2 + m_1g\Delta x\sin\theta$$
+
+$$E_{lost} = \mu_k m_1g\cos\theta\,\Delta x$$
+
+**Step 2: Substitute into $E_i = E_f + E_{lost}$ and solve for $v_f^2$.**
+
+$$
+\begin{aligned}
+\tfrac12(m_1 + m_2)v_i^2 + m_2g\Delta x &= \tfrac12(m_1 + m_2)v_f^2 + m_1g\Delta x\sin\theta + \mu_k m_1g\cos\theta\,\Delta x \\[8pt]
+\tfrac12(m_1 + m_2)v_f^2 &= \tfrac12(m_1 + m_2)v_i^2 + g\Delta x\left(m_2 - m_1\sin\theta - \mu_k m_1\cos\theta\right) \\[8pt]
+v_f^2 &= v_i^2 + \frac{2g\Delta x}{m_1 + m_2}\left(m_2 - m_1\sin\theta - \mu_k m_1\cos\theta\right)
+\end{aligned}
+$$
+
+**Step 3: Take the square root.**
+
+$$v_f = \sqrt{v_i^2 + \frac{2g\Delta x}{m_1 + m_2}\left(m_2 - m_1\sin\theta - \mu_k m_1\cos\theta\right)}$$
+
+**Step 4: Plug in.**
+
+$$
+\begin{aligned}
+v_f &= \sqrt{2^2 + \frac{2(9.8)(0.5)}{22}\left(2 - 20(0.5) - 0.4(20)(0.866)\right)} \\[8pt]
+&= \sqrt{4 + 0.445(2 - 10 - 6.928)} = \sqrt{4 - 6.64}
+\end{aligned}
+$$
+
+**Step 5: That's imaginary: "Doesn't go 0.5 m."** Set $v_f = 0$ in the $v_f^2$ line and solve for $\Delta x$:
+
+$$
+\begin{aligned}
+v_f^2 - v_i^2 &= \frac{2g\Delta x}{m_1 + m_2}\left(m_2 - m_1\sin\theta - \mu_k m_1\cos\theta\right) \\[8pt]
+\Delta x &= \frac{(m_1 + m_2)(v_f^2 - v_i^2)}{2g\left(m_2 - m_1\sin\theta - \mu_k m_1\cos\theta\right)}
+\end{aligned}
+$$
+
+**Step 6: Plug in, with $v_f = 0$.**
+
+$$\Delta x = \frac{22(0 - 2^2)}{2(9.8)(2 - 10 - 6.928)} = \frac{-88}{19.6(-14.928)} = 0.30\ \text{m}$$
+
+**Answer:** $\Delta x = 0.30$ m. It "goes 0.3 m up" and then stops.
+
+::: {.callout-tip title="3×5 notecard"}
+
+$$v_f = \sqrt{v_i^2 + \frac{2g\,\Delta x\,B}{m_1 + m_2 + \dfrac{I}{R^2}}}$$
+
+$$\text{Stops after:}\quad \Delta x = \frac{-\left(m_1 + m_2 + \dfrac{I}{R^2}\right)v_i^2}{2gB}$$
+
+* $m_1$ = block on the incline; $m_2$ = hanging block ($m_2 = 0$ if nothing hangs); $\theta$ = incline angle; $\mu_k$ = friction between $m_1$ and the incline.
+* $\Delta x$ = distance each block moves (m); $v_i$, $v_f$ = their shared speed at the start / end.
+* $I$, $R$ = pulley's moment of inertia and radius ($I = 0$ for a massless pulley; disk $I/R^2 = \tfrac12 M$).
+* $B$ = the "net pull" (kg), picked by direction of motion:
+    * $m_2$ falls, $m_1$ slides **up**: $B = m_2 - m_1\sin\theta - \mu_k m_1\cos\theta$.
+    * $m_1$ slides **down**, $m_2$ rises: $B = m_1\sin\theta - m_2 - \mu_k m_1\cos\theta$.
+* $B > 0$: speeds up. $B < 0$: slows down; a negative number under the root means it stops first, so use the second line.
+
+**Covers:** a block on an incline tied to a hanging block, either direction, with or without friction, with a massless or massive pulley (2015 Exam #13 is $m_2 = 0$ with a disk pulley).
+
+:::
+
+## 7.13 Block down an incline, held back by a hanging mass
+**Source:** Ch 7/8 notes, p. 17/18–18/18.
+
+**Given:** the same setup, but $m_1 = 20$ kg slides **down** the slope at $v_i = 2$ m/s while $m_2 = 2$ kg **rises**. $\theta = 30^\circ$, $\mu_k = 0.4$, $\Delta x = 0.5$ m.
+
+**Find:** $v_f$.
+
+**Idea:** $E_i = E_f + E_{lost}$. Now $m_1$ starts $\Delta x\sin\theta$ high and drops to 0, while $m_2$ starts at 0 and rises $\Delta x$. Friction still removes energy.
+
+**Step 1: Write each energy term.**
+
+$$E_i = \tfrac12(m_1 + m_2)v_i^2 + m_1g\Delta x\sin\theta$$
+
+$$E_f = \tfrac12(m_1 + m_2)v_f^2 + m_2g\Delta x$$
+
+$$E_{lost} = \mu_k m_1g\cos\theta\,\Delta x$$
+
+**Step 2: Substitute into $E_i = E_f + E_{lost}$ and solve for $v_f^2$.**
+
+$$
+\begin{aligned}
+\tfrac12(m_1 + m_2)v_i^2 + m_1g\Delta x\sin\theta &= \tfrac12(m_1 + m_2)v_f^2 + m_2g\Delta x + \mu_k m_1g\cos\theta\,\Delta x \\[8pt]
+\tfrac12(m_1 + m_2)v_f^2 &= \tfrac12(m_1 + m_2)v_i^2 + g\Delta x\left(m_1\sin\theta - m_2 - \mu_k m_1\cos\theta\right) \\[8pt]
+v_f^2 &= v_i^2 + \frac{2g\Delta x}{m_1 + m_2}\left(m_1\sin\theta - m_2 - \mu_k m_1\cos\theta\right)
+\end{aligned}
+$$
+
+**Step 3: Take the square root.**
+
+$$v_f = \sqrt{v_i^2 + \frac{2g\Delta x}{m_1 + m_2}\left(m_1\sin\theta - m_2 - \mu_k m_1\cos\theta\right)}$$
+
+**Step 4: Plug in.**
+
+$$
+\begin{aligned}
+v_f &= \sqrt{2^2 + \frac{2(9.8)(0.5)}{22}\left(20(0.5) - 2 - 0.4(20)(0.866)\right)} \\[8pt]
+&= \sqrt{4 + 0.445(10 - 2 - 6.928)} = \sqrt{4 + 0.477} = 2.12\ \text{m/s}
+\end{aligned}
+$$
+
+**Answer:** $v_f = 2.12$ m/s. "It speeds up!"
+
+**"What would slow it down?"** A bigger $m_2$, a smaller $\theta$, a bigger $\mu_k$, or a smaller $m_1$. With $m_2 = 10$ kg, the same formula gives
+
+$$
+\begin{aligned}
+v_f &= \sqrt{2^2 + \frac{2(9.8)(0.5)}{30}\left(20(0.5) - 10 - 0.4(20)(0.866)\right)} \\[8pt]
+&= \sqrt{4 + 0.3267(-6.928)} = 1.32\ \text{m/s}
+\end{aligned}
+$$
+
+after sliding 0.5 m down, so it slows.
+
+::: {.callout-tip title="3×5 notecard"}
+
+$$v_f = \sqrt{v_i^2 + \frac{2g\,\Delta x\,B}{m_1 + m_2 + \dfrac{I}{R^2}}}$$
+
+$$\text{Stops after:}\quad \Delta x = \frac{-\left(m_1 + m_2 + \dfrac{I}{R^2}\right)v_i^2}{2gB}$$
+
+* $m_1$ = block on the incline; $m_2$ = hanging block ($m_2 = 0$ if nothing hangs); $\theta$ = incline angle; $\mu_k$ = friction between $m_1$ and the incline.
+* $\Delta x$ = distance each block moves (m); $v_i$, $v_f$ = their shared speed at the start / end.
+* $I$, $R$ = pulley's moment of inertia and radius ($I = 0$ for a massless pulley; disk $I/R^2 = \tfrac12 M$).
+* $B$ = the "net pull" (kg), picked by direction of motion:
+    * $m_2$ falls, $m_1$ slides **up**: $B = m_2 - m_1\sin\theta - \mu_k m_1\cos\theta$.
+    * $m_1$ slides **down**, $m_2$ rises: $B = m_1\sin\theta - m_2 - \mu_k m_1\cos\theta$.
+* $B > 0$: speeds up. $B < 0$: slows down; a negative number under the root means it stops first, so use the second line.
+
+**Covers:** a block on an incline tied to a hanging block, either direction, with or without friction, with a massless or massive pulley (2015 Exam #13 is $m_2 = 0$ with a disk pulley).
+
+:::
+
+## 7.14 Loop-the-loop
+**Source:** Ch 7/8 notes, p. 12/18–13/18. 2015 Exam 2 #3.
+
+**Given:** a circular loop of radius $R$ (notes: $R = 10$ m). The car is launched from rest at height $h$ above the bottom of the loop.
+
+**Find:**
+
+* (a) the speed at the top if the car "barely" stays on
+* (b) the minimum launch height $h$
+* (c) the normal force at the bottom
+* (d) the minimum speed entering the bottom (Exam #3)
+
+**(a) Top of the loop: forces.** $N$ (the track pushing) and $mg$ both point **down**, toward the center:
+
+$$N + mg = \frac{mv_{top}^2}{R}$$
+
+"Barely means $N = 0$":
+
+$$
+\begin{aligned}
+mg &= \frac{mv_{top}^2}{R} \\[8pt]
+v_{top}^2 &= gR \\[8pt]
+v_{top} &= \sqrt{gR} = \sqrt{9.8 \times 10} = 9.9\ \text{m/s}
+\end{aligned}
+$$
+
+**(b) Launch height: energy, $E_i = E_f$.** Put $h = 0$ at the bottom of the loop; the top of the loop is at $2R$.
+
+$$E_i = mgh + \tfrac12 m(0)^2 = mgh$$
+
+$$E_f = mg(2R) + \tfrac12 mv_{top}^2 = mg(2R) + \tfrac12 m(gR)$$
+
+$$
+\begin{aligned}
+mgh &= 2mgR + \tfrac12 mgR \\[8pt]
+h &= 2R + \tfrac12 R = \tfrac52 R \\[8pt]
+h &= \tfrac52(10) = 25\ \text{m}
+\end{aligned}
+$$
+
+**(c) Normal force at the bottom.** From the launch height, energy gives $\tfrac12 mv_{bottom}^2 = mgh$, so $v_{bottom}^2 = 2gh = 2g\left(\tfrac52 R\right) = 5gR$ ("dropped coyote"). At the bottom, $N$ points up (toward the center) and $mg$ points down:
+
+$$
+\begin{aligned}
+N - mg &= \frac{mv_{bottom}^2}{R} = \frac{m(5gR)}{R} = 5mg \\[8pt]
+N &= 6mg
+\end{aligned}
+$$
+
+("death & unconsciousness").
+
+**(d) Exam #3: minimum speed at the bottom, $E_i = E_f$ from the bottom to the top.**
+
+$$E_i = \tfrac12 mv_{bottom}^2 + mg(0)$$
+
+$$E_f = \tfrac12 mv_{top}^2 + mg(2R) = \tfrac12 m(gR) + 2mgR$$
+
+$$
+\begin{aligned}
+\tfrac12 mv_{bottom}^2 &= \tfrac12 mgR + 2mgR \\[8pt]
+v_{bottom}^2 &= gR + 4gR = 5gR \\[8pt]
+v_{bottom} &= \sqrt{5gR}
+\end{aligned}
+$$
+
+Plug in $R = 10$ m:
+
+$$v_{bottom} = \sqrt{5(9.8)(10)} = 22.1\ \text{m/s}$$
+
+**Answer:** $v_{top} = 9.9$ m/s, $h = 25$ m, $N = 6mg$. For Exam #3, the choices are 17, 19, 21, 23, 25 m/s. 22.1 is a **minimum**, and at 21 m/s it falls off, so the answer is **d) 23 m/s**.
+
+::: {.callout-tip title="3×5 notecard"}
+
+$$v_{top,\,min} = \sqrt{gR}$$
+
+$$v_{bottom,\,min} = \sqrt{5gR}$$
+
+$$h_{min} = \tfrac52 R$$
+
+$$v_{top}^2 = v_{bottom}^2 - 4gR = 2g(h - 2R)$$
+
+$$\text{Top:}\quad N = \frac{mv_{top}^2}{R} - mg$$
+
+$$\text{Bottom:}\quad N = \frac{mv_{bottom}^2}{R} + mg$$
+
+* $R$ = loop radius (m); $h$ = starting height above the bottom of the loop, starting from rest (m); $m$ = mass (kg).
+* $v_{top}$, $v_{bottom}$ = speed at the top / bottom of the loop; $N$ = normal force from the track (N).
+* "Barely" makes it = $N = 0$ at the top. Launched from $h = \tfrac52 R$: $N_{bottom} = 6mg$.
+* **Answer choices:** these are minimums, so round **up** to a choice that works.
+
+**Covers:** minimum speed at the top or bottom, minimum launch height, normal force at the top or bottom for any launch height.
+
+:::
+
+# Chapter 9: Momentum and collisions
+
+## 9.1 Force from a change in momentum
+
+**Source:** Ch 9 notes, p. 1/5.
+
+**Definitions:** momentum $\vec p = m\vec v$ ($m$ = mass, $\vec v$ = velocity, with direction). Force is the rate of change of momentum:
+
+$$\vec F = \frac{d\vec p}{dt} \approx \frac{p_f - p_i}{t}$$
+
+($p_i$, $p_f$ = momentum before and after; $t$ = how long the hit lasts.)
+
+**Ball bouncing straight back off a wall** ("100% rebound"): the speed is the same but the direction reverses.
+
+**Step 1: Momentum before and after** (pick "away from the wall" as $+$):
+
+$$p_i = -mv$$
+
+$$p_f = +mv$$
+
+**Step 2: Average force.**
+
+$$
+\begin{aligned}
+F &= \frac{p_f - p_i}{t} = \frac{mv - (-mv)}{t} \\[8pt]
+F &= \frac{2mv}{t}
+\end{aligned}
+$$
+
+**Answer:** $F = \dfrac{2mv}{t} = \dfrac{2p}{t}$. A bounce takes twice the force of simply stopping the ball ($F = mv/t$).
+
+**Numbers** (Practice Exam 2-2 #10): $m = 0.15$ kg, $v = 30$ m/s, $t = 0.010$ s.
+
+$$F = \frac{2(0.15)(30)}{0.010} = 900\ \text{N}$$
+
+::: {.callout-tip title="3×5 notecard"}
+
+$$F = \frac{m(v_f - v_i)}{t}$$
+
+* $m$ = mass (kg); $v_i$, $v_f$ = velocity before / after **with signs** (reversing direction flips the sign); $t$ = contact time (s).
+* Bounces straight back at the same speed: $|F| = \dfrac{2mv}{t}$. Comes to a stop: $|F| = \dfrac{mv}{t}$.
+* $mv$ alone is momentum (kg·m/s), and $m(v_f - v_i)$ is the impulse (N·s); neither is a force.
+
+**Covers:** bounces, catches, stops, any average force from a change in velocity.
+
+:::
+
+## 9.2 Completely inelastic collision (they stick)
+
+**Source:** Ch 9 notes, p. 1/5. 2015 Exam 2 #7.
+
+**Idea:** "2 types of collision": **inelastic** conserves momentum ($p$) only; **elastic** conserves $p$ **and** kinetic energy ($K$). When the objects stick together, it's completely inelastic, so use momentum only.
+
+**Step 1: Momentum before = momentum after.**
+
+$$m_1v_{1i} + m_2v_{2i} = (m_1 + m_2)v_f$$
+
+($m_1$, $m_2$ = the two masses; $v_{1i}$, $v_{2i}$ = their velocities before, with signs; $v_f$ = their shared velocity after.)
+
+**Step 2: Solve for $v_f$.**
+
+$$v_f = \frac{m_1v_{1i} + m_2v_{2i}}{m_1 + m_2}$$
+
+**2015 Exam 2 #7. Given:** car 1 has mass $2m$ and velocity $2v$; car 2 has mass $m$ and velocity $v$, in the same direction. They couple together.
+
+**Find:** the fraction of the initial KE that's retained, $K_f/K_i$.
+
+**Step 3: Plug into $v_f$.**
+
+$$v_f = \frac{(2m)(2v) + (m)(v)}{2m + m} = \frac{5mv}{3m} = \frac{5v}{3}$$
+
+**Step 4: KE before.**
+
+$$
+\begin{aligned}
+K_i &= \tfrac12 m_1v_{1i}^2 + \tfrac12 m_2v_{2i}^2 \\[8pt]
+&= \tfrac12(2m)(2v)^2 + \tfrac12(m)(v)^2 = 4mv^2 + \tfrac12 mv^2 = \tfrac92 mv^2
+\end{aligned}
+$$
+
+**Step 5: KE after.**
+
+$$
+\begin{aligned}
+K_f &= \tfrac12(m_1 + m_2)v_f^2 \\[8pt]
+&= \tfrac12(3m)\left(\frac{5v}{3}\right)^2 = \tfrac{25}{6}mv^2
+\end{aligned}
+$$
+
+**Step 6: Ratio.** The $m$'s and $v$'s cancel.
+
+$$\frac{K_f}{K_i} = \frac{25/6}{9/2} = \frac{25}{27} = 0.926$$
+
+**Answer: e) >90%** (93% kept).
+
+::: {.callout-tip title="3×5 notecard"}
+
+$$v_f = \frac{m_1v_{1i} + m_2v_{2i}}{m_1 + m_2}$$
+
+$$\frac{K_f}{K_i} = \frac{(m_1 + m_2)\,v_f^2}{m_1v_{1i}^2 + m_2v_{2i}^2}$$
+
+* $m_1$, $m_2$ = the two masses; $v_{1i}$, $v_{2i}$ = velocities before, **with signs** (pick a + direction).
+* $v_f$ = shared velocity after they stick; $K_i$, $K_f$ = total kinetic energy before / after.
+* One object at rest ($v_{2i} = 0$): $\dfrac{K_f}{K_i} = \dfrac{m_1}{m_1 + m_2}$.
+
+**Covers:** any objects that stick, moving the same way or toward each other; symbolic masses like $2m$ and speeds like $3v$ cancel.
+
+:::
+
+## 9.3 Elastic collision in 1-D
+
+**Source:** Ch 9 notes, p. 2/5–3/5. 2015 Exam 2 #6.
+
+**Symbols:** $m_1$, $m_2$ = the two masses; $v_{1i}$, $v_{2i}$ = velocities **before**; $v_{1f}$, $v_{2f}$ = velocities **after**. All velocities carry a sign: pick right as $+$, so left is $-$.
+
+**Derivation (his steps):**
+
+**Step 1: Momentum is conserved.**
+
+$$
+\begin{aligned}
+m_1v_{1i} + m_2v_{2i} &= m_1v_{1f} + m_2v_{2f} \\[8pt]
+m_1(v_{1i} - v_{1f}) &= m_2(v_{2f} - v_{2i}) \qquad (1)
+\end{aligned}
+$$
+
+**Step 2: KE is conserved** (that's what "elastic" means).
+
+$$
+\begin{aligned}
+\tfrac12 m_1v_{1i}^2 + \tfrac12 m_2v_{2i}^2 &= \tfrac12 m_1v_{1f}^2 + \tfrac12 m_2v_{2f}^2 \\[8pt]
+m_1(v_{1i}^2 - v_{1f}^2) &= m_2(v_{2f}^2 - v_{2i}^2) \qquad (2)
+\end{aligned}
+$$
+
+**Step 3: Divide (2) by (1).** Each side factors as a difference of squares, $a^2 - b^2 = (a - b)(a + b)$:
+
+$$v_{1i} + v_{1f} = v_{2i} + v_{2f}$$
+
+"Use to replace Cons of Kinetic Energy."
+
+**Step 4: Solve for $v_{2f}$, substitute into the momentum equation, and solve for $v_{1f}$.**
+
+$$
+\begin{aligned}
+v_{2f} &= v_{1i} + v_{1f} - v_{2i} \\[8pt]
+m_1v_{1i} + m_2v_{2i} &= m_1v_{1f} + m_2(v_{1i} + v_{1f} - v_{2i}) \\[8pt]
+(m_1 - m_2)v_{1i} + 2m_2v_{2i} &= (m_1 + m_2)v_{1f} \\[8pt]
+v_{1f} &= \frac{(m_1 - m_2)v_{1i} + 2m_2v_{2i}}{m_1 + m_2}
+\end{aligned}
+$$
+
+"These go on 3×5 notecard! Good for any 2 objects hitting elastically."
+
+**Notes example. Given:** $m_1 = 10$ kg at $v_{1i} = +5$ m/s; $m_2 = 2$ kg at $v_{2i} = +2$ m/s (both moving right).
+
+$$
+\begin{aligned}
+v_{1f} &= \frac{(10 - 2)(5) + 2(2)(2)}{10 + 2} = \frac{40 + 8}{12} = 4\ \text{m/s} \\[8pt]
+v_{2f} &= v_{1i} + v_{1f} - v_{2i} = 5 + 4 - 2 = 7\ \text{m/s}
+\end{aligned}
+$$
+
+**Answer:** $v_{1f} = 4$ m/s, $v_{2f} = 7$ m/s.
+
+**2015 Exam 2 #6. Given:** $m_1 = 1$ kg at $v_{1i} = +5$ m/s (right); $m_2 = 2$ kg at $v_{2i} = -2$ m/s (left). **Find:** the 2 kg mass's final velocity.
+
+$$
+\begin{aligned}
+v_{1f} &= \frac{(1 - 2)(5) + 2(2)(-2)}{1 + 2} = \frac{-5 - 8}{3} = -4.33\ \text{m/s} \\[8pt]
+v_{2f} &= v_{1i} + v_{1f} - v_{2i} = 5 + (-4.33) - (-2) = +2.67\ \text{m/s}
+\end{aligned}
+$$
+
+**Answer: b) +2.67 m/s** (to the right). (e) −4.33 is the 1 kg mass.
+
+::: {.callout-tip title="3×5 notecard"}
+
+$$v_{1f} = \frac{(m_1 - m_2)v_{1i} + 2m_2v_{2i}}{m_1 + m_2}$$
+
+$$v_{2f} = v_{1i} + v_{1f} - v_{2i}$$
+
+* $m_1$, $m_2$ = the two masses; $v_{1i}$, $v_{2i}$ = velocities before; $v_{1f}$, $v_{2f}$ = velocities after.
+* **Every velocity has a sign.** Pick + (say, right); anything moving left is negative. A negative answer means it moves left.
+* Either object can be "object 1".
+* Equal masses, object 2 at rest (cue ball and 8-ball): $v_{1f} = 0$ and $v_{2f} = v_{1i}$.
+
+**Covers:** any 1-D elastic collision: head-on, catching up, one at rest, equal or unequal masses.
+
+:::
+
+## 9.4 Cue ball hits the 8-ball
+
+**Source:** Ch 9 notes, p. 4/5.
+
+**Given:** equal masses ($m_1 = m_2 = m$). The cue ball moves at $v_{1i}$; the 8-ball is at rest ($v_{2i} = 0$). The collision is elastic.
+
+**Find:** both velocities after, $v_{1f}$ (cue ball) and $v_{2f}$ (8-ball).
+
+**Step 1: Momentum** (the $m$'s cancel because the masses are equal):
+
+$$
+\begin{aligned}
+mv_{1i} + m(0) &= mv_{1f} + mv_{2f} \\[8pt]
+v_{1i} &= v_{1f} + v_{2f}
+\end{aligned}
+$$
+
+**Step 2: The elastic rule from 9.3**, $v_{1i} + v_{1f} = v_{2i} + v_{2f}$, with $v_{2i} = 0$:
+
+$$v_{2f} = v_{1i} + v_{1f}$$
+
+**Step 3: Substitute Step 2 into Step 1 and solve.**
+
+$$
+\begin{aligned}
+v_{1i} &= v_{1f} + (v_{1i} + v_{1f}) \\[8pt]
+0 &= 2v_{1f} \\[8pt]
+v_{1f} &= 0, \qquad v_{2f} = v_{1i}
+\end{aligned}
+$$
+
+**Answer:** "Cue is still," and the 8-ball leaves with the cue ball's full speed. The 9.3 notecard gives the same thing: $v_{1f} = \dfrac{(m - m)v_{1i} + 2m(0)}{2m} = 0$.
+
+::: {.callout-tip title="3×5 notecard"}
+
+$$v_{1f} = \frac{(m_1 - m_2)v_{1i} + 2m_2v_{2i}}{m_1 + m_2}$$
+
+$$v_{2f} = v_{1i} + v_{1f} - v_{2i}$$
+
+* $m_1$, $m_2$ = the two masses; $v_{1i}$, $v_{2i}$ = velocities before; $v_{1f}$, $v_{2f}$ = velocities after.
+* **Every velocity has a sign.** Pick + (say, right); anything moving left is negative. A negative answer means it moves left.
+* Either object can be "object 1".
+* Equal masses, object 2 at rest (cue ball and 8-ball): $v_{1f} = 0$ and $v_{2f} = v_{1i}$.
+
+**Covers:** any 1-D elastic collision: head-on, catching up, one at rest, equal or unequal masses.
+
+:::
+
+## 9.5 Ballistic pendulum
+
+**Source:** Ch 9 notes, p. 5/5. 2015 Exam 2 #8.
+
+**Symbols:** $m$ = bullet mass; $M$ = block mass; $v$ = bullet speed before the hit; $V$ = speed of block + bullet just after the hit; $h$ = height the block swings up.
+
+**Idea:** two stages, two laws. Never use energy through the collision itself.
+
+**Step 1: The collision** is inelastic (the bullet sticks), so use momentum:
+
+$$mv = (M + m)V$$
+
+**Step 2: The swing up** conserves energy. KE just after the hit becomes PE at the top:
+
+$$
+\begin{aligned}
+\tfrac12(M + m)V^2 &= (M + m)gh \\[8pt]
+V &= \sqrt{2gh}
+\end{aligned}
+$$
+
+**Step 3: Combine to get the bullet's speed.**
+
+$$v = \frac{M + m}{m}\,V = \frac{M + m}{m}\sqrt{2gh}$$
+
+**Step 4: Fraction of KE kept** (he calls it $\eta$, the efficiency):
+
+$$\eta = \frac{E_f}{E_i} = \frac{(M + m)gh}{\tfrac12 mv^2}$$
+
+Substituting $v$ from Step 3 simplifies this to
+
+$$\eta = \frac{m}{M + m}$$
+
+**Notes example. Given:** $m = 0.005$ kg, $M = 1$ kg, $h = 0.05$ m.
+
+$$
+\begin{aligned}
+v &= \frac{1.005}{0.005}\sqrt{2(9.8)(0.05)} = 201 \times 0.99 = 199\ \text{m/s} \\[8pt]
+\eta &= \frac{(1.005)(9.8)(0.05)}{\tfrac12(0.005)(200)^2} = \frac{0.5\ \text{J}}{100\ \text{J}} = \tfrac12\%
+\end{aligned}
+$$
+
+**Answer:** $v \approx 200$ m/s, and only about 0.5% of the bullet's KE remains.
+
+**2015 Exam 2 #8. Given:** $m = 0.005$ kg, $M = 10$ kg, $h = 0.01$ m. **Find:** the fraction of KE remaining in the block's motion.
+
+$$\eta = \frac{m}{M + m} = \frac{0.005}{10.005} = 0.0005 = 0.05\%$$
+
+Check with the long way: $v = \dfrac{M + m}{m}\sqrt{2gh} = 2001\sqrt{0.196} = 886$ m/s, so $E_i = \tfrac12 mv^2 = 1962$ J and $E_f = (M + m)gh = 0.98$ J, giving $0.98/1962 = 0.05\%$.
+
+**Answer: a) <0.1%.**
+
+::: {.callout-tip title="3×5 notecard"}
+
+$$v = \frac{M + m}{m}\sqrt{2gh}$$
+
+$$h = \frac{1}{2g}\left(\frac{mv}{M + m}\right)^2$$
+
+$$\frac{K_f}{K_i} = \frac{m}{M + m}$$
+
+* $m$ = bullet mass; $M$ = block mass; $v$ = bullet speed before the hit (m/s); $h$ = height the block swings up (m).
+* Block + bullet speed right after the hit: $V = \dfrac{mv}{M + m} = \sqrt{2gh}$.
+* $K_f/K_i$ = fraction of the bullet's KE left in the swinging block.
+
+**Covers:** finding the bullet speed, the swing height, the speed right after the hit, or the fraction of KE kept.
+
+:::
+
+# Chapter 10: Rotation
+
+## 10.1 Rotational kinematics
+
+**Source:** Ch 10 notes, p. 1/8 (formulas); Ch 11 notes, p. 6/8 (examples).
+
+**What the symbols mean:**
+
+* $\theta$ = angle turned, in **radians**; $\Delta\theta = \theta_f - \theta_i$.
+* $\omega$ = angular velocity (rad/s).
+* $\alpha$ = angular acceleration (rad/s²), constant.
+* $t$ = time (s).
+
+**The four equations.** They are the Ch 2 equations with $x \to \theta$, $v \to \omega$, $a \to \alpha$. Each one leaves out one variable, so pick the one that leaves out the quantity you are **not** given and **not** asked for.
+
+| # | Equation | Leaves out |
+|:-:|:--|:-:|
+| 1 | $\omega_f = \omega_i + \alpha t$ | $\Delta\theta$ |
+| 2 | $\theta_f = \theta_i + \dfrac{\omega_i + \omega_f}{2}\,t$ | $\alpha$ |
+| 3 | $\omega_f^2 = \omega_i^2 + 2\alpha(\theta_f - \theta_i)$ | $t$ |
+| 4 | $\theta_f = \theta_i + \omega_i t + \tfrac12\alpha t^2$ | $\omega_f$ |
+
+### Example A: find $\alpha$ from a time
+
+**Given:** $\omega_i = 50$ rad/s, $\omega_f = 100$ rad/s, $t = 10$ s.
+
+**Find:** $\alpha$.
+
+**Step 1: Pick the equation.** $\Delta\theta$ is not given and not asked for, so use equation 1, which leaves it out. ($\omega_f^2 = \omega_i^2 + 2\alpha\Delta\theta$? "NO", because it needs $\Delta\theta$.)
+
+$$\omega_f = \omega_i + \alpha t$$
+
+**Step 2: Solve for $\alpha$.**
+
+$$
+\begin{aligned}
+\omega_f - \omega_i &= \alpha t \\[8pt]
+\alpha &= \frac{\omega_f - \omega_i}{t}
+\end{aligned}
+$$
+
+**Step 3: Plug in.**
+
+$$\alpha = \frac{100 - 50}{10} = \frac{50}{10} = 5\ \text{rad/s}^2$$
+
+**Answer:** $\alpha = 5$ rad/s².
+
+### Example B: find $\alpha$ from an angle
+
+**Given:** $\omega_i = 50$ rad/s, $\omega_f = 100$ rad/s, $\Delta\theta = 40$ rad.
+
+**Find:** $\alpha$.
+
+**Step 1: Pick the equation.** No time is given or asked for, so use equation 3, which leaves out $t$:
+
+$$\omega_f^2 = \omega_i^2 + 2\alpha(\theta_f - \theta_i)$$
+
+**Step 2: Solve for $\alpha$.**
+
+$$
+\begin{aligned}
+\omega_f^2 - \omega_i^2 &= 2\alpha(\theta_f - \theta_i) \\[8pt]
+\alpha &= \frac{\omega_f^2 - \omega_i^2}{2(\theta_f - \theta_i)}
+\end{aligned}
+$$
+
+**Step 3: Plug in.**
+
+$$
+\begin{aligned}
+\alpha &= \frac{100^2 - 50^2}{2(40)} \\[8pt]
+&= \frac{10{,}000 - 2{,}500}{80} = \frac{7{,}500}{80} = 93.75\ \text{rad/s}^2
+\end{aligned}
+$$
+
+**Answer:** $\alpha = 93.75$ rad/s².
+
+**Watch the units:** $\theta$ must be in radians. If a problem gives revolutions, convert with $1\ \text{rev} = 2\pi\ \text{rad}$; if it gives degrees, use $180^\circ = \pi\ \text{rad}$.
+
+::: {.callout-tip title="3×5 notecard"}
+
+$$\omega_f = \omega_i + \alpha t$$
+
+$$\Delta\theta = \frac{\omega_i + \omega_f}{2}\,t$$
+
+$$\omega_f^2 = \omega_i^2 + 2\alpha\,\Delta\theta$$
+
+$$\Delta\theta = \omega_i t + \tfrac12\alpha t^2$$
+
+* $\omega_i$, $\omega_f$ = angular velocity at the start / end (rad/s); $\alpha$ = constant angular acceleration (rad/s²).
+* $\Delta\theta$ = angle turned (**radians**; 1 rev = $2\pi$ rad); $t$ = time (s).
+* Pick the equation that leaves out the one quantity you're not given and not asked for.
+
+**Covers:** finding $\alpha$, $t$, $\Delta\theta$ or $\omega$ for anything spinning up or slowing down at a steady rate.
+
+:::
+
+## 10.2 Moments of inertia and the parallel axis theorem
+
+**Source:** Ch 10 notes, p. 2/8–3/8.
+
+### What $I$ is
+
+**Moment of inertia, $I$** (kg·m²): "$I$ is resistance to rotation." It's the rotational version of mass. Mass farther from the axis counts more, because each piece counts as its mass times its distance **squared**:
+
+$$I = \sum m_i r_i^2$$
+
+($m_i$ = each small piece of mass; $r_i$ = that piece's distance from the axis of rotation.)
+
+So the **same object has a different $I$ for every axis** you spin it about. The table gives $I$ for the axis through the object's **center of mass** (its balance point: the middle of a rod, the center of a disk). That value is called $I_{cm}$ (he writes $I_0$).
+
+| Object | $I_{cm}$ (axis through the center) |
+|:--|:--|
+| Rod, mass $m$, length $\ell$ (axis perpendicular to the rod, through its middle) | $\tfrac1{12}m\ell^2$ |
+| Solid disk or cylinder, mass $M$, radius $R$ | $\tfrac12 MR^2$ |
+| Ring or hoop | $MR^2$ |
+| Solid sphere | $\tfrac25 MR^2$ |
+| Point mass (a person, a small block) | $0$ about itself, $mr^2$ about an axis $r$ away |
+
+### The parallel axis theorem
+
+If the axis does **not** pass through the center, start from $I_{cm}$ and add $md^2$:
+
+$$I = I_{cm} + md^2$$
+
+* $I$ = moment of inertia about the new axis.
+* $I_{cm}$ = the table value, about the center.
+* $m$ = the object's total mass.
+* **$d$ = the distance from the object's CENTER to the new axis.** The new axis must be parallel to the one through the center ("the distance axis is moved").
+
+**The #1 mistake:** using the distance from the **end** of a rod as $d$. Always measure $d$ from the **middle**.
+
+### The 1-minute recipe
+
+1. **Look up $I_{cm}$** in the table.
+2. **Find $d$**, the distance from the center to the axis. For a rod with the axis a distance $a$ from one end, the center is $\ell/2$ from that end, so $d = \dfrac{\ell}{2} - a$.
+3. **Add:** $I = I_{cm} + md^2$.
+
+### Example A: rod about one end (his example)
+
+**Given:** a uniform rod, mass $m$, length $\ell$. **Find:** $I$ about an axis through one end.
+
+**Step 1: $I_{cm}$ from the table.**
+
+$$I_{cm} = \tfrac1{12}m\ell^2$$
+
+**Step 2: Find $d$.** The axis is at the end ($a = 0$), and the center is halfway along, so
+
+$$d = \frac{\ell}{2} - 0 = \frac{\ell}{2}$$
+
+**Step 3: Add $md^2$.**
+
+$$
+\begin{aligned}
+I &= \tfrac1{12}m\ell^2 + m\left(\frac{\ell}{2}\right)^2 \\[8pt]
+&= \tfrac1{12}m\ell^2 + \tfrac3{12}m\ell^2 \\[8pt]
+&= \tfrac13 m\ell^2
+\end{aligned}
+$$
+
+**Answer:** $I_{end} = \tfrac13 m\ell^2$. That's why the table lists "rod about one end," and why a rod lying center-to-edge on a merry-go-round (11.5) uses $\tfrac13 m\ell^2$.
+
+### Example B: rod with the axis partway along (Practice Exam 2-2 #12)
+
+**Given:** a rod with $m = 3.0$ kg and $\ell = 1.2$ m, spun about an axis **0.30 m from one end** ($a = 0.30$ m).
+
+**Find:** $I$ about that axis.
+
+**Step 1: $I_{cm}$ from the table.**
+
+$$I_{cm} = \tfrac1{12}m\ell^2 = \tfrac1{12}(3.0)(1.2)^2 = \tfrac1{12}(3.0)(1.44) = 0.36\ \text{kg·m}^2$$
+
+**Step 2: Find $d$ from the CENTER.** The center is $\ell/2 = 0.60$ m from the end, and the axis is 0.30 m from that same end:
+
+$$d = \frac{\ell}{2} - a = 0.60 - 0.30 = 0.30\ \text{m}$$
+
+(Here $d$ happens to equal $a$, because the axis is a quarter of the way along. Don't count on that: with $a = 0.20$ m you'd get $d = 0.40$ m.)
+
+**Step 3: Add $md^2$.**
+
+$$
+\begin{aligned}
+I &= I_{cm} + md^2 \\[8pt]
+&= 0.36 + (3.0)(0.30)^2 \\[8pt]
+&= 0.36 + 0.27 = 0.63\ \text{kg·m}^2
+\end{aligned}
+$$
+
+**Answer: e) 0.63 kg·m².**
+
+**Notecard shortcut, one line:**
+
+$$
+\begin{aligned}
+I &= m\left[\frac{\ell^2}{12} + \left(\frac{\ell}{2} - a\right)^2\right] \\[8pt]
+&= 3.0\left[\frac{1.44}{12} + (0.60 - 0.30)^2\right] \\[8pt]
+&= 3.0(0.12 + 0.09) = 0.63\ \text{kg·m}^2
+\end{aligned}
+$$
+
+**Sanity check:** the answer must be between the center value ($0.36$, the smallest possible) and the end value ($\tfrac13 m\ell^2 = 1.44$, the largest for a rod). $0.63$ is in that range.
+
+### Example C: disk spun about a point on its rim
+
+**Given:** a solid disk with $M = 2.0$ kg and $R = 0.50$ m, spun about an axis through a point on its **edge**, perpendicular to the disk.
+
+**Find:** $I$ about that axis.
+
+**Step 1: $I_{cm}$ from the table.**
+
+$$I_{cm} = \tfrac12 MR^2 = \tfrac12(2.0)(0.50)^2 = 0.25\ \text{kg·m}^2$$
+
+**Step 2: Find $d$.** The edge is one radius from the center:
+
+$$d = R = 0.50\ \text{m}$$
+
+**Step 3: Add $md^2$.**
+
+$$
+\begin{aligned}
+I &= \tfrac12 MR^2 + MR^2 = \tfrac32 MR^2 \\[8pt]
+&= 0.25 + (2.0)(0.50)^2 = 0.25 + 0.50 = 0.75\ \text{kg·m}^2
+\end{aligned}
+$$
+
+**Answer:** $I = \tfrac32 MR^2 = 0.75$ kg·m². (A ring about its rim works the same way: $MR^2 + MR^2 = 2MR^2$.)
+
+### Example D: a person on a merry-go-round (used in 11.2)
+
+**Given:** a man with $m = 100$ kg stands $r = 1$ m from the axis.
+
+**Find:** his moment of inertia about the axis.
+
+**Step 1: $I_{cm}$.** Treat him as a point mass, so his $I$ about his own center is
+
+$$I_{cm} = 0$$
+
+**Step 2: Find $d$.** His center is 1 m from the axis:
+
+$$d = r = 1\ \text{m}$$
+
+**Step 3: Add $md^2$.**
+
+$$I_{man} = 0 + md^2 = mr^2 = (100)(1)^2 = 100\ \text{kg·m}^2$$
+
+**Answer:** $I_{man} = 100$ kg·m². At the rim ($r = R = 2$ m), $I_{man} = 100(2)^2 = 400$ kg·m², four times bigger, because the distance is squared.
+
+### Example E: total $I$ of a system (used in 11.6)
+
+**Given:** a merry-go-round disk with $M = 500$ kg and $R = 2$ m, plus the 100 kg man standing at the rim.
+
+**Find:** the total moment of inertia.
+
+**Step 1: Moments of inertia add**, as long as every piece is about the **same** axis.
+
+$$I_{total} = I_{disk} + I_{man} = \tfrac12 MR^2 + mR^2$$
+
+**Step 2: Plug in.**
+
+$$I_{total} = \tfrac12(500)(2)^2 + (100)(2)^2 = 1000 + 400 = 1400\ \text{kg·m}^2$$
+
+**Answer:** $I_{total} = 1400$ kg·m².
+
+::: {.callout-tip title="3×5 notecard"}
+
+$$I = I_{cm} + md^2$$
+
+**$d$ = distance from the object's CENTER to the new axis**, not from its end or edge.
+
+**Rod, axis a distance $a$ from one end:**
+
+$$I = m\left[\frac{\ell^2}{12} + \left(\frac{\ell}{2} - a\right)^2\right]$$
+
+**Rod about one end** ($a = 0$):
+
+$$I = \tfrac13 m\ell^2$$
+
+**Disk about a point on its rim:**
+
+$$I = \tfrac32 MR^2$$
+
+**Ring about a point on its rim:**
+
+$$I = 2MR^2$$
+
+**Point mass at distance $r$:**
+
+$$I = mr^2$$
+
+**System of pieces** (all about the same axis):
+
+$$I_{total} = I_1 + I_2 + \cdots$$
+
+* $I$ = moment of inertia about the new axis (kg·m²); $I_{cm}$ = about the object's own center (his $I_0$); $m$ or $M$ = the object's mass (kg).
+* $\ell$ = rod length (m); $a$ = how far the axis is from the **end** of the rod (m); $R$ = radius (m); $r$ = a point mass's distance from the axis (m).
+* $I_{cm}$ values: rod $\tfrac1{12}m\ell^2$, disk $\tfrac12 MR^2$, ring $MR^2$, sphere $\tfrac25 MR^2$, point mass $0$.
+* **Never** add $md^2$ to $\tfrac13 m\ell^2$. That value is already about the end.
+
+**Covers:** rods pivoted anywhere along their length, disks or rings spun about their rim, people or objects placed on a turntable, total $I$ of a system.
+
+:::
+
+## 10.3 Rolling ball: acceleration from forces and torque
+
+**Source:** Ch 10 notes, p. 3/8.
+
+**Given:** a solid sphere of mass $m$ and radius $R$ ($I = \tfrac25 mR^2$) rolls without slipping down an incline of angle $\theta$.
+
+**Find:** the acceleration $a$ of its center down the incline.
+
+**Idea:** a rolling object needs **two** equations: Newton's 2nd law for moving down the slope, and $\tau = I\alpha$ for spinning. Static friction $f$ at the contact point points **up** the slope. It is the only force that makes a torque about the center ($mg$ and $N$ both act through, or point at, the center). "Rolling without slipping" links the two motions: $R\alpha = a$.
+
+**Step 1: Forces along the slope** (down the slope is $+$):
+
+$$\sum F_x = ma: \qquad mg\sin\theta - f = ma$$
+
+**Step 2: Torques about the center.** Friction acts at distance $R$ from the center, perpendicular to the radius, so $\tau = Rf$:
+
+$$
+\begin{aligned}
+\sum\tau &= I\alpha \\[8pt]
+Rf &= \tfrac25 mR^2\alpha
+\end{aligned}
+$$
+
+**Step 3: Use the rolling condition, $\alpha = a/R$, and solve for $f$.**
+
+$$
+\begin{aligned}
+Rf &= \tfrac25 mR^2\left(\frac{a}{R}\right) = \tfrac25 mRa \\[8pt]
+f &= \tfrac25 ma
+\end{aligned}
+$$
+
+**Step 4: Substitute $f$ into the force equation and solve for $a$.**
+
+$$
+\begin{aligned}
+mg\sin\theta - \tfrac25 ma &= ma \\[8pt]
+mg\sin\theta &= ma + \tfrac25 ma = \left(1 + \tfrac25\right)ma = \tfrac75 ma \\[8pt]
+a &= \tfrac57 g\sin\theta
+\end{aligned}
+$$
+
+**Answer:** $a = \tfrac57 g\sin\theta$. Mass and radius cancel. This is "less than sliding" ($a_{slide} = g\sin\theta$), because some of gravity's pull goes into spinning the ball up.
+
+**Same steps for any rolling object.** Repeat Steps 2–4 with a general $I$: Step 3 gives $f = \dfrac{I}{R^2}a$, and Step 4 gives
+
+$$a = \frac{g\sin\theta}{1 + \dfrac{I}{mR^2}}$$
+
+| Object | $I$ | $\dfrac{I}{mR^2}$ | $a$ down the slope |
+|:--|:--|:-:|:--|
+| Sphere | $\tfrac25 mR^2$ | $\tfrac25$ | $\tfrac57 g\sin\theta$ |
+| Disk / cylinder | $\tfrac12 mR^2$ | $\tfrac12$ | $\tfrac23 g\sin\theta$ |
+| Ring / hoop | $mR^2$ | $1$ | $\tfrac12 g\sin\theta$ |
+| Sliding (no rolling) | — | $0$ | $g\sin\theta$ |
+
+**Plugging in a number:** on a $25^\circ$ incline, a sphere has
+
+$$a = \tfrac57(9.8)\sin 25^\circ = \tfrac57(9.8)(0.4226) = 2.96\ \text{m/s}^2$$
+
+(Practice Exam 2-2 #13).
+
+::: {.callout-tip title="3×5 notecard"}
+
+$$a = \frac{g\sin\theta}{1 + \dfrac{I}{mR^2}}$$
+
+* $a$ = acceleration of the center down the incline (m/s²); $\theta$ = incline angle.
+* $I$ = the rolling object's moment of inertia; $m$, $R$ = its mass and radius.
+* Sphere $\tfrac57 g\sin\theta$; disk $\tfrac23 g\sin\theta$; ring $\tfrac12 g\sin\theta$; sliding $g\sin\theta$.
+
+**Covers:** acceleration of any object rolling without slipping down an incline.
+
+:::
+
+## 10.4 Hanging mass on a pulley with mass ("Atwood's machine w/ torque")
+**Source:** Ch 10 notes, p. 4/8–6/8. 2015 Exam 2 #9.
+
+**Notes example. Given:**
+
+* Pulley: a disk with $I = \tfrac12 MR^2$, $M = 10$ kg, $R = 0.5$ m.
+* Hanging mass: $m = 1$ kg, moving **down** at $v_i = 1$ m/s.
+
+**Find:** $v_f$ after it drops $\Delta x = h = 2$ m.
+
+**Method 1: forces and torque.**
+
+**Step 1: Torque on the pulley.** $T$ is the string tension, and $R\alpha = a$:
+
+$$
+\begin{aligned}
+RT &= I\alpha = \tfrac12 MR^2\alpha \\[8pt]
+T &= \tfrac12 MR\alpha = \tfrac12 Ma
+\end{aligned}
+$$
+
+**Step 2: Newton's 2nd law on the hanging mass** (up is +, it accelerates down):
+
+$$
+\begin{aligned}
+T - mg &= -ma \\[8pt]
+\tfrac12 Ma - mg &= -ma \\[8pt]
+mg &= \left(m + \tfrac{M}{2}\right)a \\[8pt]
+a &= \frac{mg}{m + \tfrac{M}{2}}
+\end{aligned}
+$$
+
+**Step 3: Plug in.**
+
+$$a = \frac{(1)(9.8)}{1 + \tfrac{10}{2}} = 1.63\ \text{m/s}^2 \text{ (downward)}$$
+
+**Step 4: Kinematics** (up is +, so $v_i = -1$ m/s, $a = -1.63$ m/s², $y_f - y_i = -2$ m):
+
+$$
+\begin{aligned}
+v_f^2 &= v_i^2 + 2a(y_f - y_i) \\[8pt]
+v_f^2 &= (-1)^2 + 2(-1.63)(0 - 2) = 1 + 6.52 = 7.52 \\[8pt]
+v_f &= -\sqrt{7.52} = -2.74\ \text{m/s}
+\end{aligned}
+$$
+
+"Choose − root", because it's moving down.
+
+**Method 2: conservation of energy** (the pulley's KE counts). $E_i = E_f$; put $h = 0$ at the mass's final position.
+
+**Step 1: Write each energy term.**
+
+$$E_i = \tfrac12 mv_i^2 + \tfrac12 I\omega_i^2 + mgh$$
+
+$$E_f = \tfrac12 mv_f^2 + \tfrac12 I\omega_f^2 + mg(0)$$
+
+**Step 2: Write the pulley's KE in terms of $v$.** With $I = \tfrac12 MR^2$ and $\omega = v/R$:
+
+$$\tfrac12 I\omega^2 = \tfrac12\left(\tfrac12 MR^2\right)\left(\frac{v}{R}\right)^2 = \tfrac14 Mv^2$$
+
+**Step 3: Substitute and solve for $v_f^2$.**
+
+$$
+\begin{aligned}
+\tfrac12 mv_i^2 + \tfrac14 Mv_i^2 + mgh &= \tfrac12 mv_f^2 + \tfrac14 Mv_f^2 \\[8pt]
+\left(\tfrac12 m + \tfrac14 M\right)v_i^2 + mgh &= \left(\tfrac12 m + \tfrac14 M\right)v_f^2 \\[8pt]
+v_f^2 &= \frac{\left(\tfrac{m}{2} + \tfrac{M}{4}\right)v_i^2 + mgh}{\tfrac{m}{2} + \tfrac{M}{4}}
+\end{aligned}
+$$
+
+**Step 4: Take the square root.**
+
+$$v_f = \sqrt{\frac{\left(\tfrac{m}{2} + \tfrac{M}{4}\right)v_i^2 + mgh}{\tfrac{m}{2} + \tfrac{M}{4}}}$$
+
+**Step 5: Plug in.**
+
+$$v_f = \sqrt{\frac{\left(\tfrac12 + \tfrac{10}{4}\right)(1)^2 + (1)(9.8)(2)}{\tfrac12 + \tfrac{10}{4}}} = \sqrt{\frac{3 + 19.6}{3}} = \sqrt{7.53} = 2.74\ \text{m/s}$$
+
+**Answer:** $v_f = 2.74$ m/s downward. Both methods agree.
+
+**2015 Exam 2 #9. Given:** $m = 0.5$ kg hanging; pulley with $I = \tfrac35 MR^2$, $M = 10$ kg, $R = 0.3$ m. **Find:** the downward acceleration.
+
+**Step 1: Torque on the pulley.**
+
+$$
+\begin{aligned}
+RT &= I\alpha = \tfrac35 MR^2\left(\frac{a}{R}\right) \\[8pt]
+T &= \tfrac35 Ma
+\end{aligned}
+$$
+
+**Step 2: Newton's 2nd law on the mass** (down is +):
+
+$$
+\begin{aligned}
+mg - T &= ma \\[8pt]
+mg - \tfrac35 Ma &= ma \\[8pt]
+a &= \frac{mg}{m + \tfrac35 M}
+\end{aligned}
+$$
+
+**Step 3: Plug in.**
+
+$$a = \frac{(0.5)(9.8)}{0.5 + \tfrac35(10)} = \frac{4.9}{6.5} = 0.754\ \text{m/s}^2$$
+
+**Answer: c) 0.75 m/s².** $R$ cancels.
+
+::: {.callout-tip title="3×5 notecard"}
+
+$$v_f = \sqrt{v_i^2 + \frac{2gh(m_1 - m_2)}{m_1 + m_2 + \dfrac{I}{R^2}}}$$
+
+$$a = \frac{(m_1 - m_2)g}{m_1 + m_2 + \dfrac{I}{R^2}}$$
+
+* $m_1$ = the hanging mass that **falls**; $m_2$ = the hanging mass that **rises**.
+* $h$ = distance each mass moves (m); $v_i$, $v_f$ = their shared speed at the start / end.
+* $I$, $R$ = the pulley's moment of inertia and radius. Copy $I$ from the problem; $R$ cancels (disk $I/R^2 = \tfrac12 M$, ring $= M$, massless $= 0$).
+* **One hanging mass** (string wrapped on a pulley): set $m_2 = 0$.
+* String tension on the falling mass: $T = m_1(g - a)$.
+
+**Covers:** Atwood's machine with a massless or massive pulley, a single mass on a pulley with any shape. (A mass on an **incline** uses the 7.12 card.)
+
+:::
+
+## 10.5 Rolling down an incline: ring, disk, sphere
+**Source:** Ch 10 notes, p. 6/8–8/8. 2015 Exam 2 #10.
+
+**Given:** an object of mass $m$ and radius $r$ starts from rest at height $h$ and rolls without slipping ($r\omega = v$).
+
+**Idea:** $E_i = E_f$. Rolling means the KE has two parts, moving and spinning. Put $h = 0$ at the bottom.
+
+**Step 1: Write each energy term.**
+
+$$E_i = mgh + 0$$
+
+$$E_f = \tfrac12 mv^2 + \tfrac12 I\omega^2 = \tfrac12 mv^2 + \tfrac12 I\left(\frac{v}{r}\right)^2$$
+
+**Step 2: Solve each object.**
+
+**Slide** (no rolling, no spinning KE):
+
+$$
+\begin{aligned}
+mgh &= \tfrac12 mv^2 \\[8pt]
+v &= \sqrt{2gh}
+\end{aligned}
+$$
+
+**Ball** ($I = \tfrac25 mr^2$):
+
+$$
+\begin{aligned}
+mgh &= \tfrac12 mv^2 + \tfrac12\left(\tfrac25 mr^2\right)\frac{v^2}{r^2} = \left(\tfrac12 + \tfrac15\right)mv^2 = \tfrac{7}{10}mv^2 \\[8pt]
+v &= \sqrt{\tfrac{10}{7}gh} = \sqrt{1.43\,gh}
+\end{aligned}
+$$
+
+**Disk** ($I = \tfrac12 mr^2$):
+
+$$
+\begin{aligned}
+mgh &= \tfrac12 mv^2 + \tfrac12\left(\tfrac12 mr^2\right)\frac{v^2}{r^2} = \tfrac12 mv^2 + \tfrac14 mv^2 = \tfrac34 mv^2 \\[8pt]
+v &= \sqrt{\tfrac43 gh} = \sqrt{1.33\,gh}
+\end{aligned}
+$$
+
+**Ring** ($I = mr^2$):
+
+$$
+\begin{aligned}
+mgh &= \tfrac12 mv^2 + \tfrac12\left(mr^2\right)\frac{v^2}{r^2} = mv^2 \\[8pt]
+v &= \sqrt{gh} = \sqrt{1.0\,gh}
+\end{aligned}
+$$
+
+**His summary table:**
+
+| Object | Symbols | Numbers |
+|:--|:--|:--|
+| ring | $v = \sqrt{gh}$ | $v = \sqrt{1.0\,gh}$ |
+| disk | $v = \sqrt{\tfrac43 gh}$ | $v = \sqrt{1.33\,gh}$ |
+| sphere | $v = \sqrt{\tfrac{10}{7}gh}$ | $v = \sqrt{1.43\,gh}$ |
+| slide | $v = \sqrt{2gh}$ | $v = \sqrt{2gh}$ |
+
+**2015 Exam 2 #10. Given:** a sphere with $M = 2$ kg, $R = 0.01$ m, $I = \tfrac25 MR^2$, rolling from rest down a height of 1 m. **Find:** the rotational velocity $\omega$ at the bottom.
+
+**Step 1: Speed** (sphere result above):
+
+$$v = \sqrt{\tfrac{10}{7}gh} = \sqrt{\tfrac{10}{7}(9.8)(1)} = \sqrt{14} = 3.74\ \text{m/s}$$
+
+**Step 2: Convert to $\omega$** (rolling, so $v = R\omega$):
+
+$$\omega = \frac{v}{R} = \frac{3.74}{0.01} = 374\ \text{rad/s}$$
+
+**Answer: d) 370 rad/s.** (a) 3.7 is $v$, not $\omega$.
+
+::: {.callout-tip title="3×5 notecard"}
+
+$$v = \sqrt{\frac{2gh}{1 + \dfrac{I}{mR^2}}}$$
+
+$$\omega = \frac{v}{R}$$
+
+* $v$ = speed of the center at the bottom (m/s); $\omega$ = spin rate at the bottom (rad/s); $h$ = vertical drop (m), starting from rest.
+* $I$ = the object's moment of inertia; $m$, $R$ = its mass and radius ($R$ matters for $\omega$, not for $v$).
+* Ring $\sqrt{gh}$; disk $\sqrt{\tfrac43 gh}$; sphere $\sqrt{\tfrac{10}{7}gh}$; sliding $\sqrt{2gh}$.
+
+**Covers:** speed or rotational velocity of any rolling object at the bottom; which one wins a race (sphere, then disk, then ring).
+
+:::
+
+## 10.6 Block down a rough incline with a massive pulley
+**Source:** 2015 Exam 2 #13. Combines 7.13 (incline + friction) with 10.4 (pulley with mass).
+
+**Given:**
+
+* Block: $m = 5$ kg sliding **down** a $30^\circ$ incline with $\mu = 0.1$, starting at $v_i = 0.80$ m/s.
+* Pulley: a disk with $M = 2$ kg, $R = 0.05$ m and $I = \tfrac12 MR^2$.
+
+**Find:** $v_f$ after the block slides $d = 0.6$ m down the incline.
+
+**Idea:** work–energy theorem, $E_i + E_{added} = E_f + E_{lost}$, with $E_{added} = 0$.
+
+* Put $h = 0$ at the block's final position, so it starts $d\sin\theta$ higher.
+* The string doesn't slip, so the pulley turns at $\omega = v/R$.
+* On the incline, $N = mg\cos\theta$.
+
+**Step 1: Write each energy term.**
+
+$$E_i = \underbrace{\tfrac12 mv_i^2}_{\text{block KE}} + \underbrace{\tfrac12 I\omega_i^2}_{\text{pulley KE}} + \underbrace{mgd\sin\theta}_{\text{block PE}}$$
+
+$$E_f = \tfrac12 mv_f^2 + \tfrac12 I\omega_f^2 + mg(0)$$
+
+$$E_{lost} = F_f\,d = \mu Nd = \mu mg\cos\theta\,d$$
+
+**Step 2: Write the pulley's KE in terms of $v$.** With $I = \tfrac12 MR^2$ and $\omega = v/R$:
+
+$$\tfrac12 I\omega^2 = \tfrac12\left(\tfrac12 MR^2\right)\left(\frac{v}{R}\right)^2 = \tfrac14 Mv^2$$
+
+**Step 3: Substitute into $E_i = E_f + E_{lost}$.**
+
+$$\tfrac12 mv_i^2 + \tfrac14 Mv_i^2 + mgd\sin\theta = \tfrac12 mv_f^2 + \tfrac14 Mv_f^2 + \mu mg\cos\theta\,d$$
+
+**Step 4: Collect the $v^2$ terms and solve for $v_f^2$.**
+
+$$
+\begin{aligned}
+\tfrac12\left(m + \tfrac{M}{2}\right)v_f^2 &= \tfrac12\left(m + \tfrac{M}{2}\right)v_i^2 + mgd\sin\theta - \mu mg\cos\theta\,d \\[8pt]
+\tfrac12\left(m + \tfrac{M}{2}\right)v_f^2 &= \tfrac12\left(m + \tfrac{M}{2}\right)v_i^2 + mgd(\sin\theta - \mu\cos\theta) \\[8pt]
+v_f^2 &= v_i^2 + \frac{2mgd(\sin\theta - \mu\cos\theta)}{m + \tfrac{M}{2}}
+\end{aligned}
+$$
+
+**Step 5: Take the square root.**
+
+$$v_f = \sqrt{v_i^2 + \frac{2mgd(\sin\theta - \mu\cos\theta)}{m + \tfrac{M}{2}}}$$
+
+**Step 6: Plug in.**
+
+$$
+\begin{aligned}
+v_f &= \sqrt{0.80^2 + \frac{2(5)(9.8)(0.6)(\sin 30^\circ - 0.1\cos 30^\circ)}{5 + \tfrac{2}{2}}} \\[8pt]
+&= \sqrt{0.64 + \frac{58.8(0.5 - 0.0866)}{6}} \\[8pt]
+&= \sqrt{0.64 + 4.05} = \sqrt{4.69} = 2.17\ \text{m/s}
+\end{aligned}
+$$
+
+**Answer: a) 2.17 m/s.** The bracket $(\sin\theta - \mu\cos\theta)$ is positive, so the block speeds up and never stops; (e) is a trap.
+
+::: {.callout-tip title="3×5 notecard"}
+
+$$v_f = \sqrt{v_i^2 + \frac{2g\,\Delta x\,B}{m_1 + m_2 + \dfrac{I}{R^2}}}$$
+
+$$\text{Stops after:}\quad \Delta x = \frac{-\left(m_1 + m_2 + \dfrac{I}{R^2}\right)v_i^2}{2gB}$$
+
+* $m_1$ = block on the incline; $m_2$ = hanging block ($m_2 = 0$ if nothing hangs); $\theta$ = incline angle; $\mu_k$ = friction between $m_1$ and the incline.
+* $\Delta x$ = distance each block moves (m); $v_i$, $v_f$ = their shared speed at the start / end.
+* $I$, $R$ = pulley's moment of inertia and radius ($I = 0$ for a massless pulley; disk $I/R^2 = \tfrac12 M$).
+* $B$ = the "net pull" (kg), picked by direction of motion:
+    * $m_2$ falls, $m_1$ slides **up**: $B = m_2 - m_1\sin\theta - \mu_k m_1\cos\theta$.
+    * $m_1$ slides **down**, $m_2$ rises: $B = m_1\sin\theta - m_2 - \mu_k m_1\cos\theta$.
+* $B > 0$: speeds up. $B < 0$: slows down; a negative number under the root means it stops first, so use the second line.
+
+**Covers:** a block on an incline tied to a hanging block, either direction, with or without friction, with a massless or massive pulley (2015 Exam #13 is $m_2 = 0$ with a disk pulley).
+
+:::
+
+# Chapter 11: Angular momentum
+
+$L = I\omega$ (1-D). **Conservation of angular momentum:** $L_i = L_f$. These are the rotational version of inelastic collisions.
+
+**Merry-go-round (MGR) symbols:** $M$, $R$ = mass and radius of the MGR (a disk, $I = \tfrac12 MR^2$); $m$ = the person or dropped object's mass; $\omega_i$, $\omega_f$ = rotation rate before and after.
+
+## 11.1 Disk dropped on a spinning disk
+
+**Source:** Ch 11 notes, p. 1/8.
+
+**Given:**
+
+* Disk 1 (spinning): $I_1 = \tfrac12 MR^2$, $M = 500$ kg, $R = 2$ m, $\omega_{1i} = 2$ rad/s.
+* Disk 2 (dropped, not spinning): $I_2 = \tfrac12 mr^2$, $m = 200$ kg, $r = 1$ m, $\omega_{2i} = 0$.
+
+Disk 2 drops on disk 1: "it hits 1, bounces, chatters, and the two stick."
+
+**Find:** $\omega_f$, the shared angular velocity afterward.
+
+**Idea:** no outside torque, so angular momentum $L = I\omega$ is conserved: $L_i = L_f$.
+
+**Step 1: Angular momentum before and after.**
+
+$$L_i = I_1\omega_{1i} + I_2(0)$$
+
+$$L_f = (I_1 + I_2)\,\omega_f$$
+
+**Step 2: Set $L_i = L_f$ and solve for $\omega_f$.**
+
+$$
+\begin{aligned}
+I_1\omega_{1i} &= (I_1 + I_2)\,\omega_f \\[8pt]
+\omega_f &= \frac{I_1\,\omega_{1i}}{I_1 + I_2} = \frac{\tfrac12 MR^2\,\omega_{1i}}{\tfrac12 MR^2 + \tfrac12 mr^2}
+\end{aligned}
+$$
+
+**Step 3: Plug in.**
+
+$$
+\begin{aligned}
+\omega_f &= \frac{\tfrac12(500)(2)^2(2)}{\tfrac12(500)(2)^2 + \tfrac12(200)(1)^2} \\[8pt]
+&= \frac{2000}{1000 + 100} = \frac{2000}{1100} = 1.8\ \text{rad/s}
+\end{aligned}
+$$
+
+**Answer:** $\omega_f = 1.8$ rad/s.
+
+::: {.callout-tip title="3×5 notecard"}
+
+$$\omega_f = \frac{I_1\omega_{1i} + I_2\omega_{2i} \pm mvr}{I_1 + I_2 + I_{added}}$$
+
+* $I_1$, $\omega_{1i}$ = the spinning platform's moment of inertia and starting spin (merry-go-round disk: $I_1 = \tfrac12 MR^2$).
+* $I_2$, $\omega_{2i}$ = a dropped object's moment of inertia and starting spin ($\omega_{2i} = 0$ if not spinning, **negative** if counter-rotating). Leave out if there isn't one.
+* $mvr$ = a person running and jumping on: $m$ = their mass, $v$ = their speed, $r$ = distance from the axis where they land. **+** if running the same way as the rim, **−** if against it. Leave out if they just step on.
+* $I_{added}$ = what joins the platform: person or point mass $mr^2$, rod lying center-to-edge $\tfrac13 m\ell^2$, dropped disk $\tfrac12 mr^2$, ring $mr^2$.
+* **Something moves in or out** (walking, pulling in arms): $\omega_f = \dfrac{I_i\,\omega_i}{I_f}$. Rim to center: $\omega_f = \dfrac{M + 2m}{M}\omega_i$.
+* KE check: $K = \tfrac12 I\omega^2$. It drops in a "rotational collision" and rises when someone walks inward.
+
+**Covers:** objects or people dropped, stepped or jumped onto a spinning disk, counter-rotating drops, people walking in or out.
+
+:::
+
+## 11.2 Person drops onto a merry-go-round
+
+**Source:** Ch 11 notes, p. 2/8.
+
+**Given:**
+
+* Merry-go-round (MGR): a disk with $I = \tfrac12 MR^2$, $M = 500$ kg, $R = 2$ m, $\omega_i = 1$ rad/s.
+* A man with $m = 100$ kg drops straight down onto it at $r = 1$ m from the center (no running start).
+
+**Find:** $\omega_f$.
+
+**Idea:** $L_i = L_f$. The man had no angular momentum before (he wasn't moving around the axis). Afterward he's a point mass at $r$: by the parallel axis theorem, $I_{man} = I_0 + mr^2$ with $I_0 = 0$.
+
+**Step 1: Angular momentum before and after.**
+
+$$L_i = \tfrac12 MR^2\,\omega_i$$
+
+$$L_f = \left(\tfrac12 MR^2 + mr^2\right)\omega_f$$
+
+**Step 2: Solve for $\omega_f$.**
+
+$$\omega_f = \frac{\tfrac12 MR^2\,\omega_i}{\tfrac12 MR^2 + mr^2}$$
+
+**Step 3: Plug in.**
+
+$$
+\begin{aligned}
+\omega_f &= \frac{\tfrac12(500)(2)^2(1)}{\tfrac12(500)(2)^2 + (100)(1)^2} \\[8pt]
+&= \frac{1000}{1000 + 100} = \frac{1000}{1100} = 0.91\ \text{rad/s}
+\end{aligned}
+$$
+
+**Answer:** $\omega_f = 0.91$ rad/s.
+
+::: {.callout-tip title="3×5 notecard"}
+
+$$\omega_f = \frac{I_1\omega_{1i} + I_2\omega_{2i} \pm mvr}{I_1 + I_2 + I_{added}}$$
+
+* $I_1$, $\omega_{1i}$ = the spinning platform's moment of inertia and starting spin (merry-go-round disk: $I_1 = \tfrac12 MR^2$).
+* $I_2$, $\omega_{2i}$ = a dropped object's moment of inertia and starting spin ($\omega_{2i} = 0$ if not spinning, **negative** if counter-rotating). Leave out if there isn't one.
+* $mvr$ = a person running and jumping on: $m$ = their mass, $v$ = their speed, $r$ = distance from the axis where they land. **+** if running the same way as the rim, **−** if against it. Leave out if they just step on.
+* $I_{added}$ = what joins the platform: person or point mass $mr^2$, rod lying center-to-edge $\tfrac13 m\ell^2$, dropped disk $\tfrac12 mr^2$, ring $mr^2$.
+* **Something moves in or out** (walking, pulling in arms): $\omega_f = \dfrac{I_i\,\omega_i}{I_f}$. Rim to center: $\omega_f = \dfrac{M + 2m}{M}\omega_i$.
+* KE check: $K = \tfrac12 I\omega^2$. It drops in a "rotational collision" and rises when someone walks inward.
+
+**Covers:** objects or people dropped, stepped or jumped onto a spinning disk, counter-rotating drops, people walking in or out.
+
+:::
+
+## 11.3 Counter-rotating object dropped on a disk
+
+**Source:** Ch 11 notes, p. 3/8. 2015 Exam 2 #11.
+
+**Idea:** $L_i = L_f$. An object spinning the **opposite** way has a **negative** $\omega$, so its angular momentum subtracts.
+
+**Step 1: Angular momentum before and after** (1 = the bottom disk, 2 = the dropped object):
+
+$$L_i = I_1\omega_{1i} + I_2\omega_{2i}$$
+
+$$L_f = (I_1 + I_2)\,\omega_f$$
+
+**Step 2: Solve for $\omega_f$.**
+
+$$\omega_f = \frac{I_1\omega_{1i} + I_2\omega_{2i}}{I_1 + I_2}$$
+
+**Notes example. Given:**
+
+* Disk: $I_1 = \tfrac12 MR^2$, $M = 500$ kg, $R = 2$ m, $\omega_{1i} = +3$ rad/s.
+* Ring: $I_2 = mr^2$, $m = 200$ kg, $r = 1.5$ m, $\omega_{2i} = -2$ rad/s (spinning the opposite way).
+
+**Step 3: Plug in.**
+
+$$
+\begin{aligned}
+\omega_f &= \frac{\tfrac12(500)(2)^2(3) + (200)(1.5)^2(-2)}{\tfrac12(500)(2)^2 + (200)(1.5)^2} \\[8pt]
+&= \frac{3000 - 900}{1000 + 450} = \frac{2100}{1450} = 1.45\ \text{rad/s}
+\end{aligned}
+$$
+
+**Answer:** $\omega_f = 1.45$ rad/s, in the disk's original direction.
+
+**2015 Exam 2 #11. Given:**
+
+* Disk: $I_1 = \tfrac12 MR^2$, $M = 200$ kg, $R = 3$ m, $\omega_{1i} = +4$ rad/s.
+* Wheel: $I_2 = 0.8MR^2$, $M = 100$ kg, $R = 2.5$ m, $\omega_{2i} = -2$ rad/s.
+
+**Step 3: Moments of inertia.**
+
+$$I_1 = \tfrac12(200)(3)^2 = 900\ \text{kg·m}^2$$
+
+$$I_2 = 0.8(100)(2.5)^2 = 500\ \text{kg·m}^2$$
+
+**Step 4: Plug in.**
+
+$$
+\begin{aligned}
+\omega_f &= \frac{(900)(4) + (500)(-2)}{900 + 500} \\[8pt]
+&= \frac{3600 - 1000}{1400} = 1.86\ \text{rad/s}
+\end{aligned}
+$$
+
+**Answer: e) +2 rad/s**, the nearest choice (the other neighbor is d) +1.5).
+
+::: {.callout-tip title="3×5 notecard"}
+
+$$\omega_f = \frac{I_1\omega_{1i} + I_2\omega_{2i} \pm mvr}{I_1 + I_2 + I_{added}}$$
+
+* $I_1$, $\omega_{1i}$ = the spinning platform's moment of inertia and starting spin (merry-go-round disk: $I_1 = \tfrac12 MR^2$).
+* $I_2$, $\omega_{2i}$ = a dropped object's moment of inertia and starting spin ($\omega_{2i} = 0$ if not spinning, **negative** if counter-rotating). Leave out if there isn't one.
+* $mvr$ = a person running and jumping on: $m$ = their mass, $v$ = their speed, $r$ = distance from the axis where they land. **+** if running the same way as the rim, **−** if against it. Leave out if they just step on.
+* $I_{added}$ = what joins the platform: person or point mass $mr^2$, rod lying center-to-edge $\tfrac13 m\ell^2$, dropped disk $\tfrac12 mr^2$, ring $mr^2$.
+* **Something moves in or out** (walking, pulling in arms): $\omega_f = \dfrac{I_i\,\omega_i}{I_f}$. Rim to center: $\omega_f = \dfrac{M + 2m}{M}\omega_i$.
+* KE check: $K = \tfrac12 I\omega^2$. It drops in a "rotational collision" and rises when someone walks inward.
+
+**Covers:** objects or people dropped, stepped or jumped onto a spinning disk, counter-rotating drops, people walking in or out.
+
+:::
+
+## 11.4 Person runs and jumps onto the rim
+
+**Source:** Ch 11 notes, p. 4/8. 2015 Exam 2 #12.
+
+**Idea:** $L_i = L_f$. A person running in a straight line tangent to the rim has angular momentum $L = mvR$ about the axle ($m$ = their mass, $v$ = their running speed, $R$ = the rim's distance from the axis). After landing they're a point mass at the rim, $I = mR^2$.
+
+**Step 1: Angular momentum before and after** (MGR: $I = \tfrac12 MR^2$, mass $M$, radius $R$, starting spin $\omega_i$):
+
+$$L_i = \tfrac12 MR^2\,\omega_i + mvR$$
+
+$$L_f = \left(\tfrac12 MR^2 + mR^2\right)\omega_f$$
+
+**Step 2: Solve for $\omega_f$.**
+
+$$\omega_f = \frac{\tfrac12 MR^2\,\omega_i + mvR}{\tfrac12 MR^2 + mR^2}$$
+
+(If the person runs **against** the rotation, $mvR$ becomes $-mvR$.)
+
+**Notes example. Given:** $M = 500$ kg, $R = 2$ m, $\omega_i = 0.5$ rad/s; man $m = 100$ kg running at $v = 3$ m/s.
+
+**Step 3: Plug in.**
+
+$$
+\begin{aligned}
+\omega_f &= \frac{\tfrac12(500)(2)^2(0.5) + (100)(3)(2)}{\tfrac12(500)(2)^2 + (100)(2)^2} \\[8pt]
+&= \frac{500 + 600}{1000 + 400} = \frac{1100}{1400} = 0.786\ \text{rad/s}
+\end{aligned}
+$$
+
+**Answer:** $\omega_f = 0.786$ rad/s.
+
+**2015 Exam 2 #12. Given:** $M = 500$ kg, $R = 2$ m, $\omega_i = +0.7$ rad/s; child $m = 50$ kg running at $v = 10$ m/s in the same direction.
+
+**Step 3: Plug in.**
+
+$$
+\begin{aligned}
+\omega_f &= \frac{\tfrac12(500)(2)^2(0.7) + (50)(10)(2)}{\tfrac12(500)(2)^2 + (50)(2)^2} \\[8pt]
+&= \frac{700 + 1000}{1000 + 200} = \frac{1700}{1200} = 1.42\ \text{rad/s}
+\end{aligned}
+$$
+
+**Answer: c) 1.4 rad/s.**
+
+::: {.callout-tip title="3×5 notecard"}
+
+$$\omega_f = \frac{I_1\omega_{1i} + I_2\omega_{2i} \pm mvr}{I_1 + I_2 + I_{added}}$$
+
+* $I_1$, $\omega_{1i}$ = the spinning platform's moment of inertia and starting spin (merry-go-round disk: $I_1 = \tfrac12 MR^2$).
+* $I_2$, $\omega_{2i}$ = a dropped object's moment of inertia and starting spin ($\omega_{2i} = 0$ if not spinning, **negative** if counter-rotating). Leave out if there isn't one.
+* $mvr$ = a person running and jumping on: $m$ = their mass, $v$ = their speed, $r$ = distance from the axis where they land. **+** if running the same way as the rim, **−** if against it. Leave out if they just step on.
+* $I_{added}$ = what joins the platform: person or point mass $mr^2$, rod lying center-to-edge $\tfrac13 m\ell^2$, dropped disk $\tfrac12 mr^2$, ring $mr^2$.
+* **Something moves in or out** (walking, pulling in arms): $\omega_f = \dfrac{I_i\,\omega_i}{I_f}$. Rim to center: $\omega_f = \dfrac{M + 2m}{M}\omega_i$.
+* KE check: $K = \tfrac12 I\omega^2$. It drops in a "rotational collision" and rises when someone walks inward.
+
+**Covers:** objects or people dropped, stepped or jumped onto a spinning disk, counter-rotating drops, people walking in or out.
+
+:::
+
+## 11.5 Rod dropped from the center to the edge
+
+**Source:** Ch 11 notes, p. 5/8.
+
+**Given:**
+
+* MGR: a disk with $I = \tfrac12 MR^2$, $M = 500$ kg, $R = 2$ m, $\omega_i = 2$ rad/s.
+* A rod with $m = 100$ kg and length $\ell = 2$ m is dropped so it lies along a radius, center to edge.
+
+**Find:** $\omega_f$.
+
+**Idea:** $L_i = L_f$. The rod turns about **one end** (the center), so $I_{rod} = \tfrac13 m\ell^2$ (see 10.2).
+
+**Step 1: Angular momentum before and after.**
+
+$$L_i = \tfrac12 MR^2\,\omega_i$$
+
+$$L_f = \left(\tfrac12 MR^2 + \tfrac13 m\ell^2\right)\omega_f$$
+
+**Step 2: Solve for $\omega_f$.**
+
+$$\omega_f = \frac{\tfrac12 MR^2\,\omega_i}{\tfrac12 MR^2 + \tfrac13 m\ell^2}$$
+
+**Step 3: Plug in.**
+
+$$
+\begin{aligned}
+\omega_f &= \frac{\tfrac12(500)(2)^2(2)}{\tfrac12(500)(2)^2 + \tfrac13(100)(2)^2} \\[8pt]
+&= \frac{2000}{1000 + 133} = \frac{2000}{1133} = 1.76\ \text{rad/s}
+\end{aligned}
+$$
+
+**Answer:** $\omega_f = 1.76$ rad/s. His notes write 1.77; either way, pick the nearest choice.
+
+::: {.callout-tip title="3×5 notecard"}
+
+$$\omega_f = \frac{I_1\omega_{1i} + I_2\omega_{2i} \pm mvr}{I_1 + I_2 + I_{added}}$$
+
+* $I_1$, $\omega_{1i}$ = the spinning platform's moment of inertia and starting spin (merry-go-round disk: $I_1 = \tfrac12 MR^2$).
+* $I_2$, $\omega_{2i}$ = a dropped object's moment of inertia and starting spin ($\omega_{2i} = 0$ if not spinning, **negative** if counter-rotating). Leave out if there isn't one.
+* $mvr$ = a person running and jumping on: $m$ = their mass, $v$ = their speed, $r$ = distance from the axis where they land. **+** if running the same way as the rim, **−** if against it. Leave out if they just step on.
+* $I_{added}$ = what joins the platform: person or point mass $mr^2$, rod lying center-to-edge $\tfrac13 m\ell^2$, dropped disk $\tfrac12 mr^2$, ring $mr^2$.
+* **Something moves in or out** (walking, pulling in arms): $\omega_f = \dfrac{I_i\,\omega_i}{I_f}$. Rim to center: $\omega_f = \dfrac{M + 2m}{M}\omega_i$.
+* KE check: $K = \tfrac12 I\omega^2$. It drops in a "rotational collision" and rises when someone walks inward.
+
+**Covers:** objects or people dropped, stepped or jumped onto a spinning disk, counter-rotating drops, people walking in or out.
+
+:::
+
+## 11.6 Person walks from the rim to the center
+
+**Source:** Ch 11 notes, p. 7/8–8/8.
+
+**Given:**
+
+* MGR: a disk with $I = \tfrac12 MR^2$, $M = 500$ kg, $R = 2$ m, $\omega_i = 2$ rad/s.
+* A man with $m = 100$ kg rides on the rim and walks to the center.
+
+**Find:** $\omega_f$ when he reaches the center, and how the KE changes.
+
+**Idea:** "It's a conservation of angular momentum problem." His distance from the axis, $d$, goes from $R = 2$ m to $0$, so his $I = md^2$ goes from $mR^2$ to $0$.
+
+**Step 1: Angular momentum before and after.**
+
+$$L_i = \left(\tfrac12 MR^2 + mR^2\right)\omega_i$$
+
+$$L_f = \left(\tfrac12 MR^2 + m(0)^2\right)\omega_f$$
+
+**Step 2: Solve for $\omega_f$** (the $R^2$ cancels):
+
+$$
+\begin{aligned}
+\omega_f &= \frac{\tfrac12 MR^2 + mR^2}{\tfrac12 MR^2}\,\omega_i \\[8pt]
+&= \frac{\tfrac{M}{2} + m}{\tfrac{M}{2}}\,\omega_i = \frac{M + 2m}{M}\,\omega_i
+\end{aligned}
+$$
+
+**Step 3: Plug in.**
+
+$$\omega_f = \frac{500 + 2(100)}{500}(2) = \tfrac75(2) = 2.8\ \text{rad/s}$$
+
+**Step 4: KE before**, $K = \tfrac12 I\omega^2$:
+
+$$
+\begin{aligned}
+K_i &= \tfrac12\left(\tfrac12 MR^2 + mR^2\right)\omega_i^2 \\[8pt]
+&= \tfrac12\left(1000 + 400\right)(2)^2 = 2800\ \text{J}
+\end{aligned}
+$$
+
+**Step 5: KE after.**
+
+$$
+\begin{aligned}
+K_f &= \tfrac12\left(\tfrac12 MR^2\right)\omega_f^2 \\[8pt]
+&= \tfrac12(1000)(2.8)^2 = 3920\ \text{J}
+\end{aligned}
+$$
+
+**Answer:** $\omega_f = 2.8$ rad/s. The KE goes **up**, from 2800 J to 3920 J: "It took energy to move from rim to the center."
+
+::: {.callout-tip title="3×5 notecard"}
+
+$$\omega_f = \frac{I_1\omega_{1i} + I_2\omega_{2i} \pm mvr}{I_1 + I_2 + I_{added}}$$
+
+* $I_1$, $\omega_{1i}$ = the spinning platform's moment of inertia and starting spin (merry-go-round disk: $I_1 = \tfrac12 MR^2$).
+* $I_2$, $\omega_{2i}$ = a dropped object's moment of inertia and starting spin ($\omega_{2i} = 0$ if not spinning, **negative** if counter-rotating). Leave out if there isn't one.
+* $mvr$ = a person running and jumping on: $m$ = their mass, $v$ = their speed, $r$ = distance from the axis where they land. **+** if running the same way as the rim, **−** if against it. Leave out if they just step on.
+* $I_{added}$ = what joins the platform: person or point mass $mr^2$, rod lying center-to-edge $\tfrac13 m\ell^2$, dropped disk $\tfrac12 mr^2$, ring $mr^2$.
+* **Something moves in or out** (walking, pulling in arms): $\omega_f = \dfrac{I_i\,\omega_i}{I_f}$. Rim to center: $\omega_f = \dfrac{M + 2m}{M}\omega_i$.
+* KE check: $K = \tfrac12 I\omega^2$. It drops in a "rotational collision" and rises when someone walks inward.
+
+**Covers:** objects or people dropped, stepped or jumped onto a spinning disk, counter-rotating drops, people walking in or out.
+
+:::
+
+# Review: Chapters 4 and 5 (both were on the 2015 Exam 2)
+
+The professor listed Chapters 6–11 for this exam, but the 2015 Exam 2 also had one projectile question (Ch 4) and one forces-on-a-ramp question (Ch 5). They're worked here so you can find them.
+
+## R.1 Projectile from a ledge: maximum height (Ch 4)
+
+**Source:** 2015 Exam 2 #2. Same type as Practice Exam 2-1 #2.
+
+**Given:** $h = 3$ m (height of the ledge above the ground), $v_0 = 20$ m/s (launch speed), $\theta = 45^\circ$ (launch angle above the horizontal).
+
+**Find:** $H$, the highest point of the path, measured from the **ground**.
+
+**Idea:** split the launch velocity into horizontal and vertical parts. Only the vertical motion decides the height. At the highest point the vertical velocity is zero ($v_y = 0$), while the horizontal velocity keeps going. Take up as $+$, so the vertical acceleration is $-g$.
+
+**Step 1: Split the launch velocity.**
+
+$$v_{0x} = v_0\cos\theta$$
+
+$$v_{0y} = v_0\sin\theta$$
+
+**Step 2: Vertical kinematics from the launch point to the top.** Use the equation without time, $v_y^2 = v_{0y}^2 + 2a\,\Delta y$, with $a = -g$ and $v_y = 0$ at the top:
+
+$$
+\begin{aligned}
+v_y^2 &= v_{0y}^2 - 2g\,\Delta y \\[8pt]
+0 &= (v_0\sin\theta)^2 - 2g\,\Delta y \\[8pt]
+\Delta y &= \frac{(v_0\sin\theta)^2}{2g}
+\end{aligned}
+$$
+
+$\Delta y$ is the height gained **above the ledge**.
+
+**Step 3: Add the ledge height.**
+
+$$H = h + \Delta y = h + \frac{(v_0\sin\theta)^2}{2g}$$
+
+**Step 4: Plug in.**
+
+$$
+\begin{aligned}
+H &= 3 + \frac{(20\sin 45^\circ)^2}{2(9.8)} \\[8pt]
+&= 3 + \frac{(14.14)^2}{19.6} = 3 + \frac{200}{19.6} \\[8pt]
+&= 3 + 10.2 = 13.2\ \text{m}
+\end{aligned}
+$$
+
+**Answer: c) 13.2 m.** (b) 10.2 m forgets to add the ledge.
+
+**Same answer by energy ($E_i = E_f$, no friction).** Put $h = 0$ at the ground. At the top the mass still moves horizontally at $v_0\cos\theta$, so its KE is **not** zero there:
+
+$$E_i = \tfrac12 mv_0^2 + mgh$$
+
+$$E_f = \tfrac12 m(v_0\cos\theta)^2 + mgH$$
+
+$$
+\begin{aligned}
+\tfrac12 mv_0^2 + mgh &= \tfrac12 mv_0^2\cos^2\theta + mgH \\[8pt]
+gH &= gh + \tfrac12 v_0^2(1 - \cos^2\theta) = gh + \tfrac12 v_0^2\sin^2\theta \\[8pt]
+H &= h + \frac{(v_0\sin\theta)^2}{2g}
+\end{aligned}
+$$
+
+**Time to the top**, if it's asked: $v_y = v_{0y} - gt = 0$, so $t_{top} = \dfrac{v_0\sin\theta}{g} = \dfrac{14.14}{9.8} = 1.44$ s.
+
+**Practice Exam 2-1 #2 with the same steps:** $h = 5.0$ m, $v_0 = 25$ m/s, $\theta = 30^\circ$:
+
+$$H = h + \frac{(v_0\sin\theta)^2}{2g} = 5.0 + \frac{(25\sin 30^\circ)^2}{2(9.8)} = 5.0 + \frac{(12.5)^2}{19.6} = 5.0 + 7.97 = 13.0\ \text{m}$$
+
+::: {.callout-tip title="3×5 notecard"}
+
+$$H = h + \frac{(v_0\sin\theta)^2}{2g}$$
+
+$$t_{top} = \frac{v_0\sin\theta}{g}$$
+
+* $H$ = highest point above the ground (m); $h$ = launch height above the ground (m; $0$ if launched from the ground).
+* $v_0$ = launch speed (m/s); $\theta$ = launch angle above the horizontal; $t_{top}$ = time to reach the top (s).
+
+**Covers:** maximum height from a ledge or the ground, time to the top.
+
+:::
+
+## R.2 Sliding up a rough ramp: time to stop (Ch 5)
+
+**Source:** 2015 Exam 2 #4. Same physics as 7.6, but a **time** question, so it needs forces and kinematics.
+
+**Given:** $m = 5$ kg, $\mu_k = 0.6$, $\theta = 5^\circ$, $v_i = 7$ m/s sliding up.
+
+**Find:** the time $\Delta t$ until it stops.
+
+**Idea:** take up the slope as $+$. Going up, gravity's slope component $mg\sin\theta$ and friction $\mu_k N$ both point **down** the slope. On an incline, $N = mg\cos\theta$.
+
+**Step 1: Forces perpendicular to the slope.**
+
+$$
+\begin{aligned}
+N - mg\cos\theta &= 0 \\[8pt]
+N &= mg\cos\theta
+\end{aligned}
+$$
+
+**Step 2: Newton's 2nd law along the slope.**
+
+$$
+\begin{aligned}
+ma &= -mg\sin\theta - \mu_k N \\[8pt]
+ma &= -mg\sin\theta - \mu_k mg\cos\theta \\[8pt]
+a &= -g(\sin\theta + \mu_k\cos\theta)
+\end{aligned}
+$$
+
+**Step 3: Kinematics, $v_f = v_i + a\,\Delta t$ with $v_f = 0$.**
+
+$$
+\begin{aligned}
+0 &= v_i - g(\sin\theta + \mu_k\cos\theta)\,\Delta t \\[8pt]
+\Delta t &= \frac{v_i}{g(\sin\theta + \mu_k\cos\theta)}
+\end{aligned}
+$$
+
+**Step 4: Plug in.**
+
+$$
+\begin{aligned}
+\Delta t &= \frac{7}{9.8(\sin 5^\circ + 0.6\cos 5^\circ)} \\[8pt]
+&= \frac{7}{9.8(0.0872 + 0.5977)} = \frac{7}{6.71} = 1.04\ \text{s}
+\end{aligned}
+$$
+
+**Answer: b) 1.0 s.** The 5 kg mass cancels.
+
+**Same answer with energy + kinematics.** Energy (7.6, with $v_f = 0$) gives the stopping distance, and the average-velocity equation turns it into a time:
+
+$$
+\begin{aligned}
+\Delta x &= \frac{v_i^2}{2g(\sin\theta + \mu_k\cos\theta)} \\[8pt]
+\Delta x &= \frac{v_i + v_f}{2}\,\Delta t = \frac{v_i}{2}\,\Delta t \\[8pt]
+\Delta t &= \frac{2\Delta x}{v_i} = \frac{v_i}{g(\sin\theta + \mu_k\cos\theta)}
+\end{aligned}
+$$
+
+::: {.callout-tip title="3×5 notecard"}
+
+$$\textbf{Up the slope:}\quad v_f = \sqrt{v_i^2 - 2g\,\Delta x(\sin\theta + \mu_k\cos\theta)}$$
+
+$$\textbf{Down the slope:}\quad v_f = \sqrt{v_i^2 + 2g\,\Delta x(\sin\theta - \mu_k\cos\theta)}$$
+
+$$\textbf{Stops after (up):}\quad \Delta x = \frac{v_i^2}{2g(\sin\theta + \mu_k\cos\theta)}$$
+
+$$\textbf{Stops after (down):}\quad \Delta x = \frac{v_i^2}{2g(\mu_k\cos\theta - \sin\theta)}$$
+
+$$\textbf{Time:}\quad t = \frac{2\,\Delta x}{v_i + v_f}$$
+
+* $v_i$, $v_f$ = speed at the start / end (m/s); $\Delta x$ = distance **along the slope** (m).
+* $\theta$ = incline angle from the horizontal; $\mu_k$ = kinetic friction ($\mu_k = 0$ for frictionless).
+* **Negative under the root** = it stops first. Use the stopping-distance line.
+* Sliding down only stops if $\mu_k\cos\theta > \sin\theta$.
+* Time with forces instead: $a = g(\sin\theta \pm \mu_k\cos\theta)$ (+ going up, − going down), then $t = \dfrac{|v_f - v_i|}{a}$.
+
+**Covers:** frictionless or rough inclines, sliding up or down, how fast after a distance, how far until it stops, how long it takes.
+
+:::
+
+# The 3×5 notecard: every formula in one place
+
+One card per problem type. Each formula is general: it covers the variations of that problem, and every symbol is defined in its box.
+
+## Curves (6.1–6.4)
+
+::: {.callout-tip title="Notecard"}
+
+$$v_{max} = \sqrt{gr\,\frac{\tan\theta + \mu_s}{1 - \mu_s\tan\theta}}$$
+
+$$v_{min} = \sqrt{gr\,\frac{\tan\theta - \mu_s}{1 + \mu_s\tan\theta}}$$
+
+* $g = 9.8$ m/s², $r$ = radius of the curve (m).
+* $\theta$ = bank angle from the horizontal; $\mu_s$ = coefficient of static friction (tires on road).
+* **Flat curve:** $\theta = 0$ gives $v_{max} = \sqrt{\mu_s gr}$.
+* **No friction:** $\mu_s = 0$ gives the single speed $v = \sqrt{gr\tan\theta}$.
+* If $\tan\theta < \mu_s$, there is no $v_{min}$ (the car can sit still on the bank).
+* **Answer choices:** round a $v_{max}$ **down** and a $v_{min}$ **up** to a choice that works.
+
+**Covers:** flat curves, banked curves (max or min), frictionless banks. To find $\mu_s$ or $r$ instead, solve the same equation for it.
+
+:::
+
+## Free fall and roller coasters (7.1, 7.3)
+
+::: {.callout-tip title="Notecard"}
+
+$$v_f = \sqrt{v_i^2 + 2g(h_i - h_f)}$$
+
+* $v_i$, $v_f$ = speed at the start / end (m/s); $h_i$, $h_f$ = height at the start / end (m), from any reference level.
+* Frictionless only. Starting from rest: $v_f = \sqrt{2g\,\Delta h}$, where $\Delta h$ = the drop.
+* If the object **rises** ($h_f > h_i$), the bracket is negative and it slows down.
+
+**Covers:** dropped objects, roller coasters at any point on the track, frictionless slides from a height.
+
+:::
+
+## Halfpipe (7.4)
+
+::: {.callout-tip title="Notecard"}
+
+$$h_f = h_i + \frac{v_i^2}{2g} - n\,\mu L$$
+
+* $h_i$ = starting height (m); $h_f$ = height reached on the far side (m); $v_i$ = starting speed ($0$ if starting from rest).
+* $\mu$ = friction on the rough patch; $L$ = length of the rough patch (m); $n$ = number of times it crosses the patch.
+* Frictionless: $h_f = h_i$. One crossing from rest: $h_f = h_i - \mu L$.
+* **Number of full crossings before it stops** = the whole-number part of $\dfrac{h_i}{\mu L}$ (from rest).
+
+**Covers:** frictionless halfpipes, one rough crossing, several back-and-forth passes, a pushed start.
+
+:::
+
+## Single block on an incline (7.5–7.8, R.2)
+
+::: {.callout-tip title="Notecard"}
+
+$$\textbf{Up the slope:}\quad v_f = \sqrt{v_i^2 - 2g\,\Delta x(\sin\theta + \mu_k\cos\theta)}$$
+
+$$\textbf{Down the slope:}\quad v_f = \sqrt{v_i^2 + 2g\,\Delta x(\sin\theta - \mu_k\cos\theta)}$$
+
+$$\textbf{Stops after (up):}\quad \Delta x = \frac{v_i^2}{2g(\sin\theta + \mu_k\cos\theta)}$$
+
+$$\textbf{Stops after (down):}\quad \Delta x = \frac{v_i^2}{2g(\mu_k\cos\theta - \sin\theta)}$$
+
+$$\textbf{Time:}\quad t = \frac{2\,\Delta x}{v_i + v_f}$$
+
+* $v_i$, $v_f$ = speed at the start / end (m/s); $\Delta x$ = distance **along the slope** (m).
+* $\theta$ = incline angle from the horizontal; $\mu_k$ = kinetic friction ($\mu_k = 0$ for frictionless).
+* **Negative under the root** = it stops first. Use the stopping-distance line.
+* Sliding down only stops if $\mu_k\cos\theta > \sin\theta$.
+* Time with forces instead: $a = g(\sin\theta \pm \mu_k\cos\theta)$ (+ going up, − going down), then $t = \dfrac{|v_f - v_i|}{a}$.
+
+**Covers:** frictionless or rough inclines, sliding up or down, how fast after a distance, how far until it stops, how long it takes.
+
+:::
+
+## Springs (7.9, 7.10)
+
+::: {.callout-tip title="Notecard"}
+
+$$\tfrac12 kx^2 = \tfrac12 mv^2 + mgh$$
+
+$$\text{Compression to stop a mass:}\quad x = \sqrt{\frac{2mgh + mv_i^2}{k}}$$
+
+$$\text{Launch straight up:}\quad h = \frac{kx^2}{2mg}$$
+
+$$\text{Launch along a level floor:}\quad v = x\sqrt{\frac{k}{m}}$$
+
+* $k$ = spring constant (N/m); $x$ = how far the spring is compressed or stretched (m).
+* $m$ = the mass (kg); $v$ = its speed when the spring is relaxed (m/s); $h$ = height above (or drop to) the spring's position (m).
+* For a launch, measure $h$ from the **release point**. Frictionless only.
+
+**Covers:** a mass sliding down into a spring, vertical spring launches, horizontal spring launches.
+
+:::
+
+## Power (7.11)
+
+::: {.callout-tip title="Notecard"}
+
+$$P = \frac{W}{t} = \frac{mgh}{t} = Fv$$
+
+* $P$ = power (W = J/s); $W$ = work or energy (J); $t$ = time (s).
+* $m$ = mass lifted (kg); $h$ = height gained (m).
+* $F$ = force applied (N); $v$ = speed it moves at (m/s), for a lift or pull at steady speed.
+
+**Covers:** stairs, lifts, motors, pulling at constant speed.
+
+:::
+
+## Incline + hanging mass + pulley (7.12, 7.13, 10.6)
+
+::: {.callout-tip title="Notecard"}
+
+$$v_f = \sqrt{v_i^2 + \frac{2g\,\Delta x\,B}{m_1 + m_2 + \dfrac{I}{R^2}}}$$
+
+$$\text{Stops after:}\quad \Delta x = \frac{-\left(m_1 + m_2 + \dfrac{I}{R^2}\right)v_i^2}{2gB}$$
+
+* $m_1$ = block on the incline; $m_2$ = hanging block ($m_2 = 0$ if nothing hangs); $\theta$ = incline angle; $\mu_k$ = friction between $m_1$ and the incline.
+* $\Delta x$ = distance each block moves (m); $v_i$, $v_f$ = their shared speed at the start / end.
+* $I$, $R$ = pulley's moment of inertia and radius ($I = 0$ for a massless pulley; disk $I/R^2 = \tfrac12 M$).
+* $B$ = the "net pull" (kg), picked by direction of motion:
+    * $m_2$ falls, $m_1$ slides **up**: $B = m_2 - m_1\sin\theta - \mu_k m_1\cos\theta$.
+    * $m_1$ slides **down**, $m_2$ rises: $B = m_1\sin\theta - m_2 - \mu_k m_1\cos\theta$.
+* $B > 0$: speeds up. $B < 0$: slows down; a negative number under the root means it stops first, so use the second line.
+
+**Covers:** a block on an incline tied to a hanging block, either direction, with or without friction, with a massless or massive pulley (2015 Exam #13 is $m_2 = 0$ with a disk pulley).
+
+:::
+
+## Loop-the-loop (7.14)
+
+::: {.callout-tip title="Notecard"}
+
+$$v_{top,\,min} = \sqrt{gR}$$
+
+$$v_{bottom,\,min} = \sqrt{5gR}$$
+
+$$h_{min} = \tfrac52 R$$
+
+$$v_{top}^2 = v_{bottom}^2 - 4gR = 2g(h - 2R)$$
+
+$$\text{Top:}\quad N = \frac{mv_{top}^2}{R} - mg$$
+
+$$\text{Bottom:}\quad N = \frac{mv_{bottom}^2}{R} + mg$$
+
+* $R$ = loop radius (m); $h$ = starting height above the bottom of the loop, starting from rest (m); $m$ = mass (kg).
+* $v_{top}$, $v_{bottom}$ = speed at the top / bottom of the loop; $N$ = normal force from the track (N).
+* "Barely" makes it = $N = 0$ at the top. Launched from $h = \tfrac52 R$: $N_{bottom} = 6mg$.
+* **Answer choices:** these are minimums, so round **up** to a choice that works.
+
+**Covers:** minimum speed at the top or bottom, minimum launch height, normal force at the top or bottom for any launch height.
+
+:::
+
+## Projectile from a ledge (R.1)
+
+::: {.callout-tip title="Notecard"}
+
+$$H = h + \frac{(v_0\sin\theta)^2}{2g}$$
+
+$$t_{top} = \frac{v_0\sin\theta}{g}$$
+
+* $H$ = highest point above the ground (m); $h$ = launch height above the ground (m; $0$ if launched from the ground).
+* $v_0$ = launch speed (m/s); $\theta$ = launch angle above the horizontal; $t_{top}$ = time to reach the top (s).
+
+**Covers:** maximum height from a ledge or the ground, time to the top.
+
+:::
+
+## Force from a momentum change (9.1)
+
+::: {.callout-tip title="Notecard"}
+
+$$F = \frac{m(v_f - v_i)}{t}$$
+
+* $m$ = mass (kg); $v_i$, $v_f$ = velocity before / after **with signs** (reversing direction flips the sign); $t$ = contact time (s).
+* Bounces straight back at the same speed: $|F| = \dfrac{2mv}{t}$. Comes to a stop: $|F| = \dfrac{mv}{t}$.
+* $mv$ alone is momentum (kg·m/s), and $m(v_f - v_i)$ is the impulse (N·s); neither is a force.
+
+**Covers:** bounces, catches, stops, any average force from a change in velocity.
+
+:::
+
+## Sticking collisions (9.2)
+
+::: {.callout-tip title="Notecard"}
+
+$$v_f = \frac{m_1v_{1i} + m_2v_{2i}}{m_1 + m_2}$$
+
+$$\frac{K_f}{K_i} = \frac{(m_1 + m_2)\,v_f^2}{m_1v_{1i}^2 + m_2v_{2i}^2}$$
+
+* $m_1$, $m_2$ = the two masses; $v_{1i}$, $v_{2i}$ = velocities before, **with signs** (pick a + direction).
+* $v_f$ = shared velocity after they stick; $K_i$, $K_f$ = total kinetic energy before / after.
+* One object at rest ($v_{2i} = 0$): $\dfrac{K_f}{K_i} = \dfrac{m_1}{m_1 + m_2}$.
+
+**Covers:** any objects that stick, moving the same way or toward each other; symbolic masses like $2m$ and speeds like $3v$ cancel.
+
+:::
+
+## Elastic collisions and the cue ball (9.3, 9.4)
+
+::: {.callout-tip title="Notecard"}
+
+$$v_{1f} = \frac{(m_1 - m_2)v_{1i} + 2m_2v_{2i}}{m_1 + m_2}$$
+
+$$v_{2f} = v_{1i} + v_{1f} - v_{2i}$$
+
+* $m_1$, $m_2$ = the two masses; $v_{1i}$, $v_{2i}$ = velocities before; $v_{1f}$, $v_{2f}$ = velocities after.
+* **Every velocity has a sign.** Pick + (say, right); anything moving left is negative. A negative answer means it moves left.
+* Either object can be "object 1".
+* Equal masses, object 2 at rest (cue ball and 8-ball): $v_{1f} = 0$ and $v_{2f} = v_{1i}$.
+
+**Covers:** any 1-D elastic collision: head-on, catching up, one at rest, equal or unequal masses.
+
+:::
+
+## Ballistic pendulum (9.5)
+
+::: {.callout-tip title="Notecard"}
+
+$$v = \frac{M + m}{m}\sqrt{2gh}$$
+
+$$h = \frac{1}{2g}\left(\frac{mv}{M + m}\right)^2$$
+
+$$\frac{K_f}{K_i} = \frac{m}{M + m}$$
+
+* $m$ = bullet mass; $M$ = block mass; $v$ = bullet speed before the hit (m/s); $h$ = height the block swings up (m).
+* Block + bullet speed right after the hit: $V = \dfrac{mv}{M + m} = \sqrt{2gh}$.
+* $K_f/K_i$ = fraction of the bullet's KE left in the swinging block.
+
+**Covers:** finding the bullet speed, the swing height, the speed right after the hit, or the fraction of KE kept.
+
+:::
+
+## Rotational kinematics (10.1)
+
+::: {.callout-tip title="Notecard"}
+
+$$\omega_f = \omega_i + \alpha t$$
+
+$$\Delta\theta = \frac{\omega_i + \omega_f}{2}\,t$$
+
+$$\omega_f^2 = \omega_i^2 + 2\alpha\,\Delta\theta$$
+
+$$\Delta\theta = \omega_i t + \tfrac12\alpha t^2$$
+
+* $\omega_i$, $\omega_f$ = angular velocity at the start / end (rad/s); $\alpha$ = constant angular acceleration (rad/s²).
+* $\Delta\theta$ = angle turned (**radians**; 1 rev = $2\pi$ rad); $t$ = time (s).
+* Pick the equation that leaves out the one quantity you're not given and not asked for.
+
+**Covers:** finding $\alpha$, $t$, $\Delta\theta$ or $\omega$ for anything spinning up or slowing down at a steady rate.
+
+:::
+
+## Parallel axis theorem (10.2)
+
+::: {.callout-tip title="Notecard"}
+
+$$I = I_{cm} + md^2$$
+
+**$d$ = distance from the object's CENTER to the new axis**, not from its end or edge.
+
+**Rod, axis a distance $a$ from one end:**
+
+$$I = m\left[\frac{\ell^2}{12} + \left(\frac{\ell}{2} - a\right)^2\right]$$
+
+**Rod about one end** ($a = 0$):
+
+$$I = \tfrac13 m\ell^2$$
+
+**Disk about a point on its rim:**
+
+$$I = \tfrac32 MR^2$$
+
+**Ring about a point on its rim:**
+
+$$I = 2MR^2$$
+
+**Point mass at distance $r$:**
+
+$$I = mr^2$$
+
+**System of pieces** (all about the same axis):
+
+$$I_{total} = I_1 + I_2 + \cdots$$
+
+* $I$ = moment of inertia about the new axis (kg·m²); $I_{cm}$ = about the object's own center (his $I_0$); $m$ or $M$ = the object's mass (kg).
+* $\ell$ = rod length (m); $a$ = how far the axis is from the **end** of the rod (m); $R$ = radius (m); $r$ = a point mass's distance from the axis (m).
+* $I_{cm}$ values: rod $\tfrac1{12}m\ell^2$, disk $\tfrac12 MR^2$, ring $MR^2$, sphere $\tfrac25 MR^2$, point mass $0$.
+* **Never** add $md^2$ to $\tfrac13 m\ell^2$. That value is already about the end.
+
+**Covers:** rods pivoted anywhere along their length, disks or rings spun about their rim, people or objects placed on a turntable, total $I$ of a system.
+
+:::
+
+## Rolling acceleration (10.3)
+
+::: {.callout-tip title="Notecard"}
+
+$$a = \frac{g\sin\theta}{1 + \dfrac{I}{mR^2}}$$
+
+* $a$ = acceleration of the center down the incline (m/s²); $\theta$ = incline angle.
+* $I$ = the rolling object's moment of inertia; $m$, $R$ = its mass and radius.
+* Sphere $\tfrac57 g\sin\theta$; disk $\tfrac23 g\sin\theta$; ring $\tfrac12 g\sin\theta$; sliding $g\sin\theta$.
+
+**Covers:** acceleration of any object rolling without slipping down an incline.
+
+:::
+
+## Atwood's machine and hanging mass on a pulley (7.2, 10.4)
+
+::: {.callout-tip title="Notecard"}
+
+$$v_f = \sqrt{v_i^2 + \frac{2gh(m_1 - m_2)}{m_1 + m_2 + \dfrac{I}{R^2}}}$$
+
+$$a = \frac{(m_1 - m_2)g}{m_1 + m_2 + \dfrac{I}{R^2}}$$
+
+* $m_1$ = the hanging mass that **falls**; $m_2$ = the hanging mass that **rises**.
+* $h$ = distance each mass moves (m); $v_i$, $v_f$ = their shared speed at the start / end.
+* $I$, $R$ = the pulley's moment of inertia and radius. Copy $I$ from the problem; $R$ cancels (disk $I/R^2 = \tfrac12 M$, ring $= M$, massless $= 0$).
+* **One hanging mass** (string wrapped on a pulley): set $m_2 = 0$.
+* String tension on the falling mass: $T = m_1(g - a)$.
+
+**Covers:** Atwood's machine with a massless or massive pulley, a single mass on a pulley with any shape. (A mass on an **incline** uses the 7.12 card.)
+
+:::
+
+## Rolling speed at the bottom (10.5)
+
+::: {.callout-tip title="Notecard"}
+
+$$v = \sqrt{\frac{2gh}{1 + \dfrac{I}{mR^2}}}$$
+
+$$\omega = \frac{v}{R}$$
+
+* $v$ = speed of the center at the bottom (m/s); $\omega$ = spin rate at the bottom (rad/s); $h$ = vertical drop (m), starting from rest.
+* $I$ = the object's moment of inertia; $m$, $R$ = its mass and radius ($R$ matters for $\omega$, not for $v$).
+* Ring $\sqrt{gh}$; disk $\sqrt{\tfrac43 gh}$; sphere $\sqrt{\tfrac{10}{7}gh}$; sliding $\sqrt{2gh}$.
+
+**Covers:** speed or rotational velocity of any rolling object at the bottom; which one wins a race (sphere, then disk, then ring).
+
+:::
+
+## Angular momentum (11.1–11.6)
+
+::: {.callout-tip title="Notecard"}
+
+$$\omega_f = \frac{I_1\omega_{1i} + I_2\omega_{2i} \pm mvr}{I_1 + I_2 + I_{added}}$$
+
+* $I_1$, $\omega_{1i}$ = the spinning platform's moment of inertia and starting spin (merry-go-round disk: $I_1 = \tfrac12 MR^2$).
+* $I_2$, $\omega_{2i}$ = a dropped object's moment of inertia and starting spin ($\omega_{2i} = 0$ if not spinning, **negative** if counter-rotating). Leave out if there isn't one.
+* $mvr$ = a person running and jumping on: $m$ = their mass, $v$ = their speed, $r$ = distance from the axis where they land. **+** if running the same way as the rim, **−** if against it. Leave out if they just step on.
+* $I_{added}$ = what joins the platform: person or point mass $mr^2$, rod lying center-to-edge $\tfrac13 m\ell^2$, dropped disk $\tfrac12 mr^2$, ring $mr^2$.
+* **Something moves in or out** (walking, pulling in arms): $\omega_f = \dfrac{I_i\,\omega_i}{I_f}$. Rim to center: $\omega_f = \dfrac{M + 2m}{M}\omega_i$.
+* KE check: $K = \tfrac12 I\omega^2$. It drops in a "rotational collision" and rises when someone walks inward.
+
+**Covers:** objects or people dropped, stepped or jumped onto a spinning disk, counter-rotating drops, people walking in or out.
+
+:::
+
+
+# 2015 Exam 2 answer key (from the worked problems above)
+
+| # | Topic | Worked in | Computed | Answer |
+|:-:|:--|:-:|:--|:-:|
+| 1 | Halfpipe with friction patch | 7.4 | 6.5 m | e |
+| 2 | Projectile from a ledge | R.1 | 13.2 m | c |
+| 3 | Loop, minimum entry speed | 7.14 | 22.1 m/s (minimum, so round up) | d |
+| 4 | Rough ramp, time to stop | R.2 | 1.04 s | b |
+| 5 | Vertical spring launch | 7.10 | 0.82 m | b |
+| 6 | Elastic collision | 9.3 | +2.67 m/s | b |
+| 7 | Inelastic, KE fraction | 9.2 | 93% | e |
+| 8 | Ballistic pendulum, KE fraction | 9.5 | 0.05% | a |
+| 9 | Pulley with $I$, acceleration | 10.4 | 0.754 m/s² | c |
+| 10 | Rolling sphere, $\omega$ | 10.5 | 374 rad/s | d |
+| 11 | Counter-rotating stack | 11.3 | 1.86 rad/s (nearest) | e |
+| 12 | Child jumps onto MGR | 11.4 | 1.42 rad/s | c |
+| 13 | Incline + friction + pulley | 10.6 | 2.17 m/s | a |
+
+This key comes from working the problems with the professor's methods. He never published an official key, so #3 and #11 are judgment calls based on the answer-choice rules in the study guide.
