@@ -38,10 +38,6 @@ $v_t^2=v_b^2-4gR=2g(h-2R)$. $N_{top}=\frac{mv_t^2}{R}-mg$, $N_{bot}=\frac{mv_b^2
 \end{E}
 \sep
 \begin{E}
-\hd{Energy} $E_i+E_{add}=E_f+E_{lost}$; $E_{lost}=\mu N d$; incline $N=mg\cos\theta$. Never through a collision.
-\end{E}
-\sep
-\begin{E}
 \hd{Fall / coaster} (no friction) $v_f=\sqrt{v_i^2+2g(h_i-h_f)}$.
 \end{E}
 \sep
@@ -67,8 +63,9 @@ $\sqrt{-}$ = stops first. Time: $t=\frac{2\Delta x}{v_i+v_f}$.
 \end{E}
 \sep
 \begin{E}
-\hd{Atwood / mass on pulley} ($m_1$ falls, $m_2$ rises; one mass: $m_2{=}0$)
-$v_f^2=v_i^2+\frac{2gh(m_1-m_2)}{m_1+m_2+I/R^2}$, $a=\frac{(m_1-m_2)g}{m_1+m_2+I/R^2}$, $T=m_1(g-a)$.
+\hd{Atwood / mass on pulley} ($m_1$ falls, $m_2$ rises)
+$v_f^2=v_i^2+\frac{2gh(m_1-m_2)}{m_1+m_2+I/R^2}$, $a=\frac{(m_1-m_2)g}{m_1+m_2+I/R^2}$, $T=m_1(g-a)$.\par
+One mass: $a=\frac{mg}{m+I/R^2}$, $v_f^2=v_i^2+\frac{2mgh}{m+I/R^2}$.\par
 $I/R^2$: massless $0$, disk $\tfrac12M$, ring $M$, given $kMR^2\to kM$.
 \end{E}
 \sep
@@ -123,19 +120,23 @@ Equal $m$, 2 at rest: $v_{1f}=0$, $v_{2f}=v_{1i}$.
 \end{E}
 \sep
 \begin{E}
-\hd{Rolling} $v=\sqrt{\frac{2gh}{1+I/mR^2}}$, $\omega=\frac{v}{R}$, $a=\frac{g\sin\theta}{1+I/mR^2}$.
-Ring $\sqrt{gh}$, disk $\sqrt{\tfrac43gh}$, sphere $\sqrt{\tfrac{10}7gh}$, slide $\sqrt{2gh}$.
+\hd{Rolling} (from rest, drop $h$)\enspace $\omega=\frac{v}{R}$\par
+{\renewcommand{\arraystretch}{1.15}\begin{tabular}{@{}l@{\enspace}l@{\qquad}l@{}}
+Ring & $v=\sqrt{gh}$ & $a=\tfrac12g\sin\theta$\\
+Disk & $v=\sqrt{\tfrac43gh}$ & $a=\tfrac23g\sin\theta$\\
+Sphere & $v=\sqrt{\tfrac{10}{7}gh}$ & $a=\tfrac57g\sin\theta$\\
+Slide & $v=\sqrt{2gh}$ & $a=g\sin\theta$
+\end{tabular}}
 \end{E}
 \sep
 \begin{E}
-\hd{Angular momentum} ($L_i=L_f$) $\omega_f=\frac{I_1\omega_1+I_2\omega_2\pm mvr}{I_1+I_2+I_{add}}$.
-$\omega_2<0$ counter-rotating; $-mvr$ runs against rim; drop/step on: no $mvr$.
-$I_{add}$: person $mr^2$, rod center$\to$edge $\tfrac13m\ell^2$, disk $\tfrac12mr^2$.
-Walk in/out: $\omega_f=\frac{I_i}{I_f}\omega_i$; rim$\to$center $\omega_f=\frac{M+2m}{M}\omega_i$. $K=\tfrac12I\omega^2$.
-\end{E}
-\sep
-\begin{E}
-\hd{Pick the law} speed/height: energy; circle: $\Sigma F=\frac{mv^2}{r}$; hit: momentum; time: forces; spin change: $L_i=L_f$.
+\hd{Angular momentum} ($L_i=L_f$)\par
+\centerline{$\displaystyle\omega_f=\frac{I_1\omega_1+I_2\omega_2\pm mvr}{I_1+I_2+I_{add}}$}
+$I_1,\omega_1$: spinning disk ($\tfrac12MR^2$).\par
+$I_2,\omega_2$: dropped object; $\omega_2{=}0$ if not spinning, $\omega_2{<}0$ if counter-rotating.\par
+$\pm mvr$: person runs and jumps on ($+$ with rim, $-$ against); none if they just step on.\par
+$I_{add}$ (what lands): person $mr^2$, rod center$\to$edge $\tfrac13m\ell^2$, disk $\tfrac12mr^2$, ring $mr^2$.\par
+Walk in/out: $\omega_f=\frac{I_i}{I_f}\omega_i$; rim$\to$center $\omega_f=\frac{M+2m}{M}\omega_i$.
 \end{E}
 \end{multicols}
 ```
