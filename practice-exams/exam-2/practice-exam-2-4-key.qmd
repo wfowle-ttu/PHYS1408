@@ -1,0 +1,374 @@
+---
+title: "PHYS1408 Practice Exam 2-4 — Answer Key"
+subtitle: "Worked solutions"
+format:
+  pdf:
+    geometry: margin=0.75in
+    fontsize: 11pt
+  html:
+    embed-resources: true
+    toc: true
+---
+
+All answers were checked numerically with `_scripts/build_exam_2_4.py`. $g = 9.8\ \text{m/s}^2$ throughout.
+
+Practice Exam 2-4 uses the same problem types as Exams 2-1 through 2-3 with new numbers and new twists (find $\mu$ instead of a height, walk **out** instead of in, power from $Fv$, a one-mass ring pulley). Question 2 is a **minimum** trap: round up to the choice that works. The last column says which 3×5 notecard entry solves each question.
+
+| Q | Answer | Value | Topic | Notecard entry |
+|:-:|:-:|:-:|:--|:--|
+| 1 | **c** | 15.5 m/s | Banked curve, maximum speed | Curve |
+| 2 | **d** | 18.75 m → 20 | Loop-the-loop, minimum launch height | Loop |
+| 3 | **a** | 0.15 | Halfpipe, find $\mu$ | Halfpipe |
+| 4 | **e** | 5.07 m/s | Sliding down a rough incline | One block on incline (Down) |
+| 5 | **d** | 0.20 m | Spring stops a sliding mass | Spring |
+| 6 | **c** | 2940 W | Power, $P = Fv$ | Power |
+| 7 | **b** | 1.81 m/s | Incline + hanging mass + disk pulley | Incline + hanging mass + pulley |
+| 8 | **c** | 18.75 m/s | Completely inelastic collision | Stick (inelastic) |
+| 9 | **e** | +4.8 m/s | 1-D elastic collision | Elastic |
+| 10 | **d** | 193 m/s | Ballistic pendulum, bullet speed | Ballistic |
+| 11 | **e** | 90 rad | Rotational kinematics | Rot. kinematics |
+| 12 | **b** | 3.92 m/s² | Hanging mass on a ring pulley | Atwood / mass on pulley (one mass) |
+| 13 | **b** | 3.27 m/s² | Rolling acceleration | Rolling (disk row) |
+| 14 | **a** | +1.23 rad/s | Counter-rotating object dropped on a disk | Angular momentum |
+| 15 | **a** | 1.22 rad/s | Person walks from the center to the rim | Angular momentum (walk in/out) |
+
+# 1. Banked curve, maximum speed — **c) 15.5 m/s**
+
+**Source:** Ch 6 notes p. 3/7–5/7. **Notecard:** Curve.
+
+At $v_{max}$ the car tends to slide **up** the bank, so friction points **down** the bank. The notecard formula with the $+$ signs:
+
+$$v_{max} = \sqrt{gr\,\frac{\tan\theta + \mu_s}{1 - \mu_s\tan\theta}}$$
+
+**Plug in** ($\tan 12^\circ = 0.2126$, $g = 9.8$ m/s², $r = 45$ m):
+
+$$
+\begin{aligned}
+v_{max} &= \sqrt{(9.8)(45)\,\frac{0.2126 + 0.30}{1 - (0.30)(0.2126)}} \\[8pt]
+&= \sqrt{441 \times \frac{0.5126}{0.9362}} = \sqrt{241.4} = 15.5\ \text{m/s}
+\end{aligned}
+$$
+
+Distractors:
+
+* a) 9.7 is the frictionless bank, $\sqrt{gr\tan\theta}$.
+* b) 11.5 is the flat-curve formula, $\sqrt{\mu_s gr}$.
+* d) 21.9 multiplies by an extra $\sqrt2$.
+* e) 241 forgets the square root.
+
+# 2. Loop-the-loop, minimum launch height — **d) 20 m**
+
+**Source:** Ch 7/8 notes p. 12/18–13/18. **Notecard:** Loop.
+
+**Top of the loop:** "barely" means $N = 0$, so $mg = \dfrac{mv_t^2}{R}$ and $v_t^2 = gR$.
+
+**Energy, start to top** ($E_i = E_f$; the top is $2R$ high):
+
+$$E_i = mgh$$
+
+$$E_f = mg(2R) + \tfrac12 mv_t^2$$
+
+$$
+\begin{aligned}
+mgh &= 2mgR + \tfrac12 m(gR) \\[8pt]
+h &= \tfrac52 R
+\end{aligned}
+$$
+
+**Plug in:**
+
+$$h = \tfrac52(7.5) = 18.75\ \text{m}$$
+
+**Answer-choice trap.** 18.75 m is a **minimum**. Starting at 18 m, the car falls off the track, even though 18 is the closest number. The smallest choice that works is **d) 20 m**.
+
+Distractors:
+
+* a) 11 m is $\tfrac32 R$.
+* b) 15 m is $2R$: it reaches the top with zero speed and falls.
+* c) 18 m is the nearest number, but it's below the minimum.
+* e) 38 m is $5R$ (mixing up $v_b^2 = 5gR$ with a height).
+
+# 3. Halfpipe, find $\mu$ — **a) 0.15**
+
+**Source:** Ch 7/8 notes p. 4/18–5/18. **Notecard:** Halfpipe.
+
+Notecard (from rest, one crossing): $h_f = h_i - \mu L$. **Solve for $\mu$:**
+
+$$
+\begin{aligned}
+\mu L &= h_i - h_f \\[8pt]
+\mu &= \frac{h_i - h_f}{L}
+\end{aligned}
+$$
+
+**Plug in:**
+
+$$\mu = \frac{4.0 - 3.1}{6.0} = \frac{0.9}{6.0} = 0.15$$
+
+Distractors:
+
+* b) 0.52 is $h_f/L$.
+* c) 0.67 is $h_i/L$.
+* d) 0.78 is $h_f/h_i$.
+* e) 0.90 is the height lost, not divided by $L$.
+
+# 4. Sliding down a rough incline — **e) 5.07 m/s**
+
+**Source:** Ch 7/8 notes p. 10/18. **Notecard:** One block on incline (Down).
+
+Notecard, sliding **down**:
+
+$$v_f = \sqrt{v_i^2 + 2g\,\Delta x(\sin\theta - \mu\cos\theta)}$$
+
+**Plug in** ($\sin 35^\circ = 0.5736$, $\cos 35^\circ = 0.8192$, $\Delta x = 3.0$ m along the slope):
+
+$$
+\begin{aligned}
+v_f &= \sqrt{2.0^2 + 2(9.8)(3.0)\left(0.5736 - 0.25 \times 0.8192\right)} \\[8pt]
+&= \sqrt{4.0 + 58.8(0.3688)} = \sqrt{4.0 + 21.68} = \sqrt{25.68} = 5.07\ \text{m/s}
+\end{aligned}
+$$
+
+The bracket is positive, so the block speeds up.
+
+Distractors:
+
+* a) 2.0 m/s assumes the speed doesn't change.
+* b) 3.85 forgets the 2 in $2g$.
+* c) 4.66 forgets $v_i^2$.
+* d) 4.80 uses friction $\mu mg$ instead of $\mu mg\cos\theta$.
+
+# 5. Spring stops a sliding mass — **d) 0.20 m**
+
+**Source:** Ch 7/8 notes p. 11/18. **Notecard:** Spring.
+
+Level floor, so $h = 0$. The notecard's "stop a mass" line becomes
+
+$$x = \sqrt{\frac{2mgh + mv_i^2}{k}} = \sqrt{\frac{mv_i^2}{k}}$$
+
+(That's $\tfrac12 kx^2 = \tfrac12 mv_i^2$: all the KE becomes spring PE.)
+
+**Plug in:**
+
+$$x = \sqrt{\frac{(1.5)(4.0)^2}{600}} = \sqrt{\frac{24}{600}} = \sqrt{0.040} = 0.20\ \text{m}$$
+
+Distractors:
+
+* a) 0.010 is $mv/k$ (momentum, not energy).
+* b) 0.040 forgets the square root.
+* c) 0.14 drops a $\tfrac12$ on one side only.
+* e) 0.28 has an extra factor of 2.
+
+# 6. Power, $P = Fv$ — **c) 2940 W**
+
+**Source:** Ch 7/8 notes p. 14/18. **Notecard:** Power.
+
+At constant speed the motor's force equals the weight, $F = mg$. Notecard: $P = Fv$.
+
+$$P = Fv = mgv$$
+
+**Plug in:**
+
+$$P = (250)(9.8)(1.2) = 2940\ \text{W}$$
+
+Distractors:
+
+* a) 180 W is $\tfrac12 mv^2$ (energy, not power).
+* b) 300 is $mv$ (momentum).
+* d) 5880 doubles it.
+* e) 29,400 uses 12 m/s.
+
+# 7. Incline + hanging mass + disk pulley — **b) 1.81 m/s**
+
+**Source:** Ch 7/8 notes p. 15/18; 2015 Exam 2 #13. **Notecard:** Incline + hanging mass + pulley.
+
+Notecard, with $m_2$ falling ($m_1$ slides **up** the slope):
+
+$$v_f = \sqrt{v_i^2 + \frac{2g\,\Delta x\,B}{m_1 + m_2 + I/R^2}}$$
+
+$$B = m_2 - m_1\sin\theta - \mu m_1\cos\theta$$
+
+**Net pull** ($\sin 20^\circ = 0.3420$, $\cos 20^\circ = 0.9397$):
+
+$$B = 5.0 - 6.0(0.3420) - 0.20(6.0)(0.9397) = 5.0 - 2.052 - 1.128 = 1.820\ \text{kg}$$
+
+**Pulley term:** a disk has $I/R^2 = \tfrac12 M = 2.0$ kg.
+
+**Plug in** ($v_i = 0$, $\Delta x = 1.2$ m):
+
+$$
+\begin{aligned}
+v_f &= \sqrt{0 + \frac{2(9.8)(1.2)(1.820)}{6.0 + 5.0 + 2.0}} \\[8pt]
+&= \sqrt{\frac{42.81}{13.0}} = \sqrt{3.293} = 1.81\ \text{m/s}
+\end{aligned}
+$$
+
+Distractors:
+
+* a) 1.69 treats the pulley as a ring ($I/R^2 = M$).
+* c) 1.97 ignores the pulley's mass.
+* d) 2.31 ignores friction.
+* e) 4.85 is free fall, $\sqrt{2g\Delta x}$.
+
+# 8. Completely inelastic collision — **c) 18.8 m/s**
+
+**Source:** Ch 9 notes p. 1/5. **Notecard:** Stick (inelastic).
+
+They stick, so momentum only. Notecard:
+
+$$v_f = \frac{m_1v_1 + m_2v_2}{m_1 + m_2}$$
+
+**Plug in** (both moving the same way, so both velocities are $+$):
+
+$$v_f = \frac{(1500)(25) + (2500)(15)}{1500 + 2500} = \frac{37{,}500 + 37{,}500}{4000} = 18.75\ \text{m/s}$$
+
+Distractors:
+
+* a) 0 treats the truck as moving the opposite way.
+* b) 9.4 leaves out the truck's momentum.
+* d) 20.0 averages the two speeds.
+* e) 40.0 adds them.
+
+# 9. 1-D elastic collision — **e) +4.8 m/s**
+
+**Source:** Ch 9 notes p. 2/5–3/5. **Notecard:** Elastic.
+
+Notecard formulas, right $= +$: $m_1 = 4.0$, $v_{1i} = +3.0$; $m_2 = 1.0$, $v_{2i} = 0$.
+
+$$v_{1f} = \frac{(m_1 - m_2)v_{1i} + 2m_2v_{2i}}{m_1 + m_2} = \frac{(3.0)(3.0) + 0}{5.0} = +1.8\ \text{m/s}$$
+
+$$v_{2f} = v_{1i} + v_{1f} - v_{2i} = 3.0 + 1.8 - 0 = +4.8\ \text{m/s}$$
+
+A heavy ball hitting a light one sends the light one off faster than the heavy one was going.
+
+Distractors:
+
+* a) 0 confuses it with the stuck ball case.
+* b) +1.8 is the 4.0 kg ball's velocity.
+* c) +2.4 is the stick-together answer.
+* d) +3.0 is the equal-mass (cue ball) result.
+
+# 10. Ballistic pendulum, bullet speed — **d) 193 m/s**
+
+**Source:** Ch 9 notes p. 5/5. **Notecard:** Ballistic.
+
+Notecard: $v = \dfrac{M + m}{m}\sqrt{2gh}$ (momentum through the hit, energy for the swing).
+
+**Plug in:**
+
+$$
+\begin{aligned}
+v &= \frac{1.5 + 0.012}{0.012}\sqrt{2(9.8)(0.12)} \\[8pt]
+&= 126 \times 1.534 = 193\ \text{m/s}
+\end{aligned}
+$$
+
+Distractors:
+
+* a) 1.5 m/s is $V = \sqrt{2gh}$, the block's speed after the hit.
+* b) 17 m/s uses energy conservation through the collision (never do that).
+* c) 126 is just the mass ratio $\frac{M+m}{m}$.
+* e) 386 doubles it.
+
+# 11. Rotational kinematics — **e) 90 rad**
+
+**Source:** Ch 10 notes p. 1/8; Ch 11 notes p. 6/8. **Notecard:** Rot. kinematics.
+
+$\alpha$ isn't given or asked for, so use the equation without it:
+
+$$\Delta\theta = \frac{\omega_i + \omega_f}{2}\,t$$
+
+**Plug in:**
+
+$$\Delta\theta = \frac{30 + 0}{2}(6.0) = 15 \times 6.0 = 90\ \text{rad}$$
+
+Distractors:
+
+* a) 5.0 is the angular acceleration (rad/s²).
+* b) 14.3 is the answer in revolutions, $90/2\pi$.
+* c) 15 is the average angular velocity.
+* d) 45 halves it twice.
+
+# 12. Hanging mass on a ring pulley — **b) 3.92 m/s²**
+
+**Source:** Ch 10 notes p. 4/8; 2015 Exam 2 #9. **Notecard:** Atwood / mass on pulley (one mass).
+
+Notecard, one mass: $a = \dfrac{mg}{m + I/R^2}$. A ring has $I = MR^2$, so $I/R^2 = M$ ($R$ cancels).
+
+$$a = \frac{mg}{m + M}$$
+
+**Plug in:**
+
+$$a = \frac{(2.0)(9.8)}{2.0 + 3.0} = \frac{19.6}{5.0} = 3.92\ \text{m/s}^2$$
+
+Distractors:
+
+* a) 2.45 uses $I/R^2 = 2M$.
+* c) 5.60 treats the pulley as a disk ($\tfrac12 M$).
+* d) 6.53 leaves $m$ out of the denominator.
+* e) 9.80 is free fall (massless pulley, nothing holding it).
+
+# 13. Rolling acceleration — **b) 3.27 m/s²**
+
+**Source:** Ch 10 notes p. 3/8. **Notecard:** Rolling (disk row).
+
+Notecard, disk (solid cylinder) row: $a = \tfrac23 g\sin\theta$.
+
+**Plug in:**
+
+$$a = \tfrac23(9.8)\sin 30^\circ = \tfrac23(9.8)(0.5) = 3.27\ \text{m/s}^2$$
+
+Distractors:
+
+* a) 2.45 is a ring, $\tfrac12 g\sin\theta$.
+* c) 3.50 is a sphere, $\tfrac57 g\sin\theta$.
+* d) 4.90 is sliding, $g\sin\theta$.
+* e) 6.53 forgets $\sin\theta$.
+
+# 14. Counter-rotating object dropped on a disk — **a) +1.23 rad/s**
+
+**Source:** Ch 11 notes p. 3/8; 2015 Exam 2 #11. **Notecard:** Angular momentum.
+
+$L_i = L_f$, with the ring's $\omega_2$ **negative**. Notecard:
+
+$$\omega_f = \frac{I_1\omega_1 + I_2\omega_2}{I_1 + I_2}$$
+
+**Moments of inertia first:**
+
+$$I_1 = \tfrac12(150)(2.0)^2 = 300\ \text{kg·m}^2$$
+
+$$I_2 = (40)(1.5)^2 = 90\ \text{kg·m}^2$$
+
+**Plug in:**
+
+$$\omega_f = \frac{(300)(2.5) + (90)(-3.0)}{300 + 90} = \frac{750 - 270}{390} = +1.23\ \text{rad/s}$$
+
+Distractors:
+
+* b) +1.78 treats the ring as a disk ($\tfrac12 mr^2$).
+* c) +1.92 ignores the ring's spin.
+* d) +2.50 is no change.
+* e) +2.62 forgets the minus sign on the ring.
+
+# 15. Person walks from the center to the rim — **a) 1.22 rad/s**
+
+**Source:** Ch 11 notes p. 7/8. **Notecard:** Angular momentum (walk in/out).
+
+Notecard, walk in/out: $\omega_f = \dfrac{I_i}{I_f}\omega_i$. At the center the person adds nothing ($m \cdot 0^2$); at the rim they add $mR^2$.
+
+$$\omega_f = \frac{\tfrac12 MR^2}{\tfrac12 MR^2 + mR^2}\,\omega_i = \frac{M}{M + 2m}\,\omega_i$$
+
+(That's the notecard's rim$\to$center ratio, flipped, because they're walking **out**.)
+
+**Plug in:**
+
+$$\omega_f = \frac{250}{250 + 2(60)}(1.8) = \frac{250}{370}(1.8) = 1.22\ \text{rad/s}$$
+
+Walking outward adds $I$, so the merry-go-round slows down.
+
+Distractors:
+
+* b) 1.45 forgets the $\tfrac12$ on the disk.
+* c) 1.80 is no change.
+* d) 2.23 uses $\frac{M + m}{M}$, a speed-up.
+* e) 2.66 uses the rim$\to$center formula without flipping it (walking in, not out).

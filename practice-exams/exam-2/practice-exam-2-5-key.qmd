@@ -1,0 +1,396 @@
+---
+title: "PHYS1408 Practice Exam 2-5 — Answer Key"
+subtitle: "Worked solutions"
+format:
+  pdf:
+    geometry: margin=0.75in
+    fontsize: 11pt
+  html:
+    embed-resources: true
+    toc: true
+---
+
+All answers were checked numerically with `_scripts/build_exam_2_5.py`. $g = 9.8\ \text{m/s}^2$ throughout.
+
+Practice Exam 2-5 reuses the exam's problem types with new twists: a coaster with a starting speed, the compression **needed** for a launch, $N$ at the **bottom** of a loop, a rebound at a different speed, a collision where the carts stop dead, a child landing **inside** the rim. Question 1 is a **minimum** trap: round up to the choice that works. The last column says which 3×5 notecard entry solves each question.
+
+| Q | Answer | Value | Topic | Notecard entry |
+|:-:|:-:|:-:|:--|:--|
+| 1 | **c** | 18.2 m/s → 19 | Banked curve, minimum speed | Curve |
+| 2 | **b** | 2.95 m/s | Atwood's machine, disk pulley | Atwood / mass on pulley |
+| 3 | **c** | 20.4 m/s | Roller coaster with a starting speed | Fall / coaster |
+| 4 | **a** | 4.13 m/s | Sliding up a rough incline | One block on incline (Up) |
+| 5 | **e** | 0.11 m | Vertical spring launch, find the compression | Spring |
+| 6 | **d** | 3530 N | Loop, normal force at the bottom | Loop |
+| 7 | **b** | 3.01 m/s | Block down an incline with a disk pulley | Incline + hanging mass + pulley ($m_2 = 0$) |
+| 8 | **e** | 200 N | Force from a change in momentum | Force from $\Delta p$ |
+| 9 | **a** | 0% | Inelastic collision, KE fraction | Stick (inelastic) |
+| 10 | **d** | +3.2 m/s | 1-D elastic collision, head-on | Elastic |
+| 11 | **b** | 0.5% | Ballistic pendulum, KE kept | Ballistic |
+| 12 | **d** | 0.35 kg·m² | Parallel axis theorem, rod | Parallel axis |
+| 13 | **e** | 67 rad/s | Rolling sphere, find $\omega$ | Rolling (sphere row) |
+| 14 | **c** | 0.98 rad/s | Person runs and jumps on inside the rim | Angular momentum |
+| 15 | **a** | 5.0 s | Rotational kinematics, time from an angle | Rot. kinematics |
+
+# 1. Banked curve, minimum speed — **c) 19 m/s**
+
+**Source:** Ch 6 notes p. 7/7; handout p. 2/3. **Notecard:** Curve.
+
+At $v_{min}$ the car tends to slide **down** the bank, so friction points **up** the bank. The notecard formula with the $-$ signs:
+
+$$v_{min} = \sqrt{gr\,\frac{\tan\theta - \mu_s}{1 + \mu_s\tan\theta}}$$
+
+**Plug in** ($\tan 25^\circ = 0.4663$):
+
+$$
+\begin{aligned}
+v_{min} &= \sqrt{(9.8)(103)\,\frac{0.4663 - 0.12}{1 + (0.12)(0.4663)}} \\[8pt]
+&= \sqrt{1009.4 \times \frac{0.3463}{1.0560}} = \sqrt{331.0} = 18.2\ \text{m/s}
+\end{aligned}
+$$
+
+**Answer-choice trap.** 18.2 m/s is a **minimum**. At 18 m/s the car slides down the bank, even though 18 is the closest number. The smallest choice that works is **c) 19 m/s**.
+
+Distractors:
+
+* a) 11 is the flat-curve formula, $\sqrt{\mu_s gr}$.
+* b) 18 is the nearest number, but it's below the minimum.
+* d) 22 is the frictionless bank, $\sqrt{gr\tan\theta}$.
+* e) 25 is $v_{max}$.
+
+# 2. Atwood's machine, disk pulley — **b) 2.95 m/s**
+
+**Source:** Ch 7/8 notes p. 2/18 + Ch 10 notes p. 4/8. **Notecard:** Atwood / mass on pulley.
+
+Notecard (two masses):
+
+$$v_f = \sqrt{v_i^2 + \frac{2gh(m_1 - m_2)}{m_1 + m_2 + I/R^2}}$$
+
+A disk has $I/R^2 = \tfrac12 M = 1.0$ kg ($R$ cancels).
+
+**Plug in** ($v_i = 0$, $h = 2.0$ m):
+
+$$
+\begin{aligned}
+v_f &= \sqrt{\frac{2(9.8)(2.0)(5.0 - 3.0)}{5.0 + 3.0 + 1.0}} \\[8pt]
+&= \sqrt{\frac{78.4}{9.0}} = \sqrt{8.71} = 2.95\ \text{m/s}
+\end{aligned}
+$$
+
+Distractors:
+
+* a) 2.80 treats the pulley as a ring ($I/R^2 = M$).
+* c) 3.13 ignores the pulley's mass.
+* d) 3.61 leaves $m_2$ out of the denominator.
+* e) 6.26 is free fall, $\sqrt{2gh}$.
+
+# 3. Roller coaster with a starting speed — **c) 20.4 m/s**
+
+**Source:** Ch 7/8 notes p. 3/18. **Notecard:** Fall / coaster.
+
+Notecard (no friction):
+
+$$v_f = \sqrt{v_i^2 + 2g(h_i - h_f)}$$
+
+**Plug in:**
+
+$$v_f = \sqrt{8.0^2 + 2(9.8)(30 - 12)} = \sqrt{64 + 352.8} = \sqrt{416.8} = 20.4\ \text{m/s}$$
+
+Add the KE you start with **inside** the root, not to the final speed.
+
+Distractors:
+
+* a) 15.5 forgets the 2 in $2g$.
+* b) 18.8 ignores the starting speed.
+* d) 25.5 uses the full 30 m drop.
+* e) 26.8 adds 8.0 m/s to the speed from rest ($18.8 + 8.0$).
+
+# 4. Sliding up a rough incline — **a) 4.13 m/s**
+
+**Source:** Ch 7/8 notes p. 7/18–8/18. **Notecard:** One block on incline (Up).
+
+Notecard, sliding **up**:
+
+$$v_f = \sqrt{v_i^2 - 2g\,\Delta x(\sin\theta + \mu\cos\theta)}$$
+
+**Plug in** ($\sin 20^\circ = 0.3420$, $\cos 20^\circ = 0.9397$):
+
+$$
+\begin{aligned}
+v_f &= \sqrt{6.0^2 - 2(9.8)(2.0)(0.3420 + 0.15 \times 0.9397)} \\[8pt]
+&= \sqrt{36 - 39.2(0.4830)} = \sqrt{36 - 18.93} = \sqrt{17.07} = 4.13\ \text{m/s}
+\end{aligned}
+$$
+
+The number under the root is positive, so it does make it 2.0 m (e is wrong).
+
+Distractors:
+
+* b) 4.75 ignores friction.
+* c) 5.15 forgets the 2 in $2g$.
+* d) 7.41 adds instead of subtracts (that's the sliding-down sign).
+* e) It doesn't stop: $v_f^2 = 17.07 > 0$.
+
+# 5. Vertical spring launch, find the compression — **e) 0.11 m**
+
+**Source:** Ch 7/8 notes p. 12/18; 2015 Exam 2 #5. **Notecard:** Spring.
+
+Notecard launch line, $h = \dfrac{kx^2}{2mg}$. **Solve for $x$:**
+
+$$
+\begin{aligned}
+kx^2 &= 2mgh \\[8pt]
+x &= \sqrt{\frac{2mgh}{k}}
+\end{aligned}
+$$
+
+**Plug in:**
+
+$$x = \sqrt{\frac{2(0.25)(9.8)(3.0)}{1200}} = \sqrt{\frac{14.7}{1200}} = \sqrt{0.01225} = 0.11\ \text{m}$$
+
+Distractors:
+
+* a) 0.006 is $mgh/k$ (no 2, no root).
+* b) 0.012 forgets the square root.
+* c) 0.055 is $\sqrt{mgh/2k}$ (the 2 upside down).
+* d) 0.078 drops the 2: $\sqrt{mgh/k}$.
+
+# 6. Loop, normal force at the bottom — **d) 3530 N**
+
+**Source:** Ch 7/8 notes p. 13/18. **Notecard:** Loop.
+
+**Speed at the bottom** (energy from the start, drop $h = 20$ m):
+
+$$v_b^2 = 2gh = 2(9.8)(20) = 392\ \text{m}^2/\text{s}^2$$
+
+**Forces at the bottom.** $N$ points up, toward the center, and $mg$ points down. Notecard:
+
+$$N_{bot} = \frac{mv_b^2}{R} + mg$$
+
+**Plug in:**
+
+$$N_{bot} = \frac{(60)(392)}{8.0} + (60)(9.8) = 2940 + 588 = 3528 \approx 3530\ \text{N}$$
+
+That's 6 times the rider's weight.
+
+Distractors:
+
+* a) 588 N is just the weight $mg$.
+* b) 2350 subtracts $mg$ (the top-of-loop sign).
+* c) 2940 forgets to add $mg$.
+* e) 7060 doubles it.
+
+# 7. Block down an incline with a disk pulley — **b) 3.01 m/s**
+
+**Source:** 2015 Exam 2 #13. **Notecard:** Incline + hanging mass + pulley ($m_2 = 0$).
+
+Notecard, incline + pulley, with no hanging mass ($m_2 = 0$) and the block sliding **down**:
+
+$$v_f = \sqrt{v_i^2 + \frac{2g\,\Delta x\,B}{m + I/R^2}}$$
+
+$$B = m\sin\theta - \mu m\cos\theta$$
+
+**Net pull** ($\sin 35^\circ = 0.5736$, $\cos 35^\circ = 0.8192$):
+
+$$B = 3.0(0.5736) - 0.20(3.0)(0.8192) = 1.721 - 0.492 = 1.229\ \text{kg}$$
+
+**Pulley term:** disk, $I/R^2 = \tfrac12 M = 1.0$ kg.
+
+**Plug in** ($v_i = 0$):
+
+$$
+\begin{aligned}
+v_f &= \sqrt{\frac{2(9.8)(1.5)(1.229)}{3.0 + 1.0}} \\[8pt]
+&= \sqrt{\frac{36.14}{4.0}} = \sqrt{9.04} = 3.01\ \text{m/s}
+\end{aligned}
+$$
+
+Distractors:
+
+* a) 2.69 treats the pulley as a ring.
+* c) 3.47 ignores the pulley's mass.
+* d) 3.56 ignores friction.
+* e) 4.11 ignores both friction and the pulley.
+
+# 8. Force from a change in momentum — **e) 200 N**
+
+**Source:** Ch 9 notes p. 1/5. **Notecard:** Force from $\Delta p$.
+
+Notecard: $F = \dfrac{m(v_f - v_i)}{t}$ with **signs**. Take "away from the wall" as $+$, so $v_i = -15$ m/s and $v_f = +10$ m/s.
+
+$$F = \frac{m(v_f - v_i)}{t}$$
+
+**Plug in:**
+
+$$F = \frac{0.40\,(10 - (-15))}{0.050} = \frac{0.40(25)}{0.050} = 200\ \text{N}$$
+
+Distractors:
+
+* a) 40 uses $15 - 10$ (ignores the reversal).
+* b) 80 uses only the rebound speed.
+* c) 120 uses only the incoming speed (as if it stopped).
+* d) 160 uses $15 + 5$.
+
+# 9. Inelastic collision, KE fraction — **a) 0%**
+
+**Source:** Ch 9 notes p. 1/5; 2015 Exam 2 #7. **Notecard:** Stick (inelastic).
+
+Symbolic masses and speeds, so **set $m = 1$ and $v = 1$**. Right is $+$: $m_1 = 1$, $v_1 = +1$; $m_2 = 3$, $v_2 = -\tfrac13$.
+
+**Final velocity** (notecard):
+
+$$v_f = \frac{m_1v_1 + m_2v_2}{m_1 + m_2} = \frac{(1)(1) + (3)(-\tfrac13)}{4} = \frac{1 - 1}{4} = 0$$
+
+The momenta are equal and opposite, so the carts **stop dead**. Then
+
+$$\frac{K_f}{K_i} = \frac{(m_1 + m_2)v_f^2}{m_1v_1^2 + m_2v_2^2} = \frac{4(0)^2}{1 + 3(\tfrac19)} = 0$$
+
+All of the kinetic energy is lost.
+
+Distractors:
+
+* b) 25% is the mass ratio $\frac{m}{4m}$, which only applies when one cart starts at rest.
+* c) and d) come from treating the second cart as moving the same way.
+* e) 100% would need an elastic collision.
+
+# 10. 1-D elastic collision, head-on — **d) +3.2 m/s**
+
+**Source:** Ch 9 notes p. 2/5–3/5; 2015 Exam 2 #6. **Notecard:** Elastic.
+
+Notecard formulas, right $= +$: $m_1 = 2.0$, $v_{1i} = +5.0$; $m_2 = 3.0$, $v_{2i} = -4.0$.
+
+$$
+\begin{aligned}
+v_{1f} &= \frac{(m_1 - m_2)v_{1i} + 2m_2v_{2i}}{m_1 + m_2} = \frac{(-1.0)(5.0) + 2(3.0)(-4.0)}{5.0} = \frac{-5 - 24}{5} = -5.8\ \text{m/s} \\[8pt]
+v_{2f} &= v_{1i} + v_{1f} - v_{2i} = 5.0 + (-5.8) - (-4.0) = +3.2\ \text{m/s}
+\end{aligned}
+$$
+
+The 3.0 kg ball reverses and moves right at 3.2 m/s.
+
+Distractors:
+
+* a) +5.8 is the size of the 2.0 kg ball's velocity, not the 3.0 kg ball's.
+* b) +5.0 assumes the balls swap velocities.
+* c) +4.0 assumes the 3.0 kg ball just reverses at the same speed.
+* e) −0.4 is the stick-together answer.
+
+# 11. Ballistic pendulum, KE kept — **b) 0.1–1%**
+
+**Source:** Ch 9 notes p. 5/5; 2015 Exam 2 #8. **Notecard:** Ballistic.
+
+Notecard: $\dfrac{K_f}{K_i} = \dfrac{m}{M + m}$ (no speed or height needed).
+
+$$\frac{K_f}{K_i} = \frac{0.020}{3.98 + 0.020} = \frac{0.020}{4.00} = 0.005 = 0.5\%$$
+
+That falls in the 0.1–1% range.
+
+Distractors:
+
+* a) < 0.1% would need a much heavier block (2015 Exam #8 used $M = 10$ kg and a 5 g bullet).
+* e) > 50% would mean the collision kept most of the KE; sticking collisions with $m \ll M$ lose almost all of it.
+
+# 12. Parallel axis theorem, rod — **d) 0.35 kg·m²**
+
+**Source:** Ch 10 notes p. 2/8. **Notecard:** Parallel axis.
+
+Notecard rod shortcut, axis $a$ from one end:
+
+$$I = m\left[\frac{\ell^2}{12} + \left(\frac{\ell}{2} - a\right)^2\right]$$
+
+$d = \dfrac{\ell}{2} - a = 0.50 - 0.20 = 0.30$ m from the **center**.
+
+**Plug in:**
+
+$$
+\begin{aligned}
+I &= 2.0\left[\frac{1.0^2}{12} + (0.50 - 0.20)^2\right] \\[8pt]
+&= 2.0(0.0833 + 0.090) = 0.35\ \text{kg·m}^2
+\end{aligned}
+$$
+
+Check: it's between $I_{cm} = 0.17$ and $I_{end} = \tfrac13 m\ell^2 = 0.67$.
+
+Distractors:
+
+* a) 0.08 is $ma^2$, measured from the end.
+* b) 0.17 is $I_{cm}$ alone.
+* c) 0.25 is the #1 mistake: $I_{cm} + ma^2$, using the distance from the **end**.
+* e) 0.67 is the rod about its end.
+
+# 13. Rolling sphere, find $\omega$ — **e) 67 rad/s**
+
+**Source:** Ch 10 notes p. 6/8–8/8; 2015 Exam 2 #10. **Notecard:** Rolling (sphere row).
+
+Notecard, sphere row: $v = \sqrt{\tfrac{10}{7}gh}$, then $\omega = \dfrac{v}{R}$.
+
+**Speed:**
+
+$$v = \sqrt{\tfrac{10}{7}(9.8)(0.80)} = \sqrt{11.2} = 3.35\ \text{m/s}$$
+
+**Rotational velocity:**
+
+$$\omega = \frac{v}{R} = \frac{3.35}{0.050} = 67\ \text{rad/s}$$
+
+Distractors:
+
+* a) 3.3 is $v$ (m/s), not $\omega$.
+* b) 33 divides by the diameter (0.10 m) instead of the radius.
+* c) 56 uses the ring formula, $\sqrt{gh}$.
+* d) 65 uses the disk formula, $\sqrt{\tfrac43 gh}$.
+
+# 14. Person runs and jumps on inside the rim — **c) 0.98 rad/s**
+
+**Source:** Ch 11 notes p. 4/8; 2015 Exam 2 #12. **Notecard:** Angular momentum.
+
+Notecard with $+mvr$ (running with the rotation) and $I_{add} = mr^2$, where $r = 1.5$ m is where the child lands:
+
+$$\omega_f = \frac{I_1\omega_1 + mvr}{I_1 + mr^2}$$
+
+**Platform:** $I_1 = \tfrac12(200)(2.5)^2 = 625$ kg·m².
+
+**Plug in:**
+
+$$
+\begin{aligned}
+\omega_f &= \frac{(625)(0.80) + (30)(4.0)(1.5)}{625 + (30)(1.5)^2} \\[8pt]
+&= \frac{500 + 180}{625 + 67.5} = \frac{680}{692.5} = 0.98\ \text{rad/s}
+\end{aligned}
+$$
+
+Use $r = 1.5$ m in **both** places (the child's $L = mvr$ and their $I = mr^2$), not the rim radius.
+
+Distractors:
+
+* a) 0.72 ignores the child's running momentum.
+* b) 0.80 is no change.
+* d) 1.09 forgets to add the child's $mr^2$.
+* e) 1.16 uses the rim radius 2.5 m in $mvr$.
+
+# 15. Rotational kinematics, time from an angle — **a) 5.0 s**
+
+**Source:** Ch 10 notes p. 1/8. **Notecard:** Rot. kinematics.
+
+$\omega_f$ isn't given or asked for, so use the equation without it:
+
+$$\Delta\theta = \omega_i t + \tfrac12\alpha t^2$$
+
+**Solve for $t$** (starting from rest, $\omega_i = 0$):
+
+$$
+\begin{aligned}
+\Delta\theta &= \tfrac12\alpha t^2 \\[8pt]
+t &= \sqrt{\frac{2\,\Delta\theta}{\alpha}}
+\end{aligned}
+$$
+
+**Plug in:**
+
+$$t = \sqrt{\frac{2(50)}{4.0}} = \sqrt{25} = 5.0\ \text{s}$$
+
+Distractors:
+
+* b) 6.25 is $\Delta\theta/2\alpha$ with no root.
+* c) 12.5 is $\Delta\theta/\alpha$.
+* d) 25 is $2\Delta\theta/\alpha$ (forgot the square root).
+* e) 50 is just $\Delta\theta$.
