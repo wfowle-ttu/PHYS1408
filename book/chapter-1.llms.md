@@ -11,12 +11,12 @@
 
 2.  **Mass**
 
-- The mass of an object is related to the amount of material that is present in that object or how much that object resists change to motion. Mass is an inherent property of an object and is indepdendant of that object’s surroundings. The Fundamental SI unit of mass is kilogram \\kg\\.
+- The mass of an object is related to the amount of material that is present in that object or how much that object resists change to motion. Mass is an inherent property of an object and is indepdendant of that object’s surroundings. The Fundamental SI unit of mass is kilogram $kg$.
 
 3.  **Time**
 
-- The fundamental SI unit of time is the second. Before 1967 the standard of time was the mean solar day. And the second was defined as \\\frac{1}{60}\frac{1}{60}\frac{1}{24}\\ of a mean solar day.
-- A time and *time interval* are different. A Time is a description of an instant relative to a reference time. For example \\t\\ = 10.0 s refers to an instant 10.0s after that instant we have identified \\t = 0\\. As another example, a *time* of 11:30 AM means an instant 11.5 hours after our reference time of midnight.
+- The fundamental SI unit of time is the second. Before 1967 the standard of time was the mean solar day. And the second was defined as $\frac{1}{60}\frac{1}{60}\frac{1}{24}$ of a mean solar day.
+- A time and *time interval* are different. A Time is a description of an instant relative to a reference time. For example $t$ = 10.0 s refers to an instant 10.0s after that instant we have identified $t = 0$. As another example, a *time* of 11:30 AM means an instant 11.5 hours after our reference time of midnight.
 - A *time interval* refers to duration, i.e. he required 30 minutes to complete the task.
 
 # 1.2 Modeling and Alternative Representations
@@ -39,15 +39,16 @@ You want to find the height of a tree but cannot measure it directly. You stand 
 
 To determine the height of the tree we can use a right triangle and recall *SOH CAH TOA*
 
-In this case given our variables we would like to use \\\tan{\theta} = \frac{\text{opposite side}}{\text{adjacent side}}\\
+In this case given our variables we would like to use $\tan{\theta} = \frac{\text{opposite side}}{\text{adjacent side}}$
 
 And that allows us to see that:
 
-\\ \tan{\theta} = \frac{h}{50} \\
+$$\tan{\theta} = \frac{h}{50}$$
 
 Solving for h by multiplying both sides by 50:
 
-\\ h = 50 \* \tan{25^\circ} = h \newline h = 23.3 m \\
+$$h = 50 * \tan{25^\circ} = h \newline
+h = 23.3 m$$
 
 The particle model is an example of a *simplification model* where details that are not significant in determining the outcome of the problem are ignored.
 
@@ -59,13 +60,13 @@ In physics the word *dimension* denotes the physical nature of a quantity. The d
 
 > **TIP:**
 >
-> They use the symbols \\L\\, \\M\\, and \\T\\ to represent length, mass and time respectively. They use brackets \[\] to denote the dimensions of a physical quantity, e.g. the symbol used for speed is \\v\\ and in the book’s notation the dimensions of speed are written \\\[v\] = L/T\\. Further, the dimensions of area \\A\\ are \\\[A\] = L^2\\
+> They use the symbols $L$, $M$, and $T$ to represent length, mass and time respectively. They use brackets \[\] to denote the dimensions of a physical quantity, e.g. the symbol used for speed is $v$ and in the book’s notation the dimensions of speed are written $[v] = L/T$. Further, the dimensions of area $A$ are $[A] = L^2$
 
-| Quantity | Area (\\A\\) | Volume \\(V)\\ | Speed \\(v)\\ | Acceleration \\(a)\\ |
-|----|----|----|----|----|
-| Dimensions | \\L^2\\ | \\L^3\\ | \\L/T\\ | \\L/T^2\\ |
-| SI Units | \\m^2\\ | \\m^3\\ | \\m/s\\ | \\m/s^2\\ |
-| US Customary Units | \\ft^2\\ | \\ft^3\\ | \\ft/s\\ | \\ft/s^2\\ |
+| Quantity           | Area ($A$) | Volume $(V)$ | Speed $(v)$ | Acceleration $(a)$ |
+|--------------------|------------|--------------|-------------|--------------------|
+| Dimensions         | $L^2$      | $L^3$        | $L/T$       | $L/T^2$            |
+| SI Units           | $m^2$      | $m^3$        | $m/s$       | $m/s^2$            |
+| US Customary Units | $ft^2$     | $ft^3$       | $ft/s$      | $ft/s^2$           |
 
 Dimensions and Units of Four Derived Quantities {.caption-top .table}
 
@@ -77,6 +78,6 @@ The three fundamental physical quantities of mechanics are length, mass, and tim
 
 The density of a substance is defined as its mass per unit volume:
 
-\\ \rho \equiv \frac{m}{V} \\
+$$\rho \equiv \frac{m}{V}$$
 
 \[There are other concepts in chapter one that are worth covering and they have about 30 practice problems we should highly consider taking on\]

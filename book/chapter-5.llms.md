@@ -22,22 +22,22 @@ In physics we only tend to worry about gravitational and electromagnetic forces.
 
 We can use a spring mounted vertically to measure force.
 
-Suppose that with some initial force \\\overrightarrow{F_1}\\ applied to the spring yields a measured reading of 1.0 cm. Now if we apply \\\overrightarrow{F_2}\\ and that force is exactly twice in magnitude as \\\overrightarrow{F_1}\\ then the reading of force shall show the spring at 2.0 cm.
+Suppose that with some initial force $\overrightarrow{F_1}$ applied to the spring yields a measured reading of 1.0 cm. Now if we apply $\overrightarrow{F_2}$ and that force is exactly twice in magnitude as $\overrightarrow{F_1}$ then the reading of force shall show the spring at 2.0 cm.
 
-The combined effect of two collinear forces is the sum of the effects of the individual forces. So if we apply both \\\overrightarrow{F_1}\\ and \\overrightarrow{F_2}\\ at the same time, the spring will show 3.0 cm.
+The combined effect of two collinear forces is the sum of the effects of the individual forces. So if we apply both $\overrightarrow{F_1}$ and $overrightarrow{F_2}$ at the same time, the spring will show 3.0 cm.
 
 ![](Chapter5Figure2.png)
 
 Example of force applied to springs
 
-In the case where \\\overrightarrow{F_1}\\ is applied vertically and \\\overrightarrow{F_2}\\ is applied horizontally, the vector nature of forces allow us to use vector addition to find the reading of the spring by doing vector addition with \\\overrightarrow{F_1}\\ and \\\overrightarrow{F_2}\\.
+In the case where $\overrightarrow{F_1}$ is applied vertically and $\overrightarrow{F_2}$ is applied horizontally, the vector nature of forces allow us to use vector addition to find the reading of the spring by doing vector addition with $\overrightarrow{F_1}$ and $\overrightarrow{F_2}$.
 
-\\ \lvert \overrightarrow{F_1} \rvert = \sqrt{F_1^2 + F_2^2} = 2.24 cm \\
+$$\lvert \overrightarrow{F_1} \rvert = \sqrt{F_1^2 + F_2^2} = 2.24 cm$$
 
 And the direction of this force is:
 
-\\ \theta = \tan^-1{\frac{\lvert F_1 \rvert}{\lvert F_2 \rvert}} = 26.6^\circ \\
+$$\theta = \tan^-1{\frac{\lvert F_1 \rvert}{\lvert F_2 \rvert}} = 26.6^\circ$$
 
 Given that this is a reference angle evaluating that our components for y and x yield a quadrant 4 location:
 
-\\ \theta = 360^\circ - 26.6^\circ = 333^\circ \space or \space -26.6^\circ \\
+$$\theta = 360^\circ - 26.6^\circ = 333^\circ \space or \space -26.6^\circ$$

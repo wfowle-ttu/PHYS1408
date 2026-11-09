@@ -1,5 +1,258 @@
 [
   {
+    "objectID": "exams/exam-2.html",
+    "href": "exams/exam-2.html",
+    "title": "Exam 2 Preparation Materials",
+    "section": "",
+    "text": "Based on the expierce gained from the first exam we know that exam 2 is likely a combination of problems from the previous exam as well as problems from Professor Lamp’s lecture notes.\nMe must prepare for all questions that are either on the previous test (“exam 2” in the previous exams directory.) According to the professor our exam 2 will cover:\nChapters 6,7, 9, 10, 11.\nThe professor has provided the lecture notes and a previous exam. We should be able to solve any combination of problems from lecture notes as well as the previous exam in 15 question quantities in around 30-40 mintues, but must be under 50 minutes.",
+    "crumbs": [
+      "Exams",
+      "Exam 2 Preparation Materials"
+    ]
+  },
+  {
+    "objectID": "exams/exam-2.html#kinetic-energy",
+    "href": "exams/exam-2.html#kinetic-energy",
+    "title": "Exam 2 Preparation Materials",
+    "section": "Kinetic Energy",
+    "text": "Kinetic Energy\nKinetic Energy is given from \\(K=\\frac{1}{2}mv^2\\)\nAnd gravitational potential energy is given as \\(U = mgh\\)\n\n\n\nExample of Wile E. Coyote falling from a cliff\n\n\nConsider again the example of Wile E. Coyote falling from a cliff.\nHis initial energy is only his gravitational potential energy since his initial velocity is 0.\n\\(E_i = mgh\\)\n\\(E_f = \\frac{1}{2}mv_f^2\\) is his final energy as all of his gravitational potential energy has been converted to kinetic energy throughout the fall.\nSince there is no means of energy being lost \\(E_i = E_f\\)\n\\(v_f\\) therefore can be found by solving for it through:\n\\[\n\\newline\nmgh = \\frac{1}{2}mv^2\n\\newline\nv_f = \\sqrt{2gh}\n\\]",
+    "crumbs": [
+      "Exams",
+      "Exam 2 Preparation Materials"
+    ]
+  },
+  {
+    "objectID": "exams/exam-2.html#frictionless",
+    "href": "exams/exam-2.html#frictionless",
+    "title": "Exam 2 Preparation Materials",
+    "section": "Frictionless",
+    "text": "Frictionless\n\n\n\nA problem related to a frictionless half-pipe\n\n\nMuch like the roller coaster and other problems we have imagined, in a half pipe our skater slides from one side of the half pipe to the other on a perfectly frictionless surface.\nIn such a case the \\(E_i = E_f\\) as there is no mechanism for energy to be lost.\nThat means that at his initial height \\(h_i\\) and with no initial velocity he exhibits the maximum potential energy via gravity.\n\\(U_i = mgh\\)\nLikewise, at the opposite side of the halfpipe his climb stops once all of his energy kinetically is equal to his initial potential energy.\nThat is to say, as the skater reaches the bottom of the halfpipe his height is 0, therefore all of his gravitational potential energy has been converted to kinetic energy.\nLikewise, once the skater begins rising on the other side of the half pipe, his kinetic energy once again start becoming gravitational potential energy and eventually \\(U_i = K_f\\) at \\(h_f\\).\nSince there is no mechanism for energy to be lost \\(h_i = h_f\\) as the same gravitational potential energy is reconverted from kinetic energy on the opposite side of the half pipe:\n\\(U_i + K_i = U_f + K_f\\)\nWhere \\(K_i\\) and \\(K_f\\) both equal zero therefore:\n\\(U_i = U_f\\) which if you’ll recall \\(U_i=mgh_i\\) therefore, since mass and gravity are both constants, the height must be the same on both sides for \\(U_i = U_f\\) to be true. So \\(h_i = h_f\\)",
+    "crumbs": [
+      "Exams",
+      "Exam 2 Preparation Materials"
+    ]
+  },
+  {
+    "objectID": "exams/exam-2.html#with-friction",
+    "href": "exams/exam-2.html#with-friction",
+    "title": "Exam 2 Preparation Materials",
+    "section": "With Friction",
+    "text": "With Friction\n\n\n\nSame Halfpipe problem but with friction\n\n\nConsider the same half-pipe but with a catch, in the middle there is a length \\(L\\) of 10 meters in which we apply a kinetic friction of \\(\\mu_k = 0.01\\)\n\nWork-Energy Theorem\nThis is similar to the conservation of energy which is \\(E_i = E_f\\) except here we consider energy lost in the system:\n\\(E_i = E_f + E_{lost}\\)\nWith the frictionless halfpipe we learned that U_i = U_f, but when there is friction we know that:\n\\[\nU_i = U_f + \\mu_kmgL\n\\]\nTherefore \\(h_i \\ne h_f\\)\nWe can solve for \\(h_f\\) as such:\n\\[\n\\newline\nmgh_i = mgh_f + \\mu_kmgL\n\\newline\n\\text{Divide both sides by mg to cancel them out}\n\\newline\nh_i = h_f + \\mu_kL\n\\newline\nh_f = h_i - \\mu_kL\n\\newline\nh_f = 3-(0.01*10)= 2.9 \\space \\text{m}\n\\newline\n\\]\nIn general Work-Energy theorem is \\(E_i + E_{added} = E_f + E_{lost}\\)",
+    "crumbs": [
+      "Exams",
+      "Exam 2 Preparation Materials"
+    ]
+  },
+  {
+    "objectID": "exams/exam-2.html#determining-deltax-when-v_f-0",
+    "href": "exams/exam-2.html#determining-deltax-when-v_f-0",
+    "title": "Exam 2 Preparation Materials",
+    "section": "Determining \\(\\Delta{x}\\) When \\(V_f = 0\\)",
+    "text": "Determining \\(\\Delta{x}\\) When \\(V_f = 0\\)\nTo determine the distance the block slid before coming to rest consider the following problem:\n\n\n\nProblem description\n\n\nHere we can use the same approach as above to solve for \\(v_f\\) when \\(\\Delta{x} =\\) 2m.\nRecall that, \\(v_f = \\sqrt{v_0^2-2g\\Delta{x}(\\mu_k\\cos{\\theta}+\\sin{\\theta})}\\)\nPlugging in the numbers from the problem description where \\(v_0 = 3\\)m/s, \\(\\theta = 10^\\circ\\), \\(\\mu_k=0.2\\) and \\(\\Delta{x}=2\\)m\nWe find that:\n\\[\nv_f = \\sqrt{9-14.54}\n\\]\nThe result of that square root would result in an imaginary number. This means that the block did not slide a distance \\(\\Delta{x}\\) before coming to rest.\nTherefore, instead we will solve for \\(\\Delta{x}\\) when \\(v_f = 0\\)\nTo do this you can plug in our terms into a kinematic equation:\n\\[\nv_f^2 = v_0^2 +2a(X_f - X_i)\n\\]\nPluggin in our terms yields:\n\\[\n0 = v_0^2-2g\\Delta{x}(\\mu_kcos{\\theta}+\\sin{\\theta})\n\\]\nSolving for \\(\\Delta{x}\\) yields:\n\\[\n\\Delta{x} = \\frac{v_0^2}{2g(\\mu_k\\cos{\\theta}+\\sin{\\theta})}\n\\]\nPluggin in our values:\n\\[\n\\Delta{x} = \\frac{9}{(2)(9.8)(0.371)} = 1.24 \\space \\text{m}\n\\]\nThe mass therefore will slide 1.24 meters up before stopping.",
+    "crumbs": [
+      "Exams",
+      "Exam 2 Preparation Materials"
+    ]
+  },
+  {
+    "objectID": "exams/exam-2.html#mass-sliding-down",
+    "href": "exams/exam-2.html#mass-sliding-down",
+    "title": "Exam 2 Preparation Materials",
+    "section": "Mass Sliding Down",
+    "text": "Mass Sliding Down\n\n\n\nMass sliding down problem description\n\n\nIn this problem our mass is sliding down the incline rather than up. Firstly, we will solve for \\(v_f\\) after 2 meters, this will let us know if our mass is speeding up or slowing down.\nWe can arrange our conservation of energy problem as such:\n\\[\nmgh_i + \\frac{1}{2}mv_0^2 = \\frac{1}{2}mv_f^2+\\mu_kg\\Delta{x}\\cos{\\theta}\n\\]\nAnd recall that our \\(h_i\\) can be determined using a triginometric function.\n\\[\ng\\Delta{x}\\sin{\\theta} + \\frac{1}{2}v_0^2 = \\frac{1}{2}v_f^2 + \\mu_kg\\Delta{x}\\cos{\\theta}\n\\]\nFrom there solving for \\(v_f\\) yields:\n\\[\nv_f = \\sqrt{v_0^2+2g\\Delta{x}(\\sin(\\theta)- \\mu_k\\cos{\\theta}}\n\\]\nPluggin in our values we find that\n\\[\n\\newline\nv_f = \\sqrt{8.0984} \\approx 2.85 \\space \\text{m/s}\n\\]\nThat means that our mass is slowing down after 2 meters of displacement. Next we can solve for how far it travels before stopping:\nRecall that, \\[\n\\Delta{x} = \\frac{-v_0^2}{2g(\\sin{\\theta}-\\mu_k\\cos{\\theta})}\n\\]\nSince our velocity is in the negative direction and therefore our velocity value is negative we can drop the sign from the \\(\\v_0^2\\) term to yield:\n\\[\n\\Delta{x} = \\frac{v_0^2}{2g(\\sin{\\theta}-\\mu_k\\cos{\\theta})}\n\\newline\n\\Delta{x} = \\frac{9}{(2)(9.8)(0.2*0.988-0.174)} = 19.96 \\space \\text{meters}\n\\newline\n\\]\nTherefore, our mass will slide 19.96 meters before coming to rest.",
+    "crumbs": [
+      "Exams",
+      "Exam 2 Preparation Materials"
+    ]
+  },
+  {
+    "objectID": "exams/exam-2.html#mass-sliding-into-a-spring",
+    "href": "exams/exam-2.html#mass-sliding-into-a-spring",
+    "title": "Exam 2 Preparation Materials",
+    "section": "Mass Sliding Into A Spring",
+    "text": "Mass Sliding Into A Spring\n\n\n\nMass Sliding Into A Spring Problem\n\n\nHere a mass slides down an incline before colliding with our spring and compressing it. We want to first solve for \\(x\\) or how far the spring will compress before our mass comes to a rest.\nRecall conservation of energy\n\\[\nE_i = E_f\n\\]\nAnd also recall that in the given problem at the top of the incline we have gravitational potential energy and no initial velocity.\nAt the bottom of the ramp, once we collide with the spring our kinetic energy will have been converted to potential energy within the spring from compressing it.\nTherefore we can arrange the conservation of energy equation as such:\n\\[\nmgh = \\frac{1}{2}kx^2\n\\]\nFrom there we can solve for \\(x\\) by arranging as such:\n\\[\nx = \\sqrt{\\frac{2mgh}{k}}\n\\newline\n\\]\nPlugging in our respective values:\n\\[\n\\sqrt{\\frac{(2)(1)(9.8)(1)}{1000}} \\approx 0.14 \\space \\text{m}\n\\newline\n\\]\nSo we know that the spring then compresses 0.14 meters before our mass comes to rest.",
+    "crumbs": [
+      "Exams",
+      "Exam 2 Preparation Materials"
+    ]
+  },
+  {
+    "objectID": "exams/exam-2.html#work",
+    "href": "exams/exam-2.html#work",
+    "title": "Exam 2 Preparation Materials",
+    "section": "Work",
+    "text": "Work\nWork is a measurement of energy transfer. It is measured in Newton meters (\\(\\frac{N}{m}\\)) which is also referred to as a Joule (J).\nTo find work you can use:\n\\[\nW = \\overrightarrow{F} \\cdot \\overrightarrow{\\Delta{r}} = F\\Delta{r}\\cos{\\theta}\n\\]\nTherefore a force of 2N applied to an object that results in no displacement has done no work.\nA force of \\(2N\\) that moves an object through a displacement of 1 meter does more work than a similar force of \\(2N\\) that moves and object through a displacement of only 10 cm.\nA force of \\(1N\\) that moves an object 1m does less work than a force of \\(2N\\) that moves an object that same 1m.\nA force that is perpendicular to displacement does no work (does not transfer energy into the system) as \\(\\cos(90^\\circ)=0\\)\nWork carries a sign, and that sign depends on the direction of force and displacement.\nA force that is opposite in direction to displacement provides negative work, whereas when force and displacement occur in the same direction work’s sign is positive.\nWork done by a spring can be measured as such:\n\\[\nW_{spring} = \\frac{1}{2}kx_i^2 - \\frac{1}{2}kx_f^2\n\\]\nThe total energy of a system is defined as that systems kinetic energy \\(K\\) plus it’s potential energy \\(U\\).\n\\[\nE + K + U\n\\]\nWork is done on a system by external forces and the only change is in the speed of it’s members. Therefore work can be found via:\n\\[\nW = K_f - K_i = \\frac{1}{2}mv_f^2-\\frac{1}{2}mv_0^2\n\\]\nIf the only change is the configuration of the system then work can be measured from the change in potential energy:\n\\[\nW = U_f - U_i\n\\]",
+    "crumbs": [
+      "Exams",
+      "Exam 2 Preparation Materials"
+    ]
+  },
+  {
+    "objectID": "exams/exam-2.html#power",
+    "href": "exams/exam-2.html#power",
+    "title": "Exam 2 Preparation Materials",
+    "section": "Power",
+    "text": "Power\nWork is a measurement of force relative to displacement. Power expands on work as it measures work done over the course of time.\n\\[\nP = \\frac{W}{\\Delta{t}}\n\\]\nPower’s SI unit is the Watt in which 1 Watt = 1 Joule/s = \\(\\frac{1 kg m^2}{s^3}\\)",
+    "crumbs": [
+      "Exams",
+      "Exam 2 Preparation Materials"
+    ]
+  },
+  {
+    "objectID": "lectures/lecture_82826.html",
+    "href": "lectures/lecture_82826.html",
+    "title": "Lecture 8-28-2026",
+    "section": "",
+    "text": "Reference The first lecture for kinematic equations.",
+    "crumbs": [
+      "Lectures",
+      "Lecture 8-28-2026"
+    ]
+  },
+  {
+    "objectID": "lectures/lecture_82826.html#example-problem-4",
+    "href": "lectures/lecture_82826.html#example-problem-4",
+    "title": "Lecture 8-28-2026",
+    "section": "Example Problem 4",
+    "text": "Example Problem 4\nA penny is dropped down a well and his water after 2 seconds, how deep is the well?\n\n\n\nExample problem 4 visualization\n\n\nGiven the variables we have that would mean we need to use Kinematic 4 as we are trying to solve for \\(y_f\\)\n\\[\nX_f = X_i+V_i*t+\\frac{1}{2}a*t^2\n\\]\nRemoving the variables we know equate to zero our equation shifts: \\[\ny_f = y_i + \\frac{1}{2}(-g)t^2\n\\]\nAnd the final position of y is the depth of our well. \\[\ny_f = \\frac{1}{2}(-g)t^2\n\\]\nPlugging in our values we find:\n\\[\ny_f = \\frac{1}{2}(-9.81 m/s)2s^2 \\newline\ny_f = -19.6 \\space \\text{meters}\n\\]\nOur answer tells us that our well is around 19.6 meters deep.\n\nLet’s shuffle our previous problem slightly to reveal additional algebra within the 4th Kinematic equation.\nLet’s assume the penny is thrown down the well (rather than dropped) with a \\(V_i = -2m/s\\) and impacts in 1 second.\nThis effectively becomes the same problem but with different parameters:\n\\[\ny_f = y_i + v_{yi}*t + \\frac{1}{2}a_yt^2-V_{yi}t\n\\]\nPlugging in our known variables we find:\n\\[\ny_f = 0 + -2 m/s * 1 s + \\frac{1}{2}(-9.81)(1s)^2\n\\]\nSimplifying\n\\[\ny_f = -2 + -4.905\ny_f = -6.905 meters\n\\]\nIn another form of this equation the penny is thrown upwards at 5m/s and hits the bottom of the well after 3s.\nUsing the 4th equation again we get:\n\\[\nY_f = Y_i+V_i*t+\\frac{1}{2}a*t^2\n\\]\nIn which case we have \\[\nV_{yi} = 5 m/s \\newline\na_y = -g \\newline\ny_f = 0 \\newline\ny_i = \\space ? \\space \\text{(also known as h)}\n\\]\nPlugging that in\n\\[\n0 = h + V_{yi}t - \\frac{gt^2}{2}\n\\]\nWhich simplifies to:\n\\[\nh = \\frac{gt^2}{2}-V_{yi}t \\newline\nh = 9.8/2*3^2-5*3 \\newline\nh = 29.1 \\space \\text{meters deep}\n\\]",
+    "crumbs": [
+      "Lectures",
+      "Lecture 8-28-2026"
+    ]
+  },
+  {
+    "objectID": "lectures/lecture_82826.html#example-problem-1",
+    "href": "lectures/lecture_82826.html#example-problem-1",
+    "title": "Lecture 8-28-2026",
+    "section": "Example Problem 1",
+    "text": "Example Problem 1\nA ball rolling off of a table:\n\n\n\nExample problem 1 visualized\n\n\nTaking stock of the variables we know we will associate with the final position of the ball as \\(R\\)\nIn this problem we have to calculate both x and y indepdently in the same way we would normally calculate them.\nFirstly since the ball is rolling across the \\(x\\) axis at 1m/s and we know the x axis takes on no additional acceleration we can calculate the x position of the ball using one of the kinematic equations, specifically equation 4:\nWe will also have to calculate the y coordinate as well, using the same kinematic equation. Our example problem provides us with the necessary information to solve for both x and y.\nWe will want to solve for y first since it will tell us how long the ball takes to drop, from there we can pause and solve for x at the same time frame to find where r is.\n\nSolve for \\(Y_f\\) when",
+    "crumbs": [
+      "Lectures",
+      "Lecture 8-28-2026"
+    ]
+  },
+  {
+    "objectID": "lectures/lecture_83126.html",
+    "href": "lectures/lecture_83126.html",
+    "title": "Lecture 8-31-2028",
+    "section": "",
+    "text": "A ball rolling off of a counter top.\n\n\n\nVisualization of example problem 1",
+    "crumbs": [
+      "Lectures",
+      "Lecture 8-31-2028"
+    ]
+  },
+  {
+    "objectID": "lectures/lecture_83126.html#case-1-a-ball-rolling-off-of-a-table",
+    "href": "lectures/lecture_83126.html#case-1-a-ball-rolling-off-of-a-table",
+    "title": "Lecture 8-31-2028",
+    "section": "",
+    "text": "A ball rolling off of a counter top.\n\n\n\nVisualization of example problem 1",
+    "crumbs": [
+      "Lectures",
+      "Lecture 8-31-2028"
+    ]
+  },
+  {
+    "objectID": "homework/assignment-1.html",
+    "href": "homework/assignment-1.html",
+    "title": "Homework Assignement 1",
+    "section": "",
+    "text": "A person walks first at a constant speed of 5.10 m/s along a straight line from point circled A to point circled B and then back along the line from circled B to circled A at a constant speed of 3.15 m/s.\n\n\n\n\nRecall that we can find our average speed \\(S_{avg}\\) by using the distance traveled \\(d\\) divided by the change in time \\(\\Delta{t}\\)\nNow, since we measure our distance in meters and we measure our velocity in meters/second we can say that \\(t = d/speed\\)\nThis is mathematically true as:\n\\[\n\\frac{\\text{meters}}{\\text{meters/sec}} \\newline\n\\newline\n\\textnormal{meters cancels out in numerator and denominator}\n\\newline\n\\newline\n= seconds\n\\]\nTherefore our problem can be written as:\n\\[\n\\frac{2d}{\\frac{d}{5.10}+\\frac{d}{3.15}}\n\\newline\n\\newline\n\\]\nThe d’s cancel out:\n\\[\n\\frac{2}{\\frac{1}{5.10}+\\frac{1}{3.15}}\n\\]\nDividing by a fraction is the same as multiplying by it’s reciprocal:\n\\[\n\\frac{2(5.10)(3.15)}{5.10+3.15} = 3.89 m/s\n\\]\nTherefore we can say that the average speed is \\(3.89 \\space \\text{meters/second}\\)\n\n\n\n\nAverage velocity is based on displacement divided by change in time or: \\(v_{avg} = \\frac{\\text{displacement}}{{\\Delta{t}}}\\)\nDisplacement is a vector with a magnitude. Recall that adding two perfectly opposing vectors provides 0.\nErgo:\n\\(\\overrightarrow{\\mathbf{A}} = -\\overrightarrow{\\mathbf{B}}\\)\ntherefore\n\\(\\overrightarrow{\\mathbf{A}} + \\overrightarrow{\\mathbf{B}} = 0\\)\nThis is true in our problem as travel from point A to point B we can represent with Magnitude \\(d_1\\) and travel from point B to point A is simply \\(-d_1\\) or \\(d_2\\) which means that \\(d_1+d_2 = d_1+(-d_2) = 0\\)\nTherefore solving for average velocity provides:\n\\[\n\\newline\nv_{avg} = \\frac{0}{\\Delta{t}} = 0\n\\newline\n\\]\nTherfore our average velocity is 0. This doesn’t mean she never moved it just means that the net change in position is zero.",
+    "crumbs": [
+      "Homework",
+      "Homework Assignement 1"
+    ]
+  },
+  {
+    "objectID": "homework/assignment-1.html#a-what-is-her-average-speed-over-the-entire-trip",
+    "href": "homework/assignment-1.html#a-what-is-her-average-speed-over-the-entire-trip",
+    "title": "Homework Assignement 1",
+    "section": "",
+    "text": "Recall that we can find our average speed \\(S_{avg}\\) by using the distance traveled \\(d\\) divided by the change in time \\(\\Delta{t}\\)\nNow, since we measure our distance in meters and we measure our velocity in meters/second we can say that \\(t = d/speed\\)\nThis is mathematically true as:\n\\[\n\\frac{\\text{meters}}{\\text{meters/sec}} \\newline\n\\newline\n\\textnormal{meters cancels out in numerator and denominator}\n\\newline\n\\newline\n= seconds\n\\]\nTherefore our problem can be written as:\n\\[\n\\frac{2d}{\\frac{d}{5.10}+\\frac{d}{3.15}}\n\\newline\n\\newline\n\\]\nThe d’s cancel out:\n\\[\n\\frac{2}{\\frac{1}{5.10}+\\frac{1}{3.15}}\n\\]\nDividing by a fraction is the same as multiplying by it’s reciprocal:\n\\[\n\\frac{2(5.10)(3.15)}{5.10+3.15} = 3.89 m/s\n\\]\nTherefore we can say that the average speed is \\(3.89 \\space \\text{meters/second}\\)",
+    "crumbs": [
+      "Homework",
+      "Homework Assignement 1"
+    ]
+  },
+  {
+    "objectID": "homework/assignment-1.html#b-what-is-her-average-velocity-over-the-entire-trip",
+    "href": "homework/assignment-1.html#b-what-is-her-average-velocity-over-the-entire-trip",
+    "title": "Homework Assignement 1",
+    "section": "",
+    "text": "Average velocity is based on displacement divided by change in time or: \\(v_{avg} = \\frac{\\text{displacement}}{{\\Delta{t}}}\\)\nDisplacement is a vector with a magnitude. Recall that adding two perfectly opposing vectors provides 0.\nErgo:\n\\(\\overrightarrow{\\mathbf{A}} = -\\overrightarrow{\\mathbf{B}}\\)\ntherefore\n\\(\\overrightarrow{\\mathbf{A}} + \\overrightarrow{\\mathbf{B}} = 0\\)\nThis is true in our problem as travel from point A to point B we can represent with Magnitude \\(d_1\\) and travel from point B to point A is simply \\(-d_1\\) or \\(d_2\\) which means that \\(d_1+d_2 = d_1+(-d_2) = 0\\)\nTherefore solving for average velocity provides:\n\\[\n\\newline\nv_{avg} = \\frac{0}{\\Delta{t}} = 0\n\\newline\n\\]\nTherfore our average velocity is 0. This doesn’t mean she never moved it just means that the net change in position is zero.",
+    "crumbs": [
+      "Homework",
+      "Homework Assignement 1"
+    ]
+  },
+  {
+    "objectID": "homework/assignment-1.html#a-what-is-the-original-speed-of-the-truck",
+    "href": "homework/assignment-1.html#a-what-is-the-original-speed-of-the-truck",
+    "title": "Homework Assignement 1",
+    "section": "(a) What is the original speed of the truck?",
+    "text": "(a) What is the original speed of the truck?\nIn this problem we are given several variables:\nWe know the truck covers 37 meters so assume a starting point of \\(X_i = 0\\) and \\(X_f = 37.0\\) we know the change in time is \\(8.10s\\) from start to finish and we know the final velocity or \\(V_f = 3.00 m/s\\)\nUsing our kinematic equations we can find that kinematic 1 easily allows us to solve with our known values for \\(V_i\\)\nKinematic 1: \\[\nX_f = X_i + \\frac{V_i+V_f}{2}*t\n\\newline\n\\]\nFrom there we know that \\(X_i\\) is 0 so our full equation for this problem is:\n\\[\nX_f = \\frac{V_i+V_f}{2}*t\n\\newline\n\\]\nFrom there we rearrange to solve for \\(V_i\\)\n\\[\n\\frac{2X_f}{t}-V_f = V_i\n\\newline\n\\newline\n\\frac{2*37}{8.10}-3.00 = 6.13 m/s\n\\newline\n\\]\nTherefore the truck started at 6.13 meters per second.",
+    "crumbs": [
+      "Homework",
+      "Homework Assignement 1"
+    ]
+  },
+  {
+    "objectID": "homework/assignment-1.html#b-what-is-the-acceleration-of-the-truck",
+    "href": "homework/assignment-1.html#b-what-is-the-acceleration-of-the-truck",
+    "title": "Homework Assignement 1",
+    "section": "(b) What is the acceleration of the truck?",
+    "text": "(b) What is the acceleration of the truck?\nBased on the calculations from our previous problem we know that the \\(V_i\\) is 6.13 meters per second which combined as \\(V_f - V_i\\) = \\(\\Delta{V}\\) and:\n\\[\n\\frac{\\Delta{V}}{t} = a\n\\]\nThis is also just Kinematic 2 solved for a:\n\\[\n\\frac{V_f - V_i}{t} = a\n\\]\nPlugging in our values:\n\\[\n\\frac{3.00-6.13}{8.10} = -0.386 m/s\n\\]\nTherefore the truck decelerates at -0.386 meters per second.",
+    "crumbs": [
+      "Homework",
+      "Homework Assignement 1"
+    ]
+  },
+  {
+    "objectID": "book/chapter-5.html",
+    "href": "book/chapter-5.html",
+    "title": "Chapter 5 - The Concept of Force",
+    "section": "",
+    "text": "The word force refers to an interaction with an object by some means (sometimes muscular activity) and resulting in some change in the objects velocity. Forces, do not always cause motion.\nIn order to change an object’s velocity, Newton found that you must excert some force on that object.\n\n\n\nExample of contact forces\n\n\nContact forces invovle physical contact between two objects. Like a punter punting a football. Or the force excerted by a gas molecule on the walls of a container.\nAnother type of force are field forces, these forces do not involve physical contact between two objects, instead they act through empty space. The gravitational force of attraction between two objects such as the earth and moon are an example of a field force.\nAnother common field force is the electric force that one electric charge exerts on another, such as the attractive electric force between an electron and a proton that form a hydrogen atom. Or consider the force a bar magnet exerts on a piece of iron.\nThe fundamental forces known in nature: 1. Gravitational forces between objects 2. Electromagnetic forces between electric charges 3. Strong forces between subatomic particles 4. Weak forces that arise in certain radioactive decay processes.\nIn physics we only tend to worry about gravitational and electromagnetic forces. See Chapter 44 for strong and weak forces.\n\nThe Vector Nature of Force\nWe can use a spring mounted vertically to measure force.\nSuppose that with some initial force \\(\\overrightarrow{F_1}\\) applied to the spring yields a measured reading of 1.0 cm. Now if we apply \\(\\overrightarrow{F_2}\\) and that force is exactly twice in magnitude as \\(\\overrightarrow{F_1}\\) then the reading of force shall show the spring at 2.0 cm.\nThe combined effect of two collinear forces is the sum of the effects of the individual forces. So if we apply both \\(\\overrightarrow{F_1}\\) and \\(overrightarrow{F_2}\\) at the same time, the spring will show 3.0 cm.\n\n\n\nExample of force applied to springs\n\n\nIn the case where \\(\\overrightarrow{F_1}\\) is applied vertically and \\(\\overrightarrow{F_2}\\) is applied horizontally, the vector nature of forces allow us to use vector addition to find the reading of the spring by doing vector addition with \\(\\overrightarrow{F_1}\\) and \\(\\overrightarrow{F_2}\\).\n\\[\n\\lvert \\overrightarrow{F_1} \\rvert = \\sqrt{F_1^2 + F_2^2} = 2.24 cm\n\\]\nAnd the direction of this force is:\n\\[\n\\theta = \\tan^-1{\\frac{\\lvert F_1 \\rvert}{\\lvert F_2 \\rvert}} = 26.6^\\circ\n\\]\nGiven that this is a reference angle evaluating that our components for y and x yield a quadrant 4 location:\n\\[\n\\theta = 360^\\circ - 26.6^\\circ = 333^\\circ \\space or \\space -26.6^\\circ\n\\]",
+    "crumbs": [
+      "Book",
+      "Chapter 5 - The Concept of Force"
+    ]
+  },
+  {
+    "objectID": "book/chapter-1.html",
+    "href": "book/chapter-1.html",
+    "title": "Chapter 1",
+    "section": "",
+    "text": "Book Resource Found Here",
+    "crumbs": [
+      "Book",
+      "Chapter 1"
+    ]
+  },
+  {
+    "objectID": "book/chapter-1.html#types-of-models",
+    "href": "book/chapter-1.html#types-of-models",
+    "title": "Chapter 1",
+    "section": "Types of Models",
+    "text": "Types of Models\nUsing geometry to model a problem into a solvable solution.\nExample:\n\n\n\nFinding the height of a tree\n\n\nYou want to find the height of a tree but cannot measure it directly. You stand 50 meters from the tree and determine that the line of sight from the group to the top of the tree makes an angle of 25° with the ground.\nTo determine the height of the tree we can use a right triangle and recall SOH CAH TOA\nIn this case given our variables we would like to use \\(\\tan{\\theta} = \\frac{\\text{opposite side}}{\\text{adjacent side}}\\)\nAnd that allows us to see that:\n\\[\n\\tan{\\theta} = \\frac{h}{50}\n\\]\nSolving for h by multiplying both sides by 50:\n\\[\nh = 50 * \\tan{25^\\circ} = h \\newline\nh = 23.3 m\n\\]\nThe particle model is an example of a simplification model where details that are not significant in determining the outcome of the problem are ignored.\nAnother category of models is an analysis model and then there are structural models which are used to understand the behavior of a system that is far different in scale from our macroscopic world, either much larger or much smaller.",
+    "crumbs": [
+      "Book",
+      "Chapter 1"
+    ]
+  },
+  {
+    "objectID": "book/chapter-1.html#definitions",
+    "href": "book/chapter-1.html#definitions",
+    "title": "Chapter 1",
+    "section": "Definitions",
+    "text": "Definitions\nThe three fundamental physical quantities of mechanics are length, mass, and time, of which the SI units are meter (m), kilogram (kg) and seconds (s) respectively.\nThe density of a substance is defined as its mass per unit volume:\n\\[\n\\rho \\equiv \\frac{m}{V}\n\\]\n[There are other concepts in chapter one that are worth covering and they have about 30 practice problems we should highly consider taking on]",
+    "crumbs": [
+      "Book",
+      "Chapter 1"
+    ]
+  },
+  {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
@@ -186,116 +439,6 @@
     ]
   },
   {
-    "objectID": "homework/assignment-1.html",
-    "href": "homework/assignment-1.html",
-    "title": "Homework Assignement 1",
-    "section": "",
-    "text": "A person walks first at a constant speed of 5.10 m/s along a straight line from point circled A to point circled B and then back along the line from circled B to circled A at a constant speed of 3.15 m/s.\n\n\n\n\nRecall that we can find our average speed \\(S_{avg}\\) by using the distance traveled \\(d\\) divided by the change in time \\(\\Delta{t}\\)\nNow, since we measure our distance in meters and we measure our velocity in meters/second we can say that \\(t = d/speed\\)\nThis is mathematically true as:\n\\[\n\\frac{\\text{meters}}{\\text{meters/sec}} \\newline\n\\newline\n\\textnormal{meters cancels out in numerator and denominator}\n\\newline\n\\newline\n= seconds\n\\]\nTherefore our problem can be written as:\n\\[\n\\frac{2d}{\\frac{d}{5.10}+\\frac{d}{3.15}}\n\\newline\n\\newline\n\\]\nThe d’s cancel out:\n\\[\n\\frac{2}{\\frac{1}{5.10}+\\frac{1}{3.15}}\n\\]\nDividing by a fraction is the same as multiplying by it’s reciprocal:\n\\[\n\\frac{2(5.10)(3.15)}{5.10+3.15} = 3.89 m/s\n\\]\nTherefore we can say that the average speed is \\(3.89 \\space \\text{meters/second}\\)\n\n\n\n\nAverage velocity is based on displacement divided by change in time or: \\(v_{avg} = \\frac{\\text{displacement}}{{\\Delta{t}}}\\)\nDisplacement is a vector with a magnitude. Recall that adding two perfectly opposing vectors provides 0.\nErgo:\n\\(\\overrightarrow{\\mathbf{A}} = -\\overrightarrow{\\mathbf{B}}\\)\ntherefore\n\\(\\overrightarrow{\\mathbf{A}} + \\overrightarrow{\\mathbf{B}} = 0\\)\nThis is true in our problem as travel from point A to point B we can represent with Magnitude \\(d_1\\) and travel from point B to point A is simply \\(-d_1\\) or \\(d_2\\) which means that \\(d_1+d_2 = d_1+(-d_2) = 0\\)\nTherefore solving for average velocity provides:\n\\[\n\\newline\nv_{avg} = \\frac{0}{\\Delta{t}} = 0\n\\newline\n\\]\nTherfore our average velocity is 0. This doesn’t mean she never moved it just means that the net change in position is zero.",
-    "crumbs": [
-      "Homework",
-      "Homework Assignement 1"
-    ]
-  },
-  {
-    "objectID": "homework/assignment-1.html#a-what-is-her-average-speed-over-the-entire-trip",
-    "href": "homework/assignment-1.html#a-what-is-her-average-speed-over-the-entire-trip",
-    "title": "Homework Assignement 1",
-    "section": "",
-    "text": "Recall that we can find our average speed \\(S_{avg}\\) by using the distance traveled \\(d\\) divided by the change in time \\(\\Delta{t}\\)\nNow, since we measure our distance in meters and we measure our velocity in meters/second we can say that \\(t = d/speed\\)\nThis is mathematically true as:\n\\[\n\\frac{\\text{meters}}{\\text{meters/sec}} \\newline\n\\newline\n\\textnormal{meters cancels out in numerator and denominator}\n\\newline\n\\newline\n= seconds\n\\]\nTherefore our problem can be written as:\n\\[\n\\frac{2d}{\\frac{d}{5.10}+\\frac{d}{3.15}}\n\\newline\n\\newline\n\\]\nThe d’s cancel out:\n\\[\n\\frac{2}{\\frac{1}{5.10}+\\frac{1}{3.15}}\n\\]\nDividing by a fraction is the same as multiplying by it’s reciprocal:\n\\[\n\\frac{2(5.10)(3.15)}{5.10+3.15} = 3.89 m/s\n\\]\nTherefore we can say that the average speed is \\(3.89 \\space \\text{meters/second}\\)",
-    "crumbs": [
-      "Homework",
-      "Homework Assignement 1"
-    ]
-  },
-  {
-    "objectID": "homework/assignment-1.html#b-what-is-her-average-velocity-over-the-entire-trip",
-    "href": "homework/assignment-1.html#b-what-is-her-average-velocity-over-the-entire-trip",
-    "title": "Homework Assignement 1",
-    "section": "",
-    "text": "Average velocity is based on displacement divided by change in time or: \\(v_{avg} = \\frac{\\text{displacement}}{{\\Delta{t}}}\\)\nDisplacement is a vector with a magnitude. Recall that adding two perfectly opposing vectors provides 0.\nErgo:\n\\(\\overrightarrow{\\mathbf{A}} = -\\overrightarrow{\\mathbf{B}}\\)\ntherefore\n\\(\\overrightarrow{\\mathbf{A}} + \\overrightarrow{\\mathbf{B}} = 0\\)\nThis is true in our problem as travel from point A to point B we can represent with Magnitude \\(d_1\\) and travel from point B to point A is simply \\(-d_1\\) or \\(d_2\\) which means that \\(d_1+d_2 = d_1+(-d_2) = 0\\)\nTherefore solving for average velocity provides:\n\\[\n\\newline\nv_{avg} = \\frac{0}{\\Delta{t}} = 0\n\\newline\n\\]\nTherfore our average velocity is 0. This doesn’t mean she never moved it just means that the net change in position is zero.",
-    "crumbs": [
-      "Homework",
-      "Homework Assignement 1"
-    ]
-  },
-  {
-    "objectID": "homework/assignment-1.html#a-what-is-the-original-speed-of-the-truck",
-    "href": "homework/assignment-1.html#a-what-is-the-original-speed-of-the-truck",
-    "title": "Homework Assignement 1",
-    "section": "(a) What is the original speed of the truck?",
-    "text": "(a) What is the original speed of the truck?\nIn this problem we are given several variables:\nWe know the truck covers 37 meters so assume a starting point of \\(X_i = 0\\) and \\(X_f = 37.0\\) we know the change in time is \\(8.10s\\) from start to finish and we know the final velocity or \\(V_f = 3.00 m/s\\)\nUsing our kinematic equations we can find that kinematic 1 easily allows us to solve with our known values for \\(V_i\\)\nKinematic 1: \\[\nX_f = X_i + \\frac{V_i+V_f}{2}*t\n\\newline\n\\]\nFrom there we know that \\(X_i\\) is 0 so our full equation for this problem is:\n\\[\nX_f = \\frac{V_i+V_f}{2}*t\n\\newline\n\\]\nFrom there we rearrange to solve for \\(V_i\\)\n\\[\n\\frac{2X_f}{t}-V_f = V_i\n\\newline\n\\newline\n\\frac{2*37}{8.10}-3.00 = 6.13 m/s\n\\newline\n\\]\nTherefore the truck started at 6.13 meters per second.",
-    "crumbs": [
-      "Homework",
-      "Homework Assignement 1"
-    ]
-  },
-  {
-    "objectID": "homework/assignment-1.html#b-what-is-the-acceleration-of-the-truck",
-    "href": "homework/assignment-1.html#b-what-is-the-acceleration-of-the-truck",
-    "title": "Homework Assignement 1",
-    "section": "(b) What is the acceleration of the truck?",
-    "text": "(b) What is the acceleration of the truck?\nBased on the calculations from our previous problem we know that the \\(V_i\\) is 6.13 meters per second which combined as \\(V_f - V_i\\) = \\(\\Delta{V}\\) and:\n\\[\n\\frac{\\Delta{V}}{t} = a\n\\]\nThis is also just Kinematic 2 solved for a:\n\\[\n\\frac{V_f - V_i}{t} = a\n\\]\nPlugging in our values:\n\\[\n\\frac{3.00-6.13}{8.10} = -0.386 m/s\n\\]\nTherefore the truck decelerates at -0.386 meters per second.",
-    "crumbs": [
-      "Homework",
-      "Homework Assignement 1"
-    ]
-  },
-  {
-    "objectID": "lectures/lecture_83126.html",
-    "href": "lectures/lecture_83126.html",
-    "title": "Lecture 8-31-2028",
-    "section": "",
-    "text": "A ball rolling off of a counter top.\n\n\n\nVisualization of example problem 1",
-    "crumbs": [
-      "Lectures",
-      "Lecture 8-31-2028"
-    ]
-  },
-  {
-    "objectID": "lectures/lecture_83126.html#case-1-a-ball-rolling-off-of-a-table",
-    "href": "lectures/lecture_83126.html#case-1-a-ball-rolling-off-of-a-table",
-    "title": "Lecture 8-31-2028",
-    "section": "",
-    "text": "A ball rolling off of a counter top.\n\n\n\nVisualization of example problem 1",
-    "crumbs": [
-      "Lectures",
-      "Lecture 8-31-2028"
-    ]
-  },
-  {
-    "objectID": "lectures/lecture_82826.html",
-    "href": "lectures/lecture_82826.html",
-    "title": "Lecture 8-28-2026",
-    "section": "",
-    "text": "Reference The first lecture for kinematic equations.",
-    "crumbs": [
-      "Lectures",
-      "Lecture 8-28-2026"
-    ]
-  },
-  {
-    "objectID": "lectures/lecture_82826.html#example-problem-4",
-    "href": "lectures/lecture_82826.html#example-problem-4",
-    "title": "Lecture 8-28-2026",
-    "section": "Example Problem 4",
-    "text": "Example Problem 4\nA penny is dropped down a well and his water after 2 seconds, how deep is the well?\n\n\n\nExample problem 4 visualization\n\n\nGiven the variables we have that would mean we need to use Kinematic 4 as we are trying to solve for \\(y_f\\)\n\\[\nX_f = X_i+V_i*t+\\frac{1}{2}a*t^2\n\\]\nRemoving the variables we know equate to zero our equation shifts: \\[\ny_f = y_i + \\frac{1}{2}(-g)t^2\n\\]\nAnd the final position of y is the depth of our well. \\[\ny_f = \\frac{1}{2}(-g)t^2\n\\]\nPlugging in our values we find:\n\\[\ny_f = \\frac{1}{2}(-9.81 m/s)2s^2 \\newline\ny_f = -19.6 \\space \\text{meters}\n\\]\nOur answer tells us that our well is around 19.6 meters deep.\n\nLet’s shuffle our previous problem slightly to reveal additional algebra within the 4th Kinematic equation.\nLet’s assume the penny is thrown down the well (rather than dropped) with a \\(V_i = -2m/s\\) and impacts in 1 second.\nThis effectively becomes the same problem but with different parameters:\n\\[\ny_f = y_i + v_{yi}*t + \\frac{1}{2}a_yt^2-V_{yi}t\n\\]\nPlugging in our known variables we find:\n\\[\ny_f = 0 + -2 m/s * 1 s + \\frac{1}{2}(-9.81)(1s)^2\n\\]\nSimplifying\n\\[\ny_f = -2 + -4.905\ny_f = -6.905 meters\n\\]\nIn another form of this equation the penny is thrown upwards at 5m/s and hits the bottom of the well after 3s.\nUsing the 4th equation again we get:\n\\[\nY_f = Y_i+V_i*t+\\frac{1}{2}a*t^2\n\\]\nIn which case we have \\[\nV_{yi} = 5 m/s \\newline\na_y = -g \\newline\ny_f = 0 \\newline\ny_i = \\space ? \\space \\text{(also known as h)}\n\\]\nPlugging that in\n\\[\n0 = h + V_{yi}t - \\frac{gt^2}{2}\n\\]\nWhich simplifies to:\n\\[\nh = \\frac{gt^2}{2}-V_{yi}t \\newline\nh = 9.8/2*3^2-5*3 \\newline\nh = 29.1 \\space \\text{meters deep}\n\\]",
-    "crumbs": [
-      "Lectures",
-      "Lecture 8-28-2026"
-    ]
-  },
-  {
-    "objectID": "lectures/lecture_82826.html#example-problem-1",
-    "href": "lectures/lecture_82826.html#example-problem-1",
-    "title": "Lecture 8-28-2026",
-    "section": "Example Problem 1",
-    "text": "Example Problem 1\nA ball rolling off of a table:\n\n\n\nExample problem 1 visualized\n\n\nTaking stock of the variables we know we will associate with the final position of the ball as \\(R\\)\nIn this problem we have to calculate both x and y indepdently in the same way we would normally calculate them.\nFirstly since the ball is rolling across the \\(x\\) axis at 1m/s and we know the x axis takes on no additional acceleration we can calculate the x position of the ball using one of the kinematic equations, specifically equation 4:\nWe will also have to calculate the y coordinate as well, using the same kinematic equation. Our example problem provides us with the necessary information to solve for both x and y.\nWe will want to solve for y first since it will tell us how long the ball takes to drop, from there we can pause and solve for x at the same time frame to find where r is.\n\nSolve for \\(Y_f\\) when",
-    "crumbs": [
-      "Lectures",
-      "Lecture 8-28-2026"
-    ]
-  },
-  {
     "objectID": "lectures/lecture_82626.html",
     "href": "lectures/lecture_82626.html",
     "title": "Lecture 8-26-2026",
@@ -356,148 +499,5 @@
     "title": "notes",
     "section": "",
     "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
-  },
-  {
-    "objectID": "exams/exam-2.html",
-    "href": "exams/exam-2.html",
-    "title": "Exam 2 Preparation Materials",
-    "section": "",
-    "text": "Based on the expierce gained from the first exam we know that exam 2 is likely a combination of problems from the previous exam as well as problems from Professor Lamp’s lecture notes.\nMe must prepare for all questions that are either on the previous test (“exam 2” in the previous exams directory.) According to the professor our exam 2 will cover:\nChapters 6,7, 9, 10, 11.\nThe professor has provided the lecture notes and a previous exam. We should be able to solve any combination of problems from lecture notes as well as the previous exam in 15 question quantities in around 30-40 mintues, but must be under 50 minutes.",
-    "crumbs": [
-      "Exams",
-      "Exam 2 Preparation Materials"
-    ]
-  },
-  {
-    "objectID": "exams/exam-2.html#kinetic-energy",
-    "href": "exams/exam-2.html#kinetic-energy",
-    "title": "Exam 2 Preparation Materials",
-    "section": "Kinetic Energy",
-    "text": "Kinetic Energy\nKinetic Energy is given from \\(K=\\frac{1}{2}mv^2\\)\nAnd gravitational potential energy is given as \\(U = mgh\\)\n\n\n\nExample of Wile E. Coyote falling from a cliff\n\n\nConsider again the example of Wile E. Coyote falling from a cliff.\nHis initial energy is only his gravitational potential energy since his initial velocity is 0.\n\\(E_i = mgh\\)\n\\(E_f = \\frac{1}{2}mv_f^2\\) is his final energy as all of his gravitational potential energy has been converted to kinetic energy throughout the fall.\nSince there is no means of energy being lost \\(E_i = E_f\\)\n\\(v_f\\) therefore can be found by solving for it through:\n\\[\n\\newline\nmgh = \\frac{1}{2}mv^2\n\\newline\nv_f = \\sqrt{2gh}\n\\]",
-    "crumbs": [
-      "Exams",
-      "Exam 2 Preparation Materials"
-    ]
-  },
-  {
-    "objectID": "exams/exam-2.html#frictionless",
-    "href": "exams/exam-2.html#frictionless",
-    "title": "Exam 2 Preparation Materials",
-    "section": "Frictionless",
-    "text": "Frictionless\n\n\n\nA problem related to a frictionless half-pipe\n\n\nMuch like the roller coaster and other problems we have imagined, in a half pipe our skater slides from one side of the half pipe to the other on a perfectly frictionless surface.\nIn such a case the \\(E_i = E_f\\) as there is no mechanism for energy to be lost.\nThat means that at his initial height \\(h_i\\) and with no initial velocity he exhibits the maximum potential energy via gravity.\n\\(U_i = mgh\\)\nLikewise, at the opposite side of the halfpipe his climb stops once all of his energy kinetically is equal to his initial potential energy.\nThat is to say, as the skater reaches the bottom of the halfpipe his height is 0, therefore all of his gravitational potential energy has been converted to kinetic energy.\nLikewise, once the skater begins rising on the other side of the half pipe, his kinetic energy once again start becoming gravitational potential energy and eventually \\(U_i = K_f\\) at \\(h_f\\).\nSince there is no mechanism for energy to be lost \\(h_i = h_f\\) as the same gravitational potential energy is reconverted from kinetic energy on the opposite side of the half pipe:\n\\(U_i + K_i = U_f + K_f\\)\nWhere \\(K_i\\) and \\(K_f\\) both equal zero therefore:\n\\(U_i = U_f\\) which if you’ll recall \\(U_i=mgh_i\\) therefore, since mass and gravity are both constants, the height must be the same on both sides for \\(U_i = U_f\\) to be true. So \\(h_i = h_f\\)",
-    "crumbs": [
-      "Exams",
-      "Exam 2 Preparation Materials"
-    ]
-  },
-  {
-    "objectID": "exams/exam-2.html#with-friction",
-    "href": "exams/exam-2.html#with-friction",
-    "title": "Exam 2 Preparation Materials",
-    "section": "With Friction",
-    "text": "With Friction\n\n\n\nSame Halfpipe problem but with friction\n\n\nConsider the same half-pipe but with a catch, in the middle there is a length \\(L\\) of 10 meters in which we apply a kinetic friction of \\(\\mu_k = 0.01\\)\n\nWork-Energy Theorem\nThis is similar to the conservation of energy which is \\(E_i = E_f\\) except here we consider energy lost in the system:\n\\(E_i = E_f + E_{lost}\\)\nWith the frictionless halfpipe we learned that U_i = U_f, but when there is friction we know that:\n\\[\nU_i = U_f + \\mu_kmgL\n\\]\nTherefore \\(h_i \\ne h_f\\)\nWe can solve for \\(h_f\\) as such:\n\\[\n\\newline\nmgh_i = mgh_f + \\mu_kmgL\n\\newline\n\\text{Divide both sides by mg to cancel them out}\n\\newline\nh_i = h_f + \\mu_kL\n\\newline\nh_f = h_i - \\mu_kL\n\\newline\nh_f = 3-(0.01*10)= 2.9 \\space \\text{m}\n\\newline\n\\]\nIn general Work-Energy theorem is \\(E_i + E_{added} = E_f + E_{lost}\\)",
-    "crumbs": [
-      "Exams",
-      "Exam 2 Preparation Materials"
-    ]
-  },
-  {
-    "objectID": "exams/exam-2.html#determining-deltax-when-v_f-0",
-    "href": "exams/exam-2.html#determining-deltax-when-v_f-0",
-    "title": "Exam 2 Preparation Materials",
-    "section": "Determining \\(\\Delta{x}\\) When \\(V_f = 0\\)",
-    "text": "Determining \\(\\Delta{x}\\) When \\(V_f = 0\\)\nTo determine the distance the block slid before coming to rest consider the following problem:\n\n\n\nProblem description\n\n\nHere we can use the same approach as above to solve for \\(v_f\\) when \\(\\Delta{x} =\\) 2m.\nRecall that, \\(v_f = \\sqrt{v_0^2-2g\\Delta{x}(\\mu_k\\cos{\\theta}+\\sin{\\theta})}\\)\nPlugging in the numbers from the problem description where \\(v_0 = 3\\)m/s, \\(\\theta = 10^\\circ\\), \\(\\mu_k=0.2\\) and \\(\\Delta{x}=2\\)m\nWe find that:\n\\[\nv_f = \\sqrt{9-14.54}\n\\]\nThe result of that square root would result in an imaginary number. This means that the block did not slide a distance \\(\\Delta{x}\\) before coming to rest.\nTherefore, instead we will solve for \\(\\Delta{x}\\) when \\(v_f = 0\\)\nTo do this you can plug in our terms into a kinematic equation:\n\\[\nv_f^2 = v_0^2 +2a(X_f - X_i)\n\\]\nPluggin in our terms yields:\n\\[\n0 = v_0^2-2g\\Delta{x}(\\mu_kcos{\\theta}+\\sin{\\theta})\n\\]\nSolving for \\(\\Delta{x}\\) yields:\n\\[\n\\Delta{x} = \\frac{v_0^2}{2g(\\mu_k\\cos{\\theta}+\\sin{\\theta})}\n\\]\nPluggin in our values:\n\\[\n\\Delta{x} = \\frac{9}{(2)(9.8)(0.371)} = 1.24 \\space \\text{m}\n\\]\nThe mass therefore will slide 1.24 meters up before stopping.",
-    "crumbs": [
-      "Exams",
-      "Exam 2 Preparation Materials"
-    ]
-  },
-  {
-    "objectID": "exams/exam-2.html#mass-sliding-down",
-    "href": "exams/exam-2.html#mass-sliding-down",
-    "title": "Exam 2 Preparation Materials",
-    "section": "Mass Sliding Down",
-    "text": "Mass Sliding Down\n\n\n\nMass sliding down problem description\n\n\nIn this problem our mass is sliding down the incline rather than up. Firstly, we will solve for \\(v_f\\) after 2 meters, this will let us know if our mass is speeding up or slowing down.\nWe can arrange our conservation of energy problem as such:\n\\[\nmgh_i + \\frac{1}{2}mv_0^2 = \\frac{1}{2}mv_f^2+\\mu_kg\\Delta{x}\\cos{\\theta}\n\\]\nAnd recall that our \\(h_i\\) can be determined using a triginometric function.\n\\[\ng\\Delta{x}\\sin{\\theta} + \\frac{1}{2}v_0^2 = \\frac{1}{2}v_f^2 + \\mu_kg\\Delta{x}\\cos{\\theta}\n\\]\nFrom there solving for \\(v_f\\) yields:\n\\[\nv_f = \\sqrt{v_0^2+2g\\Delta{x}(\\sin(\\theta)- \\mu_k\\cos{\\theta}}\n\\]\nPluggin in our values we find that\n\\[\n\\newline\nv_f = \\sqrt{8.0984} \\approx 2.85 \\space \\text{m/s}\n\\]\nThat means that our mass is slowing down after 2 meters of displacement. Next we can solve for how far it travels before stopping:\nRecall that, \\[\n\\Delta{x} = \\frac{-v_0^2}{2g(\\sin{\\theta}-\\mu_k\\cos{\\theta})}\n\\]\nSince our velocity is in the negative direction and therefore our velocity value is negative we can drop the sign from the \\(\\v_0^2\\) term to yield:\n\\[\n\\Delta{x} = \\frac{v_0^2}{2g(\\sin{\\theta}-\\mu_k\\cos{\\theta})}\n\\newline\n\\Delta{x} = \\frac{9}{(2)(9.8)(0.2*0.988-0.174)} = 19.96 \\space \\text{meters}\n\\newline\n\\]\nTherefore, our mass will slide 19.96 meters before coming to rest.",
-    "crumbs": [
-      "Exams",
-      "Exam 2 Preparation Materials"
-    ]
-  },
-  {
-    "objectID": "exams/exam-2.html#mass-sliding-into-a-spring",
-    "href": "exams/exam-2.html#mass-sliding-into-a-spring",
-    "title": "Exam 2 Preparation Materials",
-    "section": "Mass Sliding Into A Spring",
-    "text": "Mass Sliding Into A Spring\n\n\n\nMass Sliding Into A Spring Problem\n\n\nHere a mass slides down an incline before colliding with our spring and compressing it. We want to first solve for \\(x\\) or how far the spring will compress before our mass comes to a rest.\nRecall conservation of energy\n\\[\nE_i = E_f\n\\]\nAnd also recall that in the given problem at the top of the incline we have gravitational potential energy and no initial velocity.\nAt the bottom of the ramp, once we collide with the spring our kinetic energy will have been converted to potential energy within the spring from compressing it.\nTherefore we can arrange the conservation of energy equation as such:\n\\[\nmgh = \\frac{1}{2}kx^2\n\\]\nFrom there we can solve for \\(x\\) by arranging as such:\n\\[\nx = \\sqrt{\\frac{2mgh}{k}}\n\\newline\n\\]\nPlugging in our respective values:\n\\[\n\\sqrt{\\frac{(2)(1)(9.8)(1)}{1000}} \\approx 0.14 \\space \\text{m}\n\\newline\n\\]\nSo we know that the spring then compresses 0.14 meters before our mass comes to rest.",
-    "crumbs": [
-      "Exams",
-      "Exam 2 Preparation Materials"
-    ]
-  },
-  {
-    "objectID": "exams/exam-2.html#work",
-    "href": "exams/exam-2.html#work",
-    "title": "Exam 2 Preparation Materials",
-    "section": "Work",
-    "text": "Work\nWork is a measurement of energy transfer. It is measured in Newton meters (\\(\\frac{N}{m}\\)) which is also referred to as a Joule (J).\nTo find work you can use:\n\\[\nW = \\overrightarrow{F} \\cdot \\overrightarrow{\\Delta{r}} = F\\Delta{r}\\cos{\\theta}\n\\]\nTherefore a force of 2N applied to an object that results in no displacement has done no work.\nA force of \\(2N\\) that moves an object through a displacement of 1 meter does more work than a similar force of \\(2N\\) that moves and object through a displacement of only 10 cm.\nA force of \\(1N\\) that moves an object 1m does less work than a force of \\(2N\\) that moves an object that same 1m.\nA force that is perpendicular to displacement does no work (does not transfer energy into the system) as \\(\\cos(90^\\circ)=0\\)\nWork carries a sign, and that sign depends on the direction of force and displacement.\nA force that is opposite in direction to displacement provides negative work, whereas when force and displacement occur in the same direction work’s sign is positive.\nWork done by a spring can be measured as such:\n\\[\nW_{spring} = \\frac{1}{2}kx_i^2 - \\frac{1}{2}kx_f^2\n\\]\nThe total energy of a system is defined as that systems kinetic energy \\(K\\) plus it’s potential energy \\(U\\).\n\\[\nE + K + U\n\\]\nWork is done on a system by external forces and the only change is in the speed of it’s members. Therefore work can be found via:\n\\[\nW = K_f - K_i = \\frac{1}{2}mv_f^2-\\frac{1}{2}mv_0^2\n\\]\nIf the only change is the configuration of the system then work can be measured from the change in potential energy:\n\\[\nW = U_f - U_i\n\\]",
-    "crumbs": [
-      "Exams",
-      "Exam 2 Preparation Materials"
-    ]
-  },
-  {
-    "objectID": "exams/exam-2.html#power",
-    "href": "exams/exam-2.html#power",
-    "title": "Exam 2 Preparation Materials",
-    "section": "Power",
-    "text": "Power\nWork is a measurement of force relative to displacement. Power expands on work as it measures work done over the course of time.\n\\[\nP = \\frac{W}{\\Delta{t}}\n\\]\nPower’s SI unit is the Watt in which 1 Watt = 1 Joule/s = \\(\\frac{1 kg m^2}{s^3}\\)",
-    "crumbs": [
-      "Exams",
-      "Exam 2 Preparation Materials"
-    ]
-  },
-  {
-    "objectID": "book/chapter-5.html",
-    "href": "book/chapter-5.html",
-    "title": "Chapter 5 - The Concept of Force",
-    "section": "",
-    "text": "The word force refers to an interaction with an object by some means (sometimes muscular activity) and resulting in some change in the objects velocity. Forces, do not always cause motion.\nIn order to change an object’s velocity, Newton found that you must excert some force on that object.\n\n\n\nExample of contact forces\n\n\nContact forces invovle physical contact between two objects. Like a punter punting a football. Or the force excerted by a gas molecule on the walls of a container.\nAnother type of force are field forces, these forces do not involve physical contact between two objects, instead they act through empty space. The gravitational force of attraction between two objects such as the earth and moon are an example of a field force.\nAnother common field force is the electric force that one electric charge exerts on another, such as the attractive electric force between an electron and a proton that form a hydrogen atom. Or consider the force a bar magnet exerts on a piece of iron.\nThe fundamental forces known in nature: 1. Gravitational forces between objects 2. Electromagnetic forces between electric charges 3. Strong forces between subatomic particles 4. Weak forces that arise in certain radioactive decay processes.\nIn physics we only tend to worry about gravitational and electromagnetic forces. See Chapter 44 for strong and weak forces.\n\nThe Vector Nature of Force\nWe can use a spring mounted vertically to measure force.\nSuppose that with some initial force \\(\\overrightarrow{F_1}\\) applied to the spring yields a measured reading of 1.0 cm. Now if we apply \\(\\overrightarrow{F_2}\\) and that force is exactly twice in magnitude as \\(\\overrightarrow{F_1}\\) then the reading of force shall show the spring at 2.0 cm.\nThe combined effect of two collinear forces is the sum of the effects of the individual forces. So if we apply both \\(\\overrightarrow{F_1}\\) and \\(overrightarrow{F_2}\\) at the same time, the spring will show 3.0 cm.\n\n\n\nExample of force applied to springs\n\n\nIn the case where \\(\\overrightarrow{F_1}\\) is applied vertically and \\(\\overrightarrow{F_2}\\) is applied horizontally, the vector nature of forces allow us to use vector addition to find the reading of the spring by doing vector addition with \\(\\overrightarrow{F_1}\\) and \\(\\overrightarrow{F_2}\\).\n\\[\n\\lvert \\overrightarrow{F_1} \\rvert = \\sqrt{F_1^2 + F_2^2} = 2.24 cm\n\\]\nAnd the direction of this force is:\n\\[\n\\theta = \\tan^-1{\\frac{\\lvert F_1 \\rvert}{\\lvert F_2 \\rvert}} = 26.6^\\circ\n\\]\nGiven that this is a reference angle evaluating that our components for y and x yield a quadrant 4 location:\n\\[\n\\theta = 360^\\circ - 26.6^\\circ = 333^\\circ \\space or \\space -26.6^\\circ\n\\]",
-    "crumbs": [
-      "Book",
-      "Chapter 5 - The Concept of Force"
-    ]
-  },
-  {
-    "objectID": "book/chapter-1.html",
-    "href": "book/chapter-1.html",
-    "title": "Chapter 1",
-    "section": "",
-    "text": "Book Resource Found Here",
-    "crumbs": [
-      "Book",
-      "Chapter 1"
-    ]
-  },
-  {
-    "objectID": "book/chapter-1.html#types-of-models",
-    "href": "book/chapter-1.html#types-of-models",
-    "title": "Chapter 1",
-    "section": "Types of Models",
-    "text": "Types of Models\nUsing geometry to model a problem into a solvable solution.\nExample:\n\n\n\nFinding the height of a tree\n\n\nYou want to find the height of a tree but cannot measure it directly. You stand 50 meters from the tree and determine that the line of sight from the group to the top of the tree makes an angle of 25° with the ground.\nTo determine the height of the tree we can use a right triangle and recall SOH CAH TOA\nIn this case given our variables we would like to use \\(\\tan{\\theta} = \\frac{\\text{opposite side}}{\\text{adjacent side}}\\)\nAnd that allows us to see that:\n\\[\n\\tan{\\theta} = \\frac{h}{50}\n\\]\nSolving for h by multiplying both sides by 50:\n\\[\nh = 50 * \\tan{25^\\circ} = h \\newline\nh = 23.3 m\n\\]\nThe particle model is an example of a simplification model where details that are not significant in determining the outcome of the problem are ignored.\nAnother category of models is an analysis model and then there are structural models which are used to understand the behavior of a system that is far different in scale from our macroscopic world, either much larger or much smaller.",
-    "crumbs": [
-      "Book",
-      "Chapter 1"
-    ]
-  },
-  {
-    "objectID": "book/chapter-1.html#definitions",
-    "href": "book/chapter-1.html#definitions",
-    "title": "Chapter 1",
-    "section": "Definitions",
-    "text": "Definitions\nThe three fundamental physical quantities of mechanics are length, mass, and time, of which the SI units are meter (m), kilogram (kg) and seconds (s) respectively.\nThe density of a substance is defined as its mass per unit volume:\n\\[\n\\rho \\equiv \\frac{m}{V}\n\\]\n[There are other concepts in chapter one that are worth covering and they have about 30 practice problems we should highly consider taking on]",
-    "crumbs": [
-      "Book",
-      "Chapter 1"
-    ]
   }
 ]
