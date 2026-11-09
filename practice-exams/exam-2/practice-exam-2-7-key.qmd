@@ -1,0 +1,336 @@
+---
+title: "PHYS1408 Practice Exam 2-7 — Answer Key"
+subtitle: "Worked solutions"
+format:
+  pdf:
+    geometry: margin=0.75in
+    fontsize: 11pt
+  html:
+    embed-resources: true
+    toc: true
+---
+
+All answers were checked numerically with `_scripts/build_exam_2_7.py`. $g = 9.8\ \text{m/s}^2$ throughout.
+
+Practice Exam 2-7 is the **2015 Exam 2, question by question, with new numbers**. It keeps the same wording, the same unknowns and the same style of answer choices, including his evenly spaced choices on #1, #9 and #12 and the percentage ranges on #7 and #8. Questions 14 and 15 are lecture-note examples (Atwood's machine; $\alpha$ from an angle). Question 3 is a **minimum** trap: round up. The last column says which 3×5 notecard entry solves each question.
+
+| Q | Answer | Value | Topic | Notecard entry |
+|:-:|:-:|:-:|:--|:--|
+| 1 | **d** | 4.4 m | Halfpipe with a friction patch | Halfpipe |
+| 2 | **c** | 14.2 m | Projectile max height from a ledge | Projectile |
+| 3 | **e** | 24.2 m/s → 26 | Loop-the-loop, minimum speed at the bottom | Loop |
+| 4 | **a** | 0.97 s | Sliding up a rough ramp, time to stop | One block on incline (Stop up, Time) |
+| 5 | **c** | 1.7 m | Vertical spring launch | Spring (launch up) |
+| 6 | **b** | +2.6 m/s | 1-D elastic collision | Elastic |
+| 7 | **e** | 94% | Inelastic collision, KE fraction (symbolic) | Stick (inelastic) |
+| 8 | **b** | 0.13% | Ballistic pendulum, KE fraction | Ballistic |
+| 9 | **d** | 2.33 m/s² | Hanging mass on a pulley with $I$ | Atwood / mass on pulley (one mass) |
+| 10 | **b** | 229 rad/s | Rolling sphere, find $\omega$ | Rolling (sphere row) |
+| 11 | **e** | 1.85 rad/s → +2 | Counter-rotating wheel dropped on a disk | Angular momentum |
+| 12 | **d** | 0.93 rad/s | Child jumps onto a merry-go-round | Angular momentum |
+| 13 | **a** | 2.05 m/s | Incline + friction + disk pulley | Incline + hanging mass + pulley ($m_2 = 0$) |
+| 14 | **a** | 2.42 m/s | Atwood's machine | Atwood / mass on pulley |
+| 15 | **c** | 16 rad/s² | Rotational kinematics, $\alpha$ from an angle | Rot. kinematics |
+
+# 1. Halfpipe with a friction patch — **d) 4.4 m**
+
+**Source:** 2015 Exam 2 #1; Ch 7/8 notes p. 4/18–5/18. **Notecard:** Halfpipe.
+
+Notecard, starting from rest with one crossing ($v_i = 0$, $n = 1$):
+
+$$h_f = h_i - \mu L$$
+
+**Plug in:**
+
+$$h_f = 5.0 - (0.15)(4.0) = 5.0 - 0.60 = 4.4\ \text{m}$$
+
+Distractors:
+
+* a)–c) and e) are 0.1 m steps around the answer, like the 2015 exam's choices. Only $h_i - \mu L$ gives 4.4.
+
+# 2. Projectile max height from a ledge — **c) 14.2 m**
+
+**Source:** 2015 Exam 2 #2. **Notecard:** Projectile.
+
+Notecard:
+
+$$H = h_0 + \frac{(v_0\sin\theta)^2}{2g}$$
+
+**Plug in** ($v_0\sin\theta = 22\sin 40^\circ = 14.14$ m/s):
+
+$$H = 4.0 + \frac{(14.14)^2}{2(9.8)} = 4.0 + \frac{200}{19.6} = 4.0 + 10.2 = 14.2\ \text{m}$$
+
+Distractors:
+
+* a) 4.0 is just the ledge.
+* b) 10.2 forgets to add the ledge.
+* d) 18.5 uses $\cos\theta$.
+* e) 28.7 uses all of $v_0$ (as if thrown straight up).
+
+# 3. Loop-the-loop, minimum speed at the bottom — **e) 26 m/s**
+
+**Source:** 2015 Exam 2 #3; Ch 7/8 notes p. 12/18–13/18. **Notecard:** Loop.
+
+Notecard: bottom minimum $v_b = \sqrt{5gR}$.
+
+**Plug in:**
+
+$$v_b = \sqrt{5(9.8)(12)} = \sqrt{588} = 24.2\ \text{m/s}$$
+
+**Answer-choice trap.** 24.2 m/s is a **minimum**. At 24 m/s the mass falls off the loop, even though 24 is the closest number. The smallest choice that works is **e) 26 m/s**.
+
+Distractors:
+
+* a) 11 is $\sqrt{gR}$, the minimum at the **top**.
+* b) 19 is $\sqrt{3gR}$.
+* c) 22 is $\sqrt{4gR}$: just enough to reach the top with zero speed.
+* d) 24 is the nearest number, but it's below the minimum.
+
+# 4. Sliding up a rough ramp, time to stop — **a) 0.97 s**
+
+**Source:** 2015 Exam 2 #4. **Notecard:** One block on incline (Stop up, Time).
+
+**Step 1: Stopping distance** (notecard, stop up):
+
+$$\Delta x = \frac{v_i^2}{2g(\sin\theta + \mu\cos\theta)} = \frac{6.0^2}{2(9.8)(0.1392 + 0.50 \times 0.9903)} = \frac{36}{19.6(0.6343)} = 2.90\ \text{m}$$
+
+**Step 2: Time** (notecard, $v_f = 0$):
+
+$$t = \frac{2\,\Delta x}{v_i + v_f} = \frac{2(2.90)}{6.0 + 0} = 0.97\ \text{s}$$
+
+The 4.0 kg mass cancels.
+
+Distractors:
+
+* b) 1.72 uses the sliding-**down** bracket, $(\mu\cos\theta - \sin\theta)$.
+* c) 1.93 has an extra factor of 2.
+* d) 2.90 is the stopping **distance** in meters, not the time.
+* e) 4.40 ignores friction.
+
+# 5. Vertical spring launch — **c) 1.7 m**
+
+**Source:** 2015 Exam 2 #5; Ch 7/8 notes p. 12/18. **Notecard:** Spring (launch up).
+
+Notecard, launch up (measured from the release point):
+
+$$h = \frac{kx^2}{2mg}$$
+
+**Plug in:**
+
+$$h = \frac{(1500)(0.030)^2}{2(0.040)(9.8)} = \frac{1.35}{0.784} = 1.7\ \text{m}$$
+
+Distractors:
+
+* a) 0.17 slips a decimal.
+* b) 0.86 has an extra factor of 2 in the denominator.
+* d) 3.4 forgets the $\tfrac12$ on the spring PE.
+* e) 17 slips a decimal the other way.
+
+# 6. 1-D elastic collision — **b) +2.6 m/s**
+
+**Source:** 2015 Exam 2 #6; Ch 9 notes p. 3/5. **Notecard:** Elastic.
+
+Notecard formulas, right $= +$: $m_1 = 2.0$, $v_{1i} = +4.0$; $m_2 = 3.0$, $v_{2i} = -3.0$.
+
+$$v_{1f} = \frac{(m_1 - m_2)v_{1i} + 2m_2v_{2i}}{m_1 + m_2} = \frac{(-1.0)(4.0) + 2(3.0)(-3.0)}{5.0} = \frac{-4 - 18}{5} = -4.4\ \text{m/s}$$
+
+$$v_{2f} = v_{1i} + v_{1f} - v_{2i} = 4.0 + (-4.4) - (-3.0) = +2.6\ \text{m/s}$$
+
+Distractors:
+
+* a) +4.4 is the size of the 2.0 kg mass's velocity.
+* c) −0.2 is the stick-together answer.
+* d) −2.6 has the sign wrong.
+* e) −4.4 is the 2.0 kg mass's velocity.
+
+# 7. Inelastic collision, KE fraction (symbolic) — **e) >90%**
+
+**Source:** 2015 Exam 2 #7; Ch 9 notes p. 1/5. **Notecard:** Stick (inelastic).
+
+Symbolic, so **set $m = 1$ and $v = 1$**: $m_1 = 3$, $v_1 = 2$; $m_2 = 1$, $v_2 = 1$.
+
+**Shared velocity** (notecard):
+
+$$v_f = \frac{m_1v_1 + m_2v_2}{m_1 + m_2} = \frac{3(2) + 1(1)}{4} = 1.75$$
+
+**KE fraction** (notecard):
+
+$$\frac{K_f}{K_i} = \frac{(m_1 + m_2)v_f^2}{m_1v_1^2 + m_2v_2^2} = \frac{4(1.75)^2}{3(2)^2 + 1(1)^2} = \frac{12.25}{13} = 0.94$$
+
+94% is retained: **>90%**. (When both cars move the same way at similar speeds, little KE is lost.)
+
+Distractors:
+
+* d) 30–50% would need a big speed difference.
+* a) <1% is the ballistic-pendulum size of loss.
+
+# 8. Ballistic pendulum, KE fraction — **b) 0.1–0.5%**
+
+**Source:** 2015 Exam 2 #8; Ch 9 notes p. 5/5. **Notecard:** Ballistic.
+
+Notecard: $\dfrac{K_f}{K_i} = \dfrac{m}{M + m}$. The swing height isn't needed.
+
+$$\frac{K_f}{K_i} = \frac{0.008}{6.0 + 0.008} = 0.0013 = 0.13\%$$
+
+That's in the **0.1–0.5%** range.
+
+Distractors:
+
+* a) <0.1% would need a block heavier than 8 kg.
+* e) >10% would mean the collision kept a lot of KE, which a sticking bullet never does.
+
+# 9. Hanging mass on a pulley with $I$ — **d) 2.33 m/s²**
+
+**Source:** 2015 Exam 2 #9; Ch 10 notes p. 4/8. **Notecard:** Atwood / mass on pulley (one mass).
+
+Notecard, one mass: $a = \dfrac{mg}{m + I/R^2}$. Here $I = \tfrac35 MR^2$, so $I/R^2 = \tfrac35 M = 4.8$ kg ($R$ cancels).
+
+$$a = \frac{mg}{m + \tfrac35 M}$$
+
+**Plug in:**
+
+$$a = \frac{(1.5)(9.8)}{1.5 + 4.8} = \frac{14.7}{6.3} = 2.33\ \text{m/s}^2$$
+
+Distractors:
+
+* The other choices are 0.5 m/s² steps around the answer, like the 2015 exam's. $R = 0.20$ m is a distractor: it cancels.
+
+# 10. Rolling sphere, find $\omega$ — **b) 229 rad/s**
+
+**Source:** 2015 Exam 2 #10; Ch 10 notes p. 6/8–8/8. **Notecard:** Rolling (sphere row).
+
+Notecard, sphere: $v = \sqrt{\tfrac{10}{7}gh}$, then $\omega = \dfrac{v}{R}$.
+
+$$v = \sqrt{\tfrac{10}{7}(9.8)(1.5)} = \sqrt{21} = 4.58\ \text{m/s}$$
+
+$$\omega = \frac{v}{R} = \frac{4.58}{0.020} = 229\ \text{rad/s}$$
+
+Distractors:
+
+* a) 4.6 is $v$ (m/s), not $\omega$.
+* c) 458 divides by $R/2$.
+* d) 2290 slips a decimal in $R$.
+* e) 52,500 is $\omega^2$.
+
+# 11. Counter-rotating wheel dropped on a disk — **e) +2 rad/s**
+
+**Source:** 2015 Exam 2 #11; Ch 11 notes p. 3/8. **Notecard:** Angular momentum.
+
+Notecard, with the wheel's $\omega_2$ **negative**:
+
+$$\omega_f = \frac{I_1\omega_1 + I_2\omega_2}{I_1 + I_2}$$
+
+**Moments of inertia first:**
+
+$$I_1 = \tfrac12(150)(2.0)^2 = 300\ \text{kg·m}^2$$
+
+$$I_2 = 0.8(50)(1.5)^2 = 90\ \text{kg·m}^2$$
+
+**Plug in:**
+
+$$\omega_f = \frac{(300)(3.0) + (90)(-2.0)}{300 + 90} = \frac{900 - 180}{390} = 1.85\ \text{rad/s}$$
+
+The nearest choice is **e) +2 rad/s**, the same as on the 2015 exam.
+
+Distractors:
+
+* d) +1.5 is the other neighbor, but 1.85 is closer to 2.
+* a) and b) come from adding the wheel's $I$ without its spin, or flipping signs.
+
+# 12. Child jumps onto a merry-go-round — **d) 0.9 rad/s**
+
+**Source:** 2015 Exam 2 #12; Ch 11 notes p. 4/8. **Notecard:** Angular momentum.
+
+Notecard with $+mvR$ (same direction) and $I_{add} = mR^2$ (person at the rim):
+
+$$\omega_f = \frac{\tfrac12 MR^2\,\omega_i + mvR}{\tfrac12 MR^2 + mR^2}$$
+
+**Plug in** ($\tfrac12 MR^2 = \tfrac12(400)(2.5)^2 = 1250$ kg·m²):
+
+$$
+\begin{aligned}
+\omega_f &= \frac{(1250)(0.60) + (45)(6.0)(2.5)}{1250 + (45)(2.5)^2} \\[8pt]
+&= \frac{750 + 675}{1250 + 281} = \frac{1425}{1531} = 0.93\ \text{rad/s}
+\end{aligned}
+$$
+
+The nearest choice is **d) 0.9 rad/s**.
+
+Distractors:
+
+* b) 0.5 ignores the child's running momentum (0.49).
+* e) 1.1 forgets to add the child's $mR^2$ (1.14).
+
+# 13. Incline + friction + disk pulley — **a) 2.05 m/s**
+
+**Source:** 2015 Exam 2 #13. **Notecard:** Incline + hanging mass + pulley ($m_2 = 0$).
+
+Notecard with no hanging mass ($m_2 = 0$), block sliding **down**:
+
+$$v_f = \sqrt{v_i^2 + \frac{2g\,\Delta x\,B}{m + I/R^2}}$$
+
+$$B = m\sin\theta - \mu m\cos\theta$$
+
+**Net pull** ($\sin 25^\circ = 0.4226$, $\cos 25^\circ = 0.9063$):
+
+$$B = 6.0(0.4226) - 0.12(6.0)(0.9063) = 2.536 - 0.653 = 1.883\ \text{kg}$$
+
+**Pulley term:** $I = 0.5MR^2$, so $I/R^2 = 0.5M = 1.5$ kg.
+
+**Plug in:**
+
+$$
+\begin{aligned}
+v_f &= \sqrt{0.50^2 + \frac{2(9.8)(0.80)(1.883)}{6.0 + 1.5}} \\[8pt]
+&= \sqrt{0.25 + \frac{29.53}{7.5}} = \sqrt{0.25 + 3.94} = 2.05\ \text{m/s}
+\end{aligned}
+$$
+
+Distractors:
+
+* b) 1.98 forgets $v_i^2$.
+* c) 1.88 treats the pulley as a ring ($I/R^2 = M$).
+* d) 1.49 forgets the 2 in $2g$.
+* e) $B > 0$, so it speeds up and never stops.
+
+# 14. Atwood's machine — **a) 2.42 m/s**
+
+**Source:** Ch 7/8 notes p. 2/18. **Notecard:** Atwood / mass on pulley.
+
+Notecard, massless pulley ($I = 0$), from rest:
+
+$$v_f = \sqrt{\frac{2gh(m_1 - m_2)}{m_1 + m_2}}$$
+
+**Plug in:**
+
+$$v_f = \sqrt{\frac{2(9.8)(1.5)(12 - 8.0)}{12 + 8.0}} = \sqrt{\frac{117.6}{20}} = \sqrt{5.88} = 2.42\ \text{m/s}$$
+
+Distractors:
+
+* b) 3.13 divides by $m_1$ only.
+* c) 3.83 divides by $m_2$ only.
+* d) 4.85 doubles the answer.
+* e) 5.42 is free fall, $\sqrt{2gh}$.
+
+# 15. Rotational kinematics, $\alpha$ from an angle — **c) 16 rad/s²**
+
+**Source:** Ch 11 notes p. 6/8. **Notecard:** Rot. kinematics.
+
+No time is given or asked for, so use the equation without $t$:
+
+$$\omega_f^2 = \omega_i^2 + 2\alpha\,\Delta\theta$$
+
+**Solve for $\alpha$:**
+
+$$\alpha = \frac{\omega_f^2 - \omega_i^2}{2\,\Delta\theta}$$
+
+**Plug in:**
+
+$$\alpha = \frac{60^2 - 20^2}{2(100)} = \frac{3600 - 400}{200} = 16\ \text{rad/s}^2$$
+
+Distractors:
+
+* a) 0.40 is $\Delta\omega/\Delta\theta$.
+* b) 8.0 squares the difference: $(\omega_f - \omega_i)^2/2\Delta\theta$.
+* d) 32 forgets the 2.
+* e) 36 drops $\omega_i$ and the 2.

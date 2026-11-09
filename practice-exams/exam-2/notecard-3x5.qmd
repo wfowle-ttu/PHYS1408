@@ -29,7 +29,7 @@ format:
 \begin{multicols}{2}
 \raggedright
 \begin{E}
-\hd{Curve} $v=\sqrt{gr\frac{\tan\theta\pm\mu_s}{1\mp\mu_s\tan\theta}}$ ($+$ max, $-$ min). Flat: $v_{max}=\sqrt{\mu_s gr}$. No friction: $v=\sqrt{gr\tan\theta}$.
+\hd{Curve} $v_{max}=\sqrt{gr\frac{\tan\theta+\mu_s}{1-\mu_s\tan\theta}}$, $v_{min}=\sqrt{gr\frac{\tan\theta-\mu_s}{1+\mu_s\tan\theta}}$. Flat: $v_{max}=\sqrt{\mu_s gr}$. No friction: $v=\sqrt{gr\tan\theta}$.
 \end{E}
 \sep
 \begin{E}
@@ -59,7 +59,7 @@ $\sqrt{-}$ = stops first. Time: $t=\frac{2\Delta x}{v_i+v_f}$.
 \end{E}
 \sep
 \begin{E}
-\hd{Power} $P=\frac{W}{t}=\frac{mgh}{t}=Fv$. Work $W=Fd\cos\phi$.
+\hd{Power} $P=\frac{W}{t}=\frac{mgh}{t}=Fv$; lift at constant $v$: $P=mgv$. Work $W=Fd\cos\phi$.
 \end{E}
 \sep
 \begin{E}

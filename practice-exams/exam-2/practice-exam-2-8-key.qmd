@@ -1,0 +1,326 @@
+---
+title: "PHYS1408 Practice Exam 2-8 — Answer Key"
+subtitle: "Worked solutions"
+format:
+  pdf:
+    geometry: margin=0.75in
+    fontsize: 11pt
+  html:
+    embed-resources: true
+    toc: true
+---
+
+All answers were checked numerically with `_scripts/build_exam_2_8.py`. $g = 9.8\ \text{m/s}^2$ throughout.
+
+Practice Exam 2-8 is built from the professor's **lecture-note examples**, one per question, with new numbers. It keeps his setups and his unknowns: the halfpipe after the rain, the roller coaster, the four incline cases, the spring at the bottom of a ramp, the man on the stairs, the block that "doesn't go" up the incline, loop launch height, the 3×5-notecard elastic collision, the rod on the merry-go-round, the ballistic pendulum, the pulley "Atwood's machine w/ torque," the rolling disk, and the disk dropped on a disk. Question 9 is a **minimum** trap: round up. The last column says which 3×5 notecard entry solves each question.
+
+| Q | Answer | Value | Topic | Notecard entry |
+|:-:|:-:|:-:|:--|:--|
+| 1 | **a** | 2.34 m | Halfpipe with a rough strip | Halfpipe |
+| 2 | **b** | 29.7 m/s | Roller coaster | Fall / coaster |
+| 3 | **a** | 2.95 m/s | Sliding up a frictionless incline | One block on incline (Up, $\mu = 0$) |
+| 4 | **b** | 1.49 m | Rough incline, sliding up: stopping distance | One block on incline (Stop up) |
+| 5 | **c** | 2.94 m | Rough incline, sliding down: stopping distance | One block on incline (Stop down) |
+| 6 | **e** | 0.20 m | Mass slides into a spring | Spring (stop a mass) |
+| 7 | **b** | 941 W | Power climbing stairs | Power |
+| 8 | **e** | stops (at 0.77 m) | Incline + hanging mass, stops early | Incline + hanging mass + pulley |
+| 9 | **d** | 22.5 m → 24 | Loop-the-loop, minimum launch height | Loop |
+| 10 | **e** | +5.5 m/s | 1-D elastic collision | Elastic |
+| 11 | **c** | 1.44 rad/s | Rod dropped from the center to the edge | Angular momentum ($I_{add}$: rod) |
+| 12 | **d** | 419 m/s | Ballistic pendulum, bullet speed | Ballistic |
+| 13 | **d** | 3.57 m/s | Hanging mass on a disk pulley | Atwood / mass on pulley (one mass) |
+| 14 | **c** | 4.85 m/s | Disk rolling down an incline | Rolling (disk row) |
+| 15 | **a** | 2.20 rad/s | Disk dropped on a spinning disk | Angular momentum |
+
+# 1. Halfpipe with a rough strip — **a) 2.34 m**
+
+**Source:** Ch 7/8 notes p. 4/18–5/18. **Notecard:** Halfpipe.
+
+Notecard, from rest, one crossing:
+
+$$h_f = h_i - \mu L$$
+
+**Plug in:**
+
+$$h_f = 2.5 - (0.02)(8.0) = 2.5 - 0.16 = 2.34\ \text{m}$$
+
+Distractors:
+
+* b)–e) subtract the friction loss 1.5, 2, 2.5 and 3 times. Crossing the strip once loses $\mu L$ once.
+
+# 2. Roller coaster — **b) 29.7 m/s**
+
+**Source:** Ch 7/8 notes p. 3/18. **Notecard:** Fall / coaster.
+
+Notecard (no friction, from rest):
+
+$$v_f = \sqrt{v_i^2 + 2g(h_i - h_f)} = \sqrt{2g(h_i - h_f)}$$
+
+**Plug in:**
+
+$$v_f = \sqrt{2(9.8)(75 - 30)} = \sqrt{882} = 29.7\ \text{m/s}$$
+
+Distractors:
+
+* a) 21.0 forgets the 2.
+* c) 38.3 uses the full 75 m drop.
+* d) 42.0 doubles the drop.
+* e) 882 forgets the square root.
+
+# 3. Sliding up a frictionless incline — **a) 2.95 m/s**
+
+**Source:** Ch 7/8 notes p. 6/18. **Notecard:** One block on incline (Up, $\mu = 0$).
+
+Notecard, sliding up, with $\mu = 0$:
+
+$$v_f = \sqrt{v_i^2 - 2g\,\Delta x\sin\theta}$$
+
+**Plug in** ($\sin 12^\circ = 0.2079$):
+
+$$v_f = \sqrt{5.0^2 - 2(9.8)(4.0)(0.2079)} = \sqrt{25 - 16.30} = \sqrt{8.70} = 2.95\ \text{m/s}$$
+
+Distractors:
+
+* b) 4.10 forgets the 2.
+* c) 6.43 adds instead of subtracts.
+* d) 8.70 forgets the square root.
+* e) comes from using $\cos\theta$.
+
+# 4. Rough incline, sliding up: stopping distance — **b) 1.49 m**
+
+**Source:** Ch 7/8 notes p. 9/18. **Notecard:** One block on incline (Stop up).
+
+Notecard, stop up:
+
+$$\Delta x = \frac{v_i^2}{2g(\sin\theta + \mu\cos\theta)}$$
+
+**Plug in** ($\sin 15^\circ = 0.2588$, $\cos 15^\circ = 0.9659$):
+
+$$\Delta x = \frac{4.0^2}{2(9.8)(0.2588 + 0.30 \times 0.9659)} = \frac{16}{19.6(0.5486)} = 1.49\ \text{m}$$
+
+Distractors:
+
+* a) 0.74 has an extra factor of 2.
+* c) 2.98 forgets the 2.
+* d) 3.15 ignores friction.
+* e) 6.30 ignores friction and the 2.
+
+# 5. Rough incline, sliding down: stopping distance — **c) 2.94 m**
+
+**Source:** Ch 7/8 notes p. 10/18. **Notecard:** One block on incline (Stop down).
+
+It stops, because $\mu\cos\theta = 0.248$ is bigger than $\sin\theta = 0.139$. Notecard, stop down:
+
+$$\Delta x = \frac{v_i^2}{2g(\mu\cos\theta - \sin\theta)}$$
+
+**Plug in** ($\sin 8^\circ = 0.1392$, $\cos 8^\circ = 0.9903$):
+
+$$\Delta x = \frac{2.5^2}{2(9.8)(0.25 \times 0.9903 - 0.1392)} = \frac{6.25}{19.6(0.1084)} = 2.94\ \text{m}$$
+
+The bracket is small (0.108), so keep 4 digits in the trig values.
+
+Distractors:
+
+* a) 0.82 uses the sliding-**up** bracket.
+* b) 1.29 leaves out $\sin\theta$.
+* d) 5.88 forgets the 2.
+* e) It does stop, since $\mu\cos\theta > \sin\theta$.
+
+# 6. Mass slides into a spring — **e) 0.20 m**
+
+**Source:** Ch 7/8 notes p. 11/18. **Notecard:** Spring (stop a mass).
+
+Notecard, stop a mass, starting from rest ($v_i = 0$):
+
+$$x = \sqrt{\frac{2mgh + mv_i^2}{k}} = \sqrt{\frac{2mgh}{k}}$$
+
+**Plug in:**
+
+$$x = \sqrt{\frac{2(2.0)(9.8)(1.5)}{1500}} = \sqrt{0.0392} = 0.20\ \text{m}$$
+
+Distractors:
+
+* a) 0.020 is $mgh/k$ (no 2, no root).
+* b) 0.039 forgets the square root.
+* c) 0.099 has the 2 upside down.
+* d) 0.14 forgets the 2.
+
+# 7. Power climbing stairs — **b) 941 W**
+
+**Source:** Ch 7/8 notes p. 14/18. **Notecard:** Power.
+
+Notecard:
+
+$$P = \frac{mgh}{t}$$
+
+**Plug in:**
+
+$$P = \frac{(80)(9.8)(18)}{15} = \frac{14{,}112}{15} = 941\ \text{W}$$
+
+Distractors:
+
+* a) 96 forgets $g$.
+* c) 1880 doubles it.
+* d) 14,100 is the work $mgh$ in joules, not power.
+* e) 254,000 multiplies by $t$.
+
+# 8. Incline + hanging mass, stops early — **e) it stops before it slides the whole 1.0 m**
+
+**Source:** Ch 7/8 notes p. 15/18–16/18. **Notecard:** Incline + hanging mass + pulley.
+
+Notecard, $m_2$ falls ($m_1$ slides **up**), massless pulley:
+
+$$v_f = \sqrt{v_i^2 + \frac{2g\,\Delta x\,B}{m_1 + m_2}}$$
+
+$$B = m_2 - m_1\sin\theta - \mu m_1\cos\theta$$
+
+**Net pull:**
+
+$$B = 3.0 - 15(0.4226) - 0.30(15)(0.9063) = 3.0 - 6.339 - 4.078 = -7.42\ \text{kg}$$
+
+**Plug in:**
+
+$$v_f = \sqrt{2.5^2 + \frac{2(9.8)(1.0)(-7.42)}{18}} = \sqrt{6.25 - 8.08} = \sqrt{-1.83}$$
+
+Negative under the root: it "doesn't go 1.0 m." **Where it stops** (notecard):
+
+$$\Delta x = \frac{-(m_1 + m_2)v_i^2}{2gB} = \frac{-(18)(6.25)}{2(9.8)(-7.42)} = 0.77\ \text{m}$$
+
+Distractors:
+
+* a) 1.49 forgets the 2 in $2g$.
+* b) 1.62 ignores friction.
+* c) 2.33 uses the $m_1$-slides-down $B$.
+* d) 3.79 adds the bracket instead of subtracting it.
+
+# 9. Loop-the-loop, minimum launch height — **d) 24 m**
+
+**Source:** Ch 7/8 notes p. 12/18–13/18. **Notecard:** Loop.
+
+Notecard: launch $h = \tfrac52 R$ (from $v_t = \sqrt{gR}$ at the top plus energy).
+
+**Plug in:**
+
+$$h = \tfrac52(9.0) = 22.5\ \text{m}$$
+
+**Answer-choice trap.** 22.5 m is a **minimum**. From 22 m the car falls off at the top, even though 22 is the closest number. The smallest choice that works is **d) 24 m**.
+
+Distractors:
+
+* a) 18 m is $2R$: it reaches the top with zero speed.
+* c) 22 m is the nearest number, but it's below the minimum.
+* e) 27 m is $3R$ (works, but isn't the minimum choice).
+
+# 10. 1-D elastic collision — **e) +5.5 m/s**
+
+**Source:** Ch 9 notes p. 3/5. **Notecard:** Elastic.
+
+Notecard formulas, right $= +$: $m_1 = 6.0$, $v_{1i} = +4.0$; $m_2 = 2.0$, $v_{2i} = +1.0$.
+
+$$v_{1f} = \frac{(m_1 - m_2)v_{1i} + 2m_2v_{2i}}{m_1 + m_2} = \frac{(4.0)(4.0) + 2(2.0)(1.0)}{8.0} = \frac{20}{8} = +2.5\ \text{m/s}$$
+
+$$v_{2f} = v_{1i} + v_{1f} - v_{2i} = 4.0 + 2.5 - 1.0 = +5.5\ \text{m/s}$$
+
+Distractors:
+
+* a) +1.0 is no change.
+* b) +2.5 is the 6.0 kg ball's velocity.
+* c) +3.25 is the stick-together answer.
+* d) +4.0 assumes the balls swap velocities.
+
+# 11. Rod dropped from the center to the edge — **c) 1.44 rad/s**
+
+**Source:** Ch 11 notes p. 5/8. **Notecard:** Angular momentum ($I_{add}$: rod).
+
+Notecard with $I_{add}$ = rod center$\to$edge $= \tfrac13 m\ell^2$:
+
+$$\omega_f = \frac{I_1\omega_1}{I_1 + \tfrac13 m\ell^2}$$
+
+**Moments of inertia:** $I_1 = \tfrac12(300)(2.5)^2 = 937.5$; $\tfrac13(50)(2.5)^2 = 104.2$ (kg·m²).
+
+**Plug in:**
+
+$$\omega_f = \frac{(937.5)(1.6)}{937.5 + 104.2} = \frac{1500}{1041.7} = 1.44\ \text{rad/s}$$
+
+Distractors:
+
+* a) 1.20 treats the rod as a point mass at the rim ($m\ell^2$).
+* b) 1.37 uses $\tfrac12 m\ell^2$.
+* d) 1.56 uses the rod-about-its-middle formula, $\tfrac1{12}m\ell^2$.
+* e) 1.60 ignores the rod.
+
+# 12. Ballistic pendulum, bullet speed — **d) 419 m/s**
+
+**Source:** Ch 9 notes p. 5/5. **Notecard:** Ballistic.
+
+Notecard:
+
+$$v = \frac{M + m}{m}\sqrt{2gh}$$
+
+**Plug in:**
+
+$$v = \frac{2.006}{0.006}\sqrt{2(9.8)(0.080)} = 334.3 \times 1.252 = 419\ \text{m/s}$$
+
+Distractors:
+
+* a) 1.25 is $V = \sqrt{2gh}$, the block's speed after the hit.
+* b) 22.9 uses energy conservation through the collision.
+* c) 334 is just the mass ratio.
+* e) 837 doubles it.
+
+# 13. Hanging mass on a disk pulley — **d) 3.57 m/s**
+
+**Source:** Ch 10 notes p. 4/8–6/8. **Notecard:** Atwood / mass on pulley (one mass).
+
+Notecard, one mass: $v_f^2 = v_i^2 + \dfrac{2mgh}{m + I/R^2}$. A disk has $I/R^2 = \tfrac12 M = 3.0$ kg.
+
+$$v_f = \sqrt{v_i^2 + \frac{2mgh}{m + \tfrac12 M}}$$
+
+**Plug in:**
+
+$$v_f = \sqrt{1.0^2 + \frac{2(2.0)(9.8)(1.5)}{2.0 + 3.0}} = \sqrt{1.0 + 11.76} = \sqrt{12.76} = 3.57\ \text{m/s}$$
+
+Distractors:
+
+* a) 2.62 forgets the 2.
+* b) 2.89 treats the pulley as a ring ($I/R^2 = M$).
+* c) 3.43 forgets $v_i^2$.
+* e) 5.51 ignores the pulley (free fall).
+
+# 14. Disk rolling down an incline — **c) 4.85 m/s**
+
+**Source:** Ch 10 notes p. 7/8–8/8. **Notecard:** Rolling (disk row).
+
+Notecard, disk row: $v = \sqrt{\tfrac43 gh}$.
+
+**Plug in:**
+
+$$v = \sqrt{\tfrac43(9.8)(1.8)} = \sqrt{23.52} = 4.85\ \text{m/s}$$
+
+Distractors:
+
+* a) 3.43 uses $\tfrac23$ instead of $\tfrac43$.
+* b) 4.20 is a ring, $\sqrt{gh}$.
+* d) 5.02 is a sphere, $\sqrt{\tfrac{10}{7}gh}$.
+* e) 5.94 is sliding, $\sqrt{2gh}$.
+
+# 15. Disk dropped on a spinning disk — **a) 2.20 rad/s**
+
+**Source:** Ch 11 notes p. 1/8. **Notecard:** Angular momentum.
+
+Notecard with $\omega_2 = 0$:
+
+$$\omega_f = \frac{I_1\omega_1}{I_1 + I_2}$$
+
+**Moments of inertia:** $I_1 = \tfrac12(400)(2.0)^2 = 800$; $I_2 = \tfrac12(150)(1.2)^2 = 108$ (kg·m²).
+
+**Plug in:**
+
+$$\omega_f = \frac{(800)(2.5)}{800 + 108} = \frac{2000}{908} = 2.20\ \text{rad/s}$$
+
+Distractors:
+
+* b) 2.50 is no change.
+* c) 2.84 flips the ratio.
+* d) 4.40 doubles it.
+* e) 5.00 doubles the starting speed.

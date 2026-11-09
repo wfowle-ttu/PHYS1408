@@ -1,0 +1,339 @@
+---
+title: "PHYS1408 Practice Exam 2-9 — Answer Key"
+subtitle: "Worked solutions"
+format:
+  pdf:
+    geometry: margin=0.75in
+    fontsize: 11pt
+  html:
+    embed-resources: true
+    toc: true
+---
+
+All answers were checked numerically with `_scripts/build_exam_2_9.py`. $g = 9.8\ \text{m/s}^2$ throughout.
+
+Practice Exam 2-9 mixes **lecture-note examples** and **2015 Exam 2 questions** with new numbers, with no banked curves. It covers the flat curve, $N = 6mg$ at the bottom of the loop, the incline cases, the block sliding down with a hanging mass, the spring launch, the bounce, the head-on sticking cars, the elastic collision, the ballistic KE fraction, $\alpha$ from a time, the rolling ball, the counter-rotating ring, the man jumping on, and the man walking to the center. Question 1 is a **maximum** trap: round down. The last column says which 3×5 notecard entry solves each question.
+
+| Q | Answer | Value | Topic | Notecard entry |
+|:-:|:-:|:-:|:--|:--|
+| 1 | **c** | 13.7 m/s → 13 | Flat curve, maximum speed | Curve (flat) |
+| 2 | **e** | 4120 N | Loop, normal force at the bottom | Loop |
+| 3 | **a** | 1.87 m/s | Sliding up a rough incline | One block on incline (Up) |
+| 4 | **e** | 2.64 m/s | Sliding down a rough incline | One block on incline (Down) |
+| 5 | **b** | 2.07 m/s | Incline + hanging mass, block slides down | Incline + hanging mass + pulley |
+| 6 | **b** | 0.72 m | Vertical spring launch | Spring (launch up) |
+| 7 | **d** | 1200 N | Force from a bounce | Force from $\Delta p$ |
+| 8 | **a** | +2.86 m/s | Completely inelastic collision | Stick (inelastic) |
+| 9 | **e** | +2.5 m/s | 1-D elastic collision | Elastic |
+| 10 | **b** | 0.2% | Ballistic pendulum, KE fraction | Ballistic |
+| 11 | **c** | 5.0 rad/s² | Rotational kinematics, $\alpha$ from a time | Rot. kinematics |
+| 12 | **c** | 2.62 m/s² | Rolling ball acceleration | Rolling (sphere row) |
+| 13 | **a** | +1.33 rad/s | Counter-rotating ring dropped on a disk | Angular momentum |
+| 14 | **d** | 0.80 rad/s | Man runs and jumps on the rim | Angular momentum |
+| 15 | **d** | 1.84 rad/s | Man walks from the rim to the center | Angular momentum (rim→center) |
+
+# 1. Flat curve, maximum speed — **c) 13 m/s**
+
+**Source:** Ch 6 notes p. 2/7. **Notecard:** Curve (flat).
+
+Notecard, flat curve:
+
+$$v_{max} = \sqrt{\mu_s gr}$$
+
+**Plug in:**
+
+$$v_{max} = \sqrt{(0.35)(9.8)(55)} = \sqrt{188.7} = 13.7\ \text{m/s}$$
+
+**Answer-choice trap.** 13.7 m/s is a **maximum**. At 14 m/s the car slides, even though 14 is the closest number. The largest choice that works is **c) 13 m/s**.
+
+Distractors:
+
+* a) 4.4 forgets $g$.
+* b) 9.7 has an extra $\tfrac12$ under the root.
+* d) 14 is the nearest number, but it's above the maximum.
+* e) 23 drops $\mu_s$: $\sqrt{gr}$.
+
+# 2. Loop, normal force at the bottom — **e) 4120 N**
+
+**Source:** Ch 7/8 notes p. 13/18. **Notecard:** Loop.
+
+From the minimum launch height, $v_b^2 = 2gh = 2g\left(\tfrac52R\right) = 5gR$. Notecard, bottom:
+
+$$N_{bot} = \frac{mv_b^2}{R} + mg = \frac{m(5gR)}{R} + mg = 6mg$$
+
+$R$ cancels. **Plug in:**
+
+$$N_{bot} = 6(70)(9.8) = 4116 \approx 4120\ \text{N}$$
+
+His notes call this "$N = 6mg$, death & unconsciousness."
+
+Distractors:
+
+* a) 686 N is just $mg$.
+* b) 1370 is $2mg$.
+* c) 2740 is $4mg$.
+* d) 3430 is $5mg$ (forgot to add $mg$).
+
+# 3. Sliding up a rough incline — **a) 1.87 m/s**
+
+**Source:** Ch 7/8 notes p. 7/18–8/18. **Notecard:** One block on incline (Up).
+
+Notecard, sliding up:
+
+$$v_f = \sqrt{v_i^2 - 2g\,\Delta x(\sin\theta + \mu\cos\theta)}$$
+
+**Plug in** ($\sin 25^\circ = 0.4226$, $\cos 25^\circ = 0.9063$):
+
+$$v_f = \sqrt{3.5^2 - 2(9.8)(0.80)(0.4226 + 0.15 \times 0.9063)} = \sqrt{12.25 - 8.76} = \sqrt{3.49} = 1.87\ \text{m/s}$$
+
+Distractors:
+
+* b) 2.37 ignores friction.
+* c) 2.81 forgets the 2.
+* d) 4.58 adds instead of subtracts.
+* e) $v_f^2 = 3.49 > 0$, so it makes it.
+
+# 4. Sliding down a rough incline — **e) 2.64 m/s**
+
+**Source:** Ch 7/8 notes p. 10/18. **Notecard:** One block on incline (Down).
+
+Notecard, sliding down:
+
+$$v_f = \sqrt{v_i^2 + 2g\,\Delta x(\sin\theta - \mu\cos\theta)}$$
+
+**Plug in** ($\sin 20^\circ = 0.3420$, $\cos 20^\circ = 0.9397$):
+
+$$v_f = \sqrt{2.0^2 + 2(9.8)(2.5)(0.3420 - 0.30 \times 0.9397)} = \sqrt{4.0 + 49(0.0601)} = \sqrt{6.94} = 2.64\ \text{m/s}$$
+
+The bracket is positive (barely), so it speeds up a little.
+
+Distractors:
+
+* a) 1.72 forgets $v_i^2$.
+* b) 2.00 assumes no change.
+* c) 2.34 forgets the 2.
+* d) 2.46 uses friction $\mu mg$ instead of $\mu mg\cos\theta$.
+
+# 5. Incline + hanging mass, block slides down — **b) 2.07 m/s**
+
+**Source:** Ch 7/8 notes p. 17/18. **Notecard:** Incline + hanging mass + pulley.
+
+Notecard with $m_1$ sliding **down**, massless pulley:
+
+$$v_f = \sqrt{v_i^2 + \frac{2g\,\Delta x\,B}{m_1 + m_2}}$$
+
+$$B = m_1\sin\theta - m_2 - \mu m_1\cos\theta$$
+
+**Net pull** ($\sin 35^\circ = 0.5736$, $\cos 35^\circ = 0.8192$):
+
+$$B = 10(0.5736) - 2.0 - 0.20(10)(0.8192) = 5.736 - 2.0 - 1.638 = 2.098\ \text{kg}$$
+
+**Plug in:**
+
+$$v_f = \sqrt{1.5^2 + \frac{2(9.8)(0.60)(2.098)}{12}} = \sqrt{2.25 + 2.06} = \sqrt{4.31} = 2.07\ \text{m/s}$$
+
+"It speeds up!"
+
+Distractors:
+
+* a) 1.43 forgets $v_i^2$.
+* c) 2.17 divides by $m_1$ only.
+* d) 2.43 ignores friction.
+* e) $B > 0$, so it speeds up.
+
+# 6. Vertical spring launch — **b) 0.72 m**
+
+**Source:** 2015 Exam 2 #5. **Notecard:** Spring (launch up).
+
+Notecard, launch up:
+
+$$h = \frac{kx^2}{2mg}$$
+
+**Plug in:**
+
+$$h = \frac{(1800)(0.025)^2}{2(0.080)(9.8)} = \frac{1.125}{1.568} = 0.72\ \text{m}$$
+
+Distractors:
+
+* a) 0.36 has an extra factor of 2.
+* c) 1.43 forgets the $\tfrac12$ on the spring PE.
+* d) 7.03 forgets $g$.
+* e) 28.7 forgets to square $x$.
+
+# 7. Force from a bounce — **d) 1200 N**
+
+**Source:** Ch 9 notes p. 1/5. **Notecard:** Force from $\Delta p$.
+
+Notecard, bounce back at the same speed:
+
+$$|F| = \frac{2mv}{t}$$
+
+**Plug in:**
+
+$$|F| = \frac{2(0.060)(40)}{0.0040} = \frac{4.8}{0.0040} = 1200\ \text{N}$$
+
+Distractors:
+
+* a) 0 ignores the direction change.
+* b) 4.8 is the change in momentum (N·s), not a force.
+* c) 600 is a ball that just stops ($mv/t$).
+* e) 2400 doubles it again.
+
+# 8. Completely inelastic collision — **a) +2.86 m/s**
+
+**Source:** Ch 9 notes p. 1/5. **Notecard:** Stick (inelastic).
+
+Notecard, with west as **negative**:
+
+$$v_f = \frac{m_1v_1 + m_2v_2}{m_1 + m_2}$$
+
+**Plug in:**
+
+$$v_f = \frac{(900)(20) + (1200)(-10)}{900 + 1200} = \frac{18{,}000 - 12{,}000}{2100} = +2.86\ \text{m/s}$$
+
+The pair moves east, slowly.
+
+Distractors:
+
+* b) 8.57 leaves out the second car's momentum.
+* c) 14.3 forgets the minus sign.
+* d) 20.0 is the first car's speed before.
+* e) 30.0 adds the speeds.
+
+# 9. 1-D elastic collision — **e) +2.5 m/s**
+
+**Source:** 2015 Exam 2 #6; Ch 9 notes p. 3/5. **Notecard:** Elastic.
+
+Notecard, right $= +$: $m_1 = 1.5$, $v_{1i} = +4.0$; $m_2 = 2.5$, $v_{2i} = -2.0$.
+
+$$v_{1f} = \frac{(m_1 - m_2)v_{1i} + 2m_2v_{2i}}{m_1 + m_2} = \frac{(-1.0)(4.0) + 2(2.5)(-2.0)}{4.0} = \frac{-4 - 10}{4} = -3.5\ \text{m/s}$$
+
+$$v_{2f} = v_{1i} + v_{1f} - v_{2i} = 4.0 + (-3.5) - (-2.0) = +2.5\ \text{m/s}$$
+
+Distractors:
+
+* a) −3.5 is the 1.5 kg mass's velocity.
+* b) −2.0 is no change.
+* c) +0.25 is the stick-together answer.
+* d) +2.0 assumes it just reverses at the same speed.
+
+# 10. Ballistic pendulum, KE fraction — **b) 0.1–0.5%**
+
+**Source:** 2015 Exam 2 #8. **Notecard:** Ballistic.
+
+Notecard:
+
+$$\frac{K_f}{K_i} = \frac{m}{M + m} = \frac{0.010}{5.00} = 0.002 = 0.2\%$$
+
+That's in the **0.1–0.5%** range.
+
+Distractors:
+
+* a) <0.1% would need a block heavier than 10 kg.
+* e) >10% would mean the collision kept a lot of KE.
+
+# 11. Rotational kinematics, $\alpha$ from a time — **c) 5.0 rad/s²**
+
+**Source:** Ch 11 notes p. 6/8. **Notecard:** Rot. kinematics.
+
+$\Delta\theta$ isn't given or asked for, so use the equation without it:
+
+$$\omega_f = \omega_i + \alpha t$$
+
+**Solve for $\alpha$:**
+
+$$\alpha = \frac{\omega_f - \omega_i}{t}$$
+
+**Plug in:**
+
+$$\alpha = \frac{100 - 40}{12} = \frac{60}{12} = 5.0\ \text{rad/s}^2$$
+
+Distractors:
+
+* a) 2.5 has an extra factor of 2.
+* b) 3.33 is $\omega_i/t$.
+* d) 8.33 is $\omega_f/t$.
+* e) 11.7 adds the speeds.
+
+# 12. Rolling ball acceleration — **c) 2.62 m/s²**
+
+**Source:** Ch 10 notes p. 3/8. **Notecard:** Rolling (sphere row).
+
+Notecard, sphere row: $a = \tfrac57 g\sin\theta$, "less than sliding."
+
+**Plug in:**
+
+$$a = \tfrac57(9.8)\sin 22^\circ = \tfrac57(9.8)(0.3746) = 2.62\ \text{m/s}^2$$
+
+Distractors:
+
+* a) 1.84 is a ring.
+* b) 2.45 is a disk.
+* d) 3.67 is sliding, $g\sin\theta$.
+* e) 6.49 uses $\cos\theta$.
+
+# 13. Counter-rotating ring dropped on a disk — **a) +1.33 rad/s**
+
+**Source:** Ch 11 notes p. 3/8. **Notecard:** Angular momentum.
+
+Notecard, with the ring's $\omega_2$ **negative**:
+
+$$\omega_f = \frac{I_1\omega_1 + I_2\omega_2}{I_1 + I_2}$$
+
+**Moments of inertia:** $I_1 = \tfrac12(400)(2.0)^2 = 800$; $I_2 = (150)(1.2)^2 = 216$ (kg·m²).
+
+**Plug in:**
+
+$$\omega_f = \frac{(800)(2.5) + (216)(-3.0)}{800 + 216} = \frac{2000 - 648}{1016} = +1.33\ \text{rad/s}$$
+
+Distractors:
+
+* b) 1.85 treats the ring as a disk ($\tfrac12 mr^2$).
+* c) 1.97 ignores the ring's spin.
+* d) 2.50 is no change.
+* e) 2.61 forgets the minus sign.
+
+# 14. Man runs and jumps on the rim — **d) 0.80 rad/s**
+
+**Source:** Ch 11 notes p. 4/8. **Notecard:** Angular momentum.
+
+Notecard with $+mvR$ (same direction) and $I_{add} = mR^2$:
+
+$$\omega_f = \frac{\tfrac12 MR^2\,\omega_i + mvR}{\tfrac12 MR^2 + mR^2}$$
+
+**Plug in** ($\tfrac12 MR^2 = \tfrac12(350)(2.2)^2 = 847$ kg·m²):
+
+$$
+\begin{aligned}
+\omega_f &= \frac{(847)(0.40) + (90)(3.5)(2.2)}{847 + (90)(2.2)^2} \\[8pt]
+&= \frac{338.8 + 693}{847 + 435.6} = \frac{1031.8}{1282.6} = 0.80\ \text{rad/s}
+\end{aligned}
+$$
+
+Distractors:
+
+* a) −0.28 uses $-mvR$ (running against the rim).
+* b) 0.26 ignores his running momentum.
+* c) 0.40 is no change.
+* e) 1.22 forgets to add his $mR^2$.
+
+# 15. Man walks from the rim to the center — **d) 1.84 rad/s**
+
+**Source:** Ch 11 notes p. 7/8. **Notecard:** Angular momentum (rim→center).
+
+Notecard, rim$\to$center:
+
+$$\omega_f = \frac{M + 2m}{M}\,\omega_i$$
+
+**Plug in:**
+
+$$\omega_f = \frac{300 + 2(80)}{300}(1.2) = \frac{460}{300}(1.2) = 1.84\ \text{rad/s}$$
+
+$R$ isn't needed. The KE goes up: "it took energy to move from rim to the center."
+
+Distractors:
+
+* a) 0.78 flips the ratio (walking out).
+* b) 1.20 is no change.
+* c) 1.52 uses $\frac{M + m}{M}$.
+* e) 2.48 uses $\frac{M + 4m}{M}$.
