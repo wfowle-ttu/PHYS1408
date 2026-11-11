@@ -1,0 +1,48 @@
+---
+format:
+  pdf:
+    documentclass: article
+    pdf-engine: lualatex
+    geometry:
+      - letterpaper
+      - margin=0in
+    include-in-header:
+      text: |
+        \usepackage{tikz}
+        \usetikzlibrary{calc}
+        \pagestyle{empty}
+        \setlength{\parindent}{0pt}
+---
+
+```{=latex}
+% PAGE 1 (front): one bold reference line at the card's top edge, 4 in from the top of the page.
+\begin{tikzpicture}[remember picture,overlay]
+  \coordinate (TL) at (current page.north west);
+  \draw[line width=1.2pt] ($(TL)+(1.75in,-4in)$) -- ++(5in,0);
+  \node[font=\sffamily\small,anchor=south] at ($(TL)+(4.25in,-4in)$) {FRONT reference line};
+  \node[font=\sffamily\small,align=center,anchor=north] at ($(TL)+(4.25in,-1in)$)
+    {Notecard alignment test. Print BOTH pages exactly like the notecard:\\
+     100\% / Actual size, duplex, flip on long edge. Then read the back side.};
+\end{tikzpicture}
+\null
+\newpage
+% PAGE 2 (back): a ruler centered on the same nominal line, + = below.
+\begin{tikzpicture}[remember picture,overlay]
+  \coordinate (Z) at ($(current page.north west)+(4.25in,-4in)$);
+  \foreach \mm in {-50,...,50} {
+    \pgfmathsetmacro{\len}{ifthenelse(mod(\mm,10)==0, 1.2, ifthenelse(mod(\mm,5)==0, 0.8, 0.45))}
+    \draw[line width=0.3pt] ($(Z)+(-\len cm,-\mm mm)$) -- ($(Z)+(\len cm,-\mm mm)$);
+  }
+  \foreach \cm in {-5,...,5} {
+    \node[font=\sffamily\footnotesize,anchor=west] at ($(Z)+(1.3cm,-\cm cm)$) {\ifnum\cm>0 +\fi\cm\ cm};
+  }
+  \node[font=\sffamily\small,anchor=west] at ($(Z)+(3.2cm,0)$) {$\leftarrow$ 0 = perfectly aligned};
+  \node[font=\sffamily\small,align=left,anchor=north west] at ($(current page.north west)+(1in,-7in)$)
+    {Hold this sheet up to a light, back side facing you.\\
+     Find where the bold FRONT line shows through on this ruler.\\[4pt]
+     Read the number in cm. \textbf{+} means the front printed LOWER than the back.\\
+     Convert to inches (divide by 2.54) and put it in \texttt{\textbackslash BACKSHIFT}\\
+     in notecard-3x5-print.qmd, e.g.\ +2.5 cm $\to$ 0.98.};
+\end{tikzpicture}
+\null
+```

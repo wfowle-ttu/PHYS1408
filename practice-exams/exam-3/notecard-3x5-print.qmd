@@ -1,0 +1,41 @@
+---
+format:
+  pdf:
+    documentclass: article
+    pdf-engine: lualatex
+    geometry:
+      - letterpaper
+      - margin=0in
+    include-in-header:
+      text: |
+        \usepackage{graphicx}
+        \usepackage[absolute]{textpos}
+        \setlength{\TPHorizModule}{1in}
+        \setlength{\TPVertModule}{1in}
+        \pagestyle{empty}
+        \setlength{\parindent}{0pt}
+        \setlength{\fboxsep}{0pt}
+        \setlength{\fboxrule}{0.3pt}
+        % ---------------------------------------------------------------
+        % BACKSHIFT moves the BACK card DOWN the page (inches; negative = up).
+        % 0 = front and back in exactly the same place on the page.
+        % A 0.75 in shift was tried on 2026-11-11 with the Microsoft IPP Class Driver and made
+        % the offset WORSE (~10 cm), so that driver doesn't place pages linearly. Keep 0 and
+        % fix the driver; remeasure with notecard-alignment-test.pdf before changing this.
+        \newcommand{\BACKSHIFT}{0}
+        % ---------------------------------------------------------------
+        \newcommand{\cardat}[3]{% page, label, top edge of card (in)
+          \begin{textblock*}{5in}(1.75in,#3in)
+          \fbox{\includegraphics[page=#1,width=5in,height=3in]{notecard-3x5.pdf}}
+          \end{textblock*}
+          \begin{textblock*}{5in}(1.75in,1in)
+          {\footnotesize\sffamily #2. Cut along the box. Print at 100\% / Actual size, duplex, flip on long edge.}
+          \end{textblock*}
+          \null}
+---
+
+```{=latex}
+\cardat{1}{FRONT}{4}
+\newpage
+\cardat{2}{BACK}{\fpeval{4+\BACKSHIFT}}
+```

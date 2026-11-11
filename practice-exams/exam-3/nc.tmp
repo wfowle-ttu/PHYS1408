@@ -1,0 +1,31 @@
+---
+format:
+  pdf:
+    documentclass: article
+    pdf-engine: lualatex
+    geometry:
+      - paperwidth=5in
+      - paperheight=3in
+      - margin=0.09in
+    include-in-header:
+      text: |
+        \usepackage{multicol}
+        \usepackage{amsmath}
+        \pagestyle{empty}
+        \setlength{\columnsep}{5pt}
+        \setlength{\columnseprule}{0.2pt}
+        \setlength{\parindent}{0pt}
+        \setlength{\parskip}{0.6pt}
+        \newcommand{\hd}[1]{\textbf{\color{blue!60!black}#1}\enspace}
+        \newcommand{\sep}{\par\vspace{0.4pt}\hrule height 0.1pt\vspace{0.6pt}}
+        % one card entry: never split across columns or pages
+        \newenvironment{E}{\par\noindent\begin{minipage}{\linewidth}\raggedright\setlength{\parskip}{0.6pt}}{\end{minipage}\par}
+        \renewcommand{\arraystretch}{1}
+        \thinmuskip=1mu \medmuskip=1.5mu \thickmuskip=2mu
+---
+
+```{=latex}
+\fontsize{7.8}{8.8}\selectfont
+\begin{multicols}{2}
+\raggedright
+\begin{E}

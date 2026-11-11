@@ -1,0 +1,112 @@
+---
+format:
+  pdf:
+    documentclass: article
+    pdf-engine: lualatex
+    geometry:
+      - paperwidth=5in
+      - paperheight=3in
+      - margin=0.09in
+    include-in-header:
+      text: |
+        \usepackage{multicol}
+        \usepackage{amsmath}
+        \pagestyle{empty}
+        \setlength{\columnsep}{5pt}
+        \setlength{\columnseprule}{0.2pt}
+        \setlength{\parindent}{0pt}
+        \setlength{\parskip}{0.6pt}
+        \newcommand{\hd}[1]{\textbf{\color{blue!60!black}#1}\enspace}
+        \newcommand{\sep}{\par\vspace{0.4pt}\hrule height 0.1pt\vspace{0.6pt}}
+        % one card entry: never split across columns or pages
+        \newenvironment{E}{\par\noindent\begin{minipage}{\linewidth}\raggedright\setlength{\parskip}{0.6pt}}{\end{minipage}\par}
+        \renewcommand{\arraystretch}{1}
+        \thinmuskip=1mu \medmuskip=1.5mu \thickmuskip=2mu
+---
+
+```{=latex}
+\fontsize{7.8}{8.8}\selectfont
+\begin{multicols}{2}
+\raggedright
+\begin{E}
+\hd{Statics} $\sum F_x=\sum F_y=0$, $\sum\tau=0$. $\tau=rF_\perp=r_\perp F$. Pivot at the force you DON'T want ($r=0$). Uniform beam: weight at $L/2$. CCW $+$.
+\end{E}
+\sep
+\begin{E}
+\hd{Sofa / beam} (A at 0, B at $x_B$) $x_BF_B=\frac L2Mg+\sum x_im_ig$; $F_A=W_{tot}-F_B$. Ends, no load: $\frac12Mg$ each.
+\end{E}
+\sep
+\begin{E}
+\hd{Diving board} A at end, B at $a$: $B=\frac{L/2}{a}Mg$ (up), $A=B-Mg$ (DOWN). ($L{=}10,a{=}1$: $5Mg$, $4Mg$.)
+\end{E}
+\sep
+\begin{E}
+\hd{Seesaw} $x=\frac{Lm_k}{2M_T}$ from center. Seesaw mass: don't care.
+\end{E}
+\sep
+\begin{E}
+\hd{Wall beam + cable} ($\theta$ cable--beam) $x_{max}=\frac{L}{mg}\left(T\sin\theta-\frac{Mg}{2}\right)$.
+\end{E}
+\sep
+\begin{E}
+\hd{Ladder} ($\theta$ from floor, wall frictionless; $M$ man, $m$ ladder)\par
+$x_{max}=\frac LM\left(\mu_s(M+m)\tan\theta-\frac m2\right)$ \textbf{MAX: round DOWN}.\par
+Empty: $\tan\theta_{min}=\frac1{2\mu_s}$. To top: $\tan\theta_{min}=\frac{M+m/2}{(M+m)\mu_s}$.\par
+Climb higher: increase $\theta$ or $\mu_s$.
+\end{E}
+\sep
+\begin{E}
+\hd{Two cords} ($\theta$ from CEILING) $T=\frac{mg}{\sin\theta}$.
+\end{E}
+\sep
+\begin{E}
+\hd{Young's modulus} $Y=\frac{F/A}{\Delta\ell/\ell}$: $\Delta\ell=\frac{F\ell}{AY}$, $F{=}mg$.\par
+Wire: $A=\pi(\frac d2)^2$ (radius = HALF the diameter).\par
+Block: $A$ = top face (width $\times$ length), $\ell$ = height.
+\end{E}
+\end{multicols}
+
+\newpage
+
+\begin{multicols}{2}
+\raggedright
+\begin{E}
+\hd{Constants} $G=6.67{\times}10^{-11}$, $M_E=5.98{\times}10^{24}$, $R_E=6.37{\times}10^6$, $M_{sun}=2{\times}10^{30}$, 1 AU $=1.5{\times}10^{11}$ m, $c=3{\times}10^8$, 1 day $=86{,}400$ s.
+\end{E}
+\sep
+\begin{E}
+\hd{$g$ at height} $g=\frac{GM}{r^2}$, $r=R+h$ (from CENTER, not $h$). Person's mass cancels.
+\end{E}
+\sep
+\begin{E}
+\hd{Orbit period} $T=2\pi\sqrt{\frac{r^3}{GM}}$, $r=R+h$. Satellite mass cancels. LEO 400 km: 92.4 min.\par
+\hd{Altitude from $T$} $r=\left(\frac{T^2GM}{4\pi^2}\right)^{1/3}$, $h=r-R$ ($T$ in s). Geo: 24 h, $h=35{,}900$ km.
+\end{E}
+\sep
+\begin{E}
+\hd{Binary stars} $T^2=\frac{16\pi^2r^3}{GM}$, $r=\frac d2$ (separation $=2r$), $M$ = one star.
+\end{E}
+\sep
+\begin{E}
+\hd{Rocket} $U=-\frac{GMm}{r}$ (NOT $mgh$).\par
+Speed for height: $v=\sqrt{2GM\left(\frac1R-\frac1r\right)}$, $r=R+h$.\par
+Height from speed: $h=\frac{2GMR}{2GM-v^2R}-R$ (keep 4+ sig figs).
+\end{E}
+\sep
+\begin{E}
+\hd{Escape} $v_{esc}=\sqrt{\frac{2GM}{R}}$ (Earth 11.2 km/s). Event horizon ($v{=}c$): $r=\frac{2GM}{c^2}$.
+\end{E}
+\sep
+\begin{E}
+\hd{Planet speed} $v=\sqrt{\frac{GM_{sun}}{r}}$, $GM_{sun}=1.33{\times}10^{20}$; $r$ in m (AU$\times1.5{\times}10^{11}$).
+\end{E}
+\sep
+\begin{E}
+\hd{Equal pull} $\frac xd=\frac{k}{1+k}$, $k=\sqrt{\frac{M_E}{M_b}}$, $x$ from Earth.
+\end{E}
+\sep
+\begin{E}
+\hd{Choices} Nearest choice; MAX (``safely'') $\to$ largest that works; MIN $\to$ smallest that works.
+\end{E}
+\end{multicols}
+```

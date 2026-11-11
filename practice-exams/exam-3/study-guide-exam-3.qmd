@@ -1,0 +1,762 @@
+---
+title: "PHYS1408 Exam 3 Study Guide"
+subtitle: "Chapter 12 (Statics) and Chapter 13 (Gravity): every lecture-note example and every 2015 Exam 3 question, fully worked"
+format:
+  pdf:
+    papersize: letter
+    fontsize: 11pt
+    toc: true
+    toc-depth: 2
+    include-in-header:
+      text: |
+        \usepackage{longtable,array,colortbl,cancel,needspace}
+filters:
+  - _filters/tables.lua
+---
+
+# How Exam 3 is built
+
+**Exam date:** Nov 18. It covers **Chapter 12 (Statics)** and **Chapter 13 (Gravity)** only.
+
+Every question on the live exam comes from one of two places: an example in the professor's lecture notes (`Professors-Notes/Chapter 12 Statics-2.pdf`, `Chapter 13 Gravity-2.pdf`), or a question on the **2015 Exam 3** (`Professors-Notes/exam 3-4.pdf`) with different numbers. This guide works **all** of both, using his method, and **nothing else**. For this course, a procedure that isn't worked in the notes or on the 2015 exam won't be on the test, so it isn't in this guide, the practice exams, or the notecard. Expect the same procedures with different numbers and names.
+
+The 2015 Exam 3 had 13 multiple-choice questions, each with five choices (a–e). Questions 6–8 were fluids (Chapter 14), which is **not** on our exam. The other ten map to the notes like this:
+
+| 2015 # | Problem | Ch | Same method as the notes | Section here |
+|:-:|:--|:-:|:--|:--|
+| 1 | Sofa carried by two people + box of books on one end | 12 | p. 4–5 (sofa, kid on sofa) | 12.5 |
+| 2 | Man climbing a leaning ladder: how far can he safely climb? | 12 | p. 8 | 12.8 |
+| 3 | Light hung from a ceiling cord at 40° + a horizontal cord | 12 | p. 1 ($\sum F = 0$) | 12.11 |
+| 4 | Block of jello compressed by a mass (Young's modulus) | 12 | p. 10 | 12.10 |
+| 5 | Wire stretched by a hanging load (Young's modulus) | 12 | p. 10 | 12.10 |
+| 9 | Rocket rises 1000 km: launch speed? | 13 | p. 8 (the identical example) | 13.6 |
+| 10 | Satellite period at altitude $10^8$ m | 13 | p. 2 | 13.2 |
+| 11 | Two equal-mass stars: period | 13 | p. 4 | 13.4 |
+| 12 | $g$ at 750 km altitude | 13 | p. 1 | 13.1 |
+| 13 | Point between Earth and Moon where the pulls are equal | 13 | p. 1 ($F = GMm/r^2$) | 13.9 |
+
+**Constants on the exam.** The 2015 Exam 3 printed these at the top:
+
+| Symbol | Value on the 2015 exam | Value in his notes |
+|:--|:--|:--|
+| $G$ | $6.67\times10^{-11}$ N m²/kg² | same |
+| $M_{earth}$ | $5.98\times10^{24}$ kg | $5.97\times10^{24}$ kg |
+| $R_{earth}$ | $6.37\times10^{6}$ m | same |
+| $g$ | — (use 9.8, as in all his notes) | 9.8 m/s² |
+
+The notes' examples below use $5.97\times10^{24}$ (his numbers); the 2015 questions use $5.98\times10^{24}$. The difference never changes an answer letter. Other values in the notes, p. 1/10: $M_{sun} = 2\times10^{30}$ kg, $M_{moon} = M_{earth}/80$, Earth–Sun distance $1.5\times10^{11}$ m, Earth–Moon distance $4\times10^{8}$ m (400,000 km).
+
+## Reading his answer choices
+
+His choices are rounded and widely spaced, so the right value is usually *not* printed exactly.
+
+1. **"What is…" questions:** pick the **nearest** choice. On 2015 #3 the tension is 305 N, and the answer is b) 300 N.
+2. **Maximum questions ("how far can he *safely* climb"):** pick the **largest choice that still works**, not the nearest. On 2015 #2 he can climb 3.78 m. 4.0 m is the nearest number, but at 4.0 m the ladder slips, so the answer is b) 3.5 m.
+3. **Minimum questions:** pick the smallest choice that still works.
+
+**One flawed 2015 question.** On #9 (rocket rises 1000 km) the correct launch speed is **4.12 km/s**, which falls between his choices c) 3 km/s and d) 8 km/s. By the nearest-choice rule the answer is c) 3 km/s, but at 3 km/s the rocket would not get to 1000 km. If this happens on the live exam, recheck your work. If your answer still falls between two choices, pick the nearest one and ask the professor afterward.
+
+## Which tool do I use?
+
+| If the problem… | Use |
+|:--|:--|
+| has a beam, sofa, board, seesaw or ladder that **doesn't move** | $\sum F = 0$ **and** $\sum\tau = 0$; take torques about the unknown force you *don't* want |
+| has cords meeting at a knot | $\sum F_x = 0$ and $\sum F_y = 0$ on the knot |
+| stretches a wire or squeezes a block | Young's modulus $Y$ |
+| asks for $g$ or a force at a distance from a planet | $F = GMm/r^2$, $g = GM/r^2$, with $r$ from the **center** |
+| has something in a circular orbit | gravity = centripetal force: $\dfrac{GMm}{r^2} = \dfrac{mv^2}{r}$, $v = \dfrac{2\pi r}{T}$ |
+| launches something up very high, or asks for escape speed | energy, with $U = -\dfrac{GMm}{r}$ (not $mgh$) |
+
+# Symbol key
+
+| Symbol | Meaning | Units |
+|:--|:--|:--|
+| $\tau$ | torque, a "twist" (Ch 12 notes p. 1) | N m |
+| $r$ | lever arm: distance from the pivot to where the force acts (Ch 12); distance from a planet's **center** (Ch 13) | m |
+| $r_\perp$, $F_\perp$ | perpendicular lever arm; perpendicular part of the force | m, N |
+| $L$ | length of the beam, board, sofa, seesaw or ladder | m |
+| $M$, $m$ | masses; in each problem the notes say which is which (e.g. $M$ = man, $m$ = ladder on p. 12-8) | kg |
+| $x$ | position along the beam or ladder, measured from the pivot/end named in the problem | m |
+| $N$, $N_w$ | normal force from the floor; normal force from the wall | N |
+| $F_f$ | friction force; at the slipping point $F_f = \mu_s N$ | N |
+| $\mu_s$ | coefficient of static friction | — |
+| $\theta$ | angle (ladder: with the **floor**; cable: with the beam; 2015 #3 cord: with the **ceiling**) | ° |
+| $T$ | tension (Ch 12); **period** of an orbit (Ch 13) | N; s |
+| $Y$ | Young's modulus | N/m² |
+| $A$ | cross-section area the force acts on | m² |
+| $\ell$, $\Delta\ell$ | original length; change in length | m |
+| $h$, $\Delta h$ | height (Ch 12 block); altitude above Earth's **surface** (Ch 13) | m |
+| $G$ | universal gravitational constant | N m²/kg² |
+| $R$ | planet radius | m |
+| $v$ | orbital speed, launch speed or escape speed | m/s |
+| $U$ | gravitational potential energy, $-GMm/r$ | J |
+| $c$ | speed of light, $3\times10^8$ m/s | m/s |
+| AU | astronomical unit, $1.5\times10^{11}$ m (Earth–Sun distance) | m |
+
+# Chapter 12: Statics
+
+## 12.1 Torque and what "static" means
+
+**Source:** Ch 12 notes p. 1/10.
+
+**The professor's definitions:**
+
+* "**Torque is a twist.** Think wrench or screwdriver."
+* $\tau = rF$ when the force is perpendicular to the arm. If it isn't, only the perpendicular part counts:
+
+$$
+\tau = r_\perp F = rF_\perp
+$$
+
+* "**Static means not moving**":
+
+$$
+\sum F_x = \sum F_y = \sum F_z = 0
+$$
+
+$$
+\sum\tau_x = \sum\tau_y = \sum\tau_z = 0
+$$
+
+**The trick he uses on every problem** (p. 3/10, "A is eliminated, $\tau = rF$, $r = 0$"; p. 6/10, "Do torque at left to remove reaction forces"): take torques about the point where an **unknown force you don't want** acts. That force has $r = 0$, so it drops out.
+
+**Signs:** pick one turning direction as positive (he writes counterclockwise as $+$) and keep it for the whole equation.
+
+## 12.2 Where does a uniform beam balance?
+
+**Source:** Ch 12 notes p. 2/10.
+
+**Given:** a uniform beam of length $L$ and mass $M$, balanced on a pivot at $x$.
+
+**Idea:** split the beam at the pivot. The left piece (length $x$) has mass $\tfrac{x}{L}M$ acting at its middle, $\tfrac{x}{2}$ from the pivot. The right piece (length $L-x$) has mass $\tfrac{L-x}{L}M$ acting $\tfrac{L-x}{2}$ from the pivot.
+
+**Step 1: torque about the pivot:**
+
+$$
+\underbrace{\frac{x}{2}}_{\text{arm}}\underbrace{\frac{x}{L}Mg}_{\text{left weight}} - \underbrace{\frac{L-x}{2}}_{\text{arm}}\underbrace{\frac{L-x}{L}Mg}_{\text{right weight}} = 0
+$$
+
+**Step 2: simplify:**
+
+$$
+x^2 = (L-x)^2 \;\Rightarrow\; x = L - x \;\Rightarrow\; x = \frac{L}{2}
+$$
+
+**Answer:** the middle ("duh!"). This is why a uniform beam's whole weight can be drawn as one arrow $Mg$ **at its center**, which every other problem uses.
+
+## 12.3 Diving board
+
+**Source:** Ch 12 notes p. 3/10.
+
+**Given:** $L = 10$ m, $M = 1000$ kg. Support A at the back end ($x = 0$), support B at $x = 1$ m. Weight $Mg$ at the center, $x = 5$ m.
+
+**Find:** the forces from A and B.
+
+**Idea:** the weight is far out past B, so the board wants to tip forward about B. B pushes **up**; A must pull **down** to hold the back end on.
+
+**Step 1: $\sum F_y$** (B up, A and $Mg$ down):
+
+$$
+B - A - Mg = 0
+$$
+
+**Step 2: torque about A** (A drops out):
+
+$$
+\underbrace{1}_{\text{A to B}}\,B - \underbrace{5}_{\text{A to center}}\,Mg = 0 \;\Rightarrow\; B = 5Mg
+$$
+
+**Step 3: A from $\sum F_y$** (or from torque about B: $1A - 4Mg = 0$):
+
+$$
+A = B - Mg = 4Mg
+$$
+
+**Answer:** $B = 5Mg = 49{,}000$ N up, $A = 4Mg = 39{,}200$ N **down**.
+
+> **3×5 card: Diving board.** Support A at the end, B a distance $a$ in, board length $L$:
+> $B = \dfrac{L/2}{a}Mg$ (up), $A = B - Mg$ (down).
+
+## 12.4 Seesaw
+
+**Source:** Ch 12 notes p. 4/10.
+
+**Given:** seesaw of length $L$ pivoted at its center; mass $M$ ("don't care!"). Kid $m_k = 20$ kg at the end, $L/2$ from the pivot. Adult $M_T = 100$ kg at distance $x$ on the other side.
+
+**Find:** $x$ for balance.
+
+**Idea:** torque about the center. The seesaw's own weight acts at the center ($r = 0$), so its mass never matters.
+
+$$
+\sum\tau_{center}:\quad \frac{L}{2}m_kg - xM_Tg = 0 \;\Rightarrow\; x = \frac{Lm_k}{2M_T}
+$$
+
+$$
+x = \frac{L\,\overbrace{(20)}^{m_k}}{2\underbrace{(100)}_{M_T}} = \frac{L}{10}
+$$
+
+> **3×5 card: Seesaw.** $x = \dfrac{Lm_k}{2M_T}$ from the center.
+
+## 12.5 Carrying a sofa (and 2015 #1)
+
+**Source:** Ch 12 notes p. 4/10 and 5/10; 2015 Exam 3 #1.
+
+### Notes, p. 4: each holds an end
+
+**Given:** sofa 4 m long, $M = 50$ kg; Jim at $x = 0$, Sam at $x = 4$ m; weight at the center, $x = 2$ m.
+
+$$
+\sum\tau_{Jim}:\quad -2Mg + 4S = 0 \;\Rightarrow\; S = \tfrac12 Mg
+$$
+
+$$
+\sum\tau_{Sam}:\quad 2Mg - 4J = 0 \;\Rightarrow\; J = \tfrac12 Mg = \tfrac12(50)(9.8) = 245\ \text{N}
+$$
+
+### Notes, p. 5: the 20 kg kid sits on the sofa 1 m from Jim
+
+**Step 1: torque about Jim** (kid at 1 m, sofa center at 2 m, Sam at 4 m):
+
+$$
+-\underbrace{1}_{\text{kid}}\,mg - \underbrace{2}_{\text{sofa}}\,Mg + \underbrace{4}_{\text{Sam}}\,S = 0
+$$
+
+$$
+S = \tfrac14(mg + 2Mg) = \tfrac14\big(\underbrace{20(9.8)}_{\text{kid}} + 2\underbrace{(50)(9.8)}_{\text{sofa}}\big) = 294\ \text{N}
+$$
+
+**Step 2: torque about Sam** (kid is $4 - 1 = 3$ m from Sam, sofa center 2 m):
+
+$$
+-4J + 3mg + 2Mg = 0 \;\Rightarrow\; J = \tfrac14(3mg + 2Mg) = \tfrac14(160)(9.8) = 392\ \text{N}
+$$
+
+**Check:** $294 + 392 = 686\ \text{N} = (20 + 50)(9.8)$, the total weight.
+
+### 2015 Exam 3 #1
+
+> A 100 kg sofa 5 m long is carried by James and Sarah. James has the end; Sarah is holding the sofa 0.5 m from the other end. A helper places a 50 kg box of books on the very end of the sofa Sarah is holding. How much weight is Sarah holding now? a) 380 N b) 490 N c) 980 N d) 1090 N e) 1470 N
+
+**Given:** James at $x = 0$; Sarah at $x = 5 - 0.5 = 4.5$ m; sofa weight at $x = 2.5$ m; books at $x = 5$ m.
+
+**Step 1: torque about James** (removes James):
+
+$$
+\underbrace{4.5}_{\text{Sarah}}\,S = \underbrace{2.5}_{\text{sofa center}}\underbrace{(100)(9.8)}_{\text{sofa}} + \underbrace{5}_{\text{books}}\underbrace{(50)(9.8)}_{\text{books}} = 2450 + 2450 = 4900\ \text{N m}
+$$
+
+$$
+S = \frac{4900}{4.5} = 1089\ \text{N}
+$$
+
+**Answer: d) 1090 N.** (James holds $1470 - 1089 = 381$ N, which is choice a. Don't stop at the wrong person.)
+
+> **3×5 card: Beam / sofa.** Torque about the person you're *not* asked about:
+> $F_{other}\cdot x_{other} = \sum(\text{each weight} \times \text{its distance})$; sofa weight at $L/2$. Then $\sum F_y$: the two forces add to the total weight.
+
+## 12.6 Beam on a wall hinge with a cable
+
+**Source:** Ch 12 notes p. 6/10.
+
+**Given:** beam $L = 5$ m, $M = 1000$ kg, hinged at the wall (left). Cable from the far end up to the wall at $\theta = 30^\circ$ with the beam, $T_{max} = 10^4$ N. A mass $m = 100$ kg hangs at $x$.
+
+**Find:** $x_{max}$, the farthest out the mass can hang.
+
+**Step 1: torque about the left end** removes the hinge forces $R_x$, $R_y$. Only $T\sin\theta$ (the part of $T$ perpendicular to the beam) twists it:
+
+$$
+\sum\tau_{left}:\quad -x\,mg - \frac{L}{2}Mg + L\,T\sin\theta = 0
+$$
+
+**Step 2: solve for $x$:**
+
+$$
+x = \frac{L}{mg}\left(T\sin\theta - \frac{Mg}{2}\right)
+$$
+
+**Step 3: plug in:**
+
+$$
+x_{max} = \frac{\overbrace{5}^{L}}{\underbrace{(100)(9.8)}_{mg}}\Big(\underbrace{(10^4)(0.5)}_{T\sin 30^\circ = 5000} - \underbrace{\frac{(1000)(9.8)}{2}}_{Mg/2 = 4900}\Big) = 0.00510(100) = 0.510\ \text{m}
+$$
+
+> **3×5 card: Wall beam + cable.** $x_{max} = \dfrac{L}{mg}\big(T\sin\theta - \tfrac{Mg}{2}\big)$. $\theta$ = cable–beam angle.
+
+## 12.7 Ladder: minimum angle
+
+**Source:** Ch 12 notes p. 7/10.
+
+**Given:** uniform ladder, length $L$, mass $m$, at angle $\theta$ with the floor; frictionless wall; floor friction $\mu_s$.
+
+**Find:** $\theta_{min}$, "the minimum angle that's for the ladder to stand, not fall."
+
+**Step 1: forces.** Floor: $N = mg$ up, friction $F_f$ toward the wall. Wall: $N_w$ (horizontal only). $\sum F_x$: $N_w = F_f$. "$\theta_{min}$ means $F_{f\,max} = \mu_sN$", so $N_w = \mu_s mg$.
+
+**Step 2: torque about the base.** The weight at $L/2$ has lever arm $\tfrac L2\cos\theta$; $N_w$ at the top has lever arm $L\sin\theta$:
+
+$$
+\frac{L}{2}\cos\theta\,mg - L\sin\theta\,\mu_smg = 0 \;\Rightarrow\; \frac{\cos\theta}{2} = \mu_s\sin\theta
+$$
+
+$$
+\tan\theta_{min} = \frac{1}{2\mu_s}
+$$
+
+**Example** (not worked in the notes): $\mu_s = 0.4$ gives $\theta_{min} = \tan^{-1}(1.25) = 51.3^\circ$.
+
+## 12.8 Man climbing a ladder (and 2015 #2)
+
+**Source:** Ch 12 notes p. 8/10; 2015 Exam 3 #2.
+
+**Given (notes):** $L = 10$ m, $\theta = 65^\circ$, $\mu_s = 0.4$, ladder $m = 10$ kg, man plus load $M = 150$ kg.
+
+**Find:** how far $x$ up the ladder he can climb before it slips.
+
+**Step 1: $\sum F_y$:** $N - Mg - mg = 0$, so $N = (M+m)g$.
+
+**Step 2: $\sum F_x$:** $N_w = F_f = \mu_sN = \mu_s(M+m)g$.
+
+**Step 3: torque about the base:**
+
+$$
+\frac{L}{2}\cos\theta\,mg + x\cos\theta\,Mg - L\sin\theta\,\mu_s(M+m)g = 0
+$$
+
+**Step 4: cancel $g$, divide by $\cos\theta$, solve:**
+
+$$
+x = \frac{L}{M}\Big(\mu_s(M+m)\tan\theta - \frac{m}{2}\Big)
+$$
+
+**Step 5: plug in** ($\tan 65^\circ = 2.14$):
+
+$$
+x = \frac{\overbrace{10}^{L}}{\underbrace{150}_{M}}\Big(\underbrace{0.4}_{\mu_s}\underbrace{(160)}_{M+m}(2.14) - \underbrace{\tfrac{10}{2}}_{m/2}\Big) = 8.8\ \text{m}
+$$
+
+(His page reads "= 880 m"; he means 8.80 m.)
+
+### 2015 Exam 3 #2
+
+> A 150 kg man (and the load he carries) is going up a leaning 20 kg ladder. The ladder is set at 71°. The floor and ladder have a coefficient of friction of 0.25. The wall is frictionless. How far up the 5 m long ladder can he safely climb? a) 3.0 m b) 3.5 m c) 4.0 m d) 4.5 m e) 5.0 m
+
+$$
+x = \frac{\overbrace{5}^{L}}{\underbrace{150}_{M}}\Big(\underbrace{0.25}_{\mu_s}\underbrace{(170)}_{M+m}\underbrace{(2.904)}_{\tan 71^\circ} - \underbrace{\tfrac{20}{2}}_{m/2}\Big) = \frac{5}{150}(123.4 - 10) = 3.78\ \text{m}
+$$
+
+**Answer: b) 3.5 m.** It's a maximum ("safely"): at 4.0 m the ladder slips.
+
+> **3×5 card: Ladder.** $x_{max} = \dfrac{L}{M}\big(\mu_s(M+m)\tan\theta - \tfrac m2\big)$ [$M$ man, $m$ ladder, $\theta$ from the floor]. Empty ladder: $\tan\theta_{min} = \dfrac{1}{2\mu_s}$. Reach the top: $\tan\theta_{min} = \dfrac{M + m/2}{(M+m)\mu_s}$.
+
+## 12.9 What would get him to the roof?
+
+**Source:** Ch 12 notes p. 9/10.
+
+"Increase $\mu_s$ or $\theta$." Both make $x$ bigger in the formula above.
+
+* $\theta$: $65^\circ \to 70^\circ$ ($\tan 70^\circ = 2.75$):
+
+$$
+x = \frac{10}{150}\big(0.4(160)(2.75) - 5\big) = 11.4\ \text{m}
+$$
+
+* $\mu_s$: $0.4 \to 0.6$, $\theta$ left at $65^\circ$:
+
+$$
+x = \frac{10}{150}\big(0.6(160)(2.14) - 5\big) = 13.4\ \text{m}
+$$
+
+(His page writes $\tfrac{10}{160}$ here, but his 13.4 m comes from $\tfrac{10}{150}$, the same $L/M$ as before.)
+
+**Minimum angle to climb all the way up** (set $x = L$):
+
+$$
+LM + L\frac{m}{2} = \mu_sL(M+m)\tan\theta \;\Rightarrow\; \tan\theta = \frac{M + \frac{m}{2}}{(M+m)\mu_s}
+$$
+
+$$
+\theta_{min} = \tan^{-1}\frac{\overbrace{150 + 5}^{M + m/2}}{\underbrace{(160)}_{M+m}\underbrace{(0.4)}_{\mu_s}} = \tan^{-1}(2.42) = 67.6^\circ
+$$
+
+## 12.10 Young's modulus (2015 #4, #5)
+
+**Source:** Ch 12 notes p. 10/10; 2015 Exam 3 #4, #5.
+
+**The professor's definitions:**
+
+$$
+Y = \frac{\text{tensile stress}}{\text{tensile strain}} = \frac{F/A}{\Delta\ell/\ell}
+$$
+
+(Young's modulus: pull or push **along** the length.)
+
+Page 10 also defines the shear modulus $S$ and bulk modulus $B$ and lists values for W and Al, but no example in the notes and no 2015 question uses them, so they are left out. The 2015 exam printed $Y$ in each question; expect it to be given.
+
+### 2015 Exam 3 #5 (wire)
+
+> A load of 500 kg is hung from a circular wire 4.00 m long, diameter 0.001 m, and a Young's modulus of $8.00\times10^{10}$ N/m². By how much does the wire stretch? a) 0.003 m b) 0.009 m c) 0.03 m d) 0.09 m e) 0.3 m
+
+**Step 1: force** = the load's weight: $F = (500)(9.8) = 4900$ N.
+
+**Step 2: area** (radius = half the diameter):
+
+$$
+A = \pi r^2 = \pi\Big(\underbrace{\tfrac{0.001}{2}}_{r}\Big)^2 = 7.854\times10^{-7}\ \text{m}^2
+$$
+
+**Step 3: solve $Y$ for $\Delta\ell$:**
+
+$$
+\Delta\ell = \frac{F\ell}{AY} = \frac{\overbrace{(4900)}^{F}\overbrace{(4.00)}^{\ell}}{\underbrace{(7.854\times10^{-7})}_{A}\underbrace{(8.00\times10^{10})}_{Y}} = 0.312\ \text{m}
+$$
+
+**Answer: e) 0.3 m.** Using the diameter as the radius gives 0.078 m, a trap.
+
+### 2015 Exam 3 #4 (jello)
+
+> A block of jello $Y = 3.00\times10^4$ N/m² is 3 m wide, 4 m long, and 0.1 m high, compressed by a mass of 500 kg. By how much does the height shrink? a) 0.3 mm b) 0.5 mm c) 0.9 mm d) 1.1 mm e) 1.3 mm
+
+The mass pushes on the **top** face, $A = (3)(4) = 12$ m²; the "length" in the strain is the height, $h = 0.1$ m.
+
+$$
+\Delta h = \frac{Fh}{AY} = \frac{\overbrace{(500)(9.8)}^{F = 4900\ \text{N}}\overbrace{(0.1)}^{h}}{\underbrace{(12)}_{A}\underbrace{(3.00\times10^4)}_{Y}} = 1.36\times10^{-3}\ \text{m} = 1.36\ \text{mm}
+$$
+
+**Answer: e) 1.3 mm** (nearest).
+
+> **3×5 card: Moduli.** $\Delta\ell = \dfrac{F\ell}{AY}$ (wire: $A = \pi(d/2)^2$; block: $A$ = face pushed on, $\ell$ = height). $F = mg$.
+
+## 12.11 Light hung by two cords (2015 #3)
+
+**Source:** 2015 Exam 3 #3, using $\sum F = 0$ from Ch 12 notes p. 1/10.
+
+> A light (20 kg) is attached to the ceiling by a cord making an angle 40° with the ceiling. The second cord is exactly horizontal and anchored in the wall. What is the tension in the cord connected to the ceiling? a) 200 N b) 300 N c) 400 N d) 500 N e) 600 N
+
+**Step 1: forces on the knot.** Ceiling cord $T$ at 40° above horizontal; the horizontal cord; weight $mg = 196$ N down.
+
+**Step 2: $\sum F_y = 0$.** Only the ceiling cord has an up component:
+
+$$
+T\sin 40^\circ = mg \;\Rightarrow\; T = \frac{\overbrace{(20)(9.8)}^{mg = 196\ \text{N}}}{\underbrace{0.643}_{\sin 40^\circ}} = 305\ \text{N}
+$$
+
+**Answer: b) 300 N.**
+
+**Watch the angle:** it's measured from the **ceiling** (horizontal), so the vertical part is $T\sin\theta$. If an angle were measured from the vertical, it would be $T\cos\theta$.
+
+> **3×5 card: Two cords.** Angle $\theta$ from the ceiling: $T = \dfrac{mg}{\sin\theta}$.
+
+# Chapter 13: Gravity
+
+## 13.1 Newton's law of gravity and $g$ (and 2015 #12)
+
+**Source:** Ch 13 notes p. 1/10 ("Principia 1687, Isaac Newton"); 2015 Exam 3 #12.
+
+$$
+F = \frac{GM_1M_2}{r^2},\qquad G = 6.67\times10^{-11}\ \frac{\text{N m}^2}{\text{kg}^2}
+$$
+
+$r$ is the distance **between the centers**. The force on $M_1$ and on $M_2$ is the same size, pointing toward each other.
+
+**$g$ at the surface:** $mg = \dfrac{GMm}{R^2}$, so
+
+$$
+g = \frac{GM_E}{R_E^2} = \frac{\overbrace{(6.67\times10^{-11})}^{G}\overbrace{(5.97\times10^{24})}^{M_E}}{\underbrace{(6.37\times10^{6})^2}_{R_E^2}} = 9.81\ \text{m/s}^2
+$$
+
+### 2015 Exam 3 #12
+
+> What is the acceleration due to gravity on a 120 kg man at a height of 750 km above the Earth's surface? a) 7 m/s² b) 8 m/s² c) 9 m/s² d) 10 m/s² e) 700 m/s²
+
+**Step 1: distance from Earth's center:** $r = R + h = 6.37\times10^6 + 7.5\times10^5 = 7.12\times10^6$ m.
+
+**Step 2:**
+
+$$
+g = \frac{GM}{r^2} = \frac{(6.67\times10^{-11})(5.98\times10^{24})}{(7.12\times10^6)^2} = 7.87\ \text{m/s}^2
+$$
+
+**Answer: b) 8 m/s².** The man's 120 kg cancels and is extra information. Choice e) 700 m/s² is what you get with $r = h$ instead of $R + h$.
+
+> **3×5 card: Gravity.** $F = \dfrac{GMm}{r^2}$, $g = \dfrac{GM}{r^2}$, $r = R + h$ (from the center!).
+
+## 13.2 Satellite period (and 2015 #10)
+
+**Source:** Ch 13 notes p. 2/10; 2015 Exam 3 #10.
+
+**Definitions (his words):** $r = R + h$, "$r$ = radius of satellite's orbit about **center** of earth; $h$ = altitude above earth's surface; $R$ = radius of earth."
+
+**Step 1: gravity is the only force, and it points to the center**, so it is the centripetal force:
+
+$$
+\frac{GMm}{r^2} = \frac{mv^2}{r} \;\Rightarrow\; \frac{GM}{r} = v^2
+$$
+
+**Step 2: speed from the period.** One trip around is $2\pi r$ in time $T$, so $v = \dfrac{2\pi r}{T}$:
+
+$$
+\frac{GM}{r} = \frac{4\pi^2r^2}{T^2} \;\Rightarrow\; T^2 = \frac{4\pi^2r^3}{GM}
+$$
+
+**Notes example, $h = 400$ km (low Earth orbit, LEO):** $r = 6.37\times10^6 + 4\times10^5 = 6.77\times10^6$ m.
+
+$$
+T = \sqrt{\frac{4\pi^2\overbrace{(6.77\times10^6)^3}^{r^3}}{\underbrace{(6.67\times10^{-11})(5.97\times10^{24})}_{GM}}} = 5546\ \text{s} = 92.4\ \text{min}
+$$
+
+### 2015 Exam 3 #10
+
+> What is the period of a satellite (mass 1000 kg) in circular orbit around the earth at an altitude of $10^8$ m above the earth's surface? a) 5 minutes b) 1 hour c) 10 hours d) 4 days e) 40 days
+
+$r = 6.37\times10^6 + 1\times10^8 = 1.0637\times10^8$ m.
+
+$$
+T = 2\pi\sqrt{\frac{(1.0637\times10^8)^3}{(6.67\times10^{-11})(5.98\times10^{24})}} = 3.45\times10^5\ \text{s} \times \frac{1\ \text{day}}{86{,}400\ \text{s}} = 3.99\ \text{days}
+$$
+
+**Answer: d) 4 days.** The satellite's mass doesn't matter.
+
+> **3×5 card: Orbit.** $T = 2\pi\sqrt{\dfrac{r^3}{GM}}$, $r = R + h$. 1 day = 86,400 s.
+
+## 13.3 Geosynchronous orbit (period → radius)
+
+**Source:** Ch 13 notes p. 3/10.
+
+**His definition:** "Geosynchronous orbit (Earth with time): 24 hr orbit places equatorial satellite over same point on the equator."
+
+**Step 1: solve $T^2 = 4\pi^2r^3/GM$ for $r$:**
+
+$$
+r = \left(\frac{T^2GM}{4\pi^2}\right)^{1/3}
+$$
+
+**Step 2: plug in** $T = 24\ \text{h} = 8.64\times10^4$ s:
+
+$$
+r = \left(\frac{\overbrace{(8.64\times10^4)^2}^{T^2}\overbrace{(6.67\times10^{-11})(5.97\times10^{24})}^{GM}}{4\pi^2}\right)^{1/3} = 4.22\times10^7\ \text{m}
+$$
+
+**Step 3: altitude:**
+
+$$
+h = r - R = 4.22\times10^7 - 6.37\times10^6 = 3.59\times10^7\ \text{m} = 35{,}900\ \text{km}\ (\sim 22{,}400\ \text{miles})
+$$
+
+> **3×5 card: Orbit from $T$.** $r = (T^2GM/4\pi^2)^{1/3}$, **then subtract $R$** for the altitude. $T$ in seconds.
+
+## 13.4 Two equal-mass stars (and 2015 #11)
+
+**Source:** Ch 13 notes p. 4/10; 2015 Exam 3 #11.
+
+**Given (notes):** $M_1 = M_2 = M_{sun} = 2\times10^{30}$ kg, each star moves on a circle of radius $r = 6\times10^{10}$ m (about the Sun–Mercury distance) around the midpoint.
+
+**Key point (his words):** "separation btwn the masses is $2r$ (not $r$)."
+
+**Step 1: the force uses the separation $2r$; the circle uses $r$:**
+
+$$
+\frac{GM^2}{(2r)^2} = \frac{Mv^2}{r},\qquad v = \frac{2\pi r}{T}
+$$
+
+**Step 2: simplify:**
+
+$$
+\frac{GM}{4r} = \frac{4\pi^2r^2}{T^2} \;\Rightarrow\; T^2 = \frac{16\pi^2r^3}{GM}
+$$
+
+**Step 3: plug in:**
+
+$$
+T = \sqrt{\frac{16\pi^2(6\times10^{10})^3}{(6.67\times10^{-11})(2\times10^{30})}} = 1.599\times10^7\ \text{s} = 4441\ \text{hr} = 185\ \text{days}
+$$
+
+### 2015 Exam 3 #11
+
+> What is the period of the circular orbit of two equal mass stars ($10^{31}$ kg each) around their common center of mass (halfway between them)? Separation distance $d = 10^8$ m. a) 3 minutes b) 30 minutes c) 5 hours d) 2 days e) 20 days
+
+The exam gives the **separation**, so $r = d/2 = 5\times10^7$ m.
+
+$$
+T = \sqrt{\frac{16\pi^2\overbrace{(5\times10^7)^3}^{r = d/2}}{(6.67\times10^{-11})(10^{31})}} = 172\ \text{s} = 2.87\ \text{min}
+$$
+
+**Answer: a) 3 minutes.** Using $r = d$ gives 8.1 min, which matches none of the choices; the right number lands only if you halve $d$.
+
+> **3×5 card: Binary stars.** $T^2 = \dfrac{16\pi^2r^3}{GM}$, $r$ = **half** the separation, $M$ = one star's mass.
+
+## 13.5 Pages 5–6: Kepler and the Copernican revolution
+
+**Source:** Ch 13 notes p. 5/10 and 6/10.
+
+These pages are history (Kepler's $T^2$ vs $a^3$ plot, the elliptical orbit of Mars, dates from Copernicus to Newton). They contain no worked problem, and no 2015 question comes from them, so there's nothing here to study for the exam and nothing on the card.
+
+## 13.6 Gravitational PE and the rocket (and 2015 #9)
+
+**Source:** Ch 13 notes p. 7/10 and 8/10; 2015 Exam 3 #9.
+
+**Gravitational potential energy:**
+
+$$
+U = -\frac{GMm}{r}
+$$
+
+It's negative and goes to 0 as $r \to \infty$. Far from the surface, use this instead of $mgh$.
+
+### Height reached from a launch speed (notes p. 7–8: $v_i = 1000$ m/s)
+
+**Step 1: energy conservation.** Launch at $r = R$ with $v_i$; at the top, $v = 0$ at $r = R + h$:
+
+$$
+-\frac{GMm}{R} + \frac12mv_i^2 = -\frac{GMm}{r}
+$$
+
+**Step 2: solve for $r$** ($m$ cancels):
+
+$$
+\frac1r = \frac1R - \frac{v_i^2}{2GM} \;\Rightarrow\; r = \frac{2GMR}{2GM - v_i^2R}
+$$
+
+**Step 3: plug in** ($2GM = 2(6.67\times10^{-11})(5.97\times10^{24}) = 7.964\times10^{14}$):
+
+$$
+r = \frac{\overbrace{(7.964\times10^{14})}^{2GM}\overbrace{(6.37\times10^6)}^{R}}{7.964\times10^{14} - \underbrace{(1000)^2}_{v_i^2}(6.37\times10^6)} = \frac{5.073\times10^{21}}{7.900\times10^{14}} = 6.4214\times10^6\ \text{m}
+$$
+
+$$
+h = r - R = 6.4214\times10^6 - 6.37\times10^6 = 5.14\times10^4\ \text{m} = 51.4\ \text{km}
+$$
+
+**His page shows 50.73 km.** The difference is rounding: he rounded $2GM$ to $7.96\times10^{14}$ before subtracting two nearly equal numbers. **Carry 4+ significant figures until the final subtraction $r - R$.**
+
+### Launch speed for a target height (notes p. 8: $h = 1000$ km)
+
+$$
+\frac{v^2}{2} - \frac{GM}{R} = -\frac{GM}{r} \;\Rightarrow\; v = \sqrt{2GM\Big(\frac1R - \frac1r\Big)}
+$$
+
+With $r = R + h = 7.37\times10^6$ m:
+
+$$
+v = \sqrt{2\underbrace{(6.67\times10^{-11})(5.97\times10^{24})}_{GM}\Big(\underbrace{\frac{1}{6.37\times10^6}}_{1/R} - \underbrace{\frac{1}{7.37\times10^6}}_{1/r}\Big)} = 4119\ \text{m/s}
+$$
+
+### 2015 Exam 3 #9
+
+> A rocket fired from earth's surface rises 1000 km. At what speed was it launched? a) 640 m/s b) 900 m/s c) 3 km/s d) 8 km/s e) 11 km/s
+
+This is the notes' p. 8 example. With the exam's $M = 5.98\times10^{24}$: $v = 4122$ m/s = **4.1 km/s**. See "One flawed 2015 question" above: none of the choices is close, and by the nearest-choice rule the answer is c) 3 km/s.
+
+> **3×5 card: Rocket.** $v = \sqrt{2GM\big(\frac1R - \frac1r\big)}$; $h = \dfrac{2GMR}{2GM - v^2R} - R$. $r = R + h$. Don't use $mgh$.
+
+## 13.7 Escape speed and the event horizon
+
+**Source:** Ch 13 notes p. 9/10.
+
+**Escape speed:** the object just reaches $r = \infty$ with $v = 0$, where $E = 0$:
+
+$$
+U_1 + K_1 = U_2 + K_2:\quad -\frac{GMm}{R} + \frac{mv^2}{2} = 0 + 0 \;\Rightarrow\; v_{escape} = \sqrt{\frac{2GM}{R}}
+$$
+
+$$
+v_{escape} = \sqrt{\frac{2(6.67\times10^{-11})(5.97\times10^{24})}{6.37\times10^6}} = 11{,}181\ \text{m/s} \approx 11.2\ \text{km/s}
+$$
+
+**Event horizon:** "if $v_{escape} = c$ (speed of light, $3\times10^8$ m/s), then $r$ is the radius of the event horizon":
+
+$$
+c^2 = \frac{2GM}{r} \;\Rightarrow\; r = \frac{2GM}{c^2}
+$$
+
+For $M = 10^{37}$ kg (his example, "50 million solar masses"):
+
+$$
+r = \frac{2(6.67\times10^{-11})(10^{37})}{(3\times10^8)^2} = 1.48\times10^{10}\ \text{m}
+$$
+
+That's about $\tfrac{1}{10}$ the radius of Earth's orbit.
+
+> **3×5 card: Escape.** $v_{esc} = \sqrt{2GM/R}$ (orbit speed has no 2). Event horizon $r = 2GM/c^2$.
+
+## 13.8 Orbital speed of the planets
+
+**Source:** Ch 13 notes p. 10/10.
+
+$$
+\frac{GMm}{r^2} = \frac{mv^2}{r} \;\Rightarrow\; v = \sqrt{\frac{GM}{r}}
+$$
+
+With $M_{sun} = 2\times10^{30}$ kg, $GM_{sun} = 1.33\times10^{20}$, and 1 AU $= 1.5\times10^{11}$ m:
+
+| Planet | $r$ (AU) | $r$ (m) | $v$ (km/s) |
+|:--|:-:|:-:|:-:|
+| Mercury | 0.4 | $0.6\times10^{11}$ | 47.15 |
+| Venus | 0.7 | $1.05\times10^{11}$ | 35.6 |
+| Earth | 1 | $1.5\times10^{11}$ | 29.8 |
+| Mars | 1.5 | $2.25\times10^{11}$ | 24.3 |
+| Jupiter | 5.2 | $7.8\times10^{11}$ | 13.1 |
+| Saturn | 10 | $1.5\times10^{12}$ | 9.42 |
+| Uranus | 20 | $3\times10^{12}$ | 6.66 |
+| Neptune | 30 | $4.5\times10^{12}$ | 5.44 |
+
+"Only a factor of 10 in speed of planet! Way smaller than I expected!"
+
+## 13.9 Where the pulls are equal (2015 #13)
+
+**Source:** 2015 Exam 3 #13, using $F = GMm/r^2$ from Ch 13 notes p. 1/10.
+
+> The earth and the moon (mass $7\times10^{22}$ kg) are separated by 400,000 km, from center to center. How far from the center of the earth toward the moon would you have to move to find a place where the gravitational pull towards the earth would equal the gravitational pull towards the moon? a) 50% b) 90% c) 96% d) 99% e) 99.8%
+
+**Step 1: set the pulls equal.** At distance $x$ from Earth, the Moon is $d - x$ away; the test mass cancels:
+
+$$
+\frac{GM_E}{x^2} = \frac{GM_M}{(d-x)^2} \;\Rightarrow\; \frac{x}{d-x} = \sqrt{\frac{M_E}{M_M}}
+$$
+
+**Step 2: the square root of the mass ratio:**
+
+$$
+k = \sqrt{\frac{5.98\times10^{24}}{7\times10^{22}}} = \sqrt{85.4} = 9.24
+$$
+
+**Step 3: solve for the fraction of the distance:**
+
+$$
+x = k(d - x) \;\Rightarrow\; \frac{x}{d} = \frac{k}{1+k} = \frac{9.24}{10.24} = 0.902 = 90.2\%
+$$
+
+**Answer: b) 90%** (that's 361,000 km from Earth's center). Using the mass ratio without the square root gives $85.4/86.4 = 98.8\%$, near choice d.
+
+> **3×5 card: Equal pull.** $\dfrac{x}{d} = \dfrac{k}{1+k}$, $k = \sqrt{\dfrac{M_{big}}{M_{small}}}$, $x$ measured from the big body.
+
+# Corrections to the notes, all checked by script
+
+Every number in this guide was recomputed in `_scripts/verify_guide.py`. The notes agree everywhere except:
+
+| Where | Notes say | Correct | Why |
+|:--|:--|:--|:--|
+| Ch 12 p. 8 | "= 880 m" | 8.80 m | decimal point dropped |
+| Ch 12 p. 9 | $x = \frac{10}{160}(\dots) = 13.4$ m | $\frac{10}{150}(\dots) = 13.4$ m | the 13.4 m answer uses 150 |
+| Ch 13 p. 8 | $h = 50.73$ km | 51.4 km | rounding before subtracting close numbers |
+| 2015 #9 | choices 3 km/s, 8 km/s | 4.12 km/s | no choice near the true value |
+
+# The 3×5 notecard (all cards in one place)
+
+The printable two-sided card is `notecard-3x5.pdf`; print `notecard-3x5-print.pdf` at 100%.
+
+| Card | Formula |
+|:--|:--|
+| Statics | $\sum F = 0$, $\sum\tau = 0$; $\tau = rF_\perp = r_\perp F$; pivot at the force you don't want |
+| Beam / sofa | torque about one person: $F\cdot x = \sum(\text{weight}\times\text{distance})$, beam weight at $L/2$; then $\sum F_y$ |
+| Diving board | $B = \frac{L/2}{a}Mg$ up; $A = B - Mg$ down |
+| Seesaw | $x = \frac{Lm_k}{2M_T}$ from center |
+| Wall beam + cable | $x_{max} = \frac{L}{mg}(T\sin\theta - \frac{Mg}{2})$ |
+| Ladder | $x = \frac LM(\mu_s(M+m)\tan\theta - \frac m2)$; $\tan\theta_{min} = \frac{1}{2\mu_s}$; top: $\tan\theta = \frac{M + m/2}{(M+m)\mu_s}$ |
+| Two cords | $T = \frac{mg}{\sin\theta}$ ($\theta$ from ceiling) |
+| Young's modulus | $\Delta\ell = \frac{F\ell}{AY}$; wire $A = \pi(d/2)^2$; block: $A$ = top face, $\ell$ = height |
+| Gravity | $F = \frac{GMm}{r^2}$, $g = \frac{GM}{r^2}$, $r = R + h$ |
+| Orbit | $T^2 = \frac{4\pi^2r^3}{GM}$; from $T$: $r = (T^2GM/4\pi^2)^{1/3}$, $h = r - R$ |
+| Binary | $T^2 = \frac{16\pi^2r^3}{GM}$, $r = d/2$ |
+| Rocket | $v = \sqrt{2GM(\frac1R - \frac1r)}$; $h = \frac{2GMR}{2GM - v^2R} - R$ |
+| Escape | $v = \sqrt{2GM/R}$; $r_{EH} = 2GM/c^2$ |
+| Equal pull | $x/d = k/(1+k)$, $k = \sqrt{M_E/M_b}$ |
