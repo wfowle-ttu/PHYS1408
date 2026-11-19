@@ -6,107 +6,104 @@ format:
     geometry:
       - paperwidth=5in
       - paperheight=3in
-      - margin=0.09in
+      - top=0.14in
+      - bottom=0.14in
+      - left=0.40in
+      - right=0.26in
     include-in-header:
       text: |
         \usepackage{multicol}
         \usepackage{amsmath}
+        \usepackage{xcolor}
+        \usepackage{fontspec}
+        \setmainfont{Arial}
         \pagestyle{empty}
-        \setlength{\columnsep}{5pt}
-        \setlength{\columnseprule}{0.2pt}
+        \setlength{\columnsep}{6pt}
+        \setlength{\columnseprule}{0.3pt}
         \setlength{\parindent}{0pt}
-        \setlength{\parskip}{0.6pt}
-        \newcommand{\hd}[1]{\textbf{\color{blue!60!black}#1}\enspace}
-        \newcommand{\sep}{\par\vspace{0.4pt}\hrule height 0.1pt\vspace{0.6pt}}
-        % one card entry: never split across columns or pages
-        \newenvironment{E}{\par\noindent\begin{minipage}{\linewidth}\raggedright\setlength{\parskip}{0.6pt}}{\end{minipage}\par}
-        \renewcommand{\arraystretch}{1}
-        \thinmuskip=1mu \medmuskip=1.5mu \thickmuskip=2mu
+        \setlength{\parskip}{0pt}
+        \thinmuskip=1mu \medmuskip=2mu \thickmuskip=2.5mu
+        \definecolor{hd}{RGB}{0,51,140}
+        % \E[formula width]{RECOGNIZE (key words)}{ANSWER = formula}{what each symbol is}
+        \newcommand{\E}[4][0.50]{%
+          \par\noindent\begin{minipage}{\linewidth}
+          \hrule height 0.25pt\vspace{1.4pt}
+          {\fontsize{7.2}{8.3}\selectfont\bfseries\color{hd}#2}\par\vspace{0.6pt}
+          \begin{minipage}[c]{#1\linewidth}{\fontsize{6.6}{7.6}\selectfont\mbox{$\displaystyle #3$}}\end{minipage}\hfill
+          \begin{minipage}[c]{\dimexpr(0.97\linewidth-#1\linewidth)\relax}\raggedright
+          {\fontsize{6.2}{7.1}\selectfont #4}\end{minipage}
+          \end{minipage}\par\vspace{0.9pt}}
 ---
 
 ```{=latex}
-\fontsize{7.8}{8.8}\selectfont
+\fontsize{7.6}{8.7}\selectfont
 \begin{multicols}{2}
-\raggedright
-\begin{E}
-\hd{Statics} $\sum F_x=\sum F_y=0$, $\sum\tau=0$. $\tau=rF_\perp=r_\perp F$. Pivot at the force you DON'T want ($r=0$). Uniform beam: weight at $L/2$. CCW $+$.
-\end{E}
-\sep
-\begin{E}
-\hd{Sofa / beam} (A at 0, B at $x_B$) $x_BF_B=\frac L2Mg+\sum x_im_ig$; $F_A=W_{tot}-F_B$. Ends, no load: $\frac12Mg$ each.
-\end{E}
-\sep
-\begin{E}
-\hd{Diving board} A at end, B at $a$: $B=\frac{L/2}{a}Mg$ (up), $A=B-Mg$ (DOWN). ($L{=}10,a{=}1$: $5Mg$, $4Mg$.)
-\end{E}
-\sep
-\begin{E}
-\hd{Seesaw} $x=\frac{Lm_k}{2M_T}$ from center. Seesaw mass: don't care.
-\end{E}
-\sep
-\begin{E}
-\hd{Wall beam + cable} ($\theta$ cable--beam) $x_{max}=\frac{L}{mg}\left(T\sin\theta-\frac{Mg}{2}\right)$.
-\end{E}
-\sep
-\begin{E}
-\hd{Ladder} ($\theta$ from floor, wall frictionless; $M$ man, $m$ ladder)\par
-$x_{max}=\frac LM\left(\mu_s(M+m)\tan\theta-\frac m2\right)$ \textbf{MAX: round DOWN}.\par
-Empty: $\tan\theta_{min}=\frac1{2\mu_s}$. To top: $\tan\theta_{min}=\frac{M+m/2}{(M+m)\mu_s}$.\par
-Climb higher: increase $\theta$ or $\mu_s$.
-\end{E}
-\sep
-\begin{E}
-\hd{Two cords} ($\theta$ from CEILING) $T=\frac{mg}{\sin\theta}$.
-\end{E}
-\sep
-\begin{E}
-\hd{Young's modulus} $Y=\frac{F/A}{\Delta\ell/\ell}$: $\Delta\ell=\frac{F\ell}{AY}$, $F{=}mg$.\par
-Wire: $A=\pi(\frac d2)^2$ (radius = HALF the diameter).\par
-Block: $A$ = top face (width $\times$ length), $\ell$ = height.
-\end{E}
+\E[0.53]{SOFA, 2 carry it, load on it $\to$ B's force}
+  {F_B=\frac{g\,(M\frac{L}{2}+m\,x_m)}{x_B}}
+  {$x$ from A's end. $M$ sofa, $L$ length. $m$ load at $x_m$ (far end: $x_m{=}L$). $x_B$ = where B holds (0.4 m from end: $L{-}0.4$). A's force: $(M{+}m)g-F_B$}
+\E[0.42]{DIVING BOARD: A at back end, B at $a$}
+  {\begin{array}{@{}l@{}}B=\dfrac{L/2}{a}\,Mg\\[6pt] A=B-Mg\end{array}}
+  {$L$ length, $M$ board, $a$ = A to B. B pushes up, A pulls down.}
+\E[0.40]{SEESAW: where does the adult sit?}
+  {x=\frac{L\,m_k}{2\,M_T}}
+  {$x$ from CENTER. $m_k$ kid (at end), $M_T$ adult. Seesaw mass: ignore.}
+\E[0.57]{WALL BEAM + CABLE: max hang distance}
+  {x=\frac{L}{mg}\Big(T\sin\theta-\frac{Mg}{2}\Big)}
+  {From wall. $M$ beam, $m$ mass, $T$ cable max, $\theta$ cable--beam.}
+\E[0.40]{LADDER, nobody on it: min angle}
+  {\theta=\tan^{-1}\frac{1}{2\mu}}
+  {$\mu$ floor friction. Wall frictionless.}
+\E[0.65]{MAN CLIMBS LADDER: how far up safely?}
+  {x=\frac{L}{M}\Big(\mu(M{+}m)\tan\theta-\frac{m}{2}\Big)}
+  {$M$ man+load, $m$ ladder, $\theta$ to floor. \textbf{MAX: biggest choice $\le x$}}
+\E[0.48]{LADDER: min angle to climb to the TOP}
+  {\theta=\tan^{-1}\frac{M+m/2}{(M+m)\,\mu}}
+  {$M$ man+load, $m$ ladder. Length doesn't matter.}
+\E[0.30]{LIGHT ON 2 CORDS: ceiling cord tension}
+  {T=\frac{mg}{\sin\theta}}
+  {$m$ light. $\theta$ = cord to CEILING angle.}
+\E[0.56]{WIRE stretched by a hanging load}
+  {\Delta\ell=\frac{mg\,\ell}{\pi\,(d/2)^{2}\,Y}}
+  {$\ell$ wire length. $d$ DIAMETER (halve it). Answer in m.}
+\E[0.40]{BLOCK squashed by a mass on top}
+  {\Delta h=\frac{mg\,h}{w\,l\,Y}}
+  {$w$ width, $l$ length, $h$ height. $\times1000$ = mm.}
 \end{multicols}
 
 \newpage
 
 \begin{multicols}{2}
-\raggedright
-\begin{E}
-\hd{Constants} $G=6.67{\times}10^{-11}$, $M_E=5.98{\times}10^{24}$, $R_E=6.37{\times}10^6$, $M_{sun}=2{\times}10^{30}$, 1 AU $=1.5{\times}10^{11}$ m, $c=3{\times}10^8$, 1 day $=86{,}400$ s.
-\end{E}
-\sep
-\begin{E}
-\hd{$g$ at height} $g=\frac{GM}{r^2}$, $r=R+h$ (from CENTER, not $h$). Person's mass cancels.
-\end{E}
-\sep
-\begin{E}
-\hd{Orbit period} $T=2\pi\sqrt{\frac{r^3}{GM}}$, $r=R+h$. Satellite mass cancels. LEO 400 km: 92.4 min.\par
-\hd{Altitude from $T$} $r=\left(\frac{T^2GM}{4\pi^2}\right)^{1/3}$, $h=r-R$ ($T$ in s). Geo: 24 h, $h=35{,}900$ km.
-\end{E}
-\sep
-\begin{E}
-\hd{Binary stars} $T^2=\frac{16\pi^2r^3}{GM}$, $r=\frac d2$ (separation $=2r$), $M$ = one star.
-\end{E}
-\sep
-\begin{E}
-\hd{Rocket} $U=-\frac{GMm}{r}$ (NOT $mgh$).\par
-Speed for height: $v=\sqrt{2GM\left(\frac1R-\frac1r\right)}$, $r=R+h$.\par
-Height from speed: $h=\frac{2GMR}{2GM-v^2R}-R$ (keep 4+ sig figs).
-\end{E}
-\sep
-\begin{E}
-\hd{Escape} $v_{esc}=\sqrt{\frac{2GM}{R}}$ (Earth 11.2 km/s). Event horizon ($v{=}c$): $r=\frac{2GM}{c^2}$.
-\end{E}
-\sep
-\begin{E}
-\hd{Planet speed} $v=\sqrt{\frac{GM_{sun}}{r}}$, $GM_{sun}=1.33{\times}10^{20}$; $r$ in m (AU$\times1.5{\times}10^{11}$).
-\end{E}
-\sep
-\begin{E}
-\hd{Equal pull} $\frac xd=\frac{k}{1+k}$, $k=\sqrt{\frac{M_E}{M_b}}$, $x$ from Earth.
-\end{E}
-\sep
-\begin{E}
-\hd{Choices} Nearest choice; MAX (``safely'') $\to$ largest that works; MIN $\to$ smallest that works.
-\end{E}
+\noindent{\fontsize{5.6}{6.5}\selectfont\textbf{Constants:} $G=6.67{\times}10^{-11}$, $M_E=5.98{\times}10^{24}$, $R_E=6.37{\times}10^{6}$\,m, $M_{sun}=2{\times}10^{30}$, 1\,AU $=1.5{\times}10^{11}$\,m, $c=3{\times}10^{8}$. km\,$\times1000$ = m. 1\,h = 3600\,s, 1\,day = 86{,}400\,s.\par}
+\vspace{1.4pt}
+\E[0.40]{$g$ at HEIGHT $h$ above Earth}
+  {g=\frac{GM_E}{(R_E+h)^{2}}}
+  {$h$ in m. Person's mass: ignore.}
+\E[0.47]{SATELLITE PERIOD at altitude $h$}
+  {T=2\pi\sqrt{\frac{(R_E+h)^{3}}{GM_E}}}
+  {Seconds. $\div60$ min, $\div3600$ h, $\div86{,}400$ days.}
+\E[0.58]{ALTITUDE for a given PERIOD $T$}
+  {h=\Big(\frac{T^{2}GM_E}{4\pi^{2}}\Big)^{1/3}\!-R_E}
+  {$T$ in s (h$\times$3600). $\div1000$ = km.}
+\E[0.45]{TWO EQUAL STARS orbiting: period}
+  {T=4\pi\sqrt{\frac{r^{3}}{GM}}}
+  {$r=d/2$ (half the separation). $M$ = ONE star.}
+\E[0.74]{ROCKET reaches height $h$: launch speed}
+  {v=\sqrt{2GM_E\Big(\frac{1}{R_E}-\frac{1}{R_E+h}\Big)}}
+  {m/s. $\div1000$ = km/s.}
+\E[0.62]{ROCKET launched at $v$: how high?}
+  {h=\frac{2GM_ER_E}{2GM_E-v^{2}R_E}-R_E}
+  {Keep all digits. $\div1000$ = km.}
+\E[0.40]{ESCAPE SPEED from a planet/moon}
+  {v=\sqrt{\frac{2GM}{R}}}
+  {That body's $M$, $R$. $\div1000$ = km/s.}
+\E[0.40]{EVENT HORIZON (escape speed = $c$)}
+  {r=\frac{2GM}{c^{2}}}
+  {$M$ black hole. $c=3{\times}10^{8}$.}
+\E[0.40]{PLANET'S SPEED around the Sun}
+  {v=\sqrt{\frac{GM_{sun}}{r}}}
+  {$r$ = AU $\times1.5{\times}10^{11}$ m. $\div1000$ = km/s.}
+\E[0.80]{EQUAL PULL: \% of the way from Earth to moon}
+  {\%=\frac{100\,k}{1+k}\qquad k=\sqrt{\frac{M_E}{M_{moon}}}}
+  {}
 \end{multicols}
 ```

@@ -18,11 +18,13 @@ format:
         \setlength{\fboxrule}{0.3pt}
         % ---------------------------------------------------------------
         % BACKSHIFT moves the BACK card DOWN the page (inches; negative = up).
-        % 0 = front and back in exactly the same place on the page.
-        % A 0.75 in shift was tried on 2026-11-11 with the Microsoft IPP Class Driver and made
-        % the offset WORSE (~10 cm), so that driver doesn't place pages linearly. Keep 0 and
-        % fix the driver; remeasure with notecard-alignment-test.pdf before changing this.
-        \newcommand{\BACKSHIFT}{0}
+        % Measured 2026-11-11 on the Brother HL-L2460DW (Brother driver and Mac AirPrint,
+        % duplex Long Edge (Left)) with notecard-alignment-test.pdf: back ruler zero at 10.0 cm,
+        % front line at 10.1 cm from the top edge, so the front lands 1 mm LOWER.
+        % The back card is moved down 1 mm = 0.04 in to match. 0 = no correction.
+        % Notecard printed with 0.04: front top border 10.07 cm, back 10.01 cm, so the front
+        % was still 0.6 mm lower; shift raised to 1.6 mm = 0.064 in.
+        \newcommand{\BACKSHIFT}{0.064}
         % ---------------------------------------------------------------
         \newcommand{\cardat}[3]{% page, label, top edge of card (in)
           \begin{textblock*}{5in}(1.75in,#3in)
